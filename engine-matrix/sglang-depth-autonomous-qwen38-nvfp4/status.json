@@ -1,0 +1,9 @@
+{
+  "updated_at": "2026-08-15T05:55:25+00:00",
+  "phase": "complete",
+  "completed_ok": 8,
+  "completed_failed": 1,
+  "retryable_failed": 0,
+  "total_points": 9,
+  "remaining": 0
+}

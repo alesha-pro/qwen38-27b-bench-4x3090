@@ -1,0 +1,11 @@
+== запускаю сервер: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-NVFP4 --served-model-name ... (TP4/FP8KV/MTP2)
+== сервер жив, прогреваю
+== глубина 8192, 3 повтора, 512 токенов, ignore_eos
+   run 0: prompt=8222 ttft=9.5s decode=85.3 tok/s (511 ток за 5.99s)
+   run 1: prompt=8222 ttft=9.4s decode=73.03 tok/s (511 ток за 6.997s)
+   run 2: prompt=8222 ttft=9.4s decode=68.91 tok/s (511 ток за 7.415s)
+== глубина 253952, 3 повтора, 512 токенов, ignore_eos
+   run 0: prompt=253933 ttft=354.0s decode=76.64 tok/s (511 ток за 6.667s)
+   run 1: prompt=253933 ttft=352.3s decode=75.76 tok/s (511 ток за 6.745s)
+   run 2: prompt=253933 ttft=352.2s decode=69.03 tok/s (511 ток за 7.402s)
+== готово

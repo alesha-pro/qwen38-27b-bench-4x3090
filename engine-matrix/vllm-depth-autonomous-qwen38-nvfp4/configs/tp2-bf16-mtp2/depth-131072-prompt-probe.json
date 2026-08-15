@@ -1,0 +1,7 @@
+{
+  "when": "2026-08-14T21:51:46+00:00",
+  "depth_requested": 131072,
+  "token_count": 131072,
+  "chars_per_token": 5.563838,
+  "prompt_chars": 729362
+}

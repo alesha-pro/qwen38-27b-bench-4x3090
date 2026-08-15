@@ -1,0 +1,29 @@
+0.00.135.713 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.246.593 W srv  llama_server: -----------------
+0.00.246.598 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.246.599 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.246.599 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.246.599 W srv  llama_server: -----------------
+0.00.247.960 I srv    load_model: loading model '$MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q6_K.gguf'
+0.00.979.474 W common_fit_params: failed to fit params to free device memory: n_gpu_layers already set by user to 999, abort
+0.01.629.113 W model has unused tensor blk.64.attn_norm.weight (size = 20480 bytes) -- ignoring
+0.01.629.127 W model has unused tensor blk.64.post_attention_norm.weight (size = 20480 bytes) -- ignoring
+0.01.629.141 W model has unused tensor blk.64.attn_q.weight (size = 51609600 bytes) -- ignoring
+0.01.629.146 W model has unused tensor blk.64.attn_k.weight (size = 4300800 bytes) -- ignoring
+0.01.629.151 W model has unused tensor blk.64.attn_v.weight (size = 4300800 bytes) -- ignoring
+0.01.629.168 W model has unused tensor blk.64.attn_output.weight (size = 25804800 bytes) -- ignoring
+0.01.629.173 W model has unused tensor blk.64.attn_q_norm.weight (size = 1024 bytes) -- ignoring
+0.01.629.179 W model has unused tensor blk.64.attn_k_norm.weight (size = 1024 bytes) -- ignoring
+0.01.629.184 W model has unused tensor blk.64.ffn_gate.weight (size = 73113600 bytes) -- ignoring
+0.01.629.189 W model has unused tensor blk.64.ffn_down.weight (size = 73113600 bytes) -- ignoring
+0.01.629.195 W model has unused tensor blk.64.ffn_up.weight (size = 73113600 bytes) -- ignoring
+0.01.629.203 W model has unused tensor blk.64.nextn.eh_proj.weight (size = 55705600 bytes) -- ignoring
+0.01.629.209 W model has unused tensor blk.64.nextn.enorm.weight (size = 20480 bytes) -- ignoring
+0.01.629.215 W model has unused tensor blk.64.nextn.hnorm.weight (size = 20480 bytes) -- ignoring
+0.01.629.230 W model has unused tensor blk.64.nextn.shared_head_norm.weight (size = 20480 bytes) -- ignoring
+0.06.587.619 I cmn          init: llama threadpool init, n_threads = 18
+0.06.727.384 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 40960, kv_unified = 'false'
+0.06.733.597 I srv          init: chat template supports preserving reasoning, consider enabling it via --reasoning-preserve
+0.06.733.649 I srv  llama_server: model loaded
+0.06.733.655 I srv  llama_server: listening on http://127.0.0.1:18000
+0.08.701.618 I srv    operator(): operator(): cleaning up before exit...

@@ -1,0 +1,17 @@
+{
+  "when": "2026-08-15T01:22:56+00:00",
+  "status": "ok",
+  "rows": [
+    {
+      "concurrency": 1,
+      "requests_ok": 1,
+      "errors": [],
+      "wall_s": 2.75,
+      "total_tokens": 0,
+      "aggregate_tok_s": 0.0,
+      "decode_tok_s_median": null,
+      "ttft_p50_ms": 2751.1,
+      "ttft_max_ms": 2751.1
+    }
+  ]
+}

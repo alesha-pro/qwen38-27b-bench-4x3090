@@ -1,0 +1,900 @@
+[2026-08-15 00:17:45] Attention backend not specified. Use flashinfer backend by default.
+[2026-08-15 00:17:45] --language-only is set without --encoder-urls. Encoders are expected to register dynamically via the EncoderBootstrapServer.
+[2026-08-15 00:17:45] Encoder transfer backend auto-resolved to zmq_to_scheduler for Qwen3_5ForConditionalGeneration at TP4.
+[2026-08-15 00:17:46] Compiled-kernel caches now live under SGLANG_CACHE_DIR ($USER_HOME/.cache/sglang). These older directories are no longer used by sglang, but may still be used by other frameworks on this machine, so they were left alone: $USER_HOME/.triton, $USER_HOME/.cache/flashinfer. Remove them yourself if nothing else needs them.
+[2026-08-15 00:17:46] server_args=ServerArgs(model_path='$MODELS/Qwen3.8-27B-NVFP4', tokenizer_path='$MODELS/Qwen3.8-27B-NVFP4', tokenizer_mode='auto', tokenizer_backend='huggingface', tokenizer_worker_num=1, detokenizer_worker_num=1, skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=False, context_length=262144, is_embedding=False, enable_multimodal=None, revision=None, model_impl='auto', model_config_parser='auto', json_model_override_args='{}', dtype='auto', quantization='compressed-tensors', quantization_param_path=None, kv_cache_dtype='bf16', enable_fp32_lm_head=False, modelopt_quant=None, modelopt_checkpoint_restore_path=None, modelopt_checkpoint_save_path=None, modelopt_export_path=None, quantize_and_serve=False, rl_quant_profile=None, enable_tf32_matmul=False, mem_fraction_static=0.9, max_running_requests=16, max_queued_requests=None, max_total_tokens=None, chunked_prefill_size=8192, enable_dynamic_chunking=False, max_prefill_tokens=16384, prefill_max_requests=None, schedule_policy='fcfs', enable_priority_scheduling=False, disable_priority_preemption=False, default_priority_value=None, abort_on_priority_when_disabled=False, schedule_low_priority_values_first=False, priority_scheduling_preemption_threshold=10, retraction_policy='length', schedule_conservativeness=1.0, page_size=1, swa_full_tokens_ratio=0.8, disable_hybrid_swa_memory=False, radix_eviction_policy='lru', prefill_only_disable_kv_cache=False, disable_radix_cache=True, enable_page_major_kv_layout=False, enable_unified_memory=False, disable_chunked_prefix_cache=False, disable_overlap_schedule=False, num_continuous_decode_steps=1, scheduler_recv_interval=1, enable_mixed_chunk=False, nccl_port=None, dist_timeout=None, dist_init_addr=None, nnodes=1, node_rank=0, tp_size=4, dcp_size=1, pp_size=1, pp_max_micro_batch_size=None, pp_async_batch_depth=0, dp_size=1, load_balance_method='round_robin', attn_cp_size=1, moe_dp_size=1, dwdp_size=1, dcp_comm_backend='ag_rs', dcp_replicate_q_proj=None, enable_prefill_cp=False, cp_strategy=None, enable_dsa_cache_layer_split=False, enable_dsa_prefill_context_parallel=False, dsa_prefill_cp_mode='round-robin-split', enable_prefill_context_parallel=False, prefill_cp_mode='in-seq-split', enable_cp_decode_attn_tp=False, enable_dp_attention=False, enable_dp_attention_local_control_broadcast=False, enable_dp_lm_head=False, enable_attn_tp_input_scattered=False, disable_attn_tp_gather=False, enable_p2p_check=False, device='cuda', base_gpu_id=0, gpu_id_step=1, random_seed=403669160, mlx_enable_sampling=False, watchdog_timeout=300, soft_watchdog_timeout=None, sleep_on_idle=False, use_ray=False, custom_sigquit_handler=None, numa_node=None, gc_threshold=None, host='127.0.0.1', port=18081, fastapi_root_path='', smg_grpc_mode=False, grpc_mode=False, grpc_port=None, sidecar=None, sidecar_args=None, skip_server_warmup=False, warmups=None, enable_http2=False, ssl_keyfile=None, ssl_certfile=None, ssl_ca_certs=None, ssl_keyfile_password=None, enable_ssl_refresh=False, api_key=None, admin_api_key=None, served_model_name='bench', weight_version='default', chat_template=None, hf_chat_template_name=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser='qwen3', default_chat_template_kwargs=None, strip_thinking_cache=False, enable_strict_thinking=False, tool_call_parser=None, tool_server=None, sampling_defaults='model', asr_max_buffer_seconds=60, asr_max_concurrent_sessions=32, preferred_sampling_params=None, allow_auto_truncate=False, stream_interval=1, batch_notify_size=16, stream_response_default_include_usage=False, incremental_streaming_output=False, enable_streaming_session=False, enable_session_radix_cache=False, log_level='info', log_level_http=None, log_requests=False, log_requests_level=2, log_requests_format='text', log_requests_target=None, uvicorn_access_log_exclude_prefixes=[], crash_dump_folder=None, show_time_cost=False, enable_metrics=False, smg_http_sidecar_port=None, enable_mfu_metrics=False, enable_metrics_for_all_schedulers=False, load_snapshot_publish_interval=15, tokenizer_metrics_custom_labels_header='x-custom-labels', tokenizer_metrics_allowed_custom_labels=None, extra_metric_labels=None, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, prompt_tokens_buckets=None, generation_tokens_buckets=None, gc_warning_threshold_secs=0.0, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, enable_forward_pass_metrics=False, forward_pass_metrics_worker_id='', forward_pass_metrics_ipc_name=None, enable_trace=False, trace_modules='request', otlp_traces_endpoint='localhost:4317', export_metrics_to_file=False, export_metrics_to_file_dir=None, stat_loggers=None, constrained_json_whitespace_pattern=None, constrained_json_disable_any_whitespace=False, attention_backend='flashinfer', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='flashinfer', grammar_backend='xgrammar', radix_cache_backend=None, mm_attention_backend=None, fp8_gemm_runner_backend='auto', fp4_gemm_runner_backend='marlin', bf16_gemm_backend='auto', dsa_prefill_backend=None, dsa_decode_backend=None, dsa_paged_mqa_logits_backend='auto', dsa_topk_backend='sgl-kernel', disable_flashinfer_autotune=False, flashinfer_autotune_skip_ops=None, mamba_backend='triton', cuda_graph_config=CudaGraphConfig(decode=PhaseConfig(backend='full', max_bs=80, bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 40, 44, 48, 52, 56, 60, 64, 72, 80], tc_compiler='eager', full_prefill_max_req=None, full_prefill_prefix_chunk_tokens=None), prefill=PhaseConfig(backend='breakable', max_bs=256, bs=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256], tc_compiler='eager', full_prefill_max_req=None, full_prefill_prefix_chunk_tokens=None)), cuda_graph_backend_decode=None, cuda_graph_backend_prefill=None, cuda_graph_max_bs_decode=None, cuda_graph_max_bs_prefill=256, cuda_graph_bs_decode=None, cuda_graph_bs_prefill=None, cuda_graph_tc_compiler=None, disable_prefill_cuda_graph=False, disable_decode_cuda_graph=False, disable_cuda_graph=False, disable_cuda_graph_padding=False, enable_profile_cuda_graph=False, enable_cudagraph_gc=False, debug_cuda_graph=False, enable_layerwise_nvtx_marker=False, enable_nccl_nvls=False, enable_symm_mem=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, triton_attention_split_tile_size=None, flashinfer_mla_disable_ragged=False, enable_fused_qk_norm_rope=False, enable_precise_embedding_interpolation=False, enable_fused_moe_sum_all_reduce=False, enable_deepseek_v4_fp4_indexer=False, disable_custom_all_reduce=True, enable_mscclpp=False, enable_torch_symm_mem=False, enable_scattered_sconv=False, pre_warm_nccl=False, enable_quant_communications=False, enable_flashinfer_allreduce_fusion=False, enforce_disable_flashinfer_allreduce_fusion=False, flashinfer_allreduce_fusion_backend=None, enable_aiter_allreduce_fusion=False, enable_torch_compile=False, enable_torch_compile_debug_mode=False, torch_compile_max_bs=32, speculative_algorithm='EAGLE', speculative_draft_model_path=None, speculative_draft_model_revision=None, speculative_draft_load_format=None, speculative_num_steps=3, speculative_eagle_topk=1, speculative_num_draft_tokens=4, speculative_dflash_block_size=None, speculative_dspark_block_size=None, speculative_dspark_sps_table_path=None, speculative_dspark_confidence_sts_path=None, speculative_dspark_align_verify_tokens_to_graph_tier=False, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_use_rejection_sampling=False, speculative_token_map=None, speculative_attention_mode='prefill', speculative_draft_attention_backend=None, speculative_draft_kv_cache_dtype=None, speculative_draft_window_size=None, speculative_moe_runner_backend='auto', speculative_moe_a2a_backend=None, speculative_draft_model_quantization='compressed-tensors', _speculative_draft_quantization_explicitly_set=False, speculative_skip_dp_mlp_sync=False, enable_multi_layer_eagle=False, speculative_adaptive=False, speculative_adaptive_config=None, decoupled_spec_bind_endpoint=None, decoupled_spec_connect_endpoints=None, decoupled_spec_rank=None, decoupled_spec_role='null', spec_trace_dir=None, speculative_ngram_min_bfs_breadth=1, speculative_ngram_max_bfs_breadth=10, speculative_ngram_match_type='BFS', speculative_ngram_max_trie_depth=18, speculative_ngram_capacity=10000000, speculative_ngram_external_corpus_path=None, speculative_ngram_external_sam_budget=0, speculative_ngram_external_corpus_max_tokens=10000000, ep_size=1, moe_a2a_backend='none', moe_runner_backend='auto', flashinfer_mxfp4_moe_precision='default', deepep_mode='auto', fuseep_mode=2, deepep_dispatcher_output_dtype='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm=None, init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, eplb_min_rebalancing_utilization_threshold=1.0, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, elastic_ep_backend=None, enable_elastic_expert_backup=False, mooncake_ib_device=None, enable_waterfill=False, ep_join_mode=None, ep_join_rank_offset=0, elastic_ep_initial_size=None, max_ep_size=None, elastic_ep_scale_timeout=600, elastic_ep_rejoin=False, disable_flashinfer_cutlass_moe_fp4_allgather=False, disable_shared_experts_fusion=False, enforce_shared_experts_fusion=False, max_mamba_cache_size=None, mamba_ssm_dtype=None, mamba_max_states_per_path=-1, enable_mamba_cache_stochastic_rounding=False, mamba_cache_philox_rounds=0, mamba_full_memory_ratio=0.9, mamba_radix_cache_strategy='auto', uses_mamba_radix_cache=False, mamba_track_interval=256, enable_int8_mamba_checkpoint=False, int8_mamba_ckpt_size=None, linear_attn_backend='triton', linear_attn_decode_backend=None, linear_attn_prefill_backend=None, linear_attn_verify_backend=None, enable_linear_replayssm=False, linear_replayssm_cache_len=16, enable_linear_replayssm_spec=False, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through', hicache_io_backend='kernel', hicache_mem_layout='page_first', hicache_storage_backend=None, hicache_storage_prefetch_policy='timeout', hicache_storage_backend_extra_config=None, enable_hisparse=False, hisparse_config=None, enable_broadcast_mm_inputs_process=False, enable_prefix_mm_cache=False, mm_enable_dp_encoder=False, mm_process_config={}, mm_processor_worker_num=0, mm_io_worker_num=0, mm_preprocess_cache_size_mb=None, trust_mm_content_hashes=False, limit_mm_data_per_request=None, enable_mm_global_cache=False, image_processor_backend='auto', mm_global_cache_backend='mooncake', disable_fast_image_processor=False, mm_feature_transport='cpu', keep_mm_feature_on_device=False, enable_lora=None, enable_lora_overlap_loading=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loaded_loras=None, max_loras_per_batch=8, lora_eviction_policy='lru', lora_backend='csgmv', max_lora_chunk_size=16, experts_shared_outer_loras=None, lora_use_virtual_experts=False, lora_strict_loading=False, lora_drain_wait_threshold=0.0, enable_two_batch_overlap=False, enable_single_batch_overlap=False, tbo_token_distribution_threshold=0.48, cpu_offload_gb=0, offload_group_size=-1, offload_num_in_group=1, offload_prefetch_step=1, offload_mode='cpu', enable_lmcache=False, lmcache_config_file=None, enable_flexkv=False, flexkv_config_file=None, kt_weight_path=None, kt_method='AMXINT4', kt_cpuinfer=None, kt_threadpool_count=2, kt_num_gpu_experts=None, kt_max_deferred_experts_per_token=None, dllm_algorithm=None, dllm_algorithm_config=None, dllm_fdfo=True, disaggregation_mode='null', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=8998, disaggregation_ib_device=None, disaggregation_decode_enable_radix_cache=False, disaggregation_decode_enable_offload_kvcache=False, num_reserved_decode_tokens=512, disaggregation_decode_extra_slots=None, disaggregation_decode_polling_interval=1, optimistic_prefill_attempts=0, encoder_only=False, language_only=True, language_model_only=False, encoder_transfer_backend='zmq_to_scheduler', encoder_urls=[], encoder_bootstrap_port=8997, encoder_register_urls=[], enable_adaptive_dispatch_to_encoder=False, enable_pdmux=False, pdmux_config_path=None, sm_group_num=8, startup_weight_load_mode='serial', custom_weight_loader=[], weight_loader_disable_mmap=False, weight_loader_prefetch_checkpoints=False, weight_loader_prefetch_num_threads=4, weight_loader_drop_cache_after_load=False, remote_instance_weight_loader_seed_instance_ip=None, remote_instance_weight_loader_seed_instance_service_port=None, remote_instance_weight_loader_send_weights_group_ports=None, remote_instance_weight_loader_backend='nccl', remote_instance_weight_loader_start_seed_via_transfer_engine=False, engine_info_bootstrap_port=6789, modelexpress_config=None, download_dir=None, model_checksum=None, delete_ckpt_after_loading=False, decrypted_config_file=None, decrypted_draft_config_file=None, checkpoint_engine_wait_weights_before_ready=False, enable_prefill_delayer=False, prefill_delayer_max_delay_passes=30, prefill_delayer_token_usage_low_watermark=None, prefill_delayer_forward_passes_buckets=None, prefill_delayer_wait_seconds_buckets=None, prefill_delayer_queue_min_ratio=None, prefill_delayer_max_delay_ms=None, min_free_slots_delay=None, enable_deterministic_inference=False, rl_on_policy_target=None, kv_canary='none', kv_canary_real_data='none', kv_canary_sweep_interval=0, enable_dynamic_batch_tokenizer=False, dynamic_batch_tokenizer_batch_size=32, dynamic_batch_tokenizer_batch_timeout=0.002, enable_tokenizer_batch_encode=False, disable_tokenizer_batch_decode=False, debug_tensor_dump_output_folder=None, debug_tensor_dump_layers=None, debug_tensor_dump_input_file=None, enable_memory_saver=False, enable_weights_cpu_backup=False, enable_draft_weights_cpu_backup=False, enable_custom_logit_processor=False, enable_return_hidden_states=False, return_hidden_states_mode=None, enable_return_routed_experts=False, enable_return_indexer_topk=False, disable_outlines_disk_cache=False, enable_mis=False, weight_cache_mode='off', weight_cache_socket=None, weight_cache_timeout=1800, forward_hooks=None, msprobe_dump_config=None)
+[2026-08-15 00:17:47] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:49] Ignore import error when loading sglang.srt.models.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:49] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:17:52] Multimodal processor concurrency enabled with 2 isolated worker threads (auto).
+[2026-08-15 00:17:52] EPD MMReceiver: using transport_mode=http
+[2026-08-15 00:17:52] EncoderBootstrapServer starting on 127.0.0.1:8997 (health_check every 10.0s, timeout 2.0s)
+[2026-08-15 00:17:52] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:55] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:17:55] Using default HuggingFace chat template with detected content format: openai
+[2026-08-15 00:17:55] Auto-detected template features: reasoning_config=ReasoningToggleConfig(toggle_param='enable_thinking', default_enabled=True, special_case=None, effort_kwarg=None), reasoning_parser=qwen3, tool_call_parser=qwen3_coder
+[2026-08-15 00:17:58 TP3] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:58 TP3] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:17:58 TP3] Init torch distributed begin.
+[2026-08-15 00:17:58 TP1] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:58 TP1] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:17:58 TP2] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:58 TP2] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:17:58 TP0] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:58 TP0] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:17:58 TP1] Init torch distributed begin.
+[2026-08-15 00:17:58 TP2] Init torch distributed begin.
+[2026-08-15 00:17:58 TP0] Init torch distributed begin.
+[2026-08-15 00:17:59 TP0] sglang is using nccl==2.29.7
+[2026-08-15 00:17:59 TP0] Init torch distributed ends. elapsed=1.13 s, mem usage=0.16 GB
+[2026-08-15 00:17:59 TP3] Init torch distributed ends. elapsed=1.52 s, mem usage=0.16 GB
+[2026-08-15 00:17:59 TP2] Init torch distributed ends. elapsed=1.16 s, mem usage=0.16 GB
+[2026-08-15 00:17:59 TP1] Init torch distributed ends. elapsed=1.19 s, mem usage=0.16 GB
+[2026-08-15 00:17:59 TP2] Ignore import error when loading sglang.srt.models.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:59 TP1] Ignore import error when loading sglang.srt.models.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:59 TP2] Load weight begin. avail mem=23.14 GB
+[2026-08-15 00:17:59 TP1] Load weight begin. avail mem=23.14 GB
+[2026-08-15 00:17:59 TP0] Ignore import error when loading sglang.srt.models.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:59 TP3] Ignore import error when loading sglang.srt.models.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:17:59 TP0] Load weight begin. avail mem=23.14 GB
+[2026-08-15 00:17:59 TP3] Load weight begin. avail mem=23.14 GB
+[2026-08-15 00:17:59 TP2] Multimodal attention backend not set. Use triton_attn.
+[2026-08-15 00:17:59 TP2] Using triton_attn as multimodal attention backend.
+[2026-08-15 00:17:59 TP1] Multimodal attention backend not set. Use triton_attn.
+[2026-08-15 00:17:59 TP1] Using triton_attn as multimodal attention backend.
+[2026-08-15 00:17:59 TP0] Multimodal attention backend not set. Use triton_attn.
+[2026-08-15 00:17:59 TP0] Using triton_attn as multimodal attention backend.
+[2026-08-15 00:17:59 TP3] Multimodal attention backend not set. Use triton_attn.
+[2026-08-15 00:17:59 TP3] Using triton_attn as multimodal attention backend.
+[2026-08-15 00:17:59 TP2] Acceleration for non-quantized schemes is not supported by Compressed Tensors. Falling back to UnquantizedLinearMethod
+[2026-08-15 00:17:59 TP1] Acceleration for non-quantized schemes is not supported by Compressed Tensors. Falling back to UnquantizedLinearMethod
+[2026-08-15 00:17:59 TP2] using attn output gate!
+[2026-08-15 00:18:00 TP0] Acceleration for non-quantized schemes is not supported by Compressed Tensors. Falling back to UnquantizedLinearMethod
+[2026-08-15 00:18:00 TP1] using attn output gate!
+[2026-08-15 00:18:00 TP0] using attn output gate!
+[2026-08-15 00:18:00 TP3] Acceleration for non-quantized schemes is not supported by Compressed Tensors. Falling back to UnquantizedLinearMethod
+[2026-08-15 00:18:00 TP3] using attn output gate!
+
+Multi-thread loading shards:   0% Completed | 0/2 [00:00<?, ?it/s][2026-08-15 00:18:02 TP2] Parameter lm_head.weight_scale not found in params_dict
+[2026-08-15 00:18:02 TP3] Parameter lm_head.weight_scale not found in params_dict
+[2026-08-15 00:18:02 TP0] Parameter lm_head.weight_scale not found in params_dict
+[2026-08-15 00:18:02 TP1] Parameter lm_head.weight_scale not found in params_dict
+[2026-08-15 00:18:02 TP2] Parameter model.layers.11.k_scale not found in params_dict
+[2026-08-15 00:18:02 TP2] Parameter model.layers.11.v_scale not found in params_dict
+[2026-08-15 00:18:02 TP3] Parameter model.layers.11.k_scale not found in params_dict
+[2026-08-15 00:18:02 TP3] Parameter model.layers.11.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.15.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.15.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.15.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.15.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.11.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.19.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.11.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.19.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.19.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.19.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP0] Parameter model.layers.11.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP0] Parameter model.layers.11.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.15.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.23.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.15.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.23.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.23.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.23.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP0] Parameter model.layers.15.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP0] Parameter model.layers.15.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.27.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.27.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.19.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.19.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.27.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.27.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.3.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.3.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP0] Parameter model.layers.19.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP0] Parameter model.layers.19.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.3.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.31.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.3.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP2] Parameter model.layers.31.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.23.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.31.k_scale not found in params_dict
+[2026-08-15 00:18:03 TP1] Parameter model.layers.23.v_scale not found in params_dict
+[2026-08-15 00:18:03 TP3] Parameter model.layers.31.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.35.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.35.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.23.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.23.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.35.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.35.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.27.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.27.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.39.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.39.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.39.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.27.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.3.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.39.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.27.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.3.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.31.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.43.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.31.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.43.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.3.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.3.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.43.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.43.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.31.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.31.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.47.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.47.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.35.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.35.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.47.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.47.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.35.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP0] Parameter model.layers.35.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.51.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.39.k_scale not found in params_dict
+[2026-08-15 00:18:04 TP2] Parameter model.layers.51.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP1] Parameter model.layers.39.v_scale not found in params_dict
+[2026-08-15 00:18:04 TP3] Parameter model.layers.51.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.51.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.39.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.55.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.39.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.55.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.43.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.55.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.43.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.55.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.43.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.43.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.59.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.59.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.47.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.47.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.59.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.59.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.47.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.47.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.63.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.63.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.51.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.7.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.51.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP2] Parameter model.layers.7.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.63.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.63.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.7.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP3] Parameter model.layers.7.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.51.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP0] Parameter model.layers.51.v_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.55.k_scale not found in params_dict
+[2026-08-15 00:18:05 TP1] Parameter model.layers.55.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP0] Parameter model.layers.55.k_scale not found in params_dict
+[2026-08-15 00:18:06 TP0] Parameter model.layers.55.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP1] Parameter model.layers.59.k_scale not found in params_dict
+[2026-08-15 00:18:06 TP1] Parameter model.layers.59.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP0] Parameter model.layers.59.k_scale not found in params_dict
+[2026-08-15 00:18:06 TP0] Parameter model.layers.59.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP1] Parameter model.layers.63.k_scale not found in params_dict
+[2026-08-15 00:18:06 TP1] Parameter model.layers.63.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP1] Parameter model.layers.7.k_scale not found in params_dict
+[2026-08-15 00:18:06 TP1] Parameter model.layers.7.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP0] Parameter model.layers.63.k_scale not found in params_dict
+[2026-08-15 00:18:06 TP0] Parameter model.layers.63.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP2] Your GPU does not have native support for FP8 computation but FP8 quantization is being used. Weight-only FP8 compression will be used leveraging the Marlin kernel. This may degrade performance for compute-heavy workloads.
+[2026-08-15 00:18:06 TP0] Parameter model.layers.7.k_scale not found in params_dict
+[2026-08-15 00:18:06 TP0] Parameter model.layers.7.v_scale not found in params_dict
+[2026-08-15 00:18:06 TP3] Your GPU does not have native support for FP8 computation but FP8 quantization is being used. Weight-only FP8 compression will be used leveraging the Marlin kernel. This may degrade performance for compute-heavy workloads.
+[2026-08-15 00:18:06 TP2] Using Marlin W4A16 fallback for compressed-tensors NVFP4 weights on a GPU without native FP4 tensor cores.
+[2026-08-15 00:18:06 TP3] Using Marlin W4A16 fallback for compressed-tensors NVFP4 weights on a GPU without native FP4 tensor cores.
+
+Multi-thread loading shards:  50% Completed | 1/2 [00:06<00:06,  6.40s/it][2026-08-15 00:18:06 TP2] Load weight end. elapsed=6.79 s, type=Qwen3_5ForConditionalGeneration, quant=compressed-tensors, avail mem=17.37 GB, mem usage=5.78 GB.
+[2026-08-15 00:18:06 TP3] Load weight end. elapsed=6.84 s, type=Qwen3_5ForConditionalGeneration, quant=compressed-tensors, avail mem=17.37 GB, mem usage=5.78 GB.
+[2026-08-15 00:18:06 TP1] Your GPU does not have native support for FP8 computation but FP8 quantization is being used. Weight-only FP8 compression will be used leveraging the Marlin kernel. This may degrade performance for compute-heavy workloads.
+[2026-08-15 00:18:07 TP1] Using Marlin W4A16 fallback for compressed-tensors NVFP4 weights on a GPU without native FP4 tensor cores.
+
+Multi-thread loading shards: 100% Completed | 2/2 [00:06<00:00,  2.90s/it]
+Multi-thread loading shards: 100% Completed | 2/2 [00:06<00:00,  3.42s/it]
+[2026-08-15 00:18:07 TP0] Your GPU does not have native support for FP8 computation but FP8 quantization is being used. Weight-only FP8 compression will be used leveraging the Marlin kernel. This may degrade performance for compute-heavy workloads.
+[2026-08-15 00:18:07 TP0] Using Marlin W4A16 fallback for compressed-tensors NVFP4 weights on a GPU without native FP4 tensor cores.
+[2026-08-15 00:18:07 TP1] Load weight end. elapsed=7.31 s, type=Qwen3_5ForConditionalGeneration, quant=compressed-tensors, avail mem=17.37 GB, mem usage=5.78 GB.
+[2026-08-15 00:18:07 TP0] Load weight end. elapsed=7.38 s, type=Qwen3_5ForConditionalGeneration, quant=compressed-tensors, avail mem=17.37 GB, mem usage=5.78 GB.
+[2026-08-15 00:18:09 TP2] Init torch distributed begin.
+[2026-08-15 00:18:09 TP0] Init torch distributed begin.
+[2026-08-15 00:18:09 TP1] Init torch distributed begin.
+[2026-08-15 00:18:09 TP3] Init torch distributed begin.
+[2026-08-15 00:18:09 TP0] Init torch distributed ends. elapsed=0.00 s, mem usage=0.00 GB
+[2026-08-15 00:18:09 TP3] Init torch distributed ends. elapsed=0.00 s, mem usage=0.00 GB
+[2026-08-15 00:18:09 TP2] Init torch distributed ends. elapsed=0.09 s, mem usage=0.00 GB
+[2026-08-15 00:18:09 TP0] Load weight begin. avail mem=17.35 GB
+[2026-08-15 00:18:09 TP1] Init torch distributed ends. elapsed=0.00 s, mem usage=0.00 GB
+[2026-08-15 00:18:09 TP3] Load weight begin. avail mem=17.35 GB
+[2026-08-15 00:18:09 TP2] Load weight begin. avail mem=17.35 GB
+[2026-08-15 00:18:09 TP1] Load weight begin. avail mem=17.35 GB
+
+Multi-thread loading shards:   0% Completed | 0/2 [00:00<?, ?it/s][2026-08-15 00:18:09 TP3] Load weight end. elapsed=0.26 s, type=Qwen3_5ForCausalLMMTP, quant=compressed-tensors, avail mem=15.90 GB, mem usage=1.45 GB.
+[2026-08-15 00:18:09 TP2] Load weight end. elapsed=0.28 s, type=Qwen3_5ForCausalLMMTP, quant=compressed-tensors, avail mem=15.90 GB, mem usage=1.45 GB.
+
+Multi-thread loading shards: 100% Completed | 2/2 [00:00<00:00,  8.06it/s]
+Multi-thread loading shards: 100% Completed | 2/2 [00:00<00:00,  8.05it/s]
+[2026-08-15 00:18:09 TP0] Load weight end. elapsed=0.31 s, type=Qwen3_5ForCausalLMMTP, quant=compressed-tensors, avail mem=15.90 GB, mem usage=1.45 GB.
+[2026-08-15 00:18:09 TP1] Load weight end. elapsed=0.31 s, type=Qwen3_5ForCausalLMMTP, quant=compressed-tensors, avail mem=15.90 GB, mem usage=1.45 GB.
+[2026-08-15 00:18:09 TP0] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-08-15 00:18:09 TP3] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-08-15 00:18:09 TP2] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-08-15 00:18:09 TP1] Reserving 0.10 GB of the KV budget for post-sizing multimodal allocations (feature-transport pools + embedding cache).
+[2026-08-15 00:18:10 TP1] Mamba Cache is allocated. max_mamba_cache_size: 16, conv_state size: 0.01GB, ssm_state size: 0.60GB intermediate_ssm_state_cache size: 2.39GB intermediate_conv_window_cache size: 0.02GB 
+[2026-08-15 00:18:10 TP0] Mamba Cache is allocated. max_mamba_cache_size: 16, conv_state size: 0.01GB, ssm_state size: 0.60GB intermediate_ssm_state_cache size: 2.39GB intermediate_conv_window_cache size: 0.02GB 
+[2026-08-15 00:18:10 TP3] Mamba Cache is allocated. max_mamba_cache_size: 16, conv_state size: 0.01GB, ssm_state size: 0.60GB intermediate_ssm_state_cache size: 2.39GB intermediate_conv_window_cache size: 0.02GB 
+[2026-08-15 00:18:10 TP2] Mamba Cache is allocated. max_mamba_cache_size: 16, conv_state size: 0.01GB, ssm_state size: 0.60GB intermediate_ssm_state_cache size: 2.39GB intermediate_conv_window_cache size: 0.02GB 
+[2026-08-15 00:18:10 TP2] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 5.22 GB, V size: 5.22 GB
+[2026-08-15 00:18:10 TP2] Memory pool end. avail mem=2.45 GB
+[2026-08-15 00:18:10 TP2] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 0.33 GB, V size: 0.33 GB
+[2026-08-15 00:18:10 TP2] Memory pool end. avail mem=1.78 GB
+[2026-08-15 00:18:10 TP1] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 5.22 GB, V size: 5.22 GB
+[2026-08-15 00:18:10 TP1] Memory pool end. avail mem=2.45 GB
+[2026-08-15 00:18:10 TP1] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 0.33 GB, V size: 0.33 GB
+[2026-08-15 00:18:10 TP1] Memory pool end. avail mem=1.78 GB
+[2026-08-15 00:18:10 TP0] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 5.22 GB, V size: 5.22 GB
+[2026-08-15 00:18:10 TP0] Memory pool end. avail mem=2.45 GB
+[2026-08-15 00:18:10 TP3] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 5.22 GB, V size: 5.22 GB
+[2026-08-15 00:18:10 TP3] Memory pool end. avail mem=2.45 GB
+[2026-08-15 00:18:10 TP0] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 0.33 GB, V size: 0.33 GB
+[2026-08-15 00:18:10 TP0] Memory pool end. avail mem=1.78 GB
+[2026-08-15 00:18:10 TP3] KV Cache is allocated. dtype: torch.bfloat16, #tokens: 684433, K size: 0.33 GB, V size: 0.33 GB
+[2026-08-15 00:18:10 TP3] Memory pool end. avail mem=1.78 GB
+[2026-08-15 00:18:10 TP2] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP2] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP1] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP0] Linear attention kernel backend: decode=triton, prefill=triton, verify=triton
+[2026-08-15 00:18:10 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-08-15 00:18:10 TP1] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP3] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP2] Capture target prefill CUDA graph begin. backend=breakable, num_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256], avail mem=2.43 GB
+[2026-08-15 00:18:10 TP0] Linear attention kernel backend: decode=triton, prefill=triton, verify=triton
+[2026-08-15 00:18:10 TP0] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP0] GDN kernel dispatcher: decode=TritonGDNKernel, extend=TritonGDNKernel, verify=TritonGDNKernel packed_decode=True
+[2026-08-15 00:18:10 TP3] Using hybrid linear attention backend for hybrid GDN models.
+[2026-08-15 00:18:10 TP1] Capture target prefill CUDA graph begin. backend=breakable, num_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256], avail mem=2.43 GB
+[2026-08-15 00:18:11 TP0] Capture target prefill CUDA graph begin. backend=breakable, num_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256], avail mem=2.43 GB
+[2026-08-15 00:18:11 TP3] Capture target prefill CUDA graph begin. backend=breakable, num_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256], avail mem=2.43 GB
+
+  0%|          | 0/22 [00:00<?, ?it/s]
+Capturing num tokens (num_tokens=256 avail_mem=2.43 GB):   0%|          | 0/22 [00:00<?, ?it/s]
+Capturing num tokens (num_tokens=256 avail_mem=2.43 GB):   5%|▍         | 1/22 [00:01<00:41,  1.99s/it]
+Capturing num tokens (num_tokens=240 avail_mem=2.23 GB):   5%|▍         | 1/22 [00:01<00:41,  1.99s/it]
+Capturing num tokens (num_tokens=240 avail_mem=2.23 GB):   9%|▉         | 2/22 [00:02<00:25,  1.30s/it]
+Capturing num tokens (num_tokens=224 avail_mem=2.21 GB):   9%|▉         | 2/22 [00:02<00:25,  1.30s/it]
+Capturing num tokens (num_tokens=224 avail_mem=2.21 GB):  14%|█▎        | 3/22 [00:03<00:19,  1.04s/it]
+Capturing num tokens (num_tokens=208 avail_mem=2.18 GB):  14%|█▎        | 3/22 [00:03<00:19,  1.04s/it]
+Capturing num tokens (num_tokens=208 avail_mem=2.18 GB):  18%|█▊        | 4/22 [00:04<00:16,  1.12it/s]
+Capturing num tokens (num_tokens=192 avail_mem=2.16 GB):  18%|█▊        | 4/22 [00:04<00:16,  1.12it/s]
+Capturing num tokens (num_tokens=192 avail_mem=2.16 GB):  23%|██▎       | 5/22 [00:04<00:13,  1.26it/s]
+Capturing num tokens (num_tokens=176 avail_mem=2.13 GB):  23%|██▎       | 5/22 [00:04<00:13,  1.26it/s]
+Capturing num tokens (num_tokens=176 avail_mem=2.13 GB):  27%|██▋       | 6/22 [00:05<00:11,  1.40it/s]
+Capturing num tokens (num_tokens=160 avail_mem=2.11 GB):  27%|██▋       | 6/22 [00:05<00:11,  1.40it/s]
+Capturing num tokens (num_tokens=160 avail_mem=2.11 GB):  32%|███▏      | 7/22 [00:05<00:10,  1.50it/s]
+Capturing num tokens (num_tokens=144 avail_mem=2.09 GB):  32%|███▏      | 7/22 [00:05<00:10,  1.50it/s]
+Capturing num tokens (num_tokens=144 avail_mem=2.09 GB):  36%|███▋      | 8/22 [00:06<00:08,  1.62it/s]
+Capturing num tokens (num_tokens=128 avail_mem=2.06 GB):  36%|███▋      | 8/22 [00:06<00:08,  1.62it/s]
+Capturing num tokens (num_tokens=128 avail_mem=2.06 GB):  41%|████      | 9/22 [00:06<00:07,  1.80it/s]
+Capturing num tokens (num_tokens=112 avail_mem=2.04 GB):  41%|████      | 9/22 [00:06<00:07,  1.80it/s]
+Capturing num tokens (num_tokens=112 avail_mem=2.04 GB):  45%|████▌     | 10/22 [00:07<00:06,  1.91it/s]
+Capturing num tokens (num_tokens=96 avail_mem=2.01 GB):  45%|████▌     | 10/22 [00:07<00:06,  1.91it/s] 
+Capturing num tokens (num_tokens=96 avail_mem=2.01 GB):  50%|█████     | 11/22 [00:07<00:05,  2.05it/s]
+Capturing num tokens (num_tokens=80 avail_mem=1.99 GB):  50%|█████     | 11/22 [00:07<00:05,  2.05it/s]
+Capturing num tokens (num_tokens=80 avail_mem=1.99 GB):  55%|█████▍    | 12/22 [00:08<00:04,  2.19it/s]
+Capturing num tokens (num_tokens=64 avail_mem=1.96 GB):  55%|█████▍    | 12/22 [00:08<00:04,  2.19it/s]
+Capturing num tokens (num_tokens=64 avail_mem=1.96 GB):  59%|█████▉    | 13/22 [00:08<00:03,  2.28it/s]
+Capturing num tokens (num_tokens=48 avail_mem=1.94 GB):  59%|█████▉    | 13/22 [00:08<00:03,  2.28it/s]
+Capturing num tokens (num_tokens=48 avail_mem=1.94 GB):  64%|██████▎   | 14/22 [00:08<00:03,  2.37it/s]
+Capturing num tokens (num_tokens=32 avail_mem=1.92 GB):  64%|██████▎   | 14/22 [00:08<00:03,  2.37it/s]
+Capturing num tokens (num_tokens=32 avail_mem=1.92 GB):  68%|██████▊   | 15/22 [00:09<00:02,  2.38it/s]
+Capturing num tokens (num_tokens=28 avail_mem=1.89 GB):  68%|██████▊   | 15/22 [00:09<00:02,  2.38it/s]
+Capturing num tokens (num_tokens=28 avail_mem=1.89 GB):  73%|███████▎  | 16/22 [00:09<00:02,  2.18it/s]
+Capturing num tokens (num_tokens=24 avail_mem=1.87 GB):  73%|███████▎  | 16/22 [00:09<00:02,  2.18it/s]
+Capturing num tokens (num_tokens=24 avail_mem=1.87 GB):  77%|███████▋  | 17/22 [00:10<00:02,  2.07it/s]
+Capturing num tokens (num_tokens=20 avail_mem=1.85 GB):  77%|███████▋  | 17/22 [00:10<00:02,  2.07it/s]
+Capturing num tokens (num_tokens=20 avail_mem=1.85 GB):  82%|████████▏ | 18/22 [00:10<00:01,  2.05it/s]
+Capturing num tokens (num_tokens=16 avail_mem=1.83 GB):  82%|████████▏ | 18/22 [00:10<00:01,  2.05it/s]
+Capturing num tokens (num_tokens=16 avail_mem=1.83 GB):  86%|████████▋ | 19/22 [00:11<00:01,  2.04it/s]
+Capturing num tokens (num_tokens=12 avail_mem=1.80 GB):  86%|████████▋ | 19/22 [00:11<00:01,  2.04it/s]
+Capturing num tokens (num_tokens=12 avail_mem=1.80 GB):  91%|█████████ | 20/22 [00:11<00:00,  2.12it/s]
+Capturing num tokens (num_tokens=8 avail_mem=1.78 GB):  91%|█████████ | 20/22 [00:11<00:00,  2.12it/s] 
+Capturing num tokens (num_tokens=8 avail_mem=1.78 GB):  95%|█████████▌| 21/22 [00:12<00:00,  2.24it/s]
+Capturing num tokens (num_tokens=4 avail_mem=1.76 GB):  95%|█████████▌| 21/22 [00:12<00:00,  2.24it/s]
+Capturing num tokens (num_tokens=4 avail_mem=1.76 GB): 100%|██████████| 22/22 [00:12<00:00,  2.33it/s]
+Capturing num tokens (num_tokens=4 avail_mem=1.76 GB): 100%|██████████| 22/22 [00:12<00:00,  1.74it/s]
+[2026-08-15 00:18:24 TP0] Capture target prefill CUDA graph end. elapsed=13.62 s, mem usage=0.67 GB, avail mem=1.76 GB.
+[2026-08-15 00:18:24 TP0] Capture target verify CUDA graph begin. backend=full, num_tokens_per_req=4, bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16], avail mem=1.76 GB
+[2026-08-15 00:18:24 TP2] Capture target prefill CUDA graph end. elapsed=13.71 s, mem usage=0.67 GB, avail mem=1.76 GB.
+[2026-08-15 00:18:24 TP2] Capture target verify CUDA graph begin. backend=full, num_tokens_per_req=4, bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16], avail mem=1.76 GB
+[2026-08-15 00:18:24 TP3] Capture target prefill CUDA graph end. elapsed=13.81 s, mem usage=0.67 GB, avail mem=1.76 GB.
+[2026-08-15 00:18:24 TP3] Capture target verify CUDA graph begin. backend=full, num_tokens_per_req=4, bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16], avail mem=1.76 GB
+[2026-08-15 00:18:24 TP1] Capture target prefill CUDA graph end. elapsed=13.90 s, mem usage=0.67 GB, avail mem=1.76 GB.
+[2026-08-15 00:18:24 TP1] Capture target verify CUDA graph begin. backend=full, num_tokens_per_req=4, bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16], avail mem=1.76 GB
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+Capturing batches (bs=16 avail_mem=1.70 GB):   0%|          | 0/12 [00:00<?, ?it/s][2026-08-15 00:18:27 TP2] multimem all-gather disabled (no multicast for world_size=4)
+[2026-08-15 00:18:27 TP1] multimem all-gather disabled (no multicast for world_size=4)
+[2026-08-15 00:18:27 TP0] multimem all-gather disabled (no multicast for world_size=4)
+[2026-08-15 00:18:27 TP3] multimem all-gather disabled (no multicast for world_size=4)
+
+Capturing batches (bs=16 avail_mem=1.70 GB):   8%|▊         | 1/12 [00:02<00:27,  2.49s/it]
+Capturing batches (bs=14 avail_mem=1.57 GB):   8%|▊         | 1/12 [00:02<00:27,  2.49s/it]
+Capturing batches (bs=14 avail_mem=1.57 GB):  17%|█▋        | 2/12 [00:03<00:13,  1.38s/it]
+Capturing batches (bs=12 avail_mem=1.55 GB):  17%|█▋        | 2/12 [00:03<00:13,  1.38s/it]
+Capturing batches (bs=12 avail_mem=1.55 GB):  25%|██▌       | 3/12 [00:03<00:07,  1.14it/s]
+Capturing batches (bs=10 avail_mem=1.54 GB):  25%|██▌       | 3/12 [00:03<00:07,  1.14it/s]
+Capturing batches (bs=10 avail_mem=1.54 GB):  33%|███▎      | 4/12 [00:03<00:05,  1.57it/s]
+Capturing batches (bs=8 avail_mem=1.51 GB):  33%|███▎      | 4/12 [00:03<00:05,  1.57it/s] 
+Capturing batches (bs=8 avail_mem=1.51 GB):  42%|████▏     | 5/12 [00:05<00:06,  1.07it/s]
+Capturing batches (bs=7 avail_mem=1.50 GB):  42%|████▏     | 5/12 [00:05<00:06,  1.07it/s]
+Capturing batches (bs=7 avail_mem=1.50 GB):  50%|█████     | 6/12 [00:05<00:04,  1.40it/s]
+Capturing batches (bs=6 avail_mem=1.47 GB):  50%|█████     | 6/12 [00:05<00:04,  1.40it/s]
+Capturing batches (bs=6 avail_mem=1.47 GB):  58%|█████▊    | 7/12 [00:05<00:02,  1.75it/s]
+Capturing batches (bs=5 avail_mem=1.46 GB):  58%|█████▊    | 7/12 [00:05<00:02,  1.75it/s]
+Capturing batches (bs=5 avail_mem=1.46 GB):  67%|██████▋   | 8/12 [00:05<00:01,  2.09it/s]
+Capturing batches (bs=4 avail_mem=1.45 GB):  67%|██████▋   | 8/12 [00:05<00:01,  2.09it/s]
+Capturing batches (bs=4 avail_mem=1.45 GB):  75%|███████▌  | 9/12 [00:07<00:02,  1.24it/s]
+Capturing batches (bs=3 avail_mem=1.43 GB):  75%|███████▌  | 9/12 [00:07<00:02,  1.24it/s]
+Capturing batches (bs=3 avail_mem=1.43 GB):  83%|████████▎ | 10/12 [00:07<00:01,  1.56it/s]
+Capturing batches (bs=2 avail_mem=1.42 GB):  83%|████████▎ | 10/12 [00:07<00:01,  1.56it/s]
+Capturing batches (bs=2 avail_mem=1.42 GB):  92%|█████████▏| 11/12 [00:09<00:00,  1.10it/s]
+Capturing batches (bs=1 avail_mem=1.38 GB):  92%|█████████▏| 11/12 [00:09<00:00,  1.10it/s]
+Capturing batches (bs=1 avail_mem=1.38 GB): 100%|██████████| 12/12 [00:11<00:00,  1.20s/it]
+Capturing batches (bs=1 avail_mem=1.38 GB): 100%|██████████| 12/12 [00:11<00:00,  1.08it/s]
+[2026-08-15 00:18:36 TP0] Capture target verify CUDA graph end. elapsed=12.13 s, mem usage=0.39 GB, avail mem=1.37 GB.
+[2026-08-15 00:18:36 TP0] Disable prefill CUDA graph because some layers do not apply Standard GQA
+[2026-08-15 00:18:36 TP0] Capture draft decode CUDA graph begin. backend=full, num_tokens_per_req=1, bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16], avail mem=1.37 GB
+[2026-08-15 00:18:36 TP3] Capture target verify CUDA graph end. elapsed=11.98 s, mem usage=0.39 GB, avail mem=1.37 GB.
+[2026-08-15 00:18:36 TP1] Capture target verify CUDA graph end. elapsed=12.08 s, mem usage=0.39 GB, avail mem=1.37 GB.
+[2026-08-15 00:18:37 TP2] Capture target verify CUDA graph end. elapsed=12.34 s, mem usage=0.39 GB, avail mem=1.37 GB.
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+Capturing batches (bs=16 avail_mem=1.32 GB):   0%|          | 0/12 [00:00<?, ?it/s][2026-08-15 00:18:37 TP0] multimem all-gather disabled (no multicast for world_size=4)
+[2026-08-15 00:18:37 TP2] multimem all-gather disabled (no multicast for world_size=4)
+[2026-08-15 00:18:37 TP1] multimem all-gather disabled (no multicast for world_size=4)
+[2026-08-15 00:18:37 TP3] multimem all-gather disabled (no multicast for world_size=4)
+
+Capturing batches (bs=16 avail_mem=1.32 GB):   8%|▊         | 1/12 [00:00<00:05,  1.93it/s]
+Capturing batches (bs=14 avail_mem=1.21 GB):   8%|▊         | 1/12 [00:00<00:05,  1.93it/s]
+Capturing batches (bs=12 avail_mem=1.19 GB):   8%|▊         | 1/12 [00:00<00:05,  1.93it/s]
+Capturing batches (bs=10 avail_mem=1.19 GB):   8%|▊         | 1/12 [00:00<00:05,  1.93it/s]
+Capturing batches (bs=10 avail_mem=1.19 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.35it/s]
+Capturing batches (bs=8 avail_mem=1.17 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.35it/s] 
+Capturing batches (bs=7 avail_mem=1.15 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.35it/s]
+Capturing batches (bs=6 avail_mem=1.13 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.35it/s]
+Capturing batches (bs=5 avail_mem=1.11 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.35it/s]
+Capturing batches (bs=5 avail_mem=1.11 GB):  67%|██████▋   | 8/12 [00:00<00:00, 13.92it/s]
+Capturing batches (bs=4 avail_mem=1.11 GB):  67%|██████▋   | 8/12 [00:00<00:00, 13.92it/s]
+Capturing batches (bs=3 avail_mem=1.09 GB):  67%|██████▋   | 8/12 [00:00<00:00, 13.92it/s]
+Capturing batches (bs=2 avail_mem=1.07 GB):  67%|██████▋   | 8/12 [00:00<00:00, 13.92it/s]
+Capturing batches (bs=1 avail_mem=1.05 GB):  67%|██████▋   | 8/12 [00:00<00:00, 13.92it/s]
+Capturing batches (bs=1 avail_mem=1.05 GB): 100%|██████████| 12/12 [00:00<00:00, 19.24it/s]
+Capturing batches (bs=1 avail_mem=1.05 GB): 100%|██████████| 12/12 [00:00<00:00, 13.38it/s]
+[2026-08-15 00:18:38 TP0] Capture draft decode CUDA graph end. elapsed=1.84 s, mem usage=0.35 GB, avail mem=1.03 GB.
+[2026-08-15 00:18:38 TP0] Capture draft extend CUDA graph begin. backend=full, num_tokens_per_req=4, bs=[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16], avail mem=1.03 GB
+
+  0%|          | 0/12 [00:00<?, ?it/s]
+Capturing batches (bs=16 avail_mem=0.97 GB):   0%|          | 0/12 [00:00<?, ?it/s]
+Capturing batches (bs=16 avail_mem=0.97 GB):   8%|▊         | 1/12 [00:00<00:05,  1.96it/s]
+Capturing batches (bs=14 avail_mem=0.87 GB):   8%|▊         | 1/12 [00:00<00:05,  1.96it/s]
+Capturing batches (bs=12 avail_mem=0.84 GB):   8%|▊         | 1/12 [00:00<00:05,  1.96it/s]
+Capturing batches (bs=10 avail_mem=0.84 GB):   8%|▊         | 1/12 [00:00<00:05,  1.96it/s]
+Capturing batches (bs=10 avail_mem=0.84 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.93it/s]
+Capturing batches (bs=8 avail_mem=0.82 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.93it/s] 
+Capturing batches (bs=7 avail_mem=0.82 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.93it/s]
+Capturing batches (bs=6 avail_mem=0.82 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.93it/s]
+Capturing batches (bs=5 avail_mem=0.80 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.93it/s]
+Capturing batches (bs=4 avail_mem=0.80 GB):  33%|███▎      | 4/12 [00:00<00:01,  7.93it/s]
+Capturing batches (bs=4 avail_mem=0.80 GB):  75%|███████▌  | 9/12 [00:00<00:00, 17.06it/s]
+Capturing batches (bs=3 avail_mem=0.78 GB):  75%|███████▌  | 9/12 [00:00<00:00, 17.06it/s]
+Capturing batches (bs=2 avail_mem=0.78 GB):  75%|███████▌  | 9/12 [00:00<00:00, 17.06it/s]
+Capturing batches (bs=1 avail_mem=0.78 GB):  75%|███████▌  | 9/12 [00:00<00:00, 17.06it/s]
+Capturing batches (bs=1 avail_mem=0.78 GB): 100%|██████████| 12/12 [00:00<00:00, 15.23it/s]
+[2026-08-15 00:18:40 TP1] Tree cache initialized: source=default impl=ChunkCache hybrid_swa=False hybrid_ssm=True hierarchical=False streaming_wrapped=False
+[2026-08-15 00:18:40 TP1] EPD MMReceiver: using transport_mode=http
+[2026-08-15 00:18:40 TP1] Scheduler TP rank 1 reuses ZMQ embedding port 33619
+[2026-08-15 00:18:40 TP0] Capture draft extend CUDA graph end. elapsed=1.73 s, mem usage=0.27 GB, avail mem=0.76 GB.
+[2026-08-15 00:18:40 TP0] max_total_num_tokens=684433, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=16, context_len=262144, available_gpu_mem=0.76 GB
+[2026-08-15 00:18:40 TP0] Tree cache initialized: source=default impl=ChunkCache hybrid_swa=False hybrid_ssm=True hierarchical=False streaming_wrapped=False
+[2026-08-15 00:18:40 TP1] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:18:40 TP0] EPD MMReceiver: using transport_mode=http
+[2026-08-15 00:18:40 TP0] Scheduler TP rank 0 reuses ZMQ embedding port 45299
+[2026-08-15 00:18:40 TP0] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:18:40 TP3] Tree cache initialized: source=default impl=ChunkCache hybrid_swa=False hybrid_ssm=True hierarchical=False streaming_wrapped=False
+[2026-08-15 00:18:40 TP3] EPD MMReceiver: using transport_mode=http
+[2026-08-15 00:18:40 TP3] Scheduler TP rank 3 reuses ZMQ embedding port 33445
+[2026-08-15 00:18:40 TP3] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:18:40 TP2] Tree cache initialized: source=default impl=ChunkCache hybrid_swa=False hybrid_ssm=True hierarchical=False streaming_wrapped=False
+[2026-08-15 00:18:40 TP2] EPD MMReceiver: using transport_mode=http
+[2026-08-15 00:18:40 TP2] Scheduler TP rank 2 reuses ZMQ embedding port 39357
+[2026-08-15 00:18:40 TP2] Ignore import error when loading sglang.srt.multimodal.processors.sarashina2_vision: cannot import name 'MultimodalDataItem' from 'sglang.srt.managers.mm_utils' ($ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/mm_utils.py)
+[2026-08-15 00:18:42 TP1] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:18:42 TP0] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:18:42 TP3] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:18:43 TP2] Multimodal data loading enabled with 16 worker threads (auto).
+[2026-08-15 00:18:44] Engine startup timings (s): load_weight=7.68, kv_cache_allocation=0.80, scheduler_e2e=49.00, cuda_graph={prefill=13.90, decode=0.00, target_verify=12.34, draft_prefill=0.00, draft_decode=1.96, draft_extend=1.73}, tokenizer_e2e=57.68
+[2026-08-15 00:18:44] INFO:     Started server process [758499]
+[2026-08-15 00:18:44] INFO:     Waiting for application startup.
+[2026-08-15 00:18:44] Using default chat sampling params from model generation config: {'temperature': 1.0, 'top_k': 20, 'top_p': 0.95}
+[2026-08-15 00:18:44] INFO:     Application startup complete.
+[2026-08-15 00:18:44] INFO:     Uvicorn running on http://127.0.0.1:18081 (Press CTRL+C to quit)
+[2026-08-15 00:18:44] INFO:     127.0.0.1:39178 - "GET /health HTTP/1.1" 503 Service Unavailable
+[2026-08-15 00:18:45] INFO:     127.0.0.1:39190 - "GET /model_info HTTP/1.1" 200 OK
+[2026-08-15 00:18:45 TP0] Triton kernel 'write_req_to_token_pool_triton' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel 'compute_position_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel 'write_req_to_token_pool_triton' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel 'write_req_to_token_pool_triton' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel '_fused_slot_clear_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel 'compute_position_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel 'compute_position_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel '_fused_slot_clear_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel 'write_req_to_token_pool_triton' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel '_fused_slot_clear_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel 'compute_position_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel '_fused_slot_clear_kernel' device-loaded after serving started (free device mem: 0.76 GiB). Pre-load it during engine init to avoid CUDA OOM.
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+[2026-08-15 00:18:45 TP0] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel '_gather_rows_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel '_gather_rows_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel '_gather_rows_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel '_gather_rows_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel 'assign_draft_cache_locs_contiguous' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel 'assign_draft_cache_locs_contiguous' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel 'assign_draft_cache_locs_contiguous' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel 'assign_draft_cache_locs_contiguous' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel 'assign_extend_cache_locs_uniform' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel 'assign_extend_cache_locs_uniform' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel 'assign_extend_cache_locs_uniform' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel 'assign_extend_cache_locs_uniform' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel '_fused_mamba_state_scatter_with_mask_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel '_fused_mamba_state_scatter_with_mask_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel '_fused_mamba_state_scatter_with_mask_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel '_fused_mamba_state_scatter_with_mask_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel '_fused_conv_window_scatter_multi_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel '_fused_conv_window_scatter_multi_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel 'fill_bonus_tokens' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel 'fill_bonus_tokens' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel '_fused_conv_window_scatter_multi_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel '_fused_conv_window_scatter_multi_kernel' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Prefill batch, #new-seq: 1, #new-token: 6, #cached-token: 0, full token usage: 0.00, mamba usage: 0.06, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: True, input throughput (token/s): 1.14
+[2026-08-15 00:18:45 TP3] Triton kernel 'fill_bonus_tokens' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel 'fill_bonus_tokens' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP1] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP0] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP3] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45 TP2] Triton kernel 'assign_req_to_token_pool' device-loaded after serving started (free device mem: 0.73 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:45] INFO:     127.0.0.1:39192 - "POST /generate HTTP/1.1" 200 OK
+[2026-08-15 00:18:45] The server is fired up and ready to roll!
+[2026-08-15 00:18:46 TP0] Triton kernel '_causal_conv1d_fwd_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP0] Triton kernel 'fused_gdn_gating_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP1] Triton kernel '_causal_conv1d_fwd_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP2] Triton kernel '_causal_conv1d_fwd_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP3] Triton kernel '_causal_conv1d_fwd_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP1] Triton kernel 'fused_gdn_gating_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP0] Triton kernel '_layer_norm_fwd_1pass_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP2] Triton kernel 'fused_gdn_gating_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP3] Triton kernel 'fused_gdn_gating_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP1] Triton kernel '_layer_norm_fwd_1pass_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP2] Triton kernel '_layer_norm_fwd_1pass_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP3] Triton kernel '_layer_norm_fwd_1pass_kernel' device-loaded after serving started (free device mem: 0.71 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:46 TP0] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 0.97
+[2026-08-15 00:18:47] INFO:     127.0.0.1:39198 - "GET /health HTTP/1.1" 200 OK
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+[2026-08-15 00:18:47 TP0] Prefill batch, #new-seq: 1, #new-token: 62, #cached-token: 0, full token usage: 0.00, mamba usage: 0.06, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: True, input throughput (token/s): 51.20
+[2026-08-15 00:18:47] INFO:     127.0.0.1:39204 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-08-15 00:18:48 TP0] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 3.13
+[2026-08-15 00:18:48] INFO:     127.0.0.1:39210 - "GET /health HTTP/1.1" 200 OK
+$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/entrypoints/http_server.py:450: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+  return await original_handler(ORJSONRequest(request.scope, request.receive))
+[2026-08-15 00:18:49] INFO:     127.0.0.1:39220 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-08-15 00:18:49 TP0] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 0.95
+[2026-08-15 00:18:50] INFO:     127.0.0.1:39232 - "GET /health HTTP/1.1" 200 OK
+[2026-08-15 00:18:50 TP0] Triton kernel 'chunk_gated_delta_rule_fwd_kernel_h_blockdim64' device-loaded after serving started (free device mem: 0.22 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:50 TP2] Triton kernel 'chunk_gated_delta_rule_fwd_kernel_h_blockdim64' device-loaded after serving started (free device mem: 0.22 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:50 TP3] Triton kernel 'chunk_gated_delta_rule_fwd_kernel_h_blockdim64' device-loaded after serving started (free device mem: 0.22 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:50 TP1] Triton kernel 'chunk_gated_delta_rule_fwd_kernel_h_blockdim64' device-loaded after serving started (free device mem: 0.22 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:50 TP0] Triton kernel '_fused_sigmoid_mul_kernel' device-loaded after serving started (free device mem: 0.12 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:50 TP2] Triton kernel '_fused_sigmoid_mul_kernel' device-loaded after serving started (free device mem: 0.12 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:50 TP3] Triton kernel '_fused_sigmoid_mul_kernel' device-loaded after serving started (free device mem: 0.12 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:50 TP1] Triton kernel '_fused_sigmoid_mul_kernel' device-loaded after serving started (free device mem: 0.12 GiB). Pre-load it during engine init to avoid CUDA OOM.
+[2026-08-15 00:18:58 TP0] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.01, mamba usage: 0.06, #running-req: 0, #queue-req: 0, #pending-token: 30, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 926.78
+[2026-08-15 00:18:58 TP0] Prefill batch, #new-seq: 1, #new-token: 30, #cached-token: 0, full token usage: 0.01, mamba usage: 0.06, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: True, input throughput (token/s): 2073.31
+[2026-08-15 00:18:58] INFO:     127.0.0.1:39234 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[2026-08-15 00:18:58 TP0] Decode batch, #running-req: 1, #full token: 8288, full token usage: 0.01, mamba num: 1, mamba usage: 0.06, accept len: 2.25, accept rate: 0.42, waiting-image-req: 0, cuda graph: True, gen throughput (token/s): 4.87, #queue-req: 0
+[2026-08-15 00:18:59 TP0] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 0.78
+[2026-08-15 00:19:00] INFO:     127.0.0.1:39658 - "GET /health HTTP/1.1" 200 OK
+[2026-08-15 00:19:00] INFO:     127.0.0.1:39662 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-08-15 00:19:00] INFO:     127.0.0.1:39670 - "POST /tokenize HTTP/1.1" 200 OK
+[2026-08-15 00:19:00 TP0] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 0, full token usage: 0.00, mamba usage: 0.00, #running-req: 0, #queue-req: 0, #pending-token: 0, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 0.75
+[2026-08-15 00:19:01] INFO:     127.0.0.1:39686 - "GET /health HTTP/1.1" 200 OK
+[rank3]:[W815 00:19:09.109815387 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 3 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[rank0]:[W815 00:19:09.109835464 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[rank1]:[W815 00:19:09.110060330 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 1 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[rank2]:[W815 00:19:09.110406642 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 2 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[2026-08-15 00:19:17 TP0] Prefill batch, #new-seq: 1, #new-token: 8192, #cached-token: 0, full token usage: 0.02, mamba usage: 0.06, #running-req: 0, #queue-req: 0, #pending-token: 24580, waiting-image-req: 0, cuda graph: False, input throughput (token/s): 494.52
+[rank3]:[W815 00:19:17.993376924 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 3 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[rank1]:[W815 00:19:17.993596620 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 1 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[rank0]:[W815 00:19:17.993616988 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[rank2]:[W815 00:19:17.993883311 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 2 while trying to map 20971520 bytes (free: 8192000, total: 25295323136).
+[rank3]:[W815 00:19:25.745813991 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 3 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[rank1]:[W815 00:19:25.745833517 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 1 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[rank0]:[W815 00:19:25.746018891 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[rank2]:[W815 00:19:25.746552609 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 2 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[rank3]:[W815 00:19:25.888189939 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 3 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[rank2]:[W815 00:19:25.900594011 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 2 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[rank1]:[W815 00:19:25.903545297 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 1 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[rank0]:[W815 00:19:25.903547872 CUDACachingAllocator.cpp:508] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10289152, total: 25295323136).
+[2026-08-15 00:19:25 TP3] Scheduler hit an exception: Traceback (most recent call last):
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 5058, in run_scheduler_process
+    scheduler.run_event_loop()
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1694, in run_event_loop
+    dispatch_event_loop(self)
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 4906, in dispatch_event_loop
+    scheduler.event_loop_overlap()
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1796, in event_loop_overlap
+    batch_result = self.run_batch(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/utils/nvtx_utils.py", line 109, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 3691, in run_batch
+    batch_result = self.model_worker.forward_batch_generation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 1136, in forward_batch_generation
+    self.draft_worker._draft_extend_for_prefill(
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 813, in _draft_extend_for_prefill
+    logits_output = self.draft_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1550, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1737, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 206, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 341, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5_mtp.py", line 219, in forward
+    hidden_states = self.model(
+                    ^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1437, in forward
+    hidden_states, residual = layer(
+                              ^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1237, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen2_moe.py", line 216, in forward
+    x, _ = self.down_proj(x)
+           ^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/linear.py", line 1603, in forward
+    output_parallel = self.quant_method.apply(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/quantization/unquant.py", line 265, in apply
+    return F.linear(x, layer.weight, bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 3 has a total capacity of 23.56 GiB of which 69.81 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allocated memory 22.14 GiB is allocated by PyTorch, with 279.12 MiB allocated in private pools (e.g., CUDA Graphs), and 268.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+
+[2026-08-15 00:19:25] SIGQUIT received. signum=None, frame=None. It usually means one child failed.
+[2026-08-15 00:19:25] Sleeping 5 seconds before crash diagnostics to let GPU activity settle.
+[2026-08-15 00:19:25 TP2] Scheduler hit an exception: Traceback (most recent call last):
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 5058, in run_scheduler_process
+    scheduler.run_event_loop()
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1694, in run_event_loop
+    dispatch_event_loop(self)
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 4906, in dispatch_event_loop
+    scheduler.event_loop_overlap()
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1796, in event_loop_overlap
+    batch_result = self.run_batch(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/utils/nvtx_utils.py", line 109, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 3691, in run_batch
+    batch_result = self.model_worker.forward_batch_generation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 1136, in forward_batch_generation
+    self.draft_worker._draft_extend_for_prefill(
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 813, in _draft_extend_for_prefill
+    logits_output = self.draft_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1550, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1737, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 206, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 341, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5_mtp.py", line 219, in forward
+    hidden_states = self.model(
+                    ^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1437, in forward
+    hidden_states, residual = layer(
+                              ^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1237, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen2_moe.py", line 216, in forward
+    x, _ = self.down_proj(x)
+           ^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/linear.py", line 1603, in forward
+    output_parallel = self.quant_method.apply(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/quantization/unquant.py", line 265, in apply
+    return F.linear(x, layer.weight, bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 2 has a total capacity of 23.56 GiB of which 69.81 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allocated memory 22.14 GiB is allocated by PyTorch, with 279.12 MiB allocated in private pools (e.g., CUDA Graphs), and 268.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+
+[2026-08-15 00:19:25 TP0] Scheduler hit an exception: Traceback (most recent call last):
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 5058, in run_scheduler_process
+    scheduler.run_event_loop()
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1694, in run_event_loop
+    dispatch_event_loop(self)
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 4906, in dispatch_event_loop
+    scheduler.event_loop_overlap()
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1796, in event_loop_overlap
+    batch_result = self.run_batch(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/utils/nvtx_utils.py", line 109, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 3691, in run_batch
+    batch_result = self.model_worker.forward_batch_generation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 1136, in forward_batch_generation
+    self.draft_worker._draft_extend_for_prefill(
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 813, in _draft_extend_for_prefill
+    logits_output = self.draft_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1550, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1737, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 206, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 341, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5_mtp.py", line 219, in forward
+    hidden_states = self.model(
+                    ^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1437, in forward
+    hidden_states, residual = layer(
+                              ^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1237, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen2_moe.py", line 216, in forward
+    x, _ = self.down_proj(x)
+           ^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/linear.py", line 1603, in forward
+    output_parallel = self.quant_method.apply(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/quantization/unquant.py", line 265, in apply
+    return F.linear(x, layer.weight, bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 69.81 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allocated memory 22.14 GiB is allocated by PyTorch, with 279.12 MiB allocated in private pools (e.g., CUDA Graphs), and 268.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+
+[2026-08-15 00:19:25 TP1] Scheduler hit an exception: Traceback (most recent call last):
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 5058, in run_scheduler_process
+    scheduler.run_event_loop()
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1694, in run_event_loop
+    dispatch_event_loop(self)
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 4906, in dispatch_event_loop
+    scheduler.event_loop_overlap()
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 1796, in event_loop_overlap
+    batch_result = self.run_batch(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/utils/nvtx_utils.py", line 109, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/managers/scheduler.py", line 3691, in run_batch
+    batch_result = self.model_worker.forward_batch_generation(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 1136, in forward_batch_generation
+    self.draft_worker._draft_extend_for_prefill(
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/speculative/eagle_worker_v2.py", line 813, in _draft_extend_for_prefill
+    logits_output = self.draft_runner.forward(forward_batch).logits_output
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1550, in forward
+    output = self._forward_raw(
+             ^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/model_runner.py", line 1737, in _forward_raw
+    ret = self.eager_runner.execute(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 206, in execute
+    return self._execute_extend(forward_batch, pp_proxy_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/model_executor/runner/eager_runner.py", line 341, in _execute_extend
+    ret = model_runner.model.forward(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5_mtp.py", line 219, in forward
+    hidden_states = self.model(
+                    ^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1437, in forward
+    hidden_states, residual = layer(
+                              ^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen3_5.py", line 1237, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/models/qwen2_moe.py", line 216, in forward
+    x, _ = self.down_proj(x)
+           ^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/linear.py", line 1603, in forward
+    output_parallel = self.quant_method.apply(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$ENGINES/sglang-nvfp4-ampere/python/sglang/srt/layers/quantization/unquant.py", line 265, in apply
+    return F.linear(x, layer.weight, bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 1 has a total capacity of 23.56 GiB of which 69.81 MiB is free. Including non-PyTorch memory, this process has 23.48 GiB memory in use. Of the allocated memory 22.14 GiB is allocated by PyTorch, with 279.12 MiB allocated in private pools (e.g., CUDA Graphs), and 268.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+
+[rank0]:[W815 00:19:26.341155488 ProcessGroupNCCL.cpp:1624] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[2026-08-15 00:19:30] No live scheduler processes found; skipping py-spy and CUDA coredump.
+[2026-08-15 00:19:30] kill_process_tree called: parent_pid=758499, include_parent=True, pid=758499

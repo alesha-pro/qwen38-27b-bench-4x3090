@@ -1,0 +1,8 @@
+warmup → http://127.0.0.1:18000/v1/chat/completions
+--- concurrency 1
+{"concurrency": 1, "requests_ok": 1, "errors": [], "wall_s": 4.14, "total_tokens": 256, "aggregate_tok_s": 61.76, "decode_tok_s_median": 66.63, "ttft_p50_ms": 317.4, "ttft_max_ms": 317.4, "prompt_tokens_median": 58, "prefill_tok_s_median": 182.7, "prefill_tok_s_aggregate": 182.7}
+
+сохранено: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q4_K_M-4gpu-2026-08-14-174133/s-mtp.json
+
+=== сводка (сравнивать с Qwen3.6-27B-FP8 TP=4 220W: 61.6 decode, 505 мс TTFT, 281 tok/s @c32) ===
+c=  1  agg=   61.76  decode_med=66.63  ttft_p50=317.4 мс  | prefill 58 ток: med=182.7 agg=182.7 tok/s

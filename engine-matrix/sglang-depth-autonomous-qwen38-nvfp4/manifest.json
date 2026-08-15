@@ -1,0 +1,119 @@
+{
+  "created_or_refreshed_at": "2026-08-15T05:51:20+00:00",
+  "engine": "sglang",
+  "model": "$MODELS/Qwen3.8-27B-NVFP4",
+  "vllm": "$ENGINES/vllm-cross-kv-env/bin/vllm",
+  "sglang": "$ENGINES/sglang-nvfp4-env/bin/sglang",
+  "python": "$ENGINES/sglang-nvfp4-env/bin/python",
+  "cuda_home": "$ENGINES/sglang-nvfp4-env/lib/python3.12/site-packages/nvidia/cu13",
+  "weight_quantization": "compressed-tensors",
+  "max_model_len": 262144,
+  "sweep_profile": "fast",
+  "depths": [
+    8192,
+    32768,
+    65536,
+    131072,
+    253952
+  ],
+  "concurrencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "concurrencies_by_depth": {
+    "8192": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "32768": [
+      1
+    ],
+    "65536": [
+      1
+    ],
+    "131072": [
+      1
+    ],
+    "253952": [
+      1
+    ]
+  },
+  "execution_batches": [
+    {
+      "depth": 8192,
+      "concurrencies": [
+        1
+      ]
+    },
+    {
+      "depth": 32768,
+      "concurrencies": [
+        1
+      ]
+    },
+    {
+      "depth": 65536,
+      "concurrencies": [
+        1
+      ]
+    },
+    {
+      "depth": 131072,
+      "concurrencies": [
+        1
+      ]
+    },
+    {
+      "depth": 253952,
+      "concurrencies": [
+        1
+      ]
+    },
+    {
+      "depth": 8192,
+      "concurrencies": [
+        2,
+        4,
+        8,
+        16
+      ]
+    }
+  ],
+  "config_warmups": false,
+  "config_warmup_concurrencies": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "depth_warmups": false,
+  "generation_tokens": 128,
+  "gpu_memory_utilization": 0.9,
+  "configs": [
+    {
+      "tp": 2,
+      "kv": "bf16",
+      "mtp": true,
+      "name": "tp2-bf16-mtp4"
+    }
+  ],
+  "metrics": {
+    "decode_tok_s_median": "per-request steady decode after first token",
+    "aggregate_decode_window_tok_s": "all post-first tokens divided by shared decode window",
+    "aggregate_active_decode_rate_sum": "sum of per-request steady decode rates",
+    "aggregate_tok_s": "end-to-end output throughput including prefill"
+  },
+  "notes": [
+    "No run uses eager mode; compile and CUDA graphs stay enabled.",
+    "vLLM uses TRITON_ATTN for BF16 KV and FLASHINFER for FP8 KV; SGLang uses its default FlashInfer attention backend.",
+    "Fast profile measures the full concurrency knee at 8K and single-stream decay at every deeper context.",
+    "Every completed point is fsync'd and atomically renamed for reboot-safe resume."
+  ]
+}

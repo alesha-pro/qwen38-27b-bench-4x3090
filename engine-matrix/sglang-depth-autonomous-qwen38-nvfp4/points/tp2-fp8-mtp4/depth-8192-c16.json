@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "finished_at": "2026-08-15T00:02:28+00:00",
+  "attempts": 1,
+  "config": {
+    "tp": 2,
+    "kv": "fp8",
+    "mtp": true,
+    "name": "tp2-fp8-mtp4"
+  },
+  "depth_requested": 8192,
+  "tokenized_prompt_count_probe": 8217,
+  "concurrency": 16,
+  "generation_tokens": 128,
+  "row": {
+    "concurrency": 16,
+    "requests_ok": 16,
+    "errors": [],
+    "wall_s": 83.56,
+    "total_tokens": 1548,
+    "aggregate_tok_s": 18.52,
+    "decode_tok_s_median": 16.27,
+    "ttft_p50_ms": 43102.0,
+    "ttft_max_ms": 82096.7,
+    "decode_window_s": 74.383,
+    "decode_tokens_after_first": 1532,
+    "aggregate_decode_window_tok_s": 20.6,
+    "aggregate_active_decode_rate_sum": 449.7,
+    "prompt_tokens_median": 8226,
+    "prefill_tok_s_median": 191.6,
+    "prefill_tok_s_aggregate": 1603.2
+  },
+  "error": null
+}

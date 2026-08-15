@@ -1,0 +1,45 @@
+0.00.169.922 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.287.438 W srv  llama_server: -----------------
+0.00.287.442 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.287.442 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.287.443 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.287.443 W srv  llama_server: -----------------
+0.00.288.812 I srv    load_model: loading model '$MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q4_K_M.gguf'
+0.01.088.131 W common_fit_params: failed to fit params to free device memory: n_gpu_layers already set by user to 999, abort
+0.01.726.538 W model has unused tensor blk.64.attn_norm.weight (size = 20480 bytes) -- ignoring
+0.01.726.552 W model has unused tensor blk.64.post_attention_norm.weight (size = 20480 bytes) -- ignoring
+0.01.726.565 W model has unused tensor blk.64.attn_q.weight (size = 35389440 bytes) -- ignoring
+0.01.726.571 W model has unused tensor blk.64.attn_k.weight (size = 2949120 bytes) -- ignoring
+0.01.726.576 W model has unused tensor blk.64.attn_v.weight (size = 4300800 bytes) -- ignoring
+0.01.726.593 W model has unused tensor blk.64.attn_output.weight (size = 17694720 bytes) -- ignoring
+0.01.726.598 W model has unused tensor blk.64.attn_q_norm.weight (size = 1024 bytes) -- ignoring
+0.01.726.604 W model has unused tensor blk.64.attn_k_norm.weight (size = 1024 bytes) -- ignoring
+0.01.726.610 W model has unused tensor blk.64.ffn_gate.weight (size = 50135040 bytes) -- ignoring
+0.01.726.615 W model has unused tensor blk.64.ffn_down.weight (size = 73113600 bytes) -- ignoring
+0.01.726.620 W model has unused tensor blk.64.ffn_up.weight (size = 50135040 bytes) -- ignoring
+0.01.726.628 W model has unused tensor blk.64.nextn.eh_proj.weight (size = 55705600 bytes) -- ignoring
+0.01.726.634 W model has unused tensor blk.64.nextn.enorm.weight (size = 20480 bytes) -- ignoring
+0.01.726.639 W model has unused tensor blk.64.nextn.hnorm.weight (size = 20480 bytes) -- ignoring
+0.01.726.654 W model has unused tensor blk.64.nextn.shared_head_norm.weight (size = 20480 bytes) -- ignoring
+0.05.631.378 I cmn          init: llama threadpool init, n_threads = 18
+$ENGINES/llama.cpp-rw/ggml/src/ggml-cuda/ggml-cuda.cu:106: CUDA error
+0.05.741.666 E CUDA error: out of memory
+0.05.741.679 E   current device: 0, in function ggml_cuda_graph_evaluate_and_capture at $ENGINES/llama.cpp-rw/ggml/src/ggml-cuda/ggml-cuda.cu:4203
+0.05.741.681 E   cudaGraphInstantiate(&graph->instance, graph->graph, __null, __null, 0)
+$ENGINES/llama.cpp-rw/build/bin/libggml-base.so.0(+0x1c81b)[0x7fb6f18f481b]
+$ENGINES/llama.cpp-rw/build/bin/libggml-base.so.0(ggml_print_backtrace+0x21f)[0x7fb6f18f4c9f]
+$ENGINES/llama.cpp-rw/build/bin/libggml-base.so.0(ggml_abort+0x152)[0x7fb6f18f4e72]
+$ENGINES/llama.cpp-rw/build/bin/libggml-cuda.so.0(+0x287166)[0x7fb6ee20f166]
+$ENGINES/llama.cpp-rw/build/bin/libggml-cuda.so.0(+0x29c689)[0x7fb6ee224689]
+$ENGINES/llama.cpp-rw/build/bin/libggml-base.so.0(ggml_backend_sched_graph_compute_async+0x837)[0x7fb6f19141c7]
+$ENGINES/llama.cpp-rw/build/bin/libllama.so.0(_ZN13llama_context13graph_computeEP11ggml_cgraphb+0xa1)[0x7fb6f1aa2b01]
+$ENGINES/llama.cpp-rw/build/bin/libllama.so.0(_ZN13llama_context14process_ubatchERK12llama_ubatch14llm_graph_typeP22llama_memory_context_iR11ggml_status+0x11b)[0x7fb6f1aa5a8b]
+$ENGINES/llama.cpp-rw/build/bin/libllama.so.0(_ZN13llama_context6decodeERK11llama_batch+0x4b7)[0x7fb6f1aacdf7]
+$ENGINES/llama.cpp-rw/build/bin/libllama.so.0(llama_decode+0x10)[0x7fb6f1aae1a0]
+$ENGINES/llama.cpp-rw/build/bin/libllama-common.so.0(_Z25common_context_can_seq_rmP13llama_context+0xba)[0x7fb6f20df32a]
+$ENGINES/llama.cpp-rw/build/bin/libllama-server-impl.so(_ZN19server_context_impl10load_modelER13common_params+0xdb7)[0x7fb6f29974c7]
+$ENGINES/llama.cpp-rw/build/bin/libllama-server-impl.so(_Z12llama_serverR13common_paramsiPPc+0x4208)[0x7fb6f28c5858]
+$ENGINES/llama.cpp-rw/build/bin/libllama-server-impl.so(_Z12llama_serveriPPc+0xdf)[0x7fb6f28c70df]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7fb6f2385d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7fb6f2385e40]
+$ENGINES/llama.cpp-rw/build/bin/llama-server(+0x1295)[0x556a0392e295]

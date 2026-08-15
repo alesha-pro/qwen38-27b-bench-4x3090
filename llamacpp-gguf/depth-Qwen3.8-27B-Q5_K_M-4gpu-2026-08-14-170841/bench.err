@@ -1,0 +1,99 @@
+ggml_cuda_init: found 4 CUDA devices (Total VRAM: 96494 MiB):
+  Device 0: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 1: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 2: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 3: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+llama-bench: benchmark 1/2: starting
+llama-bench: benchmark 1/2: warmup prompt run
+llama-bench: benchmark 1/2: prompt run 1/3
+llama-bench: benchmark 1/2: prompt run 2/3
+llama-bench: benchmark 1/2: prompt run 3/3
+llama-bench: benchmark 2/2: starting
+llama-bench: benchmark 2/2: warmup generation run
+llama-bench: benchmark 2/2: generation run 1/3
+llama-bench: benchmark 2/2: generation run 2/3
+llama-bench: benchmark 2/2: generation run 3/3
+ggml_cuda_init: found 4 CUDA devices (Total VRAM: 96494 MiB):
+  Device 0: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 1: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 2: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 3: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+llama-bench: benchmark 1/2: starting
+llama-bench: benchmark 1/2: warmup prompt run
+llama-bench: benchmark 1/2: depth run 1/3
+llama-bench: benchmark 1/2: prompt run 1/3
+llama-bench: benchmark 1/2: depth run 2/3 (cached)
+llama-bench: benchmark 1/2: prompt run 2/3
+llama-bench: benchmark 1/2: depth run 3/3 (cached)
+llama-bench: benchmark 1/2: prompt run 3/3
+llama-bench: benchmark 2/2: starting
+llama-bench: benchmark 2/2: warmup generation run
+llama-bench: benchmark 2/2: depth run 1/3 (cached)
+llama-bench: benchmark 2/2: generation run 1/3
+llama-bench: benchmark 2/2: depth run 2/3 (cached)
+llama-bench: benchmark 2/2: generation run 2/3
+llama-bench: benchmark 2/2: depth run 3/3 (cached)
+llama-bench: benchmark 2/2: generation run 3/3
+ggml_cuda_init: found 4 CUDA devices (Total VRAM: 96494 MiB):
+  Device 0: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 1: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 2: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 3: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+llama-bench: benchmark 1/2: starting
+llama-bench: benchmark 1/2: warmup prompt run
+llama-bench: benchmark 1/2: depth run 1/3
+llama-bench: benchmark 1/2: prompt run 1/3
+llama-bench: benchmark 1/2: depth run 2/3 (cached)
+llama-bench: benchmark 1/2: prompt run 2/3
+llama-bench: benchmark 1/2: depth run 3/3 (cached)
+llama-bench: benchmark 1/2: prompt run 3/3
+llama-bench: benchmark 2/2: starting
+llama-bench: benchmark 2/2: warmup generation run
+llama-bench: benchmark 2/2: depth run 1/3 (cached)
+llama-bench: benchmark 2/2: generation run 1/3
+llama-bench: benchmark 2/2: depth run 2/3 (cached)
+llama-bench: benchmark 2/2: generation run 2/3
+llama-bench: benchmark 2/2: depth run 3/3 (cached)
+llama-bench: benchmark 2/2: generation run 3/3
+ggml_cuda_init: found 4 CUDA devices (Total VRAM: 96494 MiB):
+  Device 0: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 1: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 2: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 3: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+llama-bench: benchmark 1/2: starting
+llama-bench: benchmark 1/2: warmup prompt run
+llama-bench: benchmark 1/2: depth run 1/3
+llama-bench: benchmark 1/2: prompt run 1/3
+llama-bench: benchmark 1/2: depth run 2/3 (cached)
+llama-bench: benchmark 1/2: prompt run 2/3
+llama-bench: benchmark 1/2: depth run 3/3 (cached)
+llama-bench: benchmark 1/2: prompt run 3/3
+llama-bench: benchmark 2/2: starting
+llama-bench: benchmark 2/2: warmup generation run
+llama-bench: benchmark 2/2: depth run 1/3 (cached)
+llama-bench: benchmark 2/2: generation run 1/3
+llama-bench: benchmark 2/2: depth run 2/3 (cached)
+llama-bench: benchmark 2/2: generation run 2/3
+llama-bench: benchmark 2/2: depth run 3/3 (cached)
+llama-bench: benchmark 2/2: generation run 3/3
+ggml_cuda_init: found 4 CUDA devices (Total VRAM: 96494 MiB):
+  Device 0: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 1: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 2: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+  Device 3: NVIDIA GeForce RTX 3090, compute capability 8.6, VMM: yes, VRAM: 24123 MiB
+llama-bench: benchmark 1/2: starting
+llama-bench: benchmark 1/2: warmup prompt run
+llama-bench: benchmark 1/2: depth run 1/3
+llama-bench: benchmark 1/2: prompt run 1/3
+llama-bench: benchmark 1/2: depth run 2/3 (cached)
+llama-bench: benchmark 1/2: prompt run 2/3
+llama-bench: benchmark 1/2: depth run 3/3 (cached)
+llama-bench: benchmark 1/2: prompt run 3/3
+llama-bench: benchmark 2/2: starting
+llama-bench: benchmark 2/2: warmup generation run
+llama-bench: benchmark 2/2: depth run 1/3 (cached)
+llama-bench: benchmark 2/2: generation run 1/3
+llama-bench: benchmark 2/2: depth run 2/3 (cached)
+llama-bench: benchmark 2/2: generation run 2/3
+llama-bench: benchmark 2/2: depth run 3/3 (cached)
+llama-bench: benchmark 2/2: generation run 3/3

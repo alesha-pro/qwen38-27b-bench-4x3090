@@ -1,0 +1,116 @@
+### 20:40:55 MTP Qwen3.8-27B-Q4_K_M, 2 карт
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q4_K_M.gguf
+карт:   2, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q4_K_M-2gpu-2026-08-14-174055
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   40.98  decode_med=42.85  ttft_p50=295.5 мс  | prefill 58 ток: med=196.3 agg=196.3 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=   57.16  decode_med=61.31  ttft_p50=318.5 мс  | prefill 58 ток: med=182.1 agg=182.1 tok/s
+0.08.854.579 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.13.332.887 I slot print_timing: id  0 | task 5 | draft acceptance = 0.62406 (  166 accepted /   266 generated), mean len =  2.87
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q4_K_M-2gpu-2026-08-14-174055
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### 20:41:33 MTP Qwen3.8-27B-Q4_K_M, 4 карт
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q4_K_M.gguf
+карт:   4, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q4_K_M-4gpu-2026-08-14-174133
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   40.96  decode_med=42.9  ttft_p50=305.0 мс  | prefill 58 ток: med=190.1 agg=190.1 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=   61.76  decode_med=66.63  ttft_p50=317.4 мс  | prefill 58 ток: med=182.7 agg=182.7 tok/s
+0.08.553.546 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.12.698.609 I slot print_timing: id  0 | task 5 | draft acceptance = 0.66275 (  169 accepted /   255 generated), mean len =  2.99
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q4_K_M-4gpu-2026-08-14-174133
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### 20:42:08 MTP Qwen3.8-27B-Q5_K_M, 2 карт
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q5_K_M.gguf
+карт:   2, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q5_K_M-2gpu-2026-08-14-174208
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   36.64  decode_med=38.18  ttft_p50=307.8 мс  | prefill 58 ток: med=188.4 agg=188.4 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=   54.77  decode_med=58.74  ttft_p50=332.0 мс  | prefill 58 ток: med=174.7 agg=174.7 tok/s
+0.08.474.905 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.13.148.934 I slot print_timing: id  0 | task 5 | draft acceptance = 0.62642 (  166 accepted /   265 generated), mean len =  2.87
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q5_K_M-2gpu-2026-08-14-174208
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### 20:42:44 MTP Qwen3.8-27B-Q5_K_M, 4 карт
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q5_K_M.gguf
+карт:   4, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q5_K_M-4gpu-2026-08-14-174244
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   36.77  decode_med=38.34  ttft_p50=310.3 мс  | prefill 58 ток: med=186.9 agg=186.9 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=   54.39  decode_med=58.16  ttft_p50=322.0 мс  | prefill 58 ток: med=180.1 agg=180.1 tok/s
+0.08.677.974 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.13.385.427 I slot print_timing: id  0 | task 5 | draft acceptance = 0.57706 (  161 accepted /   279 generated), mean len =  2.73
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q5_K_M-4gpu-2026-08-14-174244
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### 20:43:20 MTP Qwen3.8-27B-Q6_K, 2 карт
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q6_K.gguf
+карт:   2, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q6_K-2gpu-2026-08-14-174320
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   32.21  decode_med=33.31  ttft_p50=293.3 мс  | prefill 58 ток: med=197.8 agg=197.8 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=   53.88  decode_med=57.65  ttft_p50=327.2 мс  | prefill 58 ток: med=177.3 agg=177.3 tok/s
+0.08.477.140 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.13.228.675 I slot print_timing: id  0 | task 5 | draft acceptance = 0.61798 (  165 accepted /   267 generated), mean len =  2.85
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q6_K-2gpu-2026-08-14-174320
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### 20:43:58 MTP Qwen3.8-27B-Q6_K, 4 карт
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q6_K.gguf
+карт:   4, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q6_K-4gpu-2026-08-14-174358
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   32.64  decode_med=33.73  ttft_p50=283.3 мс  | prefill 58 ток: med=204.7 agg=204.7 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=   55.18  decode_med=59.12  ttft_p50=325.8 мс  | prefill 58 ток: med=178.0 agg=178.0 tok/s
+0.10.885.608 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.15.525.370 I slot print_timing: id  0 | task 5 | draft acceptance = 0.59707 (  163 accepted /   273 generated), mean len =  2.77
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q6_K-4gpu-2026-08-14-174358
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### ГОТОВО 20:44:38
+отчёт пересобран

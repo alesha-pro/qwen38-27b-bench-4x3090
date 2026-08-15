@@ -1,0 +1,9 @@
+warmup → http://127.0.0.1:18000/v1/chat/completions
+калибровка промпта: запрошено 16384, вышло 11825 → 5.542 симв/токен
+--- concurrency 1
+{"concurrency": 1, "requests_ok": 1, "errors": [], "wall_s": 16.72, "total_tokens": 58, "aggregate_tok_s": 3.47, "decode_tok_s_median": 51.17, "ttft_p50_ms": 15602.9, "ttft_max_ms": 15602.9, "prompt_tokens_median": 16358, "prefill_tok_s_median": 1048.4, "prefill_tok_s_aggregate": 1048.4}
+
+сохранено: $BENCH_ROOT/output/mtpdepth-Qwen3.8-27B-Q4_K_M-1gpu-2026-08-14-153020/s-mtp-d16384.json
+
+=== сводка (сравнивать с Qwen3.6-27B-FP8 TP=4 220W: 61.6 decode, 505 мс TTFT, 281 tok/s @c32) ===
+c=  1  agg=    3.47  decode_med=51.17  ttft_p50=15602.9 мс  | prefill 16358 ток: med=1048.4 agg=1048.4 tok/s

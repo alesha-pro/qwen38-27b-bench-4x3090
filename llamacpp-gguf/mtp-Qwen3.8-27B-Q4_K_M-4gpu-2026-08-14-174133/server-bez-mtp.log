@@ -1,0 +1,43 @@
+0.00.327.790 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.794.934 W srv  llama_server: -----------------
+0.00.794.939 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.794.940 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.794.940 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.794.940 W srv  llama_server: -----------------
+0.00.796.348 I srv    load_model: loading model '$MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q4_K_M.gguf'
+0.02.475.934 W model has unused tensor blk.64.attn_norm.weight (size = 20480 bytes) -- ignoring
+0.02.475.945 W model has unused tensor blk.64.post_attention_norm.weight (size = 20480 bytes) -- ignoring
+0.02.475.959 W model has unused tensor blk.64.attn_q.weight (size = 35389440 bytes) -- ignoring
+0.02.475.964 W model has unused tensor blk.64.attn_k.weight (size = 2949120 bytes) -- ignoring
+0.02.475.969 W model has unused tensor blk.64.attn_v.weight (size = 4300800 bytes) -- ignoring
+0.02.475.986 W model has unused tensor blk.64.attn_output.weight (size = 17694720 bytes) -- ignoring
+0.02.475.991 W model has unused tensor blk.64.attn_q_norm.weight (size = 1024 bytes) -- ignoring
+0.02.475.996 W model has unused tensor blk.64.attn_k_norm.weight (size = 1024 bytes) -- ignoring
+0.02.476.001 W model has unused tensor blk.64.ffn_gate.weight (size = 50135040 bytes) -- ignoring
+0.02.476.006 W model has unused tensor blk.64.ffn_down.weight (size = 73113600 bytes) -- ignoring
+0.02.476.011 W model has unused tensor blk.64.ffn_up.weight (size = 50135040 bytes) -- ignoring
+0.02.476.019 W model has unused tensor blk.64.nextn.eh_proj.weight (size = 55705600 bytes) -- ignoring
+0.02.476.024 W model has unused tensor blk.64.nextn.enorm.weight (size = 20480 bytes) -- ignoring
+0.02.476.030 W model has unused tensor blk.64.nextn.hnorm.weight (size = 20480 bytes) -- ignoring
+0.02.476.044 W model has unused tensor blk.64.nextn.shared_head_norm.weight (size = 20480 bytes) -- ignoring
+0.06.359.191 I cmn          init: llama threadpool init, n_threads = 18
+0.06.510.898 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 8192, kv_unified = 'false'
+0.06.516.948 I srv          init: chat template supports preserving reasoning, consider enabling it via --reasoning-preserve
+0.06.516.999 I srv  llama_server: model loaded
+0.06.517.005 I srv  llama_server: listening on http://127.0.0.1:18000
+0.08.333.414 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.08.333.599 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.08.824.841 I slot print_timing: id  0 | task 0 | prompt eval time =     315.56 ms /    13 tokens (   24.27 ms per token,    41.20 tokens per second)
+0.08.824.846 I slot print_timing: id  0 | task 0 |        eval time =     175.63 ms /     8 tokens (   25.09 ms per token,    39.86 tokens per second)
+0.08.824.847 I slot print_timing: id  0 | task 0 |       total time =     491.19 ms /    21 tokens
+0.08.824.854 I slot print_timing: id  0 | task 0 |    graphs reused =          7
+0.08.824.897 I slot      release: id  0 | task 0 | stop processing: n_tokens = 20, truncated = 0
+0.08.830.060 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 866839614391
+0.08.958.722 I slot launch_slot_: id  0 | task 10 | processing task, is_child = 0
+0.12.136.403 I slot print_timing: id  0 | task 10 | n_gen =    130, tg =  42.92 t/s, tg_3s =  43.25 t/s
+0.15.075.263 I slot print_timing: id  0 | task 10 | prompt eval time =     172.00 ms /    58 tokens (    2.97 ms per token,   337.22 tokens per second)
+0.15.075.268 I slot print_timing: id  0 | task 10 |        eval time =    5944.51 ms /   256 tokens (   23.31 ms per token,    42.90 tokens per second)
+0.15.075.268 I slot print_timing: id  0 | task 10 |       total time =    6116.51 ms /   314 tokens
+0.15.075.269 I slot print_timing: id  0 | task 10 |    graphs reused =        260
+0.15.075.293 I slot      release: id  0 | task 10 | stop processing: n_tokens = 313, truncated = 0
+0.15.094.052 I srv    operator(): operator(): cleaning up before exit...

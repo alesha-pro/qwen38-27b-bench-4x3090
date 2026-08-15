@@ -1,0 +1,150 @@
+[2026-08-14T23:12:33+00:00] dry-run successful; matrix validated
+[2026-08-15T00:56:50+00:00] starting tp2-bf16-nomtp, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend TRITON_ATTN --kv-cache-dtype bfloat16 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081
+[2026-08-15T01:00:08+00:00] server tp2-bf16-nomtp exited rc=1
+[2026-08-15T01:00:08+00:00] retrying server tp2-bf16-nomtp in 10s (2/2)
+[2026-08-15T01:00:18+00:00] starting tp2-bf16-nomtp, server attempt 2: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend TRITON_ATTN --kv-cache-dtype bfloat16 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081
+[2026-08-15T01:01:30+00:00] server tp2-bf16-nomtp exited rc=1
+[2026-08-15T01:01:30+00:00] cannot start tp2-bf16-nomtp; recording its points as failed
+[2026-08-15T01:01:30+00:00] starting tp2-bf16-mtp2, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend TRITON_ATTN --kv-cache-dtype bfloat16 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:04:58+00:00] server tp2-bf16-mtp2 exited rc=1
+[2026-08-15T01:04:58+00:00] retrying server tp2-bf16-mtp2 in 10s (2/2)
+[2026-08-15T01:05:08+00:00] starting tp2-bf16-mtp2, server attempt 2: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend TRITON_ATTN --kv-cache-dtype bfloat16 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:06:28+00:00] server tp2-bf16-mtp2 exited rc=1
+[2026-08-15T01:06:28+00:00] cannot start tp2-bf16-mtp2; recording its points as failed
+[2026-08-15T01:06:28+00:00] starting tp2-fp8-nomtp, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081
+[2026-08-15T01:09:42+00:00] server tp2-fp8-nomtp is healthy
+[2026-08-15T01:09:49+00:00] OK tp2-fp8-nomtp depth=8192 c=1: decode=47.62 agg_decode=47.62
+[2026-08-15T01:10:09+00:00] OK tp2-fp8-nomtp depth=32768 c=1: decode=47.07 agg_decode=47.07
+[2026-08-15T01:10:53+00:00] OK tp2-fp8-nomtp depth=65536 c=1: decode=46.32 agg_decode=46.32
+[2026-08-15T01:12:37+00:00] OK tp2-fp8-nomtp depth=131072 c=1: decode=46.68 agg_decode=46.68
+[2026-08-15T01:16:58+00:00] OK tp2-fp8-nomtp depth=253952 c=1: decode=41.46 agg_decode=41.46
+[2026-08-15T01:17:08+00:00] OK tp2-fp8-nomtp depth=8192 c=2: decode=25.89 agg_decode=17.77
+[2026-08-15T01:17:27+00:00] OK tp2-fp8-nomtp depth=8192 c=4: decode=23.59 agg_decode=14.76
+[2026-08-15T01:18:10+00:00] OK tp2-fp8-nomtp depth=8192 c=8: decode=2.55 agg_decode=9.93
+[2026-08-15T01:19:22+00:00] OK tp2-fp8-nomtp depth=8192 c=16: decode=1.89 agg_decode=11.99
+[2026-08-15T01:19:23+00:00] starting tp2-fp8-mtp2, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:22:53+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:23:08+00:00] starting tp2-fp8-mtp2, server attempt 2: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:24:28+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:24:30+00:00] FAIL tp2-fp8-mtp2 depth=8192 c=1 attempt=1: []
+[2026-08-15T01:24:31+00:00] starting tp2-fp8-mtp2, server attempt 3: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:25:49+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:25:52+00:00] FAIL tp2-fp8-mtp2 depth=32768 c=1 attempt=1: []
+[2026-08-15T01:25:52+00:00] starting tp2-fp8-mtp2, server attempt 4: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:27:10+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:27:13+00:00] FAIL tp2-fp8-mtp2 depth=65536 c=1 attempt=1: []
+[2026-08-15T01:27:23+00:00] starting tp2-fp8-mtp2, server attempt 5: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:28:41+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:28:45+00:00] FAIL tp2-fp8-mtp2 depth=131072 c=1 attempt=1: []
+[2026-08-15T01:28:55+00:00] starting tp2-fp8-mtp2, server attempt 6: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:30:13+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:30:18+00:00] FAIL tp2-fp8-mtp2 depth=253952 c=1 attempt=1: []
+[2026-08-15T01:30:19+00:00] starting tp2-fp8-mtp2, server attempt 7: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:31:37+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:31:39+00:00] FAIL tp2-fp8-mtp2 depth=8192 c=2 attempt=1: []
+[2026-08-15T01:31:40+00:00] starting tp2-fp8-mtp2, server attempt 8: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:32:58+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:33:00+00:00] FAIL tp2-fp8-mtp2 depth=8192 c=4 attempt=1: []
+[2026-08-15T01:33:09+00:00] starting tp2-fp8-mtp2, server attempt 9: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:34:29+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:34:31+00:00] FAIL tp2-fp8-mtp2 depth=8192 c=8 attempt=1: []
+[2026-08-15T01:34:41+00:00] starting tp2-fp8-mtp2, server attempt 10: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T01:36:01+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T01:36:03+00:00] FAIL tp2-fp8-mtp2 depth=8192 c=16 attempt=1: []
+[2026-08-15T01:36:04+00:00] starting tp4-bf16-nomtp, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend TRITON_ATTN --kv-cache-dtype bfloat16 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081
+[2026-08-15T01:39:26+00:00] server tp4-bf16-nomtp is healthy
+[2026-08-15T01:39:39+00:00] OK tp4-bf16-nomtp depth=8192 c=1: decode=63.84 agg_decode=63.84
+[2026-08-15T01:40:20+00:00] OK tp4-bf16-nomtp depth=32768 c=1: decode=57.53 agg_decode=57.53
+[2026-08-15T01:41:47+00:00] OK tp4-bf16-nomtp depth=65536 c=1: decode=50.84 agg_decode=50.84
+[2026-08-15T01:45:03+00:00] OK tp4-bf16-nomtp depth=131072 c=1: decode=40.25 agg_decode=40.25
+[2026-08-15T01:52:50+00:00] OK tp4-bf16-nomtp depth=253952 c=1: decode=28.84 agg_decode=28.84
+[2026-08-15T01:53:11+00:00] OK tp4-bf16-nomtp depth=8192 c=2: decode=28.97 agg_decode=10.83
+[2026-08-15T01:53:50+00:00] OK tp4-bf16-nomtp depth=8192 c=4: decode=22.13 agg_decode=7.58
+[2026-08-15T01:55:12+00:00] OK tp4-bf16-nomtp depth=8192 c=8: decode=1.8 agg_decode=5.51
+[2026-08-15T01:57:44+00:00] OK tp4-bf16-nomtp depth=8192 c=16: decode=0.68 agg_decode=5.46
+[2026-08-15T01:57:45+00:00] starting tp4-bf16-mtp2, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend TRITON_ATTN --kv-cache-dtype bfloat16 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:01:39+00:00] server tp4-bf16-mtp2 is healthy
+[2026-08-15T02:01:53+00:00] OK tp4-bf16-mtp2 depth=8192 c=1: decode=66.94 agg_decode=66.94
+[2026-08-15T02:02:35+00:00] OK tp4-bf16-mtp2 depth=32768 c=1: decode=38.9 agg_decode=38.9
+[2026-08-15T02:04:04+00:00] OK tp4-bf16-mtp2 depth=65536 c=1: decode=23.15 agg_decode=23.15
+[2026-08-15T02:07:25+00:00] OK tp4-bf16-mtp2 depth=131072 c=1: decode=13.6 agg_decode=13.6
+[2026-08-15T02:15:24+00:00] OK tp4-bf16-mtp2 depth=253952 c=1: decode=7.95 agg_decode=7.95
+[2026-08-15T02:15:47+00:00] OK tp4-bf16-mtp2 depth=8192 c=2: decode=34.07 agg_decode=32.72
+[2026-08-15T02:16:36+00:00] OK tp4-bf16-mtp2 depth=8192 c=4: decode=3.69 agg_decode=4.97
+[2026-08-15T02:17:55+00:00] OK tp4-bf16-mtp2 depth=8192 c=8: decode=2.05 agg_decode=5.72
+[2026-08-15T02:20:30+00:00] OK tp4-bf16-mtp2 depth=8192 c=16: decode=0.85 agg_decode=4.9
+[2026-08-15T02:20:31+00:00] starting tp4-fp8-nomtp, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081
+[2026-08-15T02:23:51+00:00] server tp4-fp8-nomtp is healthy
+[2026-08-15T02:24:03+00:00] OK tp4-fp8-nomtp depth=8192 c=1: decode=65.72 agg_decode=65.72
+[2026-08-15T02:24:42+00:00] OK tp4-fp8-nomtp depth=32768 c=1: decode=65.39 agg_decode=65.39
+[2026-08-15T02:26:00+00:00] OK tp4-fp8-nomtp depth=65536 c=1: decode=65.2 agg_decode=65.2
+[2026-08-15T02:28:41+00:00] OK tp4-fp8-nomtp depth=131072 c=1: decode=68.54 agg_decode=68.54
+[2026-08-15T02:34:25+00:00] OK tp4-fp8-nomtp depth=253952 c=1: decode=63.73 agg_decode=63.73
+[2026-08-15T02:34:45+00:00] OK tp4-fp8-nomtp depth=8192 c=2: decode=29.98 agg_decode=11.86
+[2026-08-15T02:35:23+00:00] OK tp4-fp8-nomtp depth=8192 c=4: decode=22.46 agg_decode=7.67
+[2026-08-15T02:36:43+00:00] OK tp4-fp8-nomtp depth=8192 c=8: decode=1.52 agg_decode=5.83
+[2026-08-15T02:39:09+00:00] OK tp4-fp8-nomtp depth=8192 c=16: decode=0.85 agg_decode=6.06
+[2026-08-15T02:39:10+00:00] starting tp4-fp8-mtp2, server attempt 1: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:42:58+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:43:14+00:00] starting tp4-fp8-mtp2, server attempt 2: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:44:52+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:44:54+00:00] FAIL tp4-fp8-mtp2 depth=8192 c=1 attempt=1: []
+[2026-08-15T02:45:05+00:00] starting tp4-fp8-mtp2, server attempt 3: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:46:41+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:46:43+00:00] FAIL tp4-fp8-mtp2 depth=32768 c=1 attempt=1: []
+[2026-08-15T02:46:54+00:00] starting tp4-fp8-mtp2, server attempt 4: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:48:30+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:48:33+00:00] FAIL tp4-fp8-mtp2 depth=65536 c=1 attempt=1: []
+[2026-08-15T02:48:43+00:00] starting tp4-fp8-mtp2, server attempt 5: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:50:19+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:50:23+00:00] FAIL tp4-fp8-mtp2 depth=131072 c=1 attempt=1: []
+[2026-08-15T02:50:34+00:00] starting tp4-fp8-mtp2, server attempt 6: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:52:10+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:52:15+00:00] FAIL tp4-fp8-mtp2 depth=253952 c=1 attempt=1: []
+[2026-08-15T02:52:16+00:00] starting tp4-fp8-mtp2, server attempt 7: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:53:52+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:53:54+00:00] FAIL tp4-fp8-mtp2 depth=8192 c=2 attempt=1: []
+[2026-08-15T02:54:05+00:00] starting tp4-fp8-mtp2, server attempt 8: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:55:41+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:55:43+00:00] FAIL tp4-fp8-mtp2 depth=8192 c=4 attempt=1: []
+[2026-08-15T02:55:45+00:00] starting tp4-fp8-mtp2, server attempt 9: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:57:21+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:57:23+00:00] FAIL tp4-fp8-mtp2 depth=8192 c=8 attempt=1: []
+[2026-08-15T02:57:34+00:00] starting tp4-fp8-mtp2, server attempt 10: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T02:59:12+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T02:59:15+00:00] FAIL tp4-fp8-mtp2 depth=8192 c=16 attempt=1: []
+[2026-08-15T02:59:16+00:00] all matrix points finished; DONE marker written
+[2026-08-15T05:55:30+00:00] starting tp2-fp8-mtp2, server attempt 11: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T05:56:50+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T05:56:50+00:00] config warmup disabled for resume: tp2-fp8-mtp2
+[2026-08-15T05:57:26+00:00] OK tp2-fp8-mtp2 depth=8192 c=1: decode=31.99 agg_decode=31.99
+[2026-08-15T05:57:46+00:00] OK tp2-fp8-mtp2 depth=32768 c=1: decode=64.54 agg_decode=64.54
+[2026-08-15T05:58:31+00:00] OK tp2-fp8-mtp2 depth=65536 c=1: decode=66.32 agg_decode=66.32
+[2026-08-15T06:00:19+00:00] OK tp2-fp8-mtp2 depth=131072 c=1: decode=59.04 agg_decode=59.04
+[2026-08-15T06:04:50+00:00] OK tp2-fp8-mtp2 depth=253952 c=1: decode=53.82 agg_decode=53.82
+[2026-08-15T06:05:02+00:00] OK tp2-fp8-mtp2 depth=8192 c=2: decode=23.56 agg_decode=13.85
+[2026-08-15T06:05:28+00:00] OK tp2-fp8-mtp2 depth=8192 c=4: decode=4.88 agg_decode=8.8
+[2026-08-15T06:06:06+00:00] OK tp2-fp8-mtp2 depth=8192 c=8: decode=4.37 agg_decode=13.31
+[2026-08-15T06:07:20+00:00] OK tp2-fp8-mtp2 depth=8192 c=16: decode=1.61 agg_decode=11.88
+[2026-08-15T06:07:20+00:00] starting tp4-fp8-mtp2, server attempt 11: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T06:08:56+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T06:08:56+00:00] config warmup disabled for resume: tp4-fp8-mtp2
+[2026-08-15T06:09:09+00:00] OK tp4-fp8-mtp2 depth=8192 c=1: decode=19.93 agg_decode=19.93
+[2026-08-15T06:09:48+00:00] OK tp4-fp8-mtp2 depth=32768 c=1: decode=70.64 agg_decode=70.64
+[2026-08-15T06:11:08+00:00] OK tp4-fp8-mtp2 depth=65536 c=1: decode=66.84 agg_decode=66.84
+[2026-08-15T06:13:55+00:00] OK tp4-fp8-mtp2 depth=131072 c=1: decode=74.24 agg_decode=74.24
+[2026-08-15T06:19:53+00:00] OK tp4-fp8-mtp2 depth=253952 c=1: decode=72.37 agg_decode=72.37
+[2026-08-15T06:20:14+00:00] OK tp4-fp8-mtp2 depth=8192 c=2: decode=23.24 agg_decode=7.52
+[2026-08-15T06:21:00+00:00] OK tp4-fp8-mtp2 depth=8192 c=4: decode=3.97 agg_decode=5.41
+[2026-08-15T06:22:16+00:00] OK tp4-fp8-mtp2 depth=8192 c=8: decode=2.41 agg_decode=6.33
+[2026-08-15T06:24:47+00:00] OK tp4-fp8-mtp2 depth=8192 c=16: decode=0.85 agg_decode=6.42
+[2026-08-15T06:24:48+00:00] all matrix points finished; DONE marker written
+[2026-08-15T06:53:21+00:00] starting tp2-fp8-mtp2, server attempt 12: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 2 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T06:54:39+00:00] server tp2-fp8-mtp2 is healthy
+[2026-08-15T06:54:39+00:00] config warmup disabled for resume: tp2-fp8-mtp2
+[2026-08-15T06:54:45+00:00] OK tp2-fp8-mtp2 depth=8192 c=1: decode=60.73 agg_decode=60.73
+[2026-08-15T06:54:46+00:00] starting tp4-fp8-mtp2, server attempt 12: $ENGINES/vllm-cross-kv-env/bin/vllm serve $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --quantization fp8 --kernel-config {"linear_backend":"marlin"} --language-model-only --tensor-parallel-size 4 --disable-custom-all-reduce --attention-backend FLASHINFER --kv-cache-dtype fp8 --gpu-memory-utilization 0.91 --max-model-len 262144 --max-num-seqs 16 --max-num-batched-tokens 8192 --no-enable-prefix-caching --port 18081 --speculative-config {"method":"mtp","num_speculative_tokens":2}
+[2026-08-15T06:56:24+00:00] server tp4-fp8-mtp2 is healthy
+[2026-08-15T06:56:24+00:00] config warmup disabled for resume: tp4-fp8-mtp2
+[2026-08-15T06:56:35+00:00] OK tp4-fp8-mtp2 depth=8192 c=1: decode=42.69 agg_decode=42.69
+[2026-08-15T06:56:36+00:00] all matrix points finished; DONE marker written

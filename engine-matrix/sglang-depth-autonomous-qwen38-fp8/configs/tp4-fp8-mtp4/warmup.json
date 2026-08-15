@@ -1,0 +1,24 @@
+{
+  "when": "2026-08-15T04:05:00+00:00",
+  "status": "ok",
+  "rows": [
+    {
+      "concurrency": 1,
+      "requests_ok": 1,
+      "errors": [],
+      "wall_s": 0.51,
+      "total_tokens": 16,
+      "aggregate_tok_s": 31.58,
+      "decode_tok_s_median": 97.7,
+      "ttft_p50_ms": 352.7,
+      "ttft_max_ms": 352.7,
+      "decode_window_s": 0.154,
+      "decode_tokens_after_first": 15,
+      "aggregate_decode_window_tok_s": 97.7,
+      "aggregate_active_decode_rate_sum": 97.7,
+      "prompt_tokens_median": 61,
+      "prefill_tok_s_median": 173.0,
+      "prefill_tok_s_aggregate": 173.0
+    }
+  ]
+}

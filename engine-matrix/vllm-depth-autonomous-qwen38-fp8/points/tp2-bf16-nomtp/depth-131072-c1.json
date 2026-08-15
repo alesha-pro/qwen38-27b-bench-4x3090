@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "finished_at": "2026-08-15T01:01:30+00:00",
+  "attempts": 1,
+  "config": {
+    "tp": 2,
+    "kv": "bf16",
+    "mtp": false,
+    "name": "tp2-bf16-nomtp"
+  },
+  "depth_requested": 131072,
+  "concurrency": 1,
+  "row": null,
+  "error": "server failed to start",
+  "previous": null
+}

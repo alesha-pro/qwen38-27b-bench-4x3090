@@ -1,0 +1,40 @@
+### 20:37:42 MTP Q5_K_M, 1 карта
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q5_K_M.gguf
+карт:   1, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q5_K_M-1gpu-2026-08-14-173742
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   34.41  decode_med=35.68  ttft_p50=293.5 мс  | prefill 58 ток: med=197.6 agg=197.6 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=    51.9  decode_med=55.46  ttft_p50=333.6 мс  | prefill 58 ток: med=173.8 agg=173.8 tok/s
+0.08.464.030 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.13.396.358 I slot print_timing: id  0 | task 5 | draft acceptance = 0.68675 (  171 accepted /   249 generated), mean len =  3.06
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q5_K_M-1gpu-2026-08-14-173742
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### 20:38:18 MTP Q6_K, 1 карта
+модель: $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q6_K.gguf
+карт:   1, ctx 8192, генерируем 256 токенов, черновик 3 токена
+выход:  $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q6_K-1gpu-2026-08-14-173818
+
+=== bez-mtp ===
+  ВНИМАНИЕ: тензоры nextn выброшены как unused — MTP НЕ включился
+c=  1  agg=   28.82  decode_med=29.7  ttft_p50=298.5 мс  | prefill 58 ток: med=194.3 agg=194.3 tok/s
+
+=== s-mtp ===
+  тензоры nextn не выброшены — MTP на месте
+c=  1  agg=   46.14  decode_med=48.94  ttft_p50=336.5 мс  | prefill 58 ток: med=172.3 agg=172.3 tok/s
+0.08.477.131 I slot print_timing: id  0 | task 0 | draft acceptance = 1.00000 (    5 accepted /     5 generated), mean len =  3.50
+0.14.025.240 I slot print_timing: id  0 | task 5 | draft acceptance = 0.58065 (  162 accepted /   279 generated), mean len =  2.74
+
+готово: $BENCH_ROOT/output/mtp-Qwen3.8-27B-Q6_K-1gpu-2026-08-14-173818
+NB: выигрыш от спекулятивного декодинга зависит от того, насколько текст
+предсказуем. Здесь temperature 0.7 и один фиксированный промпт — это одна
+точка, а не универсальное число.
+### ГОТОВО 20:38:57
+отчёт пересобран

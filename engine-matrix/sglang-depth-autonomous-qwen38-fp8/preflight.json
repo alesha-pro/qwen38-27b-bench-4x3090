@@ -1,0 +1,18 @@
+{
+  "when": "2026-08-15T02:59:23+00:00",
+  "nvcc": {
+    "returncode": 0,
+    "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_01:58:59_PM_PDT_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0",
+    "stderr": ""
+  },
+  "python_env": {
+    "returncode": 0,
+    "stdout": "2.13.0+cu130 13.0",
+    "stderr": ""
+  },
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "0, NVIDIA GeForce RTX 3090, 24576 MiB, 8.6, 320.00 W\n1, NVIDIA GeForce RTX 3090, 24576 MiB, 8.6, 320.00 W\n2, NVIDIA GeForce RTX 3090, 24576 MiB, 8.6, 320.00 W\n3, NVIDIA GeForce RTX 3090, 24576 MiB, 8.6, 320.00 W",
+    "stderr": ""
+  }
+}

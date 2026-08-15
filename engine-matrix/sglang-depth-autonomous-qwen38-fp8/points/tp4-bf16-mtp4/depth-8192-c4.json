@@ -1,0 +1,34 @@
+{
+  "status": "ok",
+  "finished_at": "2026-08-15T03:44:18+00:00",
+  "attempts": 1,
+  "config": {
+    "tp": 4,
+    "kv": "bf16",
+    "mtp": true,
+    "name": "tp4-bf16-mtp4"
+  },
+  "depth_requested": 8192,
+  "tokenized_prompt_count_probe": 8218,
+  "concurrency": 4,
+  "generation_tokens": 128,
+  "row": {
+    "concurrency": 4,
+    "requests_ok": 4,
+    "errors": [],
+    "wall_s": 27.77,
+    "total_tokens": 208,
+    "aggregate_tok_s": 7.49,
+    "decode_tok_s_median": 39.48,
+    "ttft_p50_ms": 26312.6,
+    "ttft_max_ms": 26525.3,
+    "decode_window_s": 8.219,
+    "decode_tokens_after_first": 204,
+    "aggregate_decode_window_tok_s": 24.82,
+    "aggregate_active_decode_rate_sum": 131.92,
+    "prompt_tokens_median": 8224,
+    "prefill_tok_s_median": 312.5,
+    "prefill_tok_s_aggregate": 1240.2
+  },
+  "error": null
+}

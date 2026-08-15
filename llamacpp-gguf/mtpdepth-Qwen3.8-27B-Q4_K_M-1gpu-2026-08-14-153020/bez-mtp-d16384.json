@@ -1,0 +1,27 @@
+{
+  "label": "bez-mtp d=16384",
+  "when": "2026-08-14T15:30:54+00:00",
+  "url": "http://127.0.0.1:18000/v1/chat/completions",
+  "model": "bench",
+  "max_tokens": 256,
+  "prompt_tokens_requested": 16384,
+  "chars_per_token": 5.542,
+  "thinking_kwarg": true,
+  "run_salt": "21444192-",
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests_ok": 1,
+      "errors": [],
+      "wall_s": 15.69,
+      "total_tokens": 33,
+      "aggregate_tok_s": 2.1,
+      "decode_tok_s_median": 37.08,
+      "ttft_p50_ms": 14822.4,
+      "ttft_max_ms": 14822.4,
+      "prompt_tokens_median": 16358,
+      "prefill_tok_s_median": 1103.6,
+      "prefill_tok_s_aggregate": 1103.6
+    }
+  ]
+}

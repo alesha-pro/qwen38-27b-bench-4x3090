@@ -1,0 +1,80 @@
+[2026-08-14T23:12:36+00:00] dry-run successful; matrix validated
+[2026-08-15T02:59:23+00:00] starting tp2-bf16-nomtp, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 2 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype bf16 --reasoning-parser qwen3
+[2026-08-15T03:00:12+00:00] server tp2-bf16-nomtp is healthy
+[2026-08-15T03:00:21+00:00] OK tp2-bf16-nomtp depth=8192 c=1: decode=46.88 agg_decode=46.88
+[2026-08-15T03:00:44+00:00] OK tp2-bf16-nomtp depth=32768 c=1: decode=45.03 agg_decode=45.03
+[2026-08-15T03:01:31+00:00] OK tp2-bf16-nomtp depth=65536 c=1: decode=42.37 agg_decode=42.37
+[2026-08-15T03:03:18+00:00] OK tp2-bf16-nomtp depth=131072 c=1: decode=38.33 agg_decode=38.33
+[2026-08-15T03:03:24+00:00] FAIL tp2-bf16-nomtp depth=253952 c=1 attempt=1: []
+[2026-08-15T03:03:38+00:00] OK tp2-bf16-nomtp depth=8192 c=2: decode=42.32 agg_decode=82.14
+[2026-08-15T03:03:59+00:00] OK tp2-bf16-nomtp depth=8192 c=4: decode=28.4 agg_decode=27.98
+[2026-08-15T03:04:39+00:00] OK tp2-bf16-nomtp depth=8192 c=8: decode=5.08 agg_decode=13.75
+[2026-08-15T03:05:57+00:00] OK tp2-bf16-nomtp depth=8192 c=16: decode=1.78 agg_decode=12.83
+[2026-08-15T03:06:03+00:00] starting tp2-bf16-mtp4, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 2 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype bf16 --reasoning-parser qwen3 --speculative-algorithm EAGLE --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
+[2026-08-15T03:06:35+00:00] server tp2-bf16-mtp4 exited rc=-9
+[2026-08-15T03:06:35+00:00] retrying server tp2-bf16-mtp4 in 10s (2/2)
+[2026-08-15T03:06:45+00:00] starting tp2-bf16-mtp4, server attempt 2: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 2 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype bf16 --reasoning-parser qwen3 --speculative-algorithm EAGLE --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
+[2026-08-15T03:07:17+00:00] server tp2-bf16-mtp4 exited rc=-9
+[2026-08-15T03:07:17+00:00] cannot start tp2-bf16-mtp4; recording its points as failed
+[2026-08-15T03:07:17+00:00] starting tp2-fp8-nomtp, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 2 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype fp8_e4m3 --reasoning-parser qwen3
+[2026-08-15T03:08:06+00:00] server tp2-fp8-nomtp is healthy
+[2026-08-15T03:08:14+00:00] OK tp2-fp8-nomtp depth=8192 c=1: decode=46.71 agg_decode=46.71
+[2026-08-15T03:08:38+00:00] OK tp2-fp8-nomtp depth=32768 c=1: decode=45.32 agg_decode=45.32
+[2026-08-15T03:09:27+00:00] OK tp2-fp8-nomtp depth=65536 c=1: decode=43.88 agg_decode=43.88
+[2026-08-15T03:11:19+00:00] OK tp2-fp8-nomtp depth=131072 c=1: decode=41.34 agg_decode=41.34
+[2026-08-15T03:15:56+00:00] OK tp2-fp8-nomtp depth=253952 c=1: decode=37.28 agg_decode=37.28
+[2026-08-15T03:16:09+00:00] OK tp2-fp8-nomtp depth=8192 c=2: decode=42.77 agg_decode=75.38
+[2026-08-15T03:16:30+00:00] OK tp2-fp8-nomtp depth=8192 c=4: decode=27.77 agg_decode=24.16
+[2026-08-15T03:17:10+00:00] OK tp2-fp8-nomtp depth=8192 c=8: decode=5.21 agg_decode=14.51
+[2026-08-15T03:18:29+00:00] OK tp2-fp8-nomtp depth=8192 c=16: decode=1.81 agg_decode=13.17
+[2026-08-15T03:18:35+00:00] starting tp2-fp8-mtp4, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 2 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype fp8_e4m3 --reasoning-parser qwen3 --speculative-algorithm EAGLE --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
+[2026-08-15T03:19:07+00:00] server tp2-fp8-mtp4 exited rc=-9
+[2026-08-15T03:19:07+00:00] retrying server tp2-fp8-mtp4 in 10s (2/2)
+[2026-08-15T03:19:17+00:00] starting tp2-fp8-mtp4, server attempt 2: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 2 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype fp8_e4m3 --reasoning-parser qwen3 --speculative-algorithm EAGLE --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
+[2026-08-15T03:19:49+00:00] server tp2-fp8-mtp4 exited rc=-9
+[2026-08-15T03:19:49+00:00] cannot start tp2-fp8-mtp4; recording its points as failed
+[2026-08-15T03:19:49+00:00] starting tp4-bf16-nomtp, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 4 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype bf16 --reasoning-parser qwen3
+[2026-08-15T03:20:40+00:00] server tp4-bf16-nomtp is healthy
+[2026-08-15T03:20:52+00:00] OK tp4-bf16-nomtp depth=8192 c=1: decode=66.08 agg_decode=66.08
+[2026-08-15T03:21:27+00:00] OK tp4-bf16-nomtp depth=32768 c=1: decode=62.68 agg_decode=62.68
+[2026-08-15T03:22:37+00:00] OK tp4-bf16-nomtp depth=65536 c=1: decode=60.19 agg_decode=60.19
+[2026-08-15T03:25:01+00:00] OK tp4-bf16-nomtp depth=131072 c=1: decode=55.98 agg_decode=55.98
+[2026-08-15T03:30:04+00:00] OK tp4-bf16-nomtp depth=253952 c=1: decode=49.1 agg_decode=49.1
+[2026-08-15T03:30:23+00:00] OK tp4-bf16-nomtp depth=8192 c=2: decode=50.7 agg_decode=94.29
+[2026-08-15T03:30:57+00:00] OK tp4-bf16-nomtp depth=8192 c=4: decode=23.38 agg_decode=16.58
+[2026-08-15T03:32:04+00:00] OK tp4-bf16-nomtp depth=8192 c=8: decode=3.32 agg_decode=9.39
+[2026-08-15T03:34:14+00:00] OK tp4-bf16-nomtp depth=8192 c=16: decode=1.11 agg_decode=7.35
+[2026-08-15T03:34:21+00:00] starting tp4-bf16-mtp4, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 4 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype bf16 --reasoning-parser qwen3 --speculative-algorithm EAGLE --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
+[2026-08-15T03:35:20+00:00] server tp4-bf16-mtp4 is healthy
+[2026-08-15T03:35:30+00:00] OK tp4-bf16-mtp4 depth=8192 c=1: decode=100.63 agg_decode=100.63
+[2026-08-15T03:36:00+00:00] OK tp4-bf16-mtp4 depth=32768 c=1: decode=93.78 agg_decode=93.78
+[2026-08-15T03:37:00+00:00] OK tp4-bf16-mtp4 depth=65536 c=1: decode=99.58 agg_decode=99.58
+[2026-08-15T03:39:05+00:00] OK tp4-bf16-mtp4 depth=131072 c=1: decode=71.54 agg_decode=71.54
+[2026-08-15T03:43:33+00:00] OK tp4-bf16-mtp4 depth=253952 c=1: decode=70.75 agg_decode=70.75
+[2026-08-15T03:43:49+00:00] OK tp4-bf16-mtp4 depth=8192 c=2: decode=70.99 agg_decode=126.64
+[2026-08-15T03:44:18+00:00] OK tp4-bf16-mtp4 depth=8192 c=4: decode=39.48 agg_decode=24.82
+[2026-08-15T03:45:14+00:00] OK tp4-bf16-mtp4 depth=8192 c=8: decode=4.82 agg_decode=12.07
+[2026-08-15T03:47:04+00:00] OK tp4-bf16-mtp4 depth=8192 c=16: decode=1.33 agg_decode=9.1
+[2026-08-15T03:47:11+00:00] starting tp4-fp8-nomtp, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 4 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype fp8_e4m3 --reasoning-parser qwen3
+[2026-08-15T03:48:04+00:00] server tp4-fp8-nomtp is healthy
+[2026-08-15T03:48:16+00:00] OK tp4-fp8-nomtp depth=8192 c=1: decode=66.56 agg_decode=66.56
+[2026-08-15T03:48:58+00:00] OK tp4-fp8-nomtp depth=32768 c=1: decode=63.84 agg_decode=63.84
+[2026-08-15T03:50:20+00:00] OK tp4-fp8-nomtp depth=65536 c=1: decode=62.46 agg_decode=62.46
+[2026-08-15T03:53:08+00:00] OK tp4-fp8-nomtp depth=131072 c=1: decode=59.66 agg_decode=59.66
+[2026-08-15T03:59:05+00:00] OK tp4-fp8-nomtp depth=253952 c=1: decode=55.65 agg_decode=55.65
+[2026-08-15T03:59:27+00:00] OK tp4-fp8-nomtp depth=8192 c=2: decode=52.7 agg_decode=88.66
+[2026-08-15T04:00:06+00:00] OK tp4-fp8-nomtp depth=8192 c=4: decode=23.14 agg_decode=14.4
+[2026-08-15T04:01:23+00:00] OK tp4-fp8-nomtp depth=8192 c=8: decode=3.01 agg_decode=7.88
+[2026-08-15T04:03:56+00:00] OK tp4-fp8-nomtp depth=8192 c=16: decode=0.91 agg_decode=6.64
+[2026-08-15T04:04:02+00:00] starting tp4-fp8-mtp4, server attempt 1: $ENGINES/sglang-nvfp4-env/bin/sglang serve --model-path $MODELS/Qwen3.8-27B-FP8 --served-model-name bench --host 127.0.0.1 --port 18081 --tp-size 4 --context-length 262144 --mem-fraction-static 0.9 --max-running-requests 16 --chunked-prefill-size 8192 --cuda-graph-max-bs-prefill 256 --disable-radix-cache --disable-custom-all-reduce --language-only --quantization fp8 --kv-cache-dtype fp8_e4m3 --reasoning-parser qwen3 --speculative-algorithm EAGLE --speculative-num-steps 3 --speculative-eagle-topk 1 --speculative-num-draft-tokens 4
+[2026-08-15T04:05:00+00:00] server tp4-fp8-mtp4 is healthy
+[2026-08-15T04:05:13+00:00] OK tp4-fp8-mtp4 depth=8192 c=1: decode=78.2 agg_decode=78.2
+[2026-08-15T04:05:55+00:00] OK tp4-fp8-mtp4 depth=32768 c=1: decode=78.75 agg_decode=78.75
+[2026-08-15T04:07:18+00:00] OK tp4-fp8-mtp4 depth=65536 c=1: decode=93.21 agg_decode=93.21
+[2026-08-15T04:10:12+00:00] OK tp4-fp8-mtp4 depth=131072 c=1: decode=82.25 agg_decode=82.25
+[2026-08-15T04:16:20+00:00] OK tp4-fp8-mtp4 depth=253952 c=1: decode=60.9 agg_decode=60.9
+[2026-08-15T04:16:42+00:00] OK tp4-fp8-mtp4 depth=8192 c=2: decode=69.84 agg_decode=126.87
+[2026-08-15T04:17:22+00:00] OK tp4-fp8-mtp4 depth=8192 c=4: decode=33.07 agg_decode=17.08
+[2026-08-15T04:18:41+00:00] OK tp4-fp8-mtp4 depth=8192 c=8: decode=3.82 agg_decode=9.49
+[2026-08-15T04:21:18+00:00] OK tp4-fp8-mtp4 depth=8192 c=16: decode=0.99 agg_decode=6.52
+[2026-08-15T04:21:25+00:00] all matrix points finished; DONE marker written

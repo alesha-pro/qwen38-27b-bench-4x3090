@@ -1,0 +1,9 @@
+модель:  $MODELS/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q4_K_M.gguf
+карт:    4 (CUDA_VISIBLE_DEVICES=0,1,2,3)
+глубины: 0,4096,16384,65536,131072
+pp=4096 tg=128 повторов=3
+бинарь:  $ENGINES/llama.cpp-rw/build/bin (?)
+0, 320.00 W
+1, 320.00 W
+2, 320.00 W
+3, 320.00 W

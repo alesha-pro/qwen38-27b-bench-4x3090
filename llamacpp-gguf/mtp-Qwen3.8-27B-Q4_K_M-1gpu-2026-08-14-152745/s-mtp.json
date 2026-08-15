@@ -1,0 +1,27 @@
+{
+  "label": "s-mtp",
+  "when": "2026-08-14T15:28:11+00:00",
+  "url": "http://127.0.0.1:18000/v1/chat/completions",
+  "model": "bench",
+  "max_tokens": 256,
+  "prompt_tokens_requested": 0,
+  "chars_per_token": 4.0,
+  "thinking_kwarg": true,
+  "run_salt": "21291334-",
+  "levels": [
+    {
+      "concurrency": 1,
+      "requests_ok": 1,
+      "errors": [],
+      "wall_s": 5.34,
+      "total_tokens": 256,
+      "aggregate_tok_s": 47.98,
+      "decode_tok_s_median": 51.18,
+      "ttft_p50_ms": 351.9,
+      "ttft_max_ms": 351.9,
+      "prompt_tokens_median": 58,
+      "prefill_tok_s_median": 164.8,
+      "prefill_tok_s_aggregate": 164.8
+    }
+  ]
+}
