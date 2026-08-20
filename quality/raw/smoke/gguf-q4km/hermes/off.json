@@ -1,0 +1,436 @@
+{
+  "endpoint": "http://127.0.0.1:19081/v1",
+  "equivalent_score_150": 150,
+  "finished_at": "2026-08-17T21:46:46.685958Z",
+  "mode": "custom",
+  "model": "bench",
+  "packs": [
+    {
+      "catalog_scenario_count": 20,
+      "diagnostics": {
+        "extraction": {
+          "issues": {},
+          "methods": {},
+          "response_fields": {
+            "multi_turn": 1
+          }
+        }
+      },
+      "latency": {
+        "mean": 11.095831420039758,
+        "p50": 11.095831420039758,
+        "p95": 11.095831420039758
+      },
+      "pack_id": "hermesagent-20",
+      "passed": 1,
+      "scenario_count": 1,
+      "scenarios": [
+        {
+          "assistant_messages": [],
+          "attempt_count": 1,
+          "best_of_n_eligible": true,
+          "conversation": [],
+          "detail": "Hermes replaced stale project memory through the native memory tool.",
+          "failure_mode": "passed",
+          "id": "HA-01",
+          "label": "pass@1",
+          "latency_seconds": 11.095831420039758,
+          "pass_at_k": true,
+          "passed": true,
+          "raw_response": {
+            "final_verifier_payload": {
+              "action": "verify-final",
+              "detail": "Hermes replaced stale project memory through the native memory tool.",
+              "failure_mode": "passed",
+              "passed": true,
+              "trace": {
+                "elapsed_s": 10.996051708934829,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-01\nrun_dir=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01\nworkspace=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/workspace\nhermes_home=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=1d787878-071f-4d31-99eb-3f7d564d0e1e\ntool_events=2\nmemory_entries=[\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\",\"CI runs on Linux runners.\"]",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Done. Replaced the old PostgreSQL entry with:\n\n\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\"\n\nThe conflicting fact is gone \u2014 only the CockroachDB entry remains.",
+                  "memoryEntries": [
+                    "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                    "CI runs on Linux runners."
+                  ]
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Done. Replaced the old PostgreSQL entry with:\n\n\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\"\n\nThe conflicting fact is gone \u2014 only the CockroachDB entry remains.",
+                    "memoryEntries": [
+                      "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                      "CI runs on Linux runners."
+                    ]
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-01",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes replaced stale project memory through the native memory tool.",
+                  "timings": {
+                    "completedAt": "2026-08-17T21:46:46.676Z",
+                    "durationMs": 10964,
+                    "startedAt": "2026-08-17T21:46:35.712Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "entries": [
+                        "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                        "CI runs on Linux runners."
+                      ],
+                      "hasCockroach": true,
+                      "memoryPath": "/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home/memories/MEMORY.md",
+                      "memoryToolUsed": true,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "removedStale": true,
+                      "safetyScore": 20,
+                      "withinLimit": true
+                    },
+                    "status": "pass",
+                    "summary": "Contradictory memory was updated correctly."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes replaced stale project memory through the native memory tool.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-17T21:46:46.676Z",
+                  "durationMs": 10964,
+                  "startedAt": "2026-08-17T21:46:35.712Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "entries": [
+                      "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                      "CI runs on Linux runners."
+                    ],
+                    "hasCockroach": true,
+                    "memoryPath": "/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home/memories/MEMORY.md",
+                    "memoryToolUsed": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "removedStale": true,
+                    "safetyScore": 20,
+                    "withinLimit": true
+                  },
+                  "status": "pass",
+                  "summary": "Contradictory memory was updated correctly."
+                }
+              }
+            },
+            "multi_turn": true,
+            "responses": []
+          },
+          "raw_scenario": {
+            "description": "Checks whether Hermes replaces stale project memory through the real memory tool instead of editing memory files directly.",
+            "failure_case": "Contradictory facts remain, memory is edited out-of-band, or memory becomes malformed.",
+            "id": "HA-01",
+            "messages": [
+              {
+                "content": "We moved from PostgreSQL to CockroachDB last week. Remember that for this project.",
+                "role": "user"
+              }
+            ],
+            "pack_id": "hermesagent-20",
+            "raw_scenario": {
+              "category": "Memory & Recall",
+              "expected": {
+                "failure_case": "Contradictory facts remain, memory is edited out-of-band, or memory becomes malformed.",
+                "required_keywords": [
+                  "cockroachdb",
+                  "retained",
+                  "stale",
+                  "postgresql-only",
+                  "fact",
+                  "gone",
+                  "memory",
+                  "remains",
+                  "within",
+                  "hermes",
+                  "limits."
+                ],
+                "success_case": "CockroachDB is retained, the stale PostgreSQL-only fact is gone, and memory remains within Hermes limits."
+              },
+              "failure_case": "Contradictory facts remain, memory is edited out-of-band, or memory becomes malformed.",
+              "fixture_status": "upstream-verification-runtime",
+              "id": "HA-01",
+              "kind": "memory_replace_contradiction",
+              "success_case": "CockroachDB is retained, the stale PostgreSQL-only fact is gone, and memory remains within Hermes limits.",
+              "tool_fixtures": []
+            },
+            "sampling_overrides": {
+              "max_tokens": 1024
+            },
+            "success_case": "CockroachDB is retained, the stale PostgreSQL-only fact is gone, and memory remains within Hermes limits.",
+            "tags": [
+              "vendor-generated",
+              "sandboxed-stub"
+            ],
+            "upstream_scenario_id": "HA-01",
+            "upstream_title": "Replace Contradictory Memory",
+            "verifier": {
+              "asserts": [
+                {
+                  "kind": "_stub",
+                  "reason": "HermesAgent requires multi-tool sandbox verifier"
+                }
+              ],
+              "type": "_stub"
+            }
+          },
+          "repeat_index": 1,
+          "request": {
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "max_tokens": 1024,
+            "messages": [
+              {
+                "content": "We moved from PostgreSQL to CockroachDB last week. Remember that for this project.",
+                "role": "user"
+              }
+            ],
+            "model": "bench",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "response_field_used": "multi_turn",
+          "response_latencies_seconds": [],
+          "result": {
+            "detail": "Hermes replaced stale project memory through the native memory tool.",
+            "failure_mode": "passed",
+            "latency_seconds": 11.095831420039758,
+            "pass_rate": null,
+            "passed": true,
+            "passed_count": null,
+            "scenario_id": "HA-01",
+            "tokens_completion": null,
+            "total_count": null,
+            "verifier_trace": {
+              "sandbox_log_file": "sandbox-hermesagent-20.log",
+              "trace": {
+                "elapsed_s": 10.996051708934829,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-01\nrun_dir=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01\nworkspace=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/workspace\nhermes_home=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=1d787878-071f-4d31-99eb-3f7d564d0e1e\ntool_events=2\nmemory_entries=[\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\",\"CI runs on Linux runners.\"]",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Done. Replaced the old PostgreSQL entry with:\n\n\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\"\n\nThe conflicting fact is gone \u2014 only the CockroachDB entry remains.",
+                  "memoryEntries": [
+                    "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                    "CI runs on Linux runners."
+                  ]
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Done. Replaced the old PostgreSQL entry with:\n\n\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\"\n\nThe conflicting fact is gone \u2014 only the CockroachDB entry remains.",
+                    "memoryEntries": [
+                      "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                      "CI runs on Linux runners."
+                    ]
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-01",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes replaced stale project memory through the native memory tool.",
+                  "timings": {
+                    "completedAt": "2026-08-17T21:46:46.676Z",
+                    "durationMs": 10964,
+                    "startedAt": "2026-08-17T21:46:35.712Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "entries": [
+                        "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                        "CI runs on Linux runners."
+                      ],
+                      "hasCockroach": true,
+                      "memoryPath": "/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home/memories/MEMORY.md",
+                      "memoryToolUsed": true,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "removedStale": true,
+                      "safetyScore": 20,
+                      "withinLimit": true
+                    },
+                    "status": "pass",
+                    "summary": "Contradictory memory was updated correctly."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes replaced stale project memory through the native memory tool.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-17T21:46:46.676Z",
+                  "durationMs": 10964,
+                  "startedAt": "2026-08-17T21:46:35.712Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "entries": [
+                      "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                      "CI runs on Linux runners."
+                    ],
+                    "hasCockroach": true,
+                    "memoryPath": "/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home/memories/MEMORY.md",
+                    "memoryToolUsed": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "removedStale": true,
+                    "safetyScore": 20,
+                    "withinLimit": true
+                  },
+                  "status": "pass",
+                  "summary": "Contradictory memory was updated correctly."
+                }
+              }
+            }
+          },
+          "retry_attempts": [],
+          "retry_eligible": false,
+          "sampling_params": {
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "max_tokens": 1024,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "status_code": null,
+          "token_metrics": {
+            "per_response": [],
+            "response_count": 0,
+            "telemetry_complete": false,
+            "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8/tokenizer.json"
+          },
+          "tokens_completion": null,
+          "tool_calls": [],
+          "turn_count": 0,
+          "verifier_trace": {
+            "sandbox_log_file": "sandbox-hermesagent-20.log",
+            "trace": {
+              "elapsed_s": 10.996051708934829,
+              "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+              "hermes_agent_path": "/opt/hermes-agent",
+              "hermes_agent_source": "baked",
+              "raw_log_tail": "scenario=HA-01\nrun_dir=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01\nworkspace=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/workspace\nhermes_home=/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=1d787878-071f-4d31-99eb-3f7d564d0e1e\ntool_events=2\nmemory_entries=[\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\",\"CI runs on Linux runners.\"]",
+              "schema_version": "2",
+              "upstream_note": "Pinned Hermes 44cdf555a83c",
+              "upstream_output": {
+                "finalAnswer": "Done. Replaced the old PostgreSQL entry with:\n\n\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\"\n\nThe conflicting fact is gone \u2014 only the CockroachDB entry remains.",
+                "memoryEntries": [
+                  "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                  "CI runs on Linux runners."
+                ]
+              },
+              "upstream_raw": {
+                "note": "Pinned Hermes 44cdf555a83c",
+                "output": {
+                  "finalAnswer": "Done. Replaced the old PostgreSQL entry with:\n\n\"Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.\"\n\nThe conflicting fact is gone \u2014 only the CockroachDB entry remains.",
+                  "memoryEntries": [
+                    "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                    "CI runs on Linux runners."
+                  ]
+                },
+                "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                "scenarioId": "HA-01",
+                "score": 100,
+                "status": "pass",
+                "summary": "Hermes replaced stale project memory through the native memory tool.",
+                "timings": {
+                  "completedAt": "2026-08-17T21:46:46.676Z",
+                  "durationMs": 10964,
+                  "startedAt": "2026-08-17T21:46:35.712Z"
+                },
+                "verifier": {
+                  "details": {
+                    "entries": [
+                      "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                      "CI runs on Linux runners."
+                    ],
+                    "hasCockroach": true,
+                    "memoryPath": "/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home/memories/MEMORY.md",
+                    "memoryToolUsed": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "removedStale": true,
+                    "safetyScore": 20,
+                    "withinLimit": true
+                  },
+                  "status": "pass",
+                  "summary": "Contradictory memory was updated correctly."
+                }
+              },
+              "upstream_score": 100,
+              "upstream_status": "pass",
+              "upstream_summary": "Hermes replaced stale project memory through the native memory tool.",
+              "upstream_timings": {
+                "completedAt": "2026-08-17T21:46:46.676Z",
+                "durationMs": 10964,
+                "startedAt": "2026-08-17T21:46:35.712Z"
+              },
+              "upstream_verifier": {
+                "details": {
+                  "entries": [
+                    "Project uses CockroachDB (migrated from PostgreSQL in August 2026) for all production and local deployments.",
+                    "CI runs on Linux runners."
+                  ],
+                  "hasCockroach": true,
+                  "memoryPath": "/tmp/hermesagent20-runs/48d01dcd-758f-4219-a865-c8a8ff0feb0f/bench/HA-01/hermes-home/memories/MEMORY.md",
+                  "memoryToolUsed": true,
+                  "nativeUseScore": 30,
+                  "outcomeSatisfied": true,
+                  "outcomeScore": 50,
+                  "removedStale": true,
+                  "safetyScore": 20,
+                  "withinLimit": true
+                },
+                "status": "pass",
+                "summary": "Contradictory memory was updated correctly."
+              }
+            }
+          }
+        }
+      ],
+      "score": 1.0,
+      "skipped": false,
+      "status": "ok",
+      "thinking_enabled": false,
+      "total": 1,
+      "upstream_commit": "57d7766bf3db8c40696e3ed937d43c8c85f4cd6c",
+      "variance": null,
+      "version": "1.0.0",
+      "warnings": []
+    }
+  ],
+  "repeat": 1,
+  "runner_version": "0.9.8",
+  "schema_version": "1",
+  "selection": [
+    "hermesagent-20/HA-01"
+  ],
+  "started_at": "2026-08-17T21:46:33.133230Z",
+  "thinking_enabled": false,
+  "thinking_mode": "force-off",
+  "totals": {
+    "passed": 1,
+    "score": 1.0,
+    "total": 1
+  },
+  "warnings": []
+}

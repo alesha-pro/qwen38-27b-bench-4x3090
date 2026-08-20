@@ -1,0 +1,12 @@
+[
+  {
+    "label": "campaign_root",
+    "source": "/private/path/to/campaign",
+    "replacement": "$RUN_ROOT"
+  },
+  {
+    "label": "lan_ip",
+    "source": "10.0.0.123",
+    "replacement": "$LLM_SERVER_IP"
+  }
+]

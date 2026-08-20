@@ -1,0 +1,25 @@
+# benchlocal-cli sandbox log — bugfind-15
+# container_id: bd0ce627f624b8776a3dc9d0de76034d8708984bed0d1f7be57e451c3a314fbc
+# captured_at: 2026-08-19T23:42:04Z
+
+=== STDOUT ===
+
+=== STDERR ===
+[bugfind-sandbox] listening on :9000
+[bugfind-sandbox] "GET /health HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+[bugfind-sandbox] "POST /verify HTTP/1.1" 200 -
+

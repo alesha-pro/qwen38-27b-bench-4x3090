@@ -1,0 +1,13 @@
+[2026-08-19T17:45:41.083350Z] ready fp8
+[2026-08-19T17:45:41.119958Z] run fp8/medium/full
+[2026-08-19T17:59:24.056263Z] run fp8/xhigh/full
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 398, in <module>
+    raise SystemExit(main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 389, in main
+    raise RuntimeError(f"final analysis failed rc={analysis.returncode}: {analysis.stderr}")
+RuntimeError: final analysis failed rc=1: Traceback (most recent call last):
+  File "$RUN_ROOT/harness/analyze_quality_matrix.py", line 16, in <module>
+    from tokenizers import Tokenizer
+ModuleNotFoundError: No module named 'tokenizers'
+

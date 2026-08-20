@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-08-19T09:05:08.734751Z",
+  "models": [
+    "ninfer"
+  ],
+  "efforts": [
+    "off",
+    "low",
+    "medium",
+    "xhigh"
+  ],
+  "suites": [
+    "full"
+  ],
+  "benchlocal": "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli",
+  "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8",
+  "target_port": 18083,
+  "proxy_port": 19083,
+  "gpu_map": {
+    "ninfer": "0"
+  },
+  "thinking_max_tokens": null,
+  "methodology": "natural endpoint-bounded reasoning; no request max_tokens in thinking arms"
+}

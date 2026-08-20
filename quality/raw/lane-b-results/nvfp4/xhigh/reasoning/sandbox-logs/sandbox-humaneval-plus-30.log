@@ -1,0 +1,40 @@
+# benchlocal-cli sandbox log — humaneval-plus-30
+# container_id: 209fb5d4a7da6e4d20450dd3dd7646fe860069dae5b8675ce222ab1edc336b0b
+# captured_at: 2026-08-18T21:00:22Z
+
+=== STDOUT ===
+
+=== STDERR ===
+[code-reasoning-sandbox] listening on :9000
+[code-reasoning-sandbox] "GET /health HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+[code-reasoning-sandbox] "POST /verify HTTP/1.1" 200 -
+

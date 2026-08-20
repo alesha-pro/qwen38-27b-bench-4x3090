@@ -1,0 +1,16 @@
+[2026-08-18T04:17:40.274555Z] ready fp8
+[2026-08-18T04:17:40.299538Z] skip complete fp8/off/full
+[2026-08-18T04:17:40.312468Z] skip complete fp8/off/reasoning
+[2026-08-18T04:17:40.335536Z] skip complete fp8/low/full
+[2026-08-18T04:17:40.349832Z] skip complete fp8/low/reasoning
+[2026-08-18T04:17:40.350436Z] run fp8/medium/full
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 374, in <module>
+    raise SystemExit(main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 350, in main
+    run_model(args.root, model_name, dict(MODELS[model_name]))
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 303, in run_model
+    run_arm(root, model_name, model, effort, suite)
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 243, in run_arm
+    raise RuntimeError(
+RuntimeError: arm failed: fp8/medium/full rc=0; see $RUN_ROOT/results/fp8/medium/full/run.log

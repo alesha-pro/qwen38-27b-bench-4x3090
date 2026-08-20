@@ -1,0 +1,421 @@
+{
+  "endpoint": "http://127.0.0.1:19081/v1",
+  "equivalent_score_150": 150,
+  "finished_at": "2026-08-17T22:18:58.203795Z",
+  "mode": "custom",
+  "model": "bench",
+  "packs": [
+    {
+      "catalog_scenario_count": 20,
+      "diagnostics": {
+        "extraction": {
+          "issues": {},
+          "methods": {},
+          "response_fields": {
+            "multi_turn": 1
+          }
+        }
+      },
+      "latency": {
+        "mean": 96.5077824338805,
+        "p50": 96.5077824338805,
+        "p95": 96.5077824338805
+      },
+      "pack_id": "hermesagent-20",
+      "passed": 1,
+      "scenario_count": 1,
+      "scenarios": [
+        {
+          "assistant_messages": [],
+          "attempt_count": 1,
+          "best_of_n_eligible": true,
+          "conversation": [],
+          "detail": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+          "failure_mode": "passed",
+          "id": "HA-02",
+          "label": "pass@1",
+          "latency_seconds": 96.5077824338805,
+          "pass_at_k": true,
+          "passed": true,
+          "raw_response": {
+            "final_verifier_payload": {
+              "action": "verify-final",
+              "detail": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+              "failure_mode": "passed",
+              "passed": true,
+              "trace": {
+                "elapsed_s": 96.4200695429463,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-02\nrun_dir=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02\nworkspace=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/workspace\nhermes_home=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=bebf181b-9dee-4c2f-a317-9c6d0b1ae661\ntool_events=64\nmemory_usage=144/2200\nmemory_entries=3",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Done. I cleared all 29 duplicate legacy notes and saved your three deployment facts. Memory is now at 6% (144/2,200 chars) with just:\n\n1. Staging service name: api-staging.internal\n2. EU deploys two canary instances before rollout.\n3. Rollbacks must pin the image digest, not the tag.",
+                  "memoryEntries": [
+                    "Staging service name: api-staging.internal",
+                    "EU deploys two canary instances before rollout.",
+                    "Rollbacks must pin the image digest, not the tag."
+                  ]
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Done. I cleared all 29 duplicate legacy notes and saved your three deployment facts. Memory is now at 6% (144/2,200 chars) with just:\n\n1. Staging service name: api-staging.internal\n2. EU deploys two canary instances before rollout.\n3. Rollbacks must pin the image digest, not the tag.",
+                    "memoryEntries": [
+                      "Staging service name: api-staging.internal",
+                      "EU deploys two canary instances before rollout.",
+                      "Rollbacks must pin the image digest, not the tag."
+                    ]
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-02",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+                  "timings": {
+                    "completedAt": "2026-08-17T22:18:58.197Z",
+                    "durationMs": 96388,
+                    "startedAt": "2026-08-17T22:17:21.809Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "containsAllFacts": true,
+                      "deduplicated": true,
+                      "finalLength": 144,
+                      "memoryPath": "/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home/memories/MEMORY.md",
+                      "memoryToolUsed": true,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "safetyScore": 20,
+                      "withinLimit": true
+                    },
+                    "status": "pass",
+                    "summary": "New facts were retained within the memory budget."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-17T22:18:58.197Z",
+                  "durationMs": 96388,
+                  "startedAt": "2026-08-17T22:17:21.809Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "containsAllFacts": true,
+                    "deduplicated": true,
+                    "finalLength": 144,
+                    "memoryPath": "/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home/memories/MEMORY.md",
+                    "memoryToolUsed": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "safetyScore": 20,
+                    "withinLimit": true
+                  },
+                  "status": "pass",
+                  "summary": "New facts were retained within the memory budget."
+                }
+              }
+            },
+            "multi_turn": true,
+            "responses": []
+          },
+          "raw_scenario": {
+            "description": "Checks whether Hermes can curate memory when near the built-in character budget.",
+            "failure_case": "Memory overflows, becomes malformed, or is edited directly.",
+            "id": "HA-02",
+            "messages": [
+              {
+                "content": "Remember these three deployment facts for later.",
+                "role": "user"
+              }
+            ],
+            "pack_id": "hermesagent-20",
+            "raw_scenario": {
+              "category": "Memory & Recall",
+              "expected": {
+                "failure_case": "Memory overflows, becomes malformed, or is edited directly.",
+                "required_keywords": [
+                  "facts",
+                  "retained",
+                  "exceeding",
+                  "hermes",
+                  "memory",
+                  "limits."
+                ],
+                "success_case": "The new facts are retained without exceeding Hermes memory limits."
+              },
+              "failure_case": "Memory overflows, becomes malformed, or is edited directly.",
+              "fixture_status": "upstream-verification-runtime",
+              "id": "HA-02",
+              "kind": "memory_near_capacity",
+              "success_case": "The new facts are retained without exceeding Hermes memory limits.",
+              "tool_fixtures": []
+            },
+            "sampling_overrides": {
+              "max_tokens": 1024
+            },
+            "success_case": "The new facts are retained without exceeding Hermes memory limits.",
+            "tags": [
+              "vendor-generated",
+              "sandboxed-stub"
+            ],
+            "upstream_scenario_id": "HA-02",
+            "upstream_title": "Memory Near Capacity",
+            "verifier": {
+              "asserts": [
+                {
+                  "kind": "_stub",
+                  "reason": "HermesAgent requires multi-tool sandbox verifier"
+                }
+              ],
+              "type": "_stub"
+            }
+          },
+          "repeat_index": 1,
+          "request": {
+            "chat_template_kwargs": {
+              "reasoning_effort": "low"
+            },
+            "messages": [
+              {
+                "content": "Remember these three deployment facts for later.",
+                "role": "user"
+              }
+            ],
+            "model": "bench",
+            "reasoning_effort": "low",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "response_field_used": "multi_turn",
+          "response_latencies_seconds": [],
+          "result": {
+            "detail": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+            "failure_mode": "passed",
+            "latency_seconds": 96.5077824338805,
+            "pass_rate": null,
+            "passed": true,
+            "passed_count": null,
+            "scenario_id": "HA-02",
+            "tokens_completion": null,
+            "total_count": null,
+            "verifier_trace": {
+              "sandbox_log_file": "sandbox-hermesagent-20.log",
+              "trace": {
+                "elapsed_s": 96.4200695429463,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-02\nrun_dir=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02\nworkspace=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/workspace\nhermes_home=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=bebf181b-9dee-4c2f-a317-9c6d0b1ae661\ntool_events=64\nmemory_usage=144/2200\nmemory_entries=3",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Done. I cleared all 29 duplicate legacy notes and saved your three deployment facts. Memory is now at 6% (144/2,200 chars) with just:\n\n1. Staging service name: api-staging.internal\n2. EU deploys two canary instances before rollout.\n3. Rollbacks must pin the image digest, not the tag.",
+                  "memoryEntries": [
+                    "Staging service name: api-staging.internal",
+                    "EU deploys two canary instances before rollout.",
+                    "Rollbacks must pin the image digest, not the tag."
+                  ]
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Done. I cleared all 29 duplicate legacy notes and saved your three deployment facts. Memory is now at 6% (144/2,200 chars) with just:\n\n1. Staging service name: api-staging.internal\n2. EU deploys two canary instances before rollout.\n3. Rollbacks must pin the image digest, not the tag.",
+                    "memoryEntries": [
+                      "Staging service name: api-staging.internal",
+                      "EU deploys two canary instances before rollout.",
+                      "Rollbacks must pin the image digest, not the tag."
+                    ]
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-02",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+                  "timings": {
+                    "completedAt": "2026-08-17T22:18:58.197Z",
+                    "durationMs": 96388,
+                    "startedAt": "2026-08-17T22:17:21.809Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "containsAllFacts": true,
+                      "deduplicated": true,
+                      "finalLength": 144,
+                      "memoryPath": "/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home/memories/MEMORY.md",
+                      "memoryToolUsed": true,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "safetyScore": 20,
+                      "withinLimit": true
+                    },
+                    "status": "pass",
+                    "summary": "New facts were retained within the memory budget."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-17T22:18:58.197Z",
+                  "durationMs": 96388,
+                  "startedAt": "2026-08-17T22:17:21.809Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "containsAllFacts": true,
+                    "deduplicated": true,
+                    "finalLength": 144,
+                    "memoryPath": "/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home/memories/MEMORY.md",
+                    "memoryToolUsed": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "safetyScore": 20,
+                    "withinLimit": true
+                  },
+                  "status": "pass",
+                  "summary": "New facts were retained within the memory budget."
+                }
+              }
+            }
+          },
+          "retry_attempts": [],
+          "retry_eligible": false,
+          "sampling_params": {
+            "chat_template_kwargs": {
+              "reasoning_effort": "low"
+            },
+            "reasoning_effort": "low",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "status_code": null,
+          "token_metrics": {
+            "per_response": [],
+            "response_count": 0,
+            "telemetry_complete": false,
+            "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8/tokenizer.json"
+          },
+          "tokens_completion": null,
+          "tool_calls": [],
+          "turn_count": 0,
+          "verifier_trace": {
+            "sandbox_log_file": "sandbox-hermesagent-20.log",
+            "trace": {
+              "elapsed_s": 96.4200695429463,
+              "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+              "hermes_agent_path": "/opt/hermes-agent",
+              "hermes_agent_source": "baked",
+              "raw_log_tail": "scenario=HA-02\nrun_dir=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02\nworkspace=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/workspace\nhermes_home=/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=bebf181b-9dee-4c2f-a317-9c6d0b1ae661\ntool_events=64\nmemory_usage=144/2200\nmemory_entries=3",
+              "schema_version": "2",
+              "upstream_note": "Pinned Hermes 44cdf555a83c",
+              "upstream_output": {
+                "finalAnswer": "Done. I cleared all 29 duplicate legacy notes and saved your three deployment facts. Memory is now at 6% (144/2,200 chars) with just:\n\n1. Staging service name: api-staging.internal\n2. EU deploys two canary instances before rollout.\n3. Rollbacks must pin the image digest, not the tag.",
+                "memoryEntries": [
+                  "Staging service name: api-staging.internal",
+                  "EU deploys two canary instances before rollout.",
+                  "Rollbacks must pin the image digest, not the tag."
+                ]
+              },
+              "upstream_raw": {
+                "note": "Pinned Hermes 44cdf555a83c",
+                "output": {
+                  "finalAnswer": "Done. I cleared all 29 duplicate legacy notes and saved your three deployment facts. Memory is now at 6% (144/2,200 chars) with just:\n\n1. Staging service name: api-staging.internal\n2. EU deploys two canary instances before rollout.\n3. Rollbacks must pin the image digest, not the tag.",
+                  "memoryEntries": [
+                    "Staging service name: api-staging.internal",
+                    "EU deploys two canary instances before rollout.",
+                    "Rollbacks must pin the image digest, not the tag."
+                  ]
+                },
+                "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                "scenarioId": "HA-02",
+                "score": 100,
+                "status": "pass",
+                "summary": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+                "timings": {
+                  "completedAt": "2026-08-17T22:18:58.197Z",
+                  "durationMs": 96388,
+                  "startedAt": "2026-08-17T22:17:21.809Z"
+                },
+                "verifier": {
+                  "details": {
+                    "containsAllFacts": true,
+                    "deduplicated": true,
+                    "finalLength": 144,
+                    "memoryPath": "/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home/memories/MEMORY.md",
+                    "memoryToolUsed": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "safetyScore": 20,
+                    "withinLimit": true
+                  },
+                  "status": "pass",
+                  "summary": "New facts were retained within the memory budget."
+                }
+              },
+              "upstream_score": 100,
+              "upstream_status": "pass",
+              "upstream_summary": "Hermes curated near-capacity memory without overflowing the built-in limit.",
+              "upstream_timings": {
+                "completedAt": "2026-08-17T22:18:58.197Z",
+                "durationMs": 96388,
+                "startedAt": "2026-08-17T22:17:21.809Z"
+              },
+              "upstream_verifier": {
+                "details": {
+                  "containsAllFacts": true,
+                  "deduplicated": true,
+                  "finalLength": 144,
+                  "memoryPath": "/tmp/hermesagent20-runs/196396ee-7663-458d-8cb6-a591d9fb5a57/bench/HA-02/hermes-home/memories/MEMORY.md",
+                  "memoryToolUsed": true,
+                  "nativeUseScore": 30,
+                  "outcomeSatisfied": true,
+                  "outcomeScore": 50,
+                  "safetyScore": 20,
+                  "withinLimit": true
+                },
+                "status": "pass",
+                "summary": "New facts were retained within the memory budget."
+              }
+            }
+          }
+        }
+      ],
+      "score": 1.0,
+      "skipped": false,
+      "status": "ok",
+      "thinking_enabled": true,
+      "total": 1,
+      "upstream_commit": "57d7766bf3db8c40696e3ed937d43c8c85f4cd6c",
+      "variance": null,
+      "version": "1.0.0",
+      "warnings": []
+    }
+  ],
+  "reasoning_effort": "low",
+  "repeat": 1,
+  "runner_version": "0.9.8",
+  "schema_version": "1",
+  "selection": [
+    "hermesagent-20/HA-02"
+  ],
+  "started_at": "2026-08-17T22:17:19.291943Z",
+  "thinking_control": "reasoning_effort",
+  "thinking_enabled": true,
+  "thinking_mode": "force-on",
+  "totals": {
+    "passed": 1,
+    "score": 1.0,
+    "total": 1
+  },
+  "warnings": []
+}

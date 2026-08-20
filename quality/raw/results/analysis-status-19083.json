@@ -1,0 +1,6 @@
+{
+  "finished_at": "2026-08-19T21:37:24.829758Z",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"$RUN_ROOT/harness/analyze_quality_matrix.py\", line 16, in <module>\n    from tokenizers import Tokenizer\nModuleNotFoundError: No module named 'tokenizers'\n"
+}

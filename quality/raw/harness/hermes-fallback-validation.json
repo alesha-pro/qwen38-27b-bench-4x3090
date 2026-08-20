@@ -1,0 +1,39 @@
+{
+  "issue": "Hermes iteration-limit summary bypassed request_overrides and contaminated no-thinking runs",
+  "benchlocal_upstream_commit": "3e677be357b79a2e4380a246e6d4399fd1a80c5c",
+  "hermes_upstream_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+  "fix_patch_sha256": "4c3535d2d68a8b4d406738c7dae5684e162f42ee0d89368eebb450761008e897",
+  "dockerfile_sha256": "c20aee08c98ca9096fc29a49aad1ff6e0f86ca55cb135c085ab33677d07bff66",
+  "sandbox_image_id": "sha256:8a944de6d17d36e79215ad7339aefc34678a05270a2d7aff7d1a4a27db9fba98",
+  "tests": {
+    "benchlocal_pytest": "412 passed",
+    "off_ha02": {
+      "model_calls": 9,
+      "fallback_calls": 1,
+      "reasoning_nonzero_calls": 0,
+      "fallback_enable_thinking": false,
+      "fallback_max_tokens": 1024
+    },
+    "low_ha02": {
+      "model_calls": 3,
+      "reasoning_nonzero_calls": 3,
+      "requests_with_max_tokens": 0,
+      "request_reasoning_effort": "low"
+    },
+    "medium_rm01": {
+      "passed": true,
+      "requests_with_max_tokens": 0,
+      "request_reasoning_effort": "medium",
+      "reasoning_chars": 373,
+      "reconstructed_reasoning_tokens": 192
+    },
+    "xhigh_rm01": {
+      "passed": true,
+      "requests_with_max_tokens": 0,
+      "request_reasoning_effort": "xhigh",
+      "reasoning_chars": 668,
+      "reconstructed_reasoning_tokens": 258
+    }
+  },
+  "rejected_data": "$RUN_ROOT/rejected/fp8-off-contaminated-before-hermes-fallback-fix"
+}

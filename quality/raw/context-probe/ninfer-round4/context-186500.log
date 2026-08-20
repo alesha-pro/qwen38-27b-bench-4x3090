@@ -1,0 +1,22 @@
+[2026-08-17 21:19:49.558] [info] ninfer-serve: loading model...
+[2026-08-17 21:19:50.673] [info] ninfer-serve: load        weights                      0.00%           0 B /      15.92 GiB     0.000 s
+[2026-08-17 21:20:00.784] [info] ninfer-serve: load        weights                     10.21%      1.62 GiB /      15.92 GiB    10.111 s
+[2026-08-17 21:20:10.975] [info] ninfer-serve: load        weights                     20.02%      3.19 GiB /      15.92 GiB    20.302 s
+[2026-08-17 21:20:21.319] [info] ninfer-serve: load        weights                     29.44%      4.69 GiB /      15.92 GiB    30.646 s
+[2026-08-17 21:20:31.940] [info] ninfer-serve: load        weights                     34.55%      5.50 GiB /      15.92 GiB    41.268 s
+[2026-08-17 21:20:42.339] [info] ninfer-serve: load        weights                     38.87%      6.19 GiB /      15.92 GiB    51.666 s
+[2026-08-17 21:20:53.058] [info] ninfer-serve: load        weights                     43.97%      7.00 GiB /      15.92 GiB    62.385 s
+[2026-08-17 21:21:03.316] [info] ninfer-serve: load        weights                     49.07%      7.81 GiB /      15.92 GiB    72.643 s
+[2026-08-17 21:21:13.396] [info] ninfer-serve: load        weights                     53.79%      8.56 GiB /      15.92 GiB    82.723 s
+[2026-08-17 21:21:24.064] [info] ninfer-serve: load        weights                     58.50%      9.31 GiB /      15.92 GiB    93.392 s
+[2026-08-17 21:21:34.829] [info] ninfer-serve: load        weights                     63.60%     10.12 GiB /      15.92 GiB   104.156 s
+[2026-08-17 21:21:45.384] [info] ninfer-serve: load        weights                     68.70%     10.94 GiB /      15.92 GiB   114.711 s
+[2026-08-17 21:21:55.434] [info] ninfer-serve: load        weights                     73.42%     11.69 GiB /      15.92 GiB   124.761 s
+[2026-08-17 21:22:05.822] [info] ninfer-serve: load        weights                     83.23%     13.25 GiB /      15.92 GiB   135.150 s
+[2026-08-17 21:22:16.210] [info] ninfer-serve: load        weights                     92.65%     14.75 GiB /      15.92 GiB   145.537 s
+[2026-08-17 21:22:27.072] [info] ninfer-serve: load        weights                     97.76%     15.56 GiB /      15.92 GiB   156.399 s
+[2026-08-17 21:22:31.461] [info] ninfer-serve: load        weights                    100.00%     15.92 GiB /      15.92 GiB   160.788 s
+[2026-08-17 21:22:33.012] [info] ninfer-serve: model loaded in 163.453 s
+[2026-08-17 21:22:33.012] [info] ninfer-serve: KV capacity auto resolved=186560 tokens pages=2915/2915 runtime=6.35 GiB free-after-weights=7.38 GiB free-after-startup=1.03 GiB headroom=1.00 GiB slack=1.03 GiB graphs=8.00 MiB/12.00 MiB
+[2026-08-17 21:22:33.012] [info] ninfer-serve: warming up...
+[2026-08-17 21:22:33.282] [info] ninfer-serve: listening on http://127.0.0.1:18220 (model id: bench, auth: disabled)

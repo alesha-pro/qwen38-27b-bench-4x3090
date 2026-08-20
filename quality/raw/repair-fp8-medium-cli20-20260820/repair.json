@@ -1,0 +1,18 @@
+{
+  "repaired_at": "2026-08-20T04:54:33+00:00",
+  "model": "fp8",
+  "effort": "medium",
+  "suite": "full",
+  "scenario": "cli-40/CLI-20",
+  "action": "targeted uncapped rerun replaced original capped scenario",
+  "new_outcome": "verifier_fail",
+  "new_finish_reason": "stop",
+  "new_max_tokens": false,
+  "new_reasoning_tokens": 1123,
+  "score_before": "131/150",
+  "score_after": "131/150",
+  "original_result_sha256": "b67cf14ba02eb01473e3031f20cd97b1292d720ce37b1e0a44cde59f228ed7bc",
+  "corrected_result_sha256": "26f6f53ac40515e1ed7aba00d091f53886f472dcdea954abcacd5d0afe9e8cae",
+  "original_telemetry_sha256": "b631cf7af4bd5d164dcf2114b24be2f0deeae00c7019f6b457da787d54b9c49e",
+  "corrected_telemetry_sha256": "a8d59da3d004d817e19894c504b5305f92861b0e2a4b9ed5da2bce7cf5670991"
+}

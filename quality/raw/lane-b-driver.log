@@ -1,0 +1,28 @@
+[2026-08-18T14:18:13.568365Z] ready nvfp4
+[2026-08-18T14:18:13.623846Z] skip complete nvfp4/off/full
+[2026-08-18T14:18:13.662939Z] skip complete nvfp4/off/reasoning
+[2026-08-18T14:18:13.695901Z] skip complete nvfp4/low/full
+[2026-08-18T14:18:13.718421Z] skip complete nvfp4/low/reasoning
+[2026-08-18T14:18:13.742076Z] skip complete nvfp4/medium/full
+[2026-08-18T14:18:13.757500Z] skip complete nvfp4/medium/reasoning
+[2026-08-18T14:18:13.758009Z] run nvfp4/xhigh/full
+[2026-08-18T17:28:42.212805Z] run nvfp4/xhigh/reasoning
+[2026-08-18T21:04:35.949495Z] ready gguf-q4-k-m
+[2026-08-18T21:04:35.950342Z] run gguf-q4-k-m/off/full
+[2026-08-18T21:41:19.713229Z] run gguf-q4-k-m/off/reasoning
+[2026-08-18T22:58:35.434026Z] run gguf-q4-k-m/low/full
+[2026-08-19T00:11:20.877298Z] run gguf-q4-k-m/low/reasoning
+[2026-08-19T03:25:17.047663Z] run gguf-q4-k-m/medium/full
+[2026-08-19T05:02:38.951609Z] run gguf-q4-k-m/medium/reasoning
+[2026-08-19T07:22:57.227236Z] run gguf-q4-k-m/xhigh/full
+[2026-08-19T12:47:49.138549Z] run gguf-q4-k-m/xhigh/reasoning
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 398, in <module>
+    raise SystemExit(main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 389, in main
+    raise RuntimeError(f"final analysis failed rc={analysis.returncode}: {analysis.stderr}")
+RuntimeError: final analysis failed rc=1: Traceback (most recent call last):
+  File "$RUN_ROOT/harness/analyze_quality_matrix.py", line 16, in <module>
+    from tokenizers import Tokenizer
+ModuleNotFoundError: No module named 'tokenizers'
+

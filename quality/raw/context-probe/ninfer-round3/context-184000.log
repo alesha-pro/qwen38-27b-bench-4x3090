@@ -1,0 +1,17 @@
+[2026-08-17 21:17:36.240] [info] ninfer-serve: loading model...
+[2026-08-17 21:17:37.377] [info] ninfer-serve: load        weights                      0.00%           0 B /      15.92 GiB     0.000 s
+[2026-08-17 21:17:47.419] [info] ninfer-serve: load        weights                     15.31%      2.44 GiB /      15.92 GiB    10.041 s
+[2026-08-17 21:17:57.698] [info] ninfer-serve: load        weights                     29.05%      4.62 GiB /      15.92 GiB    20.321 s
+[2026-08-17 21:18:08.159] [info] ninfer-serve: load        weights                     36.51%      5.81 GiB /      15.92 GiB    30.781 s
+[2026-08-17 21:18:18.633] [info] ninfer-serve: load        weights                     43.97%      7.00 GiB /      15.92 GiB    41.256 s
+[2026-08-17 21:18:29.097] [info] ninfer-serve: load        weights                     51.43%      8.19 GiB /      15.92 GiB    51.720 s
+[2026-08-17 21:18:39.557] [info] ninfer-serve: load        weights                     58.89%      9.37 GiB /      15.92 GiB    62.180 s
+[2026-08-17 21:18:49.742] [info] ninfer-serve: load        weights                     66.35%     10.56 GiB /      15.92 GiB    72.365 s
+[2026-08-17 21:19:00.214] [info] ninfer-serve: load        weights                     73.81%     11.75 GiB /      15.92 GiB    82.836 s
+[2026-08-17 21:19:10.478] [info] ninfer-serve: load        weights                     86.37%     13.75 GiB /      15.92 GiB    93.101 s
+[2026-08-17 21:19:20.737] [info] ninfer-serve: load        weights                     96.19%     15.31 GiB /      15.92 GiB   103.360 s
+[2026-08-17 21:19:26.104] [info] ninfer-serve: load        weights                    100.00%     15.92 GiB /      15.92 GiB   108.727 s
+[2026-08-17 21:19:27.745] [info] ninfer-serve: model loaded in 111.505 s
+[2026-08-17 21:19:27.745] [info] ninfer-serve: KV capacity auto resolved=184000 tokens pages=2875/2875 runtime=6.27 GiB free-after-weights=7.38 GiB free-after-startup=1.11 GiB headroom=1.00 GiB slack=1.11 GiB graphs=8.00 MiB/12.00 MiB
+[2026-08-17 21:19:27.745] [info] ninfer-serve: warming up...
+[2026-08-17 21:19:28.022] [info] ninfer-serve: listening on http://127.0.0.1:18220 (model id: bench, auth: disabled)

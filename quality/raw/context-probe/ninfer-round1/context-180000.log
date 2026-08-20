@@ -1,0 +1,11 @@
+[2026-08-17 21:15:49.580] [info] ninfer-serve: loading model...
+[2026-08-17 21:15:50.667] [info] ninfer-serve: load        weights                      0.00%           0 B /      15.92 GiB     0.000 s
+[2026-08-17 21:16:00.812] [info] ninfer-serve: load        weights                     29.84%      4.75 GiB /      15.92 GiB    10.145 s
+[2026-08-17 21:16:10.985] [info] ninfer-serve: load        weights                     47.50%      7.56 GiB /      15.92 GiB    20.318 s
+[2026-08-17 21:16:21.149] [info] ninfer-serve: load        weights                     65.17%     10.37 GiB /      15.92 GiB    30.482 s
+[2026-08-17 21:16:31.192] [info] ninfer-serve: load        weights                     89.12%     14.19 GiB /      15.92 GiB    40.525 s
+[2026-08-17 21:16:36.720] [info] ninfer-serve: load        weights                    100.00%     15.92 GiB /      15.92 GiB    46.053 s
+[2026-08-17 21:16:38.272] [info] ninfer-serve: model loaded in 48.6914 s
+[2026-08-17 21:16:38.272] [info] ninfer-serve: KV capacity auto resolved=180032 tokens pages=2813/2813 runtime=6.14 GiB free-after-weights=7.38 GiB free-after-startup=1.24 GiB headroom=1.00 GiB slack=1.23 GiB graphs=8.00 MiB/12.00 MiB
+[2026-08-17 21:16:38.272] [info] ninfer-serve: warming up...
+[2026-08-17 21:16:38.547] [info] ninfer-serve: listening on http://127.0.0.1:18220 (model id: bench, auth: disabled)

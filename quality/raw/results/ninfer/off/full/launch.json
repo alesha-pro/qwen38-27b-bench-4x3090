@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-08-19T09:06:49.861807Z",
+  "argv": [
+    "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli",
+    "run",
+    "--resume",
+    "$RUN_ROOT/results/ninfer/off/full/result.json.partial.jsonl",
+    "--endpoint",
+    "http://127.0.0.1:19083/v1",
+    "--model",
+    "bench",
+    "--timeout-per-case",
+    "86400",
+    "--timeout-ceiling-s",
+    "0",
+    "--model-turn-timeout",
+    "0",
+    "--progress",
+    "--strict-thinking",
+    "--history-file",
+    "$RUN_ROOT/results/history.csv",
+    "--report",
+    "md",
+    "--report-out",
+    "$RUN_ROOT/results/ninfer/off/full/RESULTS.md"
+  ],
+  "model": "ninfer",
+  "effort": "off",
+  "suite": "full",
+  "natural_reasoning": true
+}

@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-08-19T17:44:25.686752Z",
+  "models": [
+    "fp8"
+  ],
+  "efforts": [
+    "medium",
+    "xhigh"
+  ],
+  "suites": [
+    "full"
+  ],
+  "benchlocal": "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli",
+  "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8",
+  "target_port": 18084,
+  "proxy_port": 19084,
+  "gpu_map": {
+    "fp8": "2,3"
+  },
+  "thinking_max_tokens": null,
+  "methodology": "natural endpoint-bounded reasoning; no request max_tokens in thinking arms"
+}

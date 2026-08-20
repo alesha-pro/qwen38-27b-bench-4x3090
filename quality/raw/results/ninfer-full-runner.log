@@ -1,0 +1,25 @@
+[2026-08-19T09:03:19.653298Z] ready ninfer
+[2026-08-19T09:03:19.654130Z] run ninfer/off/full
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 398, in <module>
+    raise SystemExit(main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 369, in main
+    run_model(
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 261, in run_model
+    raise RuntimeError(f"ports {TARGET_PORT}/{PROXY_PORT} are not free")
+RuntimeError: ports 18083/19083 are not free
+[2026-08-19T09:06:49.861487Z] ready ninfer
+[2026-08-19T09:06:49.862289Z] run ninfer/off/full
+[2026-08-19T09:58:04.398219Z] run ninfer/low/full
+[2026-08-19T11:35:49.108111Z] run ninfer/medium/full
+[2026-08-19T14:41:44.632123Z] run ninfer/xhigh/full
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 398, in <module>
+    raise SystemExit(main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 389, in main
+    raise RuntimeError(f"final analysis failed rc={analysis.returncode}: {analysis.stderr}")
+RuntimeError: final analysis failed rc=1: Traceback (most recent call last):
+  File "$RUN_ROOT/harness/analyze_quality_matrix.py", line 16, in <module>
+    from tokenizers import Tokenizer
+ModuleNotFoundError: No module named 'tokenizers'
+

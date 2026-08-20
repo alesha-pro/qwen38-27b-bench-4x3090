@@ -1,0 +1,11 @@
+# benchlocal-cli sandbox log — cli-40
+# container_id: ae5cc9a9faaf61e1e697b5344c75e6f96188e0436bd393c1214f2aa195a85284
+# captured_at: 2026-08-20T04:50:25Z
+
+=== STDOUT ===
+
+=== STDERR ===
+[cli-sandbox] listening on :9000
+[cli-sandbox] "GET /health HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify HTTP/1.1" 200 -
+

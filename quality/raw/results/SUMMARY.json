@@ -1,0 +1,5179 @@
+{
+  "generated_at": "2026-08-20T04:09:47.499570+00:00",
+  "arms": [
+    {
+      "model": "awq-int4",
+      "effort": "low",
+      "suite": "full",
+      "passed": 130,
+      "total": 150,
+      "score": 0.8666666666666667,
+      "pass_at_k": {
+        "credited_flaky": 6,
+        "k": 3,
+        "passed": 136,
+        "retried_scenarios": 20,
+        "retry_attempts": 35,
+        "safety_flaky": 0,
+        "score": 0.9066666666666666,
+        "systematic": 14,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 130,
+        "verifier_fail": 19,
+        "wrong_answer": 1
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 796386.0,
+          "mean": 5309.24,
+          "median": 577.5,
+          "p90": 13771.099999999982,
+          "p95": 24834.949999999975,
+          "max": 120652.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 132673.0,
+          "mean": 884.4866666666667,
+          "median": 452.0,
+          "p90": 1976.3999999999999,
+          "p95": 3732.849999999992,
+          "max": 10139.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 83440.0,
+          "mean": 556.2666666666667,
+          "median": 250.0,
+          "p90": 1408.7,
+          "p95": 2129.699999999998,
+          "max": 5001.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 27882.0,
+          "mean": 185.88,
+          "median": 114.5,
+          "p90": 400.4,
+          "p95": 638.7499999999995,
+          "max": 1304.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 110579.0,
+          "mean": 737.1933333333334,
+          "median": 0.0,
+          "p90": 1016.8999999999994,
+          "p95": 5073.899999999998,
+          "max": 30889.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 1985.020953813335,
+          "mean": 13.233473025422233,
+          "median": 7.5591767359292135,
+          "p90": 29.8964722250821,
+          "p95": 43.14240704163676,
+          "max": 99.94934928184375
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 2375.931763431523,
+          "mean": 15.839545089543487,
+          "median": 7.5388767519034445,
+          "p90": 32.344777777977285,
+          "p95": 59.73864580796795,
+          "max": 194.47289731516503
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 394.0,
+          "mean": 2.6266666666666665,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 8.099999999999966,
+          "max": 31.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 185.0,
+          "mean": 1.2333333333333334,
+          "median": 1.0,
+          "p90": 2.0999999999999943,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 394,
+      "reasoning_share_of_completion": 0.6289147000520076,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 394,
+        "requests_with_reasoning": 394,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 171,
+          "tool_calls": 223
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "low": 394
+        },
+        "enable_thinking_counts": {
+          "None": 394
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 394
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "awq-int4",
+      "effort": "low",
+      "suite": "reasoning",
+      "passed": 90,
+      "total": 90,
+      "score": 1.0,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 90,
+        "retried_scenarios": 0,
+        "retry_attempts": 0,
+        "safety_flaky": 0,
+        "score": 1.0,
+        "systematic": 0,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 90
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 121942.0,
+          "mean": 1354.911111111111,
+          "median": 523.0,
+          "p90": 3321.0,
+          "p95": 3321.0,
+          "max": 3321.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 516571.0,
+          "mean": 5739.677777777778,
+          "median": 3517.0,
+          "p90": 9174.0,
+          "p95": 17713.549999999996,
+          "max": 43764.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 380394.0,
+          "mean": 4226.6,
+          "median": 3159.5,
+          "p90": 6547.300000000017,
+          "p95": 16938.299999999996,
+          "max": 43085.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 134257.0,
+          "mean": 1491.7444444444445,
+          "median": 307.5,
+          "p90": 3926.0,
+          "p95": 3926.0,
+          "max": 3926.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 3796.8492202297784,
+          "mean": 42.18721355810865,
+          "median": 5.540877005434595,
+          "p90": 107.80893723538635,
+          "p95": 267.94957746181166,
+          "max": 673.8610236782115
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 7816.824862562353,
+          "mean": 86.85360958402615,
+          "median": 52.61745089152828,
+          "p90": 138.6727032312192,
+          "p95": 267.93038719970497,
+          "max": 673.8346381781157
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 960.0,
+          "mean": 10.666666666666666,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 90.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "max": 1.0
+        }
+      },
+      "model_requests": 90,
+      "reasoning_share_of_completion": 0.7363828012025453,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 90,
+        "requests_with_reasoning": 90,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 90
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "low": 90
+        },
+        "enable_thinking_counts": {
+          "None": 90
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 90
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "awq-int4",
+      "effort": "medium",
+      "suite": "full",
+      "passed": 129,
+      "total": 150,
+      "score": 0.86,
+      "pass_at_k": {
+        "credited_flaky": 11,
+        "k": 3,
+        "passed": 140,
+        "retried_scenarios": 21,
+        "retry_attempts": 35,
+        "safety_flaky": 0,
+        "score": 0.9333333333333333,
+        "systematic": 10,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 129,
+        "verifier_fail": 19,
+        "wrong_answer": 2
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 656178.0,
+          "mean": 4374.52,
+          "median": 558.5,
+          "p90": 11847.399999999987,
+          "p95": 19855.04999999997,
+          "max": 69257.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 149600.0,
+          "mean": 997.3333333333334,
+          "median": 504.0,
+          "p90": 2529.7,
+          "p95": 3454.699999999998,
+          "max": 10600.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 101743.0,
+          "mean": 678.2866666666666,
+          "median": 273.0,
+          "p90": 1793.7999999999993,
+          "p95": 2746.349999999996,
+          "max": 7569.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 28628.0,
+          "mean": 190.85333333333332,
+          "median": 109.5,
+          "p90": 484.59999999999997,
+          "p95": 668.799999999998,
+          "max": 1218.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 94987.0,
+          "mean": 633.2466666666667,
+          "median": 0.0,
+          "p90": 673.099999999999,
+          "p95": 3329.5499999999993,
+          "max": 27449.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 2093.966211469844,
+          "mean": 13.959774743132293,
+          "median": 8.805651034461334,
+          "p90": 33.5420024432009,
+          "p95": 44.81783710169831,
+          "max": 110.89237813302316
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 2569.5891585941426,
+          "mean": 17.130594390627618,
+          "median": 8.635067406576127,
+          "p90": 45.945401255972676,
+          "p95": 65.64513116074947,
+          "max": 186.94258703594096
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 365.0,
+          "mean": 2.433333333333333,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 7.0,
+          "max": 27.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 185.0,
+          "mean": 1.2333333333333334,
+          "median": 1.0,
+          "p90": 2.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 365,
+      "reasoning_share_of_completion": 0.6801002673796791,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 365,
+        "requests_with_reasoning": 365,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 174,
+          "tool_calls": 191
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "medium": 365
+        },
+        "enable_thinking_counts": {
+          "None": 365
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 365
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "awq-int4",
+      "effort": "medium",
+      "suite": "reasoning",
+      "passed": 84,
+      "total": 90,
+      "score": 0.9333333333333333,
+      "pass_at_k": {
+        "credited_flaky": 5,
+        "k": 3,
+        "passed": 60,
+        "retried_scenarios": 6,
+        "retry_attempts": 9,
+        "safety_flaky": 0,
+        "score": 0.9836065573770492,
+        "systematic": 1,
+        "total": 61
+      },
+      "failure_modes": {
+        "passed": 84,
+        "verifier_fail": 5,
+        "wrong_answer": 1
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 99040.0,
+          "mean": 1100.4444444444443,
+          "median": 540.0,
+          "p90": 2541.0,
+          "p95": 2541.0,
+          "max": 2541.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 667163.0,
+          "mean": 7412.922222222222,
+          "median": 3802.5,
+          "p90": 12355.800000000003,
+          "p95": 16151.049999999985,
+          "max": 48586.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 559454.0,
+          "mean": 6216.155555555555,
+          "median": 3396.0,
+          "p90": 11113.50000000001,
+          "p95": 15705.099999999986,
+          "max": 48585.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 105771.0,
+          "mean": 1175.2333333333333,
+          "median": 358.0,
+          "p90": 3024.0,
+          "p95": 3024.0,
+          "max": 3024.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 4598.691384685459,
+          "mean": 51.09657094094954,
+          "median": 7.563758292933926,
+          "p90": 171.42156868060135,
+          "p95": 244.0396043175713,
+          "max": 750.455533468863
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 10080.561200336087,
+          "mean": 112.00623555928986,
+          "median": 56.957457850454375,
+          "p90": 185.9579894544557,
+          "p95": 244.0217892170998,
+          "max": 750.4365231269039
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 969.0,
+          "mean": 10.766666666666667,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 99.0,
+          "mean": 1.1,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 2.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 99,
+      "reasoning_share_of_completion": 0.8385566945409143,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 1,
+          "status": "ok",
+          "with_reasoning": 1
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 99,
+        "requests_with_reasoning": 99,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 99
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "medium": 99
+        },
+        "enable_thinking_counts": {
+          "None": 99
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 99
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "gsm-symbolic-30 replaced from targeted medium-effort repair after interrupted resume"
+      ]
+    },
+    {
+      "model": "awq-int4",
+      "effort": "off",
+      "suite": "full",
+      "passed": 117,
+      "total": 150,
+      "score": 0.78,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 117,
+        "retried_scenarios": 31,
+        "retry_attempts": 62,
+        "safety_flaky": 0,
+        "score": 0.78,
+        "systematic": 33,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 117,
+        "token_limit": 2,
+        "verifier_fail": 29,
+        "wrong_answer": 2
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 923527.0,
+          "mean": 6156.846666666666,
+          "median": 609.5,
+          "p90": 20987.5,
+          "p95": 28223.04999999999,
+          "max": 118557.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 51362.0,
+          "mean": 342.41333333333336,
+          "median": 185.0,
+          "p90": 903.2,
+          "p95": 1045.1,
+          "max": 2852.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 31693.0,
+          "mean": 211.28666666666666,
+          "median": 118.0,
+          "p90": 523.1,
+          "p95": 847.9499999999995,
+          "max": 1995.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 81441.0,
+          "mean": 542.94,
+          "median": 0.0,
+          "p90": 1008.1,
+          "p95": 4303.34999999997,
+          "max": 15284.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 1099.4487868926954,
+          "mean": 7.329658579284636,
+          "median": 2.755640455521643,
+          "p90": 24.115325356740502,
+          "p95": 34.92452519803772,
+          "max": 56.51431911508553
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 1234.0189634100534,
+          "mean": 8.226793089400356,
+          "median": 3.260271668434143,
+          "p90": 21.648641123669215,
+          "p95": 29.943709838436902,
+          "max": 92.49940945906565
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 485.0,
+          "mean": 3.2333333333333334,
+          "median": 1.0,
+          "p90": 7.0,
+          "p95": 15.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 212.0,
+          "mean": 1.4133333333333333,
+          "median": 1.0,
+          "p90": 3.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 485,
+      "reasoning_share_of_completion": 0.0,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "cli-40": {
+          "expected": "off",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "dataextract-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "instructfollow-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "reasonmath-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "structoutput-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "toolcall-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": false,
+        "requests": 485,
+        "requests_with_reasoning": 0,
+        "scenarios_with_reasoning": 0,
+        "requests_with_max_tokens": 484,
+        "max_tokens_values": [
+          512,
+          1024,
+          10000
+        ],
+        "finish_reason_counts": {
+          "length": 2,
+          "stop": 191,
+          "tool_calls": 292
+        },
+        "length_finish_count": 2,
+        "request_reasoning_effort_counts": {
+          "None": 485
+        },
+        "enable_thinking_counts": {
+          "False": 485
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 485
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": null,
+        "reasoning_observed": null,
+        "off_stayed_silent": true,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "awq-int4",
+      "effort": "off",
+      "suite": "reasoning",
+      "passed": 83,
+      "total": 90,
+      "score": 0.9222222222222223,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 83,
+        "retried_scenarios": 6,
+        "retry_attempts": 12,
+        "safety_flaky": 0,
+        "score": 0.9222222222222223,
+        "systematic": 7,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 83,
+        "token_limit": 1,
+        "verifier_fail": 1,
+        "wrong_answer": 5
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 105102.0,
+          "mean": 1167.8,
+          "median": 553.0,
+          "p90": 2601.0,
+          "p95": 2601.0,
+          "max": 2601.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 689564.0,
+          "mean": 7661.822222222222,
+          "median": 2034.0,
+          "p90": 15708.0,
+          "p95": 15708.0,
+          "max": 45522.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 688590.0,
+          "mean": 7651.0,
+          "median": 2033.0,
+          "p90": 15678.0,
+          "p95": 15678.0,
+          "max": 45519.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 2216.768339791568,
+          "mean": 24.630759331017423,
+          "median": 7.0778492068639025,
+          "p90": 71.3015765756136,
+          "p95": 148.39080644100898,
+          "max": 244.9286664039828
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 10250.730959423585,
+          "mean": 113.89701066026205,
+          "median": 30.362040932057425,
+          "p90": 233.2570647264365,
+          "p95": 233.2570647264365,
+          "max": 679.3879150508437
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 972.0,
+          "mean": 10.8,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 102.0,
+          "mean": 1.1333333333333333,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 102,
+      "reasoning_share_of_completion": 0.0,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "humaneval-plus-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "lcb-v6-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": false,
+        "requests": 102,
+        "requests_with_reasoning": 0,
+        "scenarios_with_reasoning": 0,
+        "requests_with_max_tokens": 102,
+        "max_tokens_values": [
+          2048,
+          16384
+        ],
+        "finish_reason_counts": {
+          "length": 1,
+          "stop": 101
+        },
+        "length_finish_count": 1,
+        "request_reasoning_effort_counts": {
+          "None": 102
+        },
+        "enable_thinking_counts": {
+          "False": 102
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 102
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": null,
+        "reasoning_observed": null,
+        "off_stayed_silent": true,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "awq-int4",
+      "effort": "xhigh",
+      "suite": "full",
+      "passed": 135,
+      "total": 150,
+      "score": 0.9,
+      "pass_at_k": {
+        "credited_flaky": 5,
+        "k": 3,
+        "passed": 140,
+        "retried_scenarios": 15,
+        "retry_attempts": 26,
+        "safety_flaky": 0,
+        "score": 0.9333333333333333,
+        "systematic": 10,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 135,
+        "server_error": 1,
+        "verifier_fail": 13,
+        "wrong_answer": 1
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 794488.0,
+          "mean": 5296.586666666667,
+          "median": 563.0,
+          "p90": 16151.89999999999,
+          "p95": 25001.499999999978,
+          "max": 119774.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 636125.0,
+          "mean": 4240.833333333333,
+          "median": 630.0,
+          "p90": 6421.899999999999,
+          "p95": 15627.049999999941,
+          "max": 131655.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 578123.0,
+          "mean": 3854.153333333333,
+          "median": 431.5,
+          "p90": 5969.7999999999965,
+          "p95": 14463.249999999975,
+          "max": 120495.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 36924.0,
+          "mean": 246.16,
+          "median": 105.0,
+          "p90": 325.19999999999993,
+          "p95": 496.2999999999986,
+          "max": 11152.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 111451.0,
+          "mean": 743.0066666666667,
+          "median": 0.0,
+          "p90": 826.0999999999989,
+          "p95": 4521.849999999979,
+          "max": 40130.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 7772.243132655509,
+          "mean": 51.814954217703395,
+          "median": 11.46164501295425,
+          "p90": 89.83109020588452,
+          "p95": 176.43646203853308,
+          "max": 1171.7479121051729
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 10101.511151355458,
+          "mean": 67.34340767570306,
+          "median": 10.790153168607503,
+          "p90": 105.32877566104288,
+          "p95": 235.2142190478035,
+          "max": 2047.93745427276
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 378.0,
+          "mean": 2.52,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 7.549999999999983,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 176.0,
+          "mean": 1.1733333333333333,
+          "median": 1.0,
+          "p90": 1.0999999999999943,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 378,
+      "reasoning_share_of_completion": 0.9088198074277855,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 378,
+        "requests_with_reasoning": 378,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 165,
+          "tool_calls": 213
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "xhigh": 378
+        },
+        "enable_thinking_counts": {
+          "None": 378
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 378
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "awq-int4",
+      "effort": "xhigh",
+      "suite": "reasoning",
+      "passed": 90,
+      "total": 90,
+      "score": 1.0,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 90,
+        "retried_scenarios": 0,
+        "retry_attempts": 0,
+        "safety_flaky": 0,
+        "score": 1.0,
+        "systematic": 0,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 90
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 133462.0,
+          "mean": 1482.911111111111,
+          "median": 535.0,
+          "p90": 3681.0,
+          "p95": 3681.0,
+          "max": 3681.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 919306.0,
+          "mean": 10214.511111111111,
+          "median": 9801.0,
+          "p90": 20962.30000000003,
+          "p95": 42291.14999999998,
+          "max": 79286.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 817478.0,
+          "mean": 9083.08888888889,
+          "median": 8516.0,
+          "p90": 20553.100000000028,
+          "p95": 41972.64999999997,
+          "max": 78294.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 99905.0,
+          "mean": 1110.0555555555557,
+          "median": 283.5,
+          "p90": 2866.0,
+          "p95": 2866.0,
+          "max": 2866.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 9014.037149532232,
+          "mean": 100.15596832813591,
+          "median": 7.566355619346723,
+          "p90": 317.6530988360061,
+          "p95": 650.9513294559317,
+          "max": 1249.2620375959668
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 14016.211052816594,
+          "mean": 155.73567836462882,
+          "median": 147.1598018790828,
+          "p90": 317.6344139036029,
+          "p95": 650.9171182503919,
+          "max": 1249.2326574800536
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 960.0,
+          "mean": 10.666666666666666,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 90.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "max": 1.0
+        }
+      },
+      "model_requests": 90,
+      "reasoning_share_of_completion": 0.889233835088643,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 90,
+        "requests_with_reasoning": 90,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 90
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "xhigh": 90
+        },
+        "enable_thinking_counts": {
+          "None": 90
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 90
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "fp8",
+      "effort": "low",
+      "suite": "full",
+      "passed": 130,
+      "total": 150,
+      "score": 0.8666666666666667,
+      "pass_at_k": {
+        "credited_flaky": 5,
+        "k": 3,
+        "passed": 135,
+        "retried_scenarios": 20,
+        "retry_attempts": 36,
+        "safety_flaky": 0,
+        "score": 0.9,
+        "systematic": 15,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 130,
+        "verifier_fail": 18,
+        "wrong_answer": 2
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 756466.0,
+          "mean": 5043.106666666667,
+          "median": 584.5,
+          "p90": 12047.199999999983,
+          "p95": 24333.149999999994,
+          "max": 92582.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 138952.0,
+          "mean": 926.3466666666667,
+          "median": 441.0,
+          "p90": 2010.9999999999995,
+          "p95": 3171.699999999999,
+          "max": 19432.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 88513.0,
+          "mean": 590.0866666666667,
+          "median": 270.5,
+          "p90": 1169.2,
+          "p95": 2130.799999999997,
+          "max": 12943.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 29924.0,
+          "mean": 199.49333333333334,
+          "median": 114.5,
+          "p90": 435.6999999999998,
+          "p95": 613.4999999999998,
+          "max": 2280.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 97664.0,
+          "mean": 651.0933333333334,
+          "median": 0.0,
+          "p90": 1022.6999999999991,
+          "p95": 4042.4999999999927,
+          "max": 37002.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 2540.381422308972,
+          "mean": 16.935876148726482,
+          "median": 10.75698102847673,
+          "p90": 38.754827895038744,
+          "p95": 52.86093012127088,
+          "max": 122.2020623611752
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 3312.2028094131965,
+          "mean": 22.081352062754643,
+          "median": 11.017435073270462,
+          "p90": 42.28914654674008,
+          "p95": 87.1005270803696,
+          "max": 452.60258602770045
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 390.0,
+          "mean": 2.6,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 7.0,
+          "max": 27.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 186.0,
+          "mean": 1.24,
+          "median": 1.0,
+          "p90": 3.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 390,
+      "reasoning_share_of_completion": 0.6370041453163683,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 390,
+        "requests_with_reasoning": 390,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 1,
+        "max_tokens_values": [
+          10000
+        ],
+        "finish_reason_counts": {
+          "stop": 175,
+          "tool_calls": 215
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "None": 7,
+          "low": 383
+        },
+        "enable_thinking_counts": {
+          "None": 383
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 390
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": false,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "fp8",
+      "effort": "low",
+      "suite": "reasoning",
+      "passed": 86,
+      "total": 90,
+      "score": 0.9555555555555556,
+      "pass_at_k": {
+        "credited_flaky": 4,
+        "k": 3,
+        "passed": 90,
+        "retried_scenarios": 4,
+        "retry_attempts": 5,
+        "safety_flaky": 0,
+        "score": 1.0,
+        "systematic": 0,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 86,
+        "verifier_fail": 1,
+        "wrong_answer": 3
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 124719.0,
+          "mean": 1385.7666666666667,
+          "median": 523.0,
+          "p90": 3321.0,
+          "p95": 3321.0,
+          "max": 3321.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 652165.0,
+          "mean": 7246.277777777777,
+          "median": 3634.5,
+          "p90": 9633.0,
+          "p95": 21795.749999999978,
+          "max": 121749.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 509465.0,
+          "mean": 5660.722222222223,
+          "median": 3247.0,
+          "p90": 6297.400000000007,
+          "p95": 21125.799999999977,
+          "max": 121096.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 140770.0,
+          "mean": 1564.111111111111,
+          "median": 324.5,
+          "p90": 4171.0,
+          "p95": 4171.0,
+          "max": 4171.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 5914.3372788615525,
+          "mean": 65.71485865401725,
+          "median": 8.164845558581874,
+          "p90": 145.69051961549565,
+          "p95": 460.5732224984323,
+          "max": 1117.359716428211
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 13781.850619488163,
+          "mean": 153.13167354986848,
+          "median": 76.04088496707845,
+          "p90": 202.95116181788035,
+          "p95": 460.5516853972217,
+          "max": 2599.6662122269627
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 965.0,
+          "mean": 10.722222222222221,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 95.0,
+          "mean": 1.0555555555555556,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 95,
+      "reasoning_share_of_completion": 0.7811903429346868,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 95,
+        "requests_with_reasoning": 95,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 95
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "low": 95
+        },
+        "enable_thinking_counts": {
+          "None": 95
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 95
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "fp8",
+      "effort": "medium",
+      "suite": "full",
+      "passed": 131,
+      "total": 150,
+      "score": 0.8733333333333333,
+      "pass_at_k": {
+        "credited_flaky": 3,
+        "k": 3,
+        "passed": 134,
+        "retried_scenarios": 19,
+        "retry_attempts": 36,
+        "safety_flaky": 0,
+        "score": 0.8933333333333333,
+        "systematic": 16,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 131,
+        "verifier_fail": 17,
+        "wrong_answer": 2
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 770103.0,
+          "mean": 5134.02,
+          "median": 551.5,
+          "p90": 11889.599999999988,
+          "p95": 21526.299999999974,
+          "max": 120360.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 164384.0,
+          "mean": 1095.8933333333334,
+          "median": 504.5,
+          "p90": 2648.7999999999997,
+          "p95": 3624.499999999998,
+          "max": 21948.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 113167.0,
+          "mean": 754.4466666666667,
+          "median": 268.0,
+          "p90": 1418.6999999999991,
+          "p95": 2710.449999999998,
+          "max": 21227.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 29159.0,
+          "mean": 194.39333333333335,
+          "median": 114.0,
+          "p90": 483.3,
+          "p95": 690.8499999999988,
+          "max": 1486.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 117182.0,
+          "mean": 781.2133333333334,
+          "median": 0.0,
+          "p90": 675.0999999999987,
+          "p95": 4404.549999999967,
+          "max": 39523.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 2783.2111453036778,
+          "mean": 18.554740968691185,
+          "median": 12.119673166424036,
+          "p90": 43.20469801670404,
+          "p95": 57.90375781388718,
+          "max": 141.5530653859023
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 3846.6890830013435,
+          "mean": 25.644593886675622,
+          "median": 11.36196932848543,
+          "p90": 63.173188803531225,
+          "p95": 86.46485193332182,
+          "max": 459.0054277481977
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 392.0,
+          "mean": 2.6133333333333333,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 7.0,
+          "max": 31.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 186.0,
+          "mean": 1.24,
+          "median": 1.0,
+          "p90": 3.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 593,
+      "reasoning_share_of_completion": 0.6884307475180066,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 593,
+        "requests_with_reasoning": 593,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 91,
+        "max_tokens_values": [
+          10000,
+          16384
+        ],
+        "finish_reason_counts": {
+          "length": 1,
+          "stop": 375,
+          "tool_calls": 217
+        },
+        "length_finish_count": 1,
+        "request_reasoning_effort_counts": {
+          "None": 7,
+          "medium": 495,
+          "xhigh": 91
+        },
+        "enable_thinking_counts": {
+          "None": 586
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 593
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": false,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "skipping cli-40: sandbox unavailable (failed to start sandbox cli-40: Command '['docker', 'run', '--rm', '-d', '--name', 'benchlocal-cli-40-1787026661137', '-p', '9002:9000', 'benchlocal-sandbox-cli:latest']' returned non-zero exit status 125.). Hint: the sandboxed packs need pre-built Docker images (benchlocal-sandbox-*) that aren't auto-pulled — and the build tooling is NOT in the pip package, it lives in a benchlocal-cli checkout. Build them once: `git clone https://github.com/noonghunna/benchlocal-cli && bash benchlocal-cli/tools/build-sandboxes.sh`. Or run a deterministic-only subset (no Docker needed).",
+        "skipping cli-40: sandbox unavailable"
+      ]
+    },
+    {
+      "model": "fp8",
+      "effort": "medium",
+      "suite": "reasoning",
+      "passed": 78,
+      "total": 90,
+      "score": 0.8666666666666667,
+      "pass_at_k": {
+        "credited_flaky": 7,
+        "k": 3,
+        "passed": 85,
+        "retried_scenarios": 12,
+        "retry_attempts": 20,
+        "safety_flaky": 0,
+        "score": 0.9444444444444444,
+        "systematic": 5,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 78,
+        "verifier_fail": 9,
+        "wrong_answer": 3
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 102961.0,
+          "mean": 1144.0111111111112,
+          "median": 546.0,
+          "p90": 2541.0,
+          "p95": 2541.0,
+          "max": 2541.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 765269.0,
+          "mean": 8502.988888888889,
+          "median": 4124.5,
+          "p90": 11689.0,
+          "p95": 18965.799999999996,
+          "max": 109896.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 664317.0,
+          "mean": 7381.3,
+          "median": 3768.5,
+          "p90": 9035.300000000014,
+          "p95": 18399.249999999996,
+          "max": 109893.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 98993.0,
+          "mean": 1099.9222222222222,
+          "median": 325.5,
+          "p90": 2751.0,
+          "p95": 2751.0,
+          "max": 2751.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 5992.693260726053,
+          "mean": 66.58548067473393,
+          "median": 10.215459031402133,
+          "p90": 149.90488944829053,
+          "p95": 374.3293750944547,
+          "max": 966.5927519758698
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 16132.895866226172,
+          "mean": 179.25439851362412,
+          "median": 86.22160577098839,
+          "p90": 245.39595084567554,
+          "p95": 399.69969142017646,
+          "max": 2340.322820577305
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 980.0,
+          "mean": 10.88888888888889,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 110.0,
+          "mean": 1.2222222222222223,
+          "median": 1.0,
+          "p90": 2.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 110,
+      "reasoning_share_of_completion": 0.8680829878121288,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 110,
+        "requests_with_reasoning": 110,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 110
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "medium": 110
+        },
+        "enable_thinking_counts": {
+          "None": 110
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 110
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "fp8",
+      "effort": "off",
+      "suite": "full",
+      "passed": 121,
+      "total": 150,
+      "score": 0.8066666666666666,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 121,
+        "retried_scenarios": 26,
+        "retry_attempts": 52,
+        "safety_flaky": 0,
+        "score": 0.8066666666666666,
+        "systematic": 29,
+        "total": 150
+      },
+      "failure_modes": {
+        "invalid_json": 1,
+        "passed": 121,
+        "token_limit": 3,
+        "verifier_fail": 24,
+        "wrong_answer": 1
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 683409.0,
+          "mean": 4556.06,
+          "median": 591.5,
+          "p90": 10670.099999999993,
+          "p95": 24545.099999999966,
+          "max": 102732.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 44807.0,
+          "mean": 298.7133333333333,
+          "median": 175.0,
+          "p90": 767.7,
+          "p95": 1024.0,
+          "max": 2271.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 179.0,
+          "mean": 1.1933333333333334,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 179.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 30814.0,
+          "mean": 205.42666666666668,
+          "median": 112.5,
+          "p90": 492.9999999999999,
+          "p95": 750.2999999999993,
+          "max": 1662.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 57009.0,
+          "mean": 380.06,
+          "median": 0.0,
+          "p90": 681.9999999999985,
+          "p95": 3104.099999999992,
+          "max": 6135.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 1159.6902659591287,
+          "mean": 7.731268439727525,
+          "median": 3.801282801083289,
+          "p90": 19.297591499984254,
+          "p95": 30.83638642770237,
+          "max": 65.23864422086626
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 1288.1208248964977,
+          "mean": 8.587472165976651,
+          "median": 4.397835339885205,
+          "p90": 21.327021824521946,
+          "p95": 32.91052157516824,
+          "max": 99.77945441566408
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 388.0,
+          "mean": 2.5866666666666664,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 7.549999999999983,
+          "max": 27.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 202.0,
+          "mean": 1.3466666666666667,
+          "median": 1.0,
+          "p90": 3.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 388,
+      "reasoning_share_of_completion": 0.003994911509362376,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "cli-40": {
+          "expected": "off",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "dataextract-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "instructfollow-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "reasonmath-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "structoutput-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "toolcall-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": false,
+        "requests": 388,
+        "requests_with_reasoning": 1,
+        "scenarios_with_reasoning": 1,
+        "requests_with_max_tokens": 387,
+        "max_tokens_values": [
+          512,
+          1024,
+          10000
+        ],
+        "finish_reason_counts": {
+          "length": 3,
+          "stop": 187,
+          "tool_calls": 198
+        },
+        "length_finish_count": 3,
+        "request_reasoning_effort_counts": {
+          "None": 388
+        },
+        "enable_thinking_counts": {
+          "False": 387
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 388
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": null,
+        "reasoning_observed": null,
+        "off_stayed_silent": false,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "fp8",
+      "effort": "off",
+      "suite": "reasoning",
+      "passed": 85,
+      "total": 90,
+      "score": 0.9444444444444444,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 85,
+        "retried_scenarios": 5,
+        "retry_attempts": 10,
+        "safety_flaky": 0,
+        "score": 0.9444444444444444,
+        "systematic": 5,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 85,
+        "verifier_fail": 1,
+        "wrong_answer": 4
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 103904.0,
+          "mean": 1154.4888888888888,
+          "median": 553.0,
+          "p90": 2601.0,
+          "p95": 2601.0,
+          "max": 2601.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 644759.0,
+          "mean": 7163.988888888889,
+          "median": 2217.0,
+          "p90": 16120.0,
+          "p95": 16120.0,
+          "max": 31032.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 643789.0,
+          "mean": 7153.211111111111,
+          "median": 2215.0,
+          "p90": 16090.0,
+          "p95": 16090.0,
+          "max": 31029.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 2543.511356995674,
+          "mean": 28.261237299951933,
+          "median": 10.412821923964657,
+          "p90": 92.49950505599855,
+          "p95": 163.67156552335945,
+          "max": 215.48823720007204
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 13405.51115278923,
+          "mean": 148.95012391988033,
+          "median": 46.36451878002845,
+          "p90": 334.99479745933786,
+          "p95": 334.99479745933786,
+          "max": 646.3402549112216
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 970.0,
+          "mean": 10.777777777777779,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 100.0,
+          "mean": 1.1111111111111112,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 2.0999999999999943,
+          "max": 3.0
+        }
+      },
+      "model_requests": 100,
+      "reasoning_share_of_completion": 0.0,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "humaneval-plus-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "lcb-v6-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": false,
+        "requests": 100,
+        "requests_with_reasoning": 0,
+        "scenarios_with_reasoning": 0,
+        "requests_with_max_tokens": 100,
+        "max_tokens_values": [
+          2048,
+          16384
+        ],
+        "finish_reason_counts": {
+          "stop": 100
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "None": 100
+        },
+        "enable_thinking_counts": {
+          "False": 100
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 100
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": null,
+        "reasoning_observed": null,
+        "off_stayed_silent": true,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "fp8",
+      "effort": "xhigh",
+      "suite": "full",
+      "passed": 133,
+      "total": 150,
+      "score": 0.8866666666666667,
+      "pass_at_k": {
+        "credited_flaky": 6,
+        "k": 3,
+        "passed": 139,
+        "retried_scenarios": 17,
+        "retry_attempts": 30,
+        "safety_flaky": 0,
+        "score": 0.9266666666666666,
+        "systematic": 11,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 133,
+        "verifier_fail": 14,
+        "wrong_answer": 3
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 803805.0,
+          "mean": 5358.7,
+          "median": 580.5,
+          "p90": 11885.899999999954,
+          "p95": 25109.79999999998,
+          "max": 119791.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 791368.0,
+          "mean": 5275.786666666667,
+          "median": 692.0,
+          "p90": 13611.099999999999,
+          "p95": 23541.799999999945,
+          "max": 105084.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 724404.0,
+          "mean": 4829.36,
+          "median": 379.0,
+          "p90": 12384.499999999993,
+          "p95": 22530.349999999955,
+          "max": 99805.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 44460.0,
+          "mean": 296.4,
+          "median": 113.0,
+          "p90": 399.0,
+          "p95": 794.2499999999974,
+          "max": 11859.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 120410.0,
+          "mean": 802.7333333333333,
+          "median": 0.0,
+          "p90": 649.6999999999979,
+          "p95": 4673.849999999993,
+          "max": 46934.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 12168.582470695022,
+          "mean": 81.12388313796681,
+          "median": 17.01949719991535,
+          "p90": 195.40672679671545,
+          "p95": 427.44764136107335,
+          "max": 1546.6171792070381
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 17130.36249167868,
+          "mean": 114.2024166111912,
+          "median": 16.50689932622481,
+          "p90": 284.6712896666023,
+          "p95": 494.6508275920047,
+          "max": 2241.835879371967
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 382.0,
+          "mean": 2.546666666666667,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 7.549999999999983,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 180.0,
+          "mean": 1.2,
+          "median": 1.0,
+          "p90": 2.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 382,
+      "reasoning_share_of_completion": 0.9153819714721849,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 382,
+        "requests_with_reasoning": 382,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 170,
+          "tool_calls": 212
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "xhigh": 382
+        },
+        "enable_thinking_counts": {
+          "None": 382
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 382
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "fp8",
+      "effort": "xhigh",
+      "suite": "reasoning",
+      "passed": 89,
+      "total": 90,
+      "score": 0.9888888888888889,
+      "pass_at_k": {
+        "credited_flaky": 1,
+        "k": 3,
+        "passed": 90,
+        "retried_scenarios": 1,
+        "retry_attempts": 1,
+        "safety_flaky": 0,
+        "score": 1.0,
+        "systematic": 0,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 89,
+        "wrong_answer": 1
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 133660.0,
+          "mean": 1485.111111111111,
+          "median": 535.0,
+          "p90": 3681.0,
+          "p95": 3681.0,
+          "max": 3681.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 971355.0,
+          "mean": 10792.833333333334,
+          "median": 12340.0,
+          "p90": 20330.50000000002,
+          "p95": 41385.79999999999,
+          "max": 61565.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 875983.0,
+          "mean": 9733.144444444444,
+          "median": 9639.0,
+          "p90": 19933.20000000002,
+          "p95": 40746.79999999999,
+          "max": 60200.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 93448.0,
+          "mean": 1038.3111111111111,
+          "median": 285.0,
+          "p90": 2641.0,
+          "p95": 2641.0,
+          "max": 2641.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 13054.664370812476,
+          "mean": 145.05182634236084,
+          "median": 12.652507466962561,
+          "p90": 434.2839028869532,
+          "p95": 882.2864184337666,
+          "max": 1324.5040855049156
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 20624.11306153424,
+          "mean": 229.1568117948249,
+          "median": 259.01886948524043,
+          "p90": 434.2551350969364,
+          "p95": 882.2652008315779,
+          "max": 1324.4596578050405
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 961.0,
+          "mean": 10.677777777777777,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 91.0,
+          "mean": 1.011111111111111,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "max": 2.0
+        }
+      },
+      "model_requests": 91,
+      "reasoning_share_of_completion": 0.901815505144875,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 91,
+        "requests_with_reasoning": 91,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 91
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "xhigh": 91
+        },
+        "enable_thinking_counts": {
+          "None": 91
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 91
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "ninfer",
+      "effort": "low",
+      "suite": "full",
+      "passed": 125,
+      "total": 150,
+      "score": 0.8333333333333334,
+      "pass_at_k": {
+        "credited_flaky": 6,
+        "k": 3,
+        "passed": 131,
+        "retried_scenarios": 24,
+        "retry_attempts": 43,
+        "safety_flaky": 0,
+        "score": 0.8733333333333333,
+        "systematic": 19,
+        "total": 150
+      },
+      "failure_modes": {
+        "agent_runner_timeout": 1,
+        "passed": 125,
+        "verifier_fail": 22,
+        "wrong_answer": 2
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 892798.0,
+          "mean": 5951.986666666667,
+          "median": 619.5,
+          "p90": 11086.699999999993,
+          "p95": 27572.049999999937,
+          "max": 133529.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 151918.0,
+          "mean": 1012.7866666666666,
+          "median": 440.5,
+          "p90": 2550.499999999999,
+          "p95": 4150.64999999999,
+          "max": 15720.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 98093.0,
+          "mean": 653.9533333333334,
+          "median": 254.5,
+          "p90": 1451.9999999999984,
+          "p95": 2864.4999999999995,
+          "max": 10280.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 31506.0,
+          "mean": 210.04,
+          "median": 105.5,
+          "p90": 486.39999999999986,
+          "p95": 895.2999999999982,
+          "max": 1774.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 25652.0,
+          "mean": 171.01333333333332,
+          "median": 0.0,
+          "p90": 447.20000000000005,
+          "p95": 792.7999999999997,
+          "max": 4254.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 3908.33521428355,
+          "mean": 26.055568095223666,
+          "median": 13.954506548005156,
+          "p90": 69.74907867074944,
+          "p95": 83.97060322057212,
+          "max": 300.18255217187107
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 5564.562646505889,
+          "mean": 37.09708431003926,
+          "median": 15.57533883699216,
+          "p90": 88.59061876432969,
+          "p95": 133.22897892364992,
+          "max": 564.7754270902369
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 429.0,
+          "mean": 2.86,
+          "median": 1.0,
+          "p90": 6.0,
+          "p95": 8.099999999999966,
+          "max": 33.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 193.0,
+          "mean": 1.2866666666666666,
+          "median": 1.0,
+          "p90": 3.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 429,
+      "reasoning_share_of_completion": 0.6456970207612002,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 429,
+        "requests_with_reasoning": 424,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "None": 5,
+          "stop": 185,
+          "tool_calls": 239
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "low": 429
+        },
+        "enable_thinking_counts": {
+          "None": 412
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 429
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "ninfer",
+      "effort": "low",
+      "suite": "reasoning",
+      "passed": 86,
+      "total": 90,
+      "score": 0.9555555555555556,
+      "pass_at_k": {
+        "credited_flaky": 4,
+        "k": 3,
+        "passed": 90,
+        "retried_scenarios": 4,
+        "retry_attempts": 5,
+        "safety_flaky": 0,
+        "score": 1.0,
+        "systematic": 0,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 86,
+        "verifier_fail": 1,
+        "wrong_answer": 3
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 124469.0,
+          "mean": 1382.9888888888888,
+          "median": 523.0,
+          "p90": 3321.0,
+          "p95": 3321.0,
+          "max": 3321.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 575622.0,
+          "mean": 6395.8,
+          "median": 4153.5,
+          "p90": 9397.300000000001,
+          "p95": 19808.099999999995,
+          "max": 40965.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 432759.0,
+          "mean": 4808.433333333333,
+          "median": 3674.5,
+          "p90": 8658.300000000001,
+          "p95": 19122.899999999994,
+          "max": 39986.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 139960.0,
+          "mean": 1555.111111111111,
+          "median": 324.0,
+          "p90": 4086.0,
+          "p95": 4086.0,
+          "max": 4086.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 7678.477766002528,
+          "mean": 85.31641962225032,
+          "median": 10.533080106019042,
+          "p90": 263.95616435741556,
+          "p95": 518.6091542902167,
+          "max": 941.0187481399626
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 17195.107387452852,
+          "mean": 191.05674874947613,
+          "median": 123.02329132484738,
+          "p90": 280.1730763572501,
+          "p95": 591.3873828840092,
+          "max": 1228.4899804850575
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 965.0,
+          "mean": 10.722222222222221,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 95.0,
+          "mean": 1.0555555555555556,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 95,
+      "reasoning_share_of_completion": 0.7518110843574429,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 95,
+        "requests_with_reasoning": 95,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 95
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "low": 95
+        },
+        "enable_thinking_counts": {
+          "None": 95
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 95
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "ninfer",
+      "effort": "medium",
+      "suite": "full",
+      "passed": 126,
+      "total": 150,
+      "score": 0.84,
+      "pass_at_k": {
+        "credited_flaky": 10,
+        "k": 3,
+        "passed": 136,
+        "retried_scenarios": 23,
+        "retry_attempts": 37,
+        "safety_flaky": 0,
+        "score": 0.9066666666666666,
+        "systematic": 14,
+        "total": 150
+      },
+      "failure_modes": {
+        "agent_runner_timeout": 1,
+        "passed": 126,
+        "verifier_fail": 21,
+        "wrong_answer": 2
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 773666.0,
+          "mean": 5157.7733333333335,
+          "median": 558.5,
+          "p90": 10817.199999999984,
+          "p95": 27253.599999999948,
+          "max": 88271.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 327675.0,
+          "mean": 2184.5,
+          "median": 528.5,
+          "p90": 2210.3999999999996,
+          "p95": 3695.2499999999864,
+          "max": 179371.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 251914.0,
+          "mean": 1679.4266666666667,
+          "median": 334.5,
+          "p90": 1428.2999999999997,
+          "p95": 2907.349999999996,
+          "max": 154599.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 53943.0,
+          "mean": 359.62,
+          "median": 119.5,
+          "p90": 411.9,
+          "p95": 754.649999999999,
+          "max": 24741.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 25102.0,
+          "mean": 167.34666666666666,
+          "median": 0.0,
+          "p90": 355.5999999999999,
+          "p95": 912.2499999999981,
+          "max": 5317.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 5939.728397372179,
+          "mean": 39.59818931581452,
+          "median": 17.15388582344167,
+          "p90": 59.77170662116259,
+          "p95": 81.80857626564101,
+          "max": 1875.5487349489704
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 10846.699109022506,
+          "mean": 72.31132739348337,
+          "median": 17.112244534655474,
+          "p90": 81.98118257899766,
+          "p95": 124.80572825242993,
+          "max": 5568.349338209955
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 384.0,
+          "mean": 2.56,
+          "median": 1.0,
+          "p90": 5.0,
+          "p95": 8.099999999999966,
+          "max": 27.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 187.0,
+          "mean": 1.2466666666666666,
+          "median": 1.0,
+          "p90": 2.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 384,
+      "reasoning_share_of_completion": 0.7687922484168764,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 384,
+        "requests_with_reasoning": 381,
+        "scenarios_with_reasoning": 150,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "None": 3,
+          "stop": 176,
+          "tool_calls": 205
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "medium": 384
+        },
+        "enable_thinking_counts": {
+          "None": 369
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 384
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "ninfer",
+      "effort": "medium",
+      "suite": "reasoning",
+      "passed": 82,
+      "total": 90,
+      "score": 0.9111111111111111,
+      "pass_at_k": {
+        "credited_flaky": 6,
+        "k": 3,
+        "passed": 88,
+        "retried_scenarios": 8,
+        "retry_attempts": 11,
+        "safety_flaky": 0,
+        "score": 0.9777777777777777,
+        "systematic": 2,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 82,
+        "verifier_fail": 7,
+        "wrong_answer": 1
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 99307.0,
+          "mean": 1103.411111111111,
+          "median": 553.5,
+          "p90": 2541.0,
+          "p95": 2541.0,
+          "max": 2541.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 571493.0,
+          "mean": 6349.922222222222,
+          "median": 4096.0,
+          "p90": 10626.0,
+          "p95": 17424.749999999993,
+          "max": 35609.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 445517.0,
+          "mean": 4950.188888888889,
+          "median": 3764.0,
+          "p90": 6995.000000000003,
+          "p95": 17044.64999999999,
+          "max": 35064.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 123062.0,
+          "mean": 1367.3555555555556,
+          "median": 352.5,
+          "p90": 3572.0,
+          "p95": 3572.0,
+          "max": 3572.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 7704.422657941934,
+          "mean": 85.60469619935482,
+          "median": 14.946889485465363,
+          "p90": 165.99344312623205,
+          "p95": 520.9825554357024,
+          "max": 1083.7251819488592
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 17054.4622849063,
+          "mean": 189.49402538784778,
+          "median": 121.1782802863745,
+          "p90": 315.9359841188416,
+          "p95": 520.9553877301977,
+          "max": 1083.699517301051
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 971.0,
+          "mean": 10.78888888888889,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 101.0,
+          "mean": 1.1222222222222222,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 2.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 101,
+      "reasoning_share_of_completion": 0.7795668538372299,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 101,
+        "requests_with_reasoning": 101,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 101
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "medium": 101
+        },
+        "enable_thinking_counts": {
+          "None": 101
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 101
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "ninfer",
+      "effort": "off",
+      "suite": "full",
+      "passed": 119,
+      "total": 150,
+      "score": 0.7933333333333333,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 119,
+        "retried_scenarios": 28,
+        "retry_attempts": 56,
+        "safety_flaky": 0,
+        "score": 0.7933333333333333,
+        "systematic": 31,
+        "total": 150
+      },
+      "failure_modes": {
+        "passed": 119,
+        "token_limit": 3,
+        "verifier_fail": 27,
+        "wrong_answer": 1
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 150,
+          "sum": 931910.0,
+          "mean": 6212.733333333334,
+          "median": 598.0,
+          "p90": 10808.499999999987,
+          "p95": 37180.79999999993,
+          "max": 171072.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 150,
+          "sum": 57366.0,
+          "mean": 382.44,
+          "median": 162.5,
+          "p90": 826.1999999999999,
+          "p95": 1032.2499999999998,
+          "max": 5945.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 36983.0,
+          "mean": 246.55333333333334,
+          "median": 130.5,
+          "p90": 581.4,
+          "p95": 978.7999999999997,
+          "max": 3647.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 24362.0,
+          "mean": 162.41333333333333,
+          "median": 0.0,
+          "p90": 392.69999999999993,
+          "p95": 784.0999999999985,
+          "max": 4759.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 1923.227558198152,
+          "mean": 12.821517054654347,
+          "median": 5.121344706509262,
+          "p90": 30.504890512116248,
+          "p95": 54.58480704326632,
+          "max": 103.44068571180105
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 2764.104339401936,
+          "mean": 18.427362262679573,
+          "median": 6.734509822097607,
+          "p90": 30.614406762667915,
+          "p95": 62.81751298075541,
+          "max": 349.47165646543726
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 455.0,
+          "mean": 3.033333333333333,
+          "median": 1.0,
+          "p90": 5.099999999999994,
+          "p95": 10.549999999999983,
+          "max": 47.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 206.0,
+          "mean": 1.3733333333333333,
+          "median": 1.0,
+          "p90": 3.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 455,
+      "reasoning_share_of_completion": 0.0,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "cli-40": {
+          "expected": "off",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "dataextract-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "instructfollow-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "reasonmath-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "structoutput-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "toolcall-15": {
+          "expected": "off",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 0
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": false,
+        "requests": 455,
+        "requests_with_reasoning": 0,
+        "scenarios_with_reasoning": 0,
+        "requests_with_max_tokens": 440,
+        "max_tokens_values": [
+          512,
+          1024,
+          10000
+        ],
+        "finish_reason_counts": {
+          "None": 6,
+          "length": 6,
+          "stop": 194,
+          "tool_calls": 249
+        },
+        "length_finish_count": 6,
+        "request_reasoning_effort_counts": {
+          "none": 455
+        },
+        "enable_thinking_counts": {
+          "None": 440
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 455
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": null,
+        "reasoning_observed": null,
+        "off_stayed_silent": true,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "ninfer",
+      "effort": "off",
+      "suite": "reasoning",
+      "passed": 84,
+      "total": 90,
+      "score": 0.9333333333333333,
+      "pass_at_k": {
+        "credited_flaky": 0,
+        "k": 3,
+        "passed": 84,
+        "retried_scenarios": 6,
+        "retry_attempts": 12,
+        "safety_flaky": 0,
+        "score": 0.9333333333333333,
+        "systematic": 6,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 84,
+        "verifier_fail": 1,
+        "wrong_answer": 5
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 105528.0,
+          "mean": 1172.5333333333333,
+          "median": 553.0,
+          "p90": 2601.0,
+          "p95": 2601.0,
+          "max": 2601.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 614678.0,
+          "mean": 6829.7555555555555,
+          "median": 1558.0,
+          "p90": 15937.0,
+          "p95": 15937.0,
+          "max": 27126.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 613706.0,
+          "mean": 6818.955555555555,
+          "median": 1556.0,
+          "p90": 15907.0,
+          "p95": 15907.0,
+          "max": 27123.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 2786.574992332142,
+          "mean": 30.961944359246022,
+          "median": 14.306734205572866,
+          "p90": 98.71797687239037,
+          "p95": 140.40818095922,
+          "max": 268.48961974401027
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 18211.49322158331,
+          "mean": 202.349924684259,
+          "median": 46.958220686996356,
+          "p90": 471.5423368723132,
+          "p95": 471.5423368723132,
+          "max": 805.5638679543044
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 972.0,
+          "mean": 10.8,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 102.0,
+          "mean": 1.1333333333333333,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 102,
+      "reasoning_share_of_completion": 0.0,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "humaneval-plus-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        },
+        "lcb-v6-30": {
+          "expected": "off",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 0
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": false,
+        "requests": 102,
+        "requests_with_reasoning": 0,
+        "scenarios_with_reasoning": 0,
+        "requests_with_max_tokens": 102,
+        "max_tokens_values": [
+          2048,
+          16384
+        ],
+        "finish_reason_counts": {
+          "stop": 102
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "none": 102
+        },
+        "enable_thinking_counts": {
+          "None": 102
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 102
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": null,
+        "reasoning_observed": null,
+        "off_stayed_silent": true,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    },
+    {
+      "model": "ninfer",
+      "effort": "xhigh",
+      "suite": "full",
+      "passed": 132,
+      "total": 150,
+      "score": 0.88,
+      "pass_at_k": {
+        "credited_flaky": 5,
+        "k": 3,
+        "passed": 137,
+        "retried_scenarios": 17,
+        "retry_attempts": 30,
+        "safety_flaky": 0,
+        "score": 0.9133333333333333,
+        "systematic": 13,
+        "total": 150
+      },
+      "failure_modes": {
+        "agent_runner_timeout": 1,
+        "passed": 132,
+        "verifier_fail": 17
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 149,
+          "sum": 872036.0,
+          "mean": 5852.5906040268455,
+          "median": 579.0,
+          "p90": 13702.600000000022,
+          "p95": 30031.999999999996,
+          "max": 121168.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 149,
+          "sum": 779956.0,
+          "mean": 5234.604026845637,
+          "median": 705.0,
+          "p90": 10056.000000000002,
+          "p95": 15510.199999999995,
+          "max": 198507.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 150,
+          "sum": 699018.0,
+          "mean": 4660.12,
+          "median": 431.5,
+          "p90": 9652.599999999999,
+          "p95": 14002.399999999998,
+          "max": 174457.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 150,
+          "sum": 56458.0,
+          "mean": 376.38666666666666,
+          "median": 97.0,
+          "p90": 436.39999999999975,
+          "p95": 1008.4499999999992,
+          "max": 24014.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 150,
+          "sum": 27980.0,
+          "mean": 186.53333333333333,
+          "median": 0.0,
+          "p90": 429.5999999999999,
+          "p95": 854.1999999999999,
+          "max": 5240.0
+        },
+        "latency_seconds": {
+          "count": 150,
+          "sum": 15371.596454632003,
+          "mean": 102.47730969754669,
+          "median": 24.474576198495924,
+          "p90": 212.8202731206082,
+          "p95": 417.42790062043343,
+          "max": 1786.3987327648792
+        },
+        "all_calls_duration_seconds": {
+          "count": 150,
+          "sum": 25074.328542013653,
+          "mean": 167.162190280091,
+          "median": 23.94974434550386,
+          "p90": 304.71020683010545,
+          "p95": 523.9759101415502,
+          "max": 6204.9815614291
+        },
+        "model_request_count": {
+          "count": 150,
+          "sum": 413.0,
+          "mean": 2.7533333333333334,
+          "median": 1.0,
+          "p90": 6.0,
+          "p95": 8.549999999999983,
+          "max": 31.0
+        },
+        "attempt_count": {
+          "count": 150,
+          "sum": 180.0,
+          "mean": 1.2,
+          "median": 1.0,
+          "p90": 2.0,
+          "p95": 3.0,
+          "max": 3.0
+        }
+      },
+      "model_requests": 413,
+      "reasoning_share_of_completion": 0.8962274794988435,
+      "thinking_validity": {
+        "bugfind-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "cli-40": {
+          "expected": "on",
+          "responses": 40,
+          "status": "ok",
+          "with_reasoning": 40
+        },
+        "dataextract-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "instructfollow-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "reasonmath-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "structoutput-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        },
+        "toolcall-15": {
+          "expected": "on",
+          "responses": 15,
+          "status": "ok",
+          "with_reasoning": 15
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 413,
+        "requests_with_reasoning": 393,
+        "scenarios_with_reasoning": 149,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "None": 20,
+          "stop": 165,
+          "tool_calls": 228
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "xhigh": 413
+        },
+        "enable_thinking_counts": {
+          "None": 389
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 413
+        },
+        "thinking_validity_statuses": {
+          "ok": 7
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": []
+    },
+    {
+      "model": "ninfer",
+      "effort": "xhigh",
+      "suite": "reasoning",
+      "passed": 88,
+      "total": 90,
+      "score": 0.9777777777777777,
+      "pass_at_k": {
+        "credited_flaky": 2,
+        "k": 3,
+        "passed": 90,
+        "retried_scenarios": 2,
+        "retry_attempts": 2,
+        "safety_flaky": 0,
+        "score": 1.0,
+        "systematic": 0,
+        "total": 90
+      },
+      "failure_modes": {
+        "passed": 88,
+        "wrong_answer": 2
+      },
+      "metrics": {
+        "all_calls_prompt_tokens": {
+          "count": 90,
+          "sum": 134381.0,
+          "mean": 1493.1222222222223,
+          "median": 567.5,
+          "p90": 3681.0,
+          "p95": 3681.0,
+          "max": 3681.0
+        },
+        "all_calls_completion_tokens": {
+          "count": 90,
+          "sum": 1119241.0,
+          "mean": 12436.011111111111,
+          "median": 11587.0,
+          "p90": 38170.90000000001,
+          "p95": 51433.59999999999,
+          "max": 91486.0
+        },
+        "all_calls_reasoning_tokens": {
+          "count": 90,
+          "sum": 1023558.0,
+          "mean": 11372.866666666667,
+          "median": 9001.0,
+          "p90": 37722.8,
+          "p95": 50411.59999999999,
+          "max": 89990.0
+        },
+        "all_calls_answer_tokens": {
+          "count": 90,
+          "sum": 92798.0,
+          "mean": 1031.088888888889,
+          "median": 273.5,
+          "p90": 2496.0,
+          "p95": 2496.0,
+          "max": 2496.0
+        },
+        "all_calls_tool_tokens": {
+          "count": 90,
+          "sum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "p90": 0.0,
+          "p95": 0.0,
+          "max": 0.0
+        },
+        "latency_seconds": {
+          "count": 90,
+          "sum": 22888.190501026576,
+          "mean": 254.31322778918417,
+          "median": 17.652137565077282,
+          "p90": 1028.946122558159,
+          "p95": 1551.8906219743076,
+          "max": 2937.017234176863
+        },
+        "all_calls_duration_seconds": {
+          "count": 90,
+          "sum": 33959.29841982201,
+          "mean": 377.3255379980223,
+          "median": 344.0936703544576,
+          "p90": 1161.5909055374564,
+          "p95": 1570.4138450227445,
+          "max": 2936.974082058994
+        },
+        "model_request_count": {
+          "count": 90,
+          "sum": 962.0,
+          "mean": 10.688888888888888,
+          "median": 1.0,
+          "p90": 30.0,
+          "p95": 30.0,
+          "max": 30.0
+        },
+        "attempt_count": {
+          "count": 90,
+          "sum": 92.0,
+          "mean": 1.0222222222222221,
+          "median": 1.0,
+          "p90": 1.0,
+          "p95": 1.0,
+          "max": 2.0
+        }
+      },
+      "model_requests": 92,
+      "reasoning_share_of_completion": 0.9145108158117867,
+      "thinking_validity": {
+        "gsm-symbolic-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "humaneval-plus-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        },
+        "lcb-v6-30": {
+          "expected": "on",
+          "responses": 30,
+          "status": "ok",
+          "with_reasoning": 30
+        }
+      },
+      "thinking_audit": {
+        "expected_reasoning": true,
+        "requests": 92,
+        "requests_with_reasoning": 92,
+        "scenarios_with_reasoning": 90,
+        "requests_with_max_tokens": 0,
+        "max_tokens_values": [],
+        "finish_reason_counts": {
+          "stop": 92
+        },
+        "length_finish_count": 0,
+        "request_reasoning_effort_counts": {
+          "xhigh": 92
+        },
+        "enable_thinking_counts": {
+          "None": 92
+        },
+        "reasoning_source_counts": {
+          "reconstructed": 92
+        },
+        "thinking_validity_statuses": {
+          "ok": 3
+        },
+        "no_forced_thinking_cap": true,
+        "reasoning_observed": true,
+        "off_stayed_silent": null,
+        "strict_validity_ok": true
+      },
+      "warnings": [
+        "GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here."
+      ]
+    }
+  ],
+  "pairwise_vs_fp8": {
+    "off/full": {
+      "awq-int4": {
+        "common": 150,
+        "reference_passed": 121,
+        "candidate_passed": 117,
+        "reference_score": 0.8066666666666666,
+        "candidate_score": 0.78,
+        "delta_percentage_points": -2.666666666666667,
+        "same": 138,
+        "regression_count": 8,
+        "fix_count": 4,
+        "regressions_vs_fp8": [
+          "full/bugfind-15/BF-12",
+          "full/cli-40/CLI-02",
+          "full/cli-40/CLI-10",
+          "full/cli-40/CLI-31",
+          "full/hermesagent-20/HA-08",
+          "full/instructfollow-15/IF-02",
+          "full/toolcall-15/TC-03",
+          "full/toolcall-15/TC-07"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-40",
+          "full/dataextract-15/DE-04",
+          "full/dataextract-15/DE-11",
+          "full/reasonmath-15/RM-05"
+        ],
+        "net": -4,
+        "mcnemar_exact_p": 0.3876953125
+      },
+      "ninfer": {
+        "common": 150,
+        "reference_passed": 121,
+        "candidate_passed": 119,
+        "reference_score": 0.8066666666666666,
+        "candidate_score": 0.7933333333333333,
+        "delta_percentage_points": -1.3333333333333335,
+        "same": 138,
+        "regression_count": 7,
+        "fix_count": 5,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-01",
+          "full/cli-40/CLI-05",
+          "full/cli-40/CLI-10",
+          "full/cli-40/CLI-17",
+          "full/hermesagent-20/HA-06",
+          "full/hermesagent-20/HA-12",
+          "full/toolcall-15/TC-07"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-09",
+          "full/cli-40/CLI-40",
+          "full/dataextract-15/DE-04",
+          "full/dataextract-15/DE-10",
+          "full/dataextract-15/DE-11"
+        ],
+        "net": -2,
+        "mcnemar_exact_p": 0.7744140625
+      }
+    },
+    "off/reasoning": {
+      "awq-int4": {
+        "common": 61,
+        "reference_passed": 56,
+        "candidate_passed": 54,
+        "reference_score": 0.9180327868852459,
+        "candidate_score": 0.8852459016393442,
+        "delta_percentage_points": -3.278688524590164,
+        "same": 55,
+        "regression_count": 4,
+        "fix_count": 2,
+        "regressions_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3688",
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3716",
+          "reasoning/lcb-v6-30/LCBv6-3754"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3715",
+          "reasoning/lcb-v6-30/LCBv6-3748"
+        ],
+        "net": -2,
+        "mcnemar_exact_p": 0.6875
+      },
+      "ninfer": {
+        "common": 61,
+        "reference_passed": 56,
+        "candidate_passed": 55,
+        "reference_score": 0.9180327868852459,
+        "candidate_score": 0.9016393442622951,
+        "delta_percentage_points": -1.639344262295082,
+        "same": 54,
+        "regression_count": 4,
+        "fix_count": 3,
+        "regressions_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3725",
+          "reasoning/lcb-v6-30/LCBv6-3733",
+          "reasoning/lcb-v6-30/LCBv6-3754"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3715",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": -1,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "low/full": {
+      "awq-int4": {
+        "common": 150,
+        "reference_passed": 130,
+        "candidate_passed": 130,
+        "reference_score": 0.8666666666666667,
+        "candidate_score": 0.8666666666666667,
+        "delta_percentage_points": 0.0,
+        "same": 142,
+        "regression_count": 4,
+        "fix_count": 4,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-14",
+          "full/dataextract-15/DE-10",
+          "full/hermesagent-20/HA-11",
+          "full/hermesagent-20/HA-17"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-07",
+          "full/cli-40/CLI-15",
+          "full/instructfollow-15/IF-04",
+          "full/reasonmath-15/RM-06"
+        ],
+        "net": 0,
+        "mcnemar_exact_p": 1.0
+      },
+      "ninfer": {
+        "common": 150,
+        "reference_passed": 130,
+        "candidate_passed": 125,
+        "reference_score": 0.8666666666666667,
+        "candidate_score": 0.8333333333333334,
+        "delta_percentage_points": -3.3333333333333335,
+        "same": 141,
+        "regression_count": 7,
+        "fix_count": 2,
+        "regressions_vs_fp8": [
+          "full/bugfind-15/BF-09",
+          "full/cli-40/CLI-10",
+          "full/cli-40/CLI-11",
+          "full/dataextract-15/DE-05",
+          "full/hermesagent-20/HA-06",
+          "full/hermesagent-20/HA-12",
+          "full/hermesagent-20/HA-17"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-40",
+          "full/toolcall-15/TC-07"
+        ],
+        "net": -5,
+        "mcnemar_exact_p": 0.1796875
+      }
+    },
+    "low/reasoning": {
+      "awq-int4": {
+        "common": 61,
+        "reference_passed": 57,
+        "candidate_passed": 61,
+        "reference_score": 0.9344262295081968,
+        "candidate_score": 1.0,
+        "delta_percentage_points": 6.557377049180328,
+        "same": 57,
+        "regression_count": 0,
+        "fix_count": 4,
+        "regressions_vs_fp8": [],
+        "fixes_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-21",
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3677",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 4,
+        "mcnemar_exact_p": 0.125
+      },
+      "ninfer": {
+        "common": 61,
+        "reference_passed": 57,
+        "candidate_passed": 57,
+        "reference_score": 0.9344262295081968,
+        "candidate_score": 0.9344262295081968,
+        "delta_percentage_points": 0.0,
+        "same": 55,
+        "regression_count": 3,
+        "fix_count": 3,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-22",
+          "reasoning/humaneval-plus-30/HumanEval-4",
+          "reasoning/lcb-v6-30/LCBv6-3733"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-21",
+          "reasoning/lcb-v6-30/LCBv6-3677",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 0,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "medium/full": {
+      "awq-int4": {
+        "common": 150,
+        "reference_passed": 131,
+        "candidate_passed": 129,
+        "reference_score": 0.8733333333333333,
+        "candidate_score": 0.86,
+        "delta_percentage_points": -1.3333333333333335,
+        "same": 144,
+        "regression_count": 4,
+        "fix_count": 2,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-10",
+          "full/cli-40/CLI-19",
+          "full/dataextract-15/DE-04",
+          "full/dataextract-15/DE-14"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-15",
+          "full/hermesagent-20/HA-08"
+        ],
+        "net": -2,
+        "mcnemar_exact_p": 0.6875
+      },
+      "ninfer": {
+        "common": 150,
+        "reference_passed": 131,
+        "candidate_passed": 126,
+        "reference_score": 0.8733333333333333,
+        "candidate_score": 0.84,
+        "delta_percentage_points": -3.3333333333333335,
+        "same": 137,
+        "regression_count": 9,
+        "fix_count": 4,
+        "regressions_vs_fp8": [
+          "full/bugfind-15/BF-09",
+          "full/cli-40/CLI-10",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-19",
+          "full/cli-40/CLI-37",
+          "full/hermesagent-20/HA-12",
+          "full/hermesagent-20/HA-17",
+          "full/hermesagent-20/HA-19",
+          "full/instructfollow-15/IF-10"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-07",
+          "full/cli-40/CLI-15",
+          "full/cli-40/CLI-20",
+          "full/cli-40/CLI-40"
+        ],
+        "net": -5,
+        "mcnemar_exact_p": 0.266845703125
+      }
+    },
+    "medium/reasoning": {
+      "awq-int4": {
+        "common": 61,
+        "reference_passed": 49,
+        "candidate_passed": 55,
+        "reference_score": 0.8032786885245902,
+        "candidate_score": 0.9016393442622951,
+        "delta_percentage_points": 9.836065573770492,
+        "same": 47,
+        "regression_count": 4,
+        "fix_count": 10,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-10",
+          "reasoning/humaneval-plus-30/HumanEval-12",
+          "reasoning/humaneval-plus-30/HumanEval-9",
+          "reasoning/lcb-v6-30/LCBv6-3748"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-14",
+          "reasoning/humaneval-plus-30/HumanEval-28",
+          "reasoning/humaneval-plus-30/HumanEval-3",
+          "reasoning/humaneval-plus-30/HumanEval-5",
+          "reasoning/humaneval-plus-30/HumanEval-6",
+          "reasoning/humaneval-plus-30/HumanEval-7",
+          "reasoning/humaneval-plus-30/HumanEval-8",
+          "reasoning/lcb-v6-30/LCBv6-3677",
+          "reasoning/lcb-v6-30/LCBv6-3733",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 6,
+        "mcnemar_exact_p": 0.1795654296875
+      },
+      "ninfer": {
+        "common": 61,
+        "reference_passed": 49,
+        "candidate_passed": 53,
+        "reference_score": 0.8032786885245902,
+        "candidate_score": 0.8688524590163934,
+        "delta_percentage_points": 6.557377049180328,
+        "same": 51,
+        "regression_count": 3,
+        "fix_count": 7,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-0",
+          "reasoning/humaneval-plus-30/HumanEval-22",
+          "reasoning/lcb-v6-30/LCBv6-3748"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-14",
+          "reasoning/humaneval-plus-30/HumanEval-28",
+          "reasoning/humaneval-plus-30/HumanEval-6",
+          "reasoning/humaneval-plus-30/HumanEval-8",
+          "reasoning/lcb-v6-30/LCBv6-3677",
+          "reasoning/lcb-v6-30/LCBv6-3733",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 4,
+        "mcnemar_exact_p": 0.34375
+      }
+    },
+    "xhigh/full": {
+      "awq-int4": {
+        "common": 150,
+        "reference_passed": 133,
+        "candidate_passed": 135,
+        "reference_score": 0.8866666666666667,
+        "candidate_score": 0.9,
+        "delta_percentage_points": 1.3333333333333335,
+        "same": 144,
+        "regression_count": 2,
+        "fix_count": 4,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-20",
+          "full/hermesagent-20/HA-11"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-08",
+          "full/cli-40/CLI-19",
+          "full/reasonmath-15/RM-01",
+          "full/reasonmath-15/RM-06"
+        ],
+        "net": 2,
+        "mcnemar_exact_p": 0.6875
+      },
+      "ninfer": {
+        "common": 150,
+        "reference_passed": 133,
+        "candidate_passed": 132,
+        "reference_score": 0.8866666666666667,
+        "candidate_score": 0.88,
+        "delta_percentage_points": -0.6666666666666667,
+        "same": 135,
+        "regression_count": 8,
+        "fix_count": 7,
+        "regressions_vs_fp8": [
+          "full/bugfind-15/BF-10",
+          "full/cli-40/CLI-11",
+          "full/cli-40/CLI-13",
+          "full/cli-40/CLI-20",
+          "full/hermesagent-20/HA-11",
+          "full/hermesagent-20/HA-12",
+          "full/hermesagent-20/HA-17",
+          "full/hermesagent-20/HA-18"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-08",
+          "full/cli-40/CLI-19",
+          "full/cli-40/CLI-32",
+          "full/reasonmath-15/RM-01",
+          "full/reasonmath-15/RM-04",
+          "full/reasonmath-15/RM-06",
+          "full/toolcall-15/TC-07"
+        ],
+        "net": -1,
+        "mcnemar_exact_p": 1.0
+      }
+    },
+    "xhigh/reasoning": {
+      "awq-int4": {
+        "common": 61,
+        "reference_passed": 60,
+        "candidate_passed": 61,
+        "reference_score": 0.9836065573770492,
+        "candidate_score": 1.0,
+        "delta_percentage_points": 1.639344262295082,
+        "same": 60,
+        "regression_count": 0,
+        "fix_count": 1,
+        "regressions_vs_fp8": [],
+        "fixes_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-22"
+        ],
+        "net": 1,
+        "mcnemar_exact_p": 1.0
+      },
+      "ninfer": {
+        "common": 61,
+        "reference_passed": 60,
+        "candidate_passed": 59,
+        "reference_score": 0.9836065573770492,
+        "candidate_score": 0.9672131147540983,
+        "delta_percentage_points": -1.639344262295082,
+        "same": 58,
+        "regression_count": 2,
+        "fix_count": 1,
+        "regressions_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3725"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-22"
+        ],
+        "net": -1,
+        "mcnemar_exact_p": 1.0
+      }
+    }
+  },
+  "effort_vs_off": {
+    "awq-int4/full": {
+      "low": {
+        "common": 150,
+        "reference_passed": 117,
+        "candidate_passed": 130,
+        "reference_score": 0.78,
+        "candidate_score": 0.8666666666666667,
+        "delta_percentage_points": 8.666666666666668,
+        "same": 131,
+        "regression_count": 3,
+        "fix_count": 16,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-32",
+          "full/cli-40/CLI-40",
+          "full/hermesagent-20/HA-11"
+        ],
+        "fixes_vs_fp8": [
+          "full/bugfind-15/BF-12",
+          "full/cli-40/CLI-02",
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-07",
+          "full/cli-40/CLI-09",
+          "full/cli-40/CLI-10",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-15",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/instructfollow-15/IF-02",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-06",
+          "full/reasonmath-15/RM-13",
+          "full/toolcall-15/TC-03"
+        ],
+        "net": 13,
+        "mcnemar_exact_p": 0.004425048828125
+      },
+      "medium": {
+        "common": 150,
+        "reference_passed": 117,
+        "candidate_passed": 129,
+        "reference_score": 0.78,
+        "candidate_score": 0.86,
+        "delta_percentage_points": 8.0,
+        "same": 130,
+        "regression_count": 4,
+        "fix_count": 16,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-32",
+          "full/cli-40/CLI-40",
+          "full/dataextract-15/DE-04",
+          "full/instructfollow-15/IF-04"
+        ],
+        "fixes_vs_fp8": [
+          "full/bugfind-15/BF-12",
+          "full/cli-40/CLI-02",
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-09",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-14",
+          "full/cli-40/CLI-15",
+          "full/dataextract-15/DE-10",
+          "full/hermesagent-20/HA-02",
+          "full/hermesagent-20/HA-08",
+          "full/hermesagent-20/HA-17",
+          "full/instructfollow-15/IF-02",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-13",
+          "full/toolcall-15/TC-03"
+        ],
+        "net": 12,
+        "mcnemar_exact_p": 0.01181793212890625
+      },
+      "xhigh": {
+        "common": 150,
+        "reference_passed": 117,
+        "candidate_passed": 135,
+        "reference_score": 0.78,
+        "candidate_score": 0.9,
+        "delta_percentage_points": 12.0,
+        "same": 128,
+        "regression_count": 2,
+        "fix_count": 20,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-32",
+          "full/hermesagent-20/HA-11"
+        ],
+        "fixes_vs_fp8": [
+          "full/bugfind-15/BF-12",
+          "full/cli-40/CLI-02",
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-07",
+          "full/cli-40/CLI-08",
+          "full/cli-40/CLI-09",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-14",
+          "full/cli-40/CLI-15",
+          "full/cli-40/CLI-19",
+          "full/dataextract-15/DE-10",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/hermesagent-20/HA-17",
+          "full/instructfollow-15/IF-02",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-06",
+          "full/reasonmath-15/RM-13",
+          "full/toolcall-15/TC-03"
+        ],
+        "net": 18,
+        "mcnemar_exact_p": 0.00012111663818359375
+      }
+    },
+    "awq-int4/reasoning": {
+      "low": {
+        "common": 61,
+        "reference_passed": 54,
+        "candidate_passed": 61,
+        "reference_score": 0.8852459016393442,
+        "candidate_score": 1.0,
+        "delta_percentage_points": 11.475409836065573,
+        "same": 54,
+        "regression_count": 0,
+        "fix_count": 7,
+        "regressions_vs_fp8": [],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3688",
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3716",
+          "reasoning/lcb-v6-30/LCBv6-3754",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 7,
+        "mcnemar_exact_p": 0.015625
+      },
+      "medium": {
+        "common": 61,
+        "reference_passed": 54,
+        "candidate_passed": 55,
+        "reference_score": 0.8852459016393442,
+        "candidate_score": 0.9016393442622951,
+        "delta_percentage_points": 1.639344262295082,
+        "same": 48,
+        "regression_count": 6,
+        "fix_count": 7,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-1",
+          "reasoning/humaneval-plus-30/HumanEval-10",
+          "reasoning/humaneval-plus-30/HumanEval-12",
+          "reasoning/humaneval-plus-30/HumanEval-17",
+          "reasoning/humaneval-plus-30/HumanEval-9",
+          "reasoning/lcb-v6-30/LCBv6-3748"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3688",
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3716",
+          "reasoning/lcb-v6-30/LCBv6-3754",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 1,
+        "mcnemar_exact_p": 1.0
+      },
+      "xhigh": {
+        "common": 61,
+        "reference_passed": 54,
+        "candidate_passed": 61,
+        "reference_score": 0.8852459016393442,
+        "candidate_score": 1.0,
+        "delta_percentage_points": 11.475409836065573,
+        "same": 54,
+        "regression_count": 0,
+        "fix_count": 7,
+        "regressions_vs_fp8": [],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3688",
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3716",
+          "reasoning/lcb-v6-30/LCBv6-3754",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 7,
+        "mcnemar_exact_p": 0.015625
+      }
+    },
+    "fp8/full": {
+      "low": {
+        "common": 150,
+        "reference_passed": 121,
+        "candidate_passed": 130,
+        "reference_score": 0.8066666666666666,
+        "candidate_score": 0.8666666666666667,
+        "delta_percentage_points": 6.0,
+        "same": 131,
+        "regression_count": 5,
+        "fix_count": 14,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-31",
+          "full/cli-40/CLI-32",
+          "full/hermesagent-20/HA-08",
+          "full/instructfollow-15/IF-04",
+          "full/toolcall-15/TC-07"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-09",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-14",
+          "full/dataextract-15/DE-04",
+          "full/dataextract-15/DE-10",
+          "full/dataextract-15/DE-11",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/hermesagent-20/HA-17",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-05",
+          "full/reasonmath-15/RM-13"
+        ],
+        "net": 9,
+        "mcnemar_exact_p": 0.063568115234375
+      },
+      "medium": {
+        "common": 150,
+        "reference_passed": 121,
+        "candidate_passed": 131,
+        "reference_score": 0.8066666666666666,
+        "candidate_score": 0.8733333333333333,
+        "delta_percentage_points": 6.666666666666667,
+        "same": 130,
+        "regression_count": 5,
+        "fix_count": 15,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-31",
+          "full/cli-40/CLI-32",
+          "full/hermesagent-20/HA-08",
+          "full/instructfollow-15/IF-04",
+          "full/toolcall-15/TC-07"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-09",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-14",
+          "full/cli-40/CLI-19",
+          "full/dataextract-15/DE-04",
+          "full/dataextract-15/DE-10",
+          "full/dataextract-15/DE-11",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/hermesagent-20/HA-17",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-05",
+          "full/reasonmath-15/RM-13"
+        ],
+        "net": 10,
+        "mcnemar_exact_p": 0.04138946533203125
+      },
+      "xhigh": {
+        "common": 150,
+        "reference_passed": 121,
+        "candidate_passed": 133,
+        "reference_score": 0.8066666666666666,
+        "candidate_score": 0.8866666666666667,
+        "delta_percentage_points": 8.0,
+        "same": 126,
+        "regression_count": 6,
+        "fix_count": 18,
+        "regressions_vs_fp8": [
+          "full/cli-40/CLI-10",
+          "full/cli-40/CLI-31",
+          "full/cli-40/CLI-32",
+          "full/hermesagent-20/HA-08",
+          "full/reasonmath-15/RM-01",
+          "full/toolcall-15/TC-07"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-07",
+          "full/cli-40/CLI-09",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-14",
+          "full/cli-40/CLI-15",
+          "full/cli-40/CLI-20",
+          "full/cli-40/CLI-40",
+          "full/dataextract-15/DE-04",
+          "full/dataextract-15/DE-10",
+          "full/dataextract-15/DE-11",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/hermesagent-20/HA-17",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-05",
+          "full/reasonmath-15/RM-13"
+        ],
+        "net": 12,
+        "mcnemar_exact_p": 0.022655844688415527
+      }
+    },
+    "fp8/reasoning": {
+      "low": {
+        "common": 61,
+        "reference_passed": 56,
+        "candidate_passed": 57,
+        "reference_score": 0.9180327868852459,
+        "candidate_score": 0.9344262295081968,
+        "delta_percentage_points": 1.639344262295082,
+        "same": 56,
+        "regression_count": 2,
+        "fix_count": 3,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-21",
+          "reasoning/lcb-v6-30/LCBv6-3677"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3715",
+          "reasoning/lcb-v6-30/LCBv6-3748"
+        ],
+        "net": 1,
+        "mcnemar_exact_p": 1.0
+      },
+      "medium": {
+        "common": 61,
+        "reference_passed": 56,
+        "candidate_passed": 49,
+        "reference_score": 0.9180327868852459,
+        "candidate_score": 0.8032786885245902,
+        "delta_percentage_points": -11.475409836065573,
+        "same": 46,
+        "regression_count": 11,
+        "fix_count": 4,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-1",
+          "reasoning/humaneval-plus-30/HumanEval-14",
+          "reasoning/humaneval-plus-30/HumanEval-17",
+          "reasoning/humaneval-plus-30/HumanEval-28",
+          "reasoning/humaneval-plus-30/HumanEval-3",
+          "reasoning/humaneval-plus-30/HumanEval-5",
+          "reasoning/humaneval-plus-30/HumanEval-6",
+          "reasoning/humaneval-plus-30/HumanEval-7",
+          "reasoning/humaneval-plus-30/HumanEval-8",
+          "reasoning/lcb-v6-30/LCBv6-3677",
+          "reasoning/lcb-v6-30/LCBv6-3733"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3715",
+          "reasoning/lcb-v6-30/LCBv6-3748"
+        ],
+        "net": -7,
+        "mcnemar_exact_p": 0.11846923828125
+      },
+      "xhigh": {
+        "common": 61,
+        "reference_passed": 56,
+        "candidate_passed": 60,
+        "reference_score": 0.9180327868852459,
+        "candidate_score": 0.9836065573770492,
+        "delta_percentage_points": 6.557377049180328,
+        "same": 55,
+        "regression_count": 1,
+        "fix_count": 5,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-22"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3697",
+          "reasoning/lcb-v6-30/LCBv6-3715",
+          "reasoning/lcb-v6-30/LCBv6-3748",
+          "reasoning/lcb-v6-30/LCBv6-3762"
+        ],
+        "net": 4,
+        "mcnemar_exact_p": 0.21875
+      }
+    },
+    "ninfer/full": {
+      "low": {
+        "common": 150,
+        "reference_passed": 119,
+        "candidate_passed": 125,
+        "reference_score": 0.7933333333333333,
+        "candidate_score": 0.8333333333333334,
+        "delta_percentage_points": 4.0,
+        "same": 130,
+        "regression_count": 7,
+        "fix_count": 13,
+        "regressions_vs_fp8": [
+          "full/bugfind-15/BF-09",
+          "full/cli-40/CLI-11",
+          "full/cli-40/CLI-31",
+          "full/cli-40/CLI-32",
+          "full/dataextract-15/DE-05",
+          "full/hermesagent-20/HA-08",
+          "full/instructfollow-15/IF-04"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-01",
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-05",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-14",
+          "full/cli-40/CLI-17",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-05",
+          "full/reasonmath-15/RM-13",
+          "full/toolcall-15/TC-07"
+        ],
+        "net": 6,
+        "mcnemar_exact_p": 0.26317596435546875
+      },
+      "medium": {
+        "common": 150,
+        "reference_passed": 119,
+        "candidate_passed": 126,
+        "reference_score": 0.7933333333333333,
+        "candidate_score": 0.84,
+        "delta_percentage_points": 4.666666666666667,
+        "same": 129,
+        "regression_count": 7,
+        "fix_count": 14,
+        "regressions_vs_fp8": [
+          "full/bugfind-15/BF-09",
+          "full/cli-40/CLI-31",
+          "full/cli-40/CLI-32",
+          "full/cli-40/CLI-37",
+          "full/hermesagent-20/HA-08",
+          "full/hermesagent-20/HA-19",
+          "full/instructfollow-15/IF-04"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-01",
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-05",
+          "full/cli-40/CLI-07",
+          "full/cli-40/CLI-14",
+          "full/cli-40/CLI-15",
+          "full/cli-40/CLI-17",
+          "full/cli-40/CLI-20",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/hermesagent-20/HA-06",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-05",
+          "full/reasonmath-15/RM-13"
+        ],
+        "net": 7,
+        "mcnemar_exact_p": 0.18924713134765625
+      },
+      "xhigh": {
+        "common": 150,
+        "reference_passed": 119,
+        "candidate_passed": 132,
+        "reference_score": 0.7933333333333333,
+        "candidate_score": 0.88,
+        "delta_percentage_points": 8.666666666666668,
+        "same": 123,
+        "regression_count": 7,
+        "fix_count": 20,
+        "regressions_vs_fp8": [
+          "full/bugfind-15/BF-10",
+          "full/cli-40/CLI-11",
+          "full/cli-40/CLI-13",
+          "full/cli-40/CLI-31",
+          "full/hermesagent-20/HA-08",
+          "full/hermesagent-20/HA-11",
+          "full/hermesagent-20/HA-18"
+        ],
+        "fixes_vs_fp8": [
+          "full/cli-40/CLI-01",
+          "full/cli-40/CLI-04",
+          "full/cli-40/CLI-05",
+          "full/cli-40/CLI-07",
+          "full/cli-40/CLI-08",
+          "full/cli-40/CLI-12",
+          "full/cli-40/CLI-14",
+          "full/cli-40/CLI-15",
+          "full/cli-40/CLI-17",
+          "full/cli-40/CLI-19",
+          "full/dataextract-15/DE-14",
+          "full/hermesagent-20/HA-02",
+          "full/hermesagent-20/HA-06",
+          "full/instructfollow-15/IF-10",
+          "full/instructfollow-15/IF-14",
+          "full/reasonmath-15/RM-04",
+          "full/reasonmath-15/RM-05",
+          "full/reasonmath-15/RM-06",
+          "full/reasonmath-15/RM-13",
+          "full/toolcall-15/TC-07"
+        ],
+        "net": 13,
+        "mcnemar_exact_p": 0.0191572904586792
+      }
+    },
+    "ninfer/reasoning": {
+      "low": {
+        "common": 61,
+        "reference_passed": 55,
+        "candidate_passed": 57,
+        "reference_score": 0.9016393442622951,
+        "candidate_score": 0.9344262295081968,
+        "delta_percentage_points": 3.278688524590164,
+        "same": 55,
+        "regression_count": 2,
+        "fix_count": 4,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-22",
+          "reasoning/humaneval-plus-30/HumanEval-4"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3725",
+          "reasoning/lcb-v6-30/LCBv6-3748",
+          "reasoning/lcb-v6-30/LCBv6-3754"
+        ],
+        "net": 2,
+        "mcnemar_exact_p": 0.6875
+      },
+      "medium": {
+        "common": 61,
+        "reference_passed": 55,
+        "candidate_passed": 53,
+        "reference_score": 0.9016393442622951,
+        "candidate_score": 0.8688524590163934,
+        "delta_percentage_points": -3.278688524590164,
+        "same": 49,
+        "regression_count": 7,
+        "fix_count": 5,
+        "regressions_vs_fp8": [
+          "reasoning/humaneval-plus-30/HumanEval-0",
+          "reasoning/humaneval-plus-30/HumanEval-1",
+          "reasoning/humaneval-plus-30/HumanEval-17",
+          "reasoning/humaneval-plus-30/HumanEval-22",
+          "reasoning/humaneval-plus-30/HumanEval-3",
+          "reasoning/humaneval-plus-30/HumanEval-5",
+          "reasoning/humaneval-plus-30/HumanEval-7"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3725",
+          "reasoning/lcb-v6-30/LCBv6-3733",
+          "reasoning/lcb-v6-30/LCBv6-3754"
+        ],
+        "net": -2,
+        "mcnemar_exact_p": 0.7744140625
+      },
+      "xhigh": {
+        "common": 61,
+        "reference_passed": 55,
+        "candidate_passed": 59,
+        "reference_score": 0.9016393442622951,
+        "candidate_score": 0.9672131147540983,
+        "delta_percentage_points": 6.557377049180328,
+        "same": 55,
+        "regression_count": 1,
+        "fix_count": 5,
+        "regressions_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3697"
+        ],
+        "fixes_vs_fp8": [
+          "reasoning/lcb-v6-30/LCBv6-3562",
+          "reasoning/lcb-v6-30/LCBv6-3696",
+          "reasoning/lcb-v6-30/LCBv6-3733",
+          "reasoning/lcb-v6-30/LCBv6-3748",
+          "reasoning/lcb-v6-30/LCBv6-3754"
+        ],
+        "net": 4,
+        "mcnemar_exact_p": 0.21875
+      }
+    }
+  },
+  "scenario_count": 2880,
+  "request_count": 6223,
+  "methodology_notes": [
+    "full and reasoning are separate requested suites; overlapping scenarios are not pooled into one score",
+    "pass@1 is authoritative; pass@k is failure-retry diagnostic",
+    "all_calls token totals include hidden agent/tool-loop model calls captured by the proxy",
+    "thinking arms are valid only when no request max_tokens was sent and reasoning was observed"
+  ]
+}

@@ -1,0 +1,142 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+humaneval-plus-30 (v0.1.0) | 30 / 30 | 100% | — | — | 5.81s | 11.09s | ok
+lcb-v6-30 (v0.1.0) | 30 / 30 | 100% | — | — | 52.64s | 361.44s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 | - | — | — | - | - | skipped
+gsm-symbolic-30 (v0.1.0) | 30 / 30 | 100% | — | — | 4.69s | 5.64s | ok
+
+TOTAL | 90 / 90 | 100% |  |  |  |  |
+
+Equivalent to: 150/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --reasoning  (endpoint: http://127.0.0.1:19081/v1, model: bench, thinking=on, 2026-08-18T11:33:19.830053Z) ===
+
+  [1/30] HumanEval-0 ✓ passed pass@1 (8.3s)
+  [2/30] HumanEval-1 ✓ passed pass@1 (9.5s)
+  [3/30] HumanEval-2 ✓ passed pass@1 (4.0s)
+  [4/30] HumanEval-3 ✓ passed pass@1 (4.0s)
+  [5/30] HumanEval-4 ✓ passed pass@1 (6.8s)
+  [6/30] HumanEval-5 ✓ passed pass@1 (7.2s)
+  [7/30] HumanEval-6 ✓ passed pass@1 (7.2s)
+  [8/30] HumanEval-7 ✓ passed pass@1 (2.6s)
+  [9/30] HumanEval-8 ✓ passed pass@1 (3.8s)
+  [10/30] HumanEval-9 ✓ passed pass@1 (7.6s)
+  [11/30] HumanEval-10 ✓ passed pass@1 (16.4s)
+  [12/30] HumanEval-11 ✓ passed pass@1 (5.4s)
+  [13/30] HumanEval-12 ✓ passed pass@1 (6.2s)
+  [14/30] HumanEval-13 ✓ passed pass@1 (2.9s)
+  [15/30] HumanEval-14 ✓ passed pass@1 (3.5s)
+  [16/30] HumanEval-15 ✓ passed pass@1 (2.6s)
+  [17/30] HumanEval-16 ✓ passed pass@1 (3.1s)
+  [18/30] HumanEval-17 ✓ passed pass@1 (7.8s)
+  [19/30] HumanEval-18 ✓ passed pass@1 (8.2s)
+  [20/30] HumanEval-19 ✓ passed pass@1 (4.6s)
+  [21/30] HumanEval-20 ✓ passed pass@1 (7.6s)
+  [22/30] HumanEval-21 ✓ passed pass@1 (7.1s)
+  [23/30] HumanEval-22 ✓ passed pass@1 (7.7s)
+  [24/30] HumanEval-23 ✓ passed pass@1 (1.4s)
+  [25/30] HumanEval-24 ✓ passed pass@1 (11.1s)
+  [26/30] HumanEval-25 ✓ passed pass@1 (9.1s)
+  [27/30] HumanEval-26 ✓ passed pass@1 (4.8s)
+  [28/30] HumanEval-27 ✓ passed pass@1 (2.6s)
+  [29/30] HumanEval-28 ✓ passed pass@1 (1.8s)
+  [30/30] HumanEval-29 ✓ passed pass@1 (2.4s)
+humaneval-plus-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 5.81s | ok
+  [1/30] LCBv6-3702 ✓ passed pass@1 (25.0s)
+  [2/30] LCBv6-3634 ✓ passed pass@1 (20.3s)
+  [3/30] LCBv6-3715 ✓ passed pass@1 (105.0s)
+  [4/30] LCBv6-3562 ✓ passed pass@1 (146.3s)
+  [5/30] LCBv6-3684 ✓ passed pass@1 (18.1s)
+  [6/30] LCBv6-3716 ✓ passed pass@1 (187.8s)
+  [7/30] LCBv6-3688 ✓ passed pass@1 (257.7s)
+  [8/30] LCBv6-3708 ✓ passed pass@1 (11.2s)
+  [9/30] LCBv6-3677 ✓ passed pass@1 (58.1s)
+  [10/30] LCBv6-3720 ✓ passed pass@1 (91.7s)
+  [11/30] LCBv6-3674 ✓ passed pass@1 (673.9s)
+  [12/30] LCBv6-3731 ✓ passed pass@1 (8.3s)
+  [13/30] LCBv6-3714 ✓ passed pass@1 (63.8s)
+  [14/30] LCBv6-3737 ✓ passed pass@1 (38.3s)
+  [15/30] LCBv6-3725 ✓ passed pass@1 (133.4s)
+  [16/30] LCBv6-3704 ✓ passed pass@1 (6.7s)
+  [17/30] LCBv6-3721 ✓ passed pass@1 (31.9s)
+  [18/30] LCBv6-3751 ✓ passed pass@1 (47.2s)
+  [19/30] LCBv6-3753 ✓ passed pass@1 (4.2s)
+  [20/30] LCBv6-3754 ✓ passed pass@1 (82.7s)
+  [21/30] LCBv6-3697 ✓ passed pass@1 (39.1s)
+  [22/30] LCBv6-3748 ✓ passed pass@1 (18.2s)
+  [23/30] LCBv6-3760 ✓ passed pass@1 (26.8s)
+  [24/30] LCBv6-3696 ✓ passed pass@1 (294.7s)
+  [25/30] LCBv6-3762 ✓ passed pass@1 (276.4s)
+  [26/30] LCBv6-3709 ✓ passed pass@1 (12.1s)
+  [27/30] LCBv6-3779 ✓ passed pass@1 (89.9s)
+  [28/30] LCBv6-3771 ✓ passed pass@1 (346.8s)
+  [29/30] LCBv6-3733 ✓ passed pass@1 (361.4s)
+  [30/30] LCBv6-3768 ✓ passed pass@1 (3.8s)
+lcb-v6-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 52.64s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 | - | - | skipped
+  [1/30] GSM-SYM-0000 ✓ passed pass@1 (5.4s)
+  [2/30] GSM-SYM-0000 ✓ passed pass@1 (3.7s)
+  [3/30] GSM-SYM-0000 ✓ passed pass@1 (4.7s)
+  [4/30] GSM-SYM-0000 ✓ passed pass@1 (4.9s)
+  [5/30] GSM-SYM-0000 ✓ passed pass@1 (5.4s)
+  [6/30] GSM-SYM-0000 ✓ passed pass@1 (3.8s)
+  [7/30] GSM-SYM-0000 ✓ passed pass@1 (4.4s)
+  [8/30] GSM-SYM-0000 ✓ passed pass@1 (4.7s)
+  [9/30] GSM-SYM-0000 ✓ passed pass@1 (4.1s)
+  [10/30] GSM-SYM-0000 ✓ passed pass@1 (4.7s)
+  [11/30] GSM-SYM-0000 ✓ passed pass@1 (4.9s)
+  [12/30] GSM-SYM-0000 ✓ passed pass@1 (4.2s)
+  [13/30] GSM-SYM-0000 ✓ passed pass@1 (5.2s)
+  [14/30] GSM-SYM-0000 ✓ passed pass@1 (4.0s)
+  [15/30] GSM-SYM-0000 ✓ passed pass@1 (7.4s)
+  [16/30] GSM-SYM-0000 ✓ passed pass@1 (5.0s)
+  [17/30] GSM-SYM-0000 ✓ passed pass@1 (4.0s)
+  [18/30] GSM-SYM-0000 ✓ passed pass@1 (3.2s)
+  [19/30] GSM-SYM-0000 ✓ passed pass@1 (5.4s)
+  [20/30] GSM-SYM-0000 ✓ passed pass@1 (5.0s)
+  [21/30] GSM-SYM-0000 ✓ passed pass@1 (3.5s)
+  [22/30] GSM-SYM-0000 ✓ passed pass@1 (3.6s)
+  [23/30] GSM-SYM-0000 ✓ passed pass@1 (5.0s)
+  [24/30] GSM-SYM-0000 ✓ passed pass@1 (3.9s)
+  [25/30] GSM-SYM-0000 ✓ passed pass@1 (5.2s)
+  [26/30] GSM-SYM-0000 ✓ passed pass@1 (5.0s)
+  [27/30] GSM-SYM-0000 ✓ passed pass@1 (4.3s)
+  [28/30] GSM-SYM-0000 ✓ passed pass@1 (4.5s)
+  [29/30] GSM-SYM-0000 ✓ passed pass@1 (4.4s)
+  [30/30] GSM-SYM-0000 ✓ passed pass@1 (5.6s)
+gsm-symbolic-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 4.69s | ok
+
+Pack | Pass@1 | Pass@3 | Flaky | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---
+humaneval-plus-30 (v0.1.0) | 30 / 30 (100%) | 30 / 30 (100%) | 0 | 5.81s | 11.09s | ok
+lcb-v6-30 (v0.1.0) | 30 / 30 (100%) | 30 / 30 (100%) | 0 | 52.64s | 361.44s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 (-) | - | - | - | - | skipped
+gsm-symbolic-30 (v0.1.0) | 30 / 30 (100%) | 30 / 30 (100%) | 0 | 4.69s | 5.64s | ok
+
+TOTAL | 90 / 90 (100%) | 90 / 90 (100%) | 0 |  |  |
+
+Inline retry classification (clean pass@1 rows omitted):
+
+Scenario | Label | Attempts | Pass@k credit
+---|---|---:|---
+all scenarios | pass@1 | 1 | yes
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+humaneval-plus-30 | 0 / 30 (0.0%) | code_start=2, last_fenced=28 | no_fenced_block=2, none=28 | message.content=30
+lcb-v6-30 | 0 / 30 (0.0%) | code_start=6, last_fenced=24 | no_fenced_block=6, none=24 | message.content=30
+gsm-symbolic-30 | 0 / 30 (0.0%) | — | — | message.content=30
+
+Warnings:
+- GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here.
+```
+
+</details>

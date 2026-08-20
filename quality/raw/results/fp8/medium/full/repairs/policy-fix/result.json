@@ -1,0 +1,714 @@
+{
+  "endpoint": "http://127.0.0.1:19081/v1",
+  "equivalent_score_150": 150,
+  "finished_at": "2026-08-18T04:15:49.552101Z",
+  "mode": "custom",
+  "model": "bench",
+  "packs": [
+    {
+      "catalog_scenario_count": 20,
+      "diagnostics": {
+        "extraction": {
+          "issues": {},
+          "methods": {},
+          "response_fields": {
+            "multi_turn": 2
+          }
+        }
+      },
+      "latency": {
+        "mean": 35.24218334897887,
+        "p50": 35.24218334897887,
+        "p95": 48.22107305401005
+      },
+      "pack_id": "hermesagent-20",
+      "passed": 2,
+      "scenario_count": 2,
+      "scenarios": [
+        {
+          "assistant_messages": [],
+          "attempt_count": 1,
+          "best_of_n_eligible": true,
+          "conversation": [],
+          "detail": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+          "failure_mode": "passed",
+          "id": "HA-04",
+          "label": "pass@1",
+          "latency_seconds": 48.22107305401005,
+          "pass_at_k": true,
+          "passed": true,
+          "raw_response": {
+            "final_verifier_payload": {
+              "action": "verify-final",
+              "detail": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+              "failure_mode": "passed",
+              "passed": true,
+              "trace": {
+                "elapsed_s": 48.135844230186194,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-04\nrun_dir=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04\nworkspace=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace\nhermes_home=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=b7439b8d-2b76-4440-b472-cf2cc78fe1b3\ntool_events=12\napi_block=\"  api:\\n    image: ghcr.io/acme/api:latest\\n    depends_on:\\n      - db\\n    networks:\\n      - backend\"\ncompose=\"services:\\n  api:\\n    image: ghcr.io/acme/api:latest\\n    depends_on:\\n      - db\\n    networks:\\n      - backend\\n  db:\\n    image: postgres:16\\n    networks:\\n      - backend\\n\\nnetworks:\\n  backend:\\n    driver: bridge\\n\"",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Done. Same fix as last time: added the `backend` network to the `api` service so it's on the same network as `db` and can resolve it by service name.\n\nFile: /tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace/docker-compose.yml\n\nThe file now looks like:\n\nservices:\n  api:\n    image: ghcr.io/acme/api:latest\n    depends_on:\n      - db\n    networks:\n      - backend\n  db:\n    image: postgres:16\n    networks:\n      - backend\n\nnetworks:\n  backend:\n    driver: bridge\n\nBoth services are now on the `backend` bridge network, so `api` can reach `db` via the `db` hostname. Recreate the stack with `docker compose up -d` to pick up the change."
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Done. Same fix as last time: added the `backend` network to the `api` service so it's on the same network as `db` and can resolve it by service name.\n\nFile: /tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace/docker-compose.yml\n\nThe file now looks like:\n\nservices:\n  api:\n    image: ghcr.io/acme/api:latest\n    depends_on:\n      - db\n    networks:\n      - backend\n  db:\n    image: postgres:16\n    networks:\n      - backend\n\nnetworks:\n  backend:\n    driver: bridge\n\nBoth services are now on the `backend` bridge network, so `api` can reach `db` via the `db` hostname. Recreate the stack with `docker compose up -d` to pick up the change."
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-04",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+                  "timings": {
+                    "completedAt": "2026-08-18T04:15:27.281Z",
+                    "durationMs": 48104,
+                    "startedAt": "2026-08-18T04:14:39.177Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "apiHasBackend": true,
+                      "backendStillDefined": true,
+                      "composePath": "docker-compose.yml",
+                      "dbStillPresent": true,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "safetyScore": 20,
+                      "searchedFirst": true
+                    },
+                    "status": "pass",
+                    "summary": "Compose file reflects the recalled networking fix."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-18T04:15:27.281Z",
+                  "durationMs": 48104,
+                  "startedAt": "2026-08-18T04:14:39.177Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "apiHasBackend": true,
+                    "backendStillDefined": true,
+                    "composePath": "docker-compose.yml",
+                    "dbStillPresent": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "safetyScore": 20,
+                    "searchedFirst": true
+                  },
+                  "status": "pass",
+                  "summary": "Compose file reflects the recalled networking fix."
+                }
+              }
+            },
+            "multi_turn": true,
+            "responses": []
+          },
+          "raw_scenario": {
+            "description": "Checks whether Hermes searches prior sessions and applies the recalled fix to the current workspace.",
+            "failure_case": "No session recall happens, or the fix is hallucinated or unrelated.",
+            "id": "HA-04",
+            "messages": [
+              {
+                "content": "Apply the same Docker networking fix we used last time to this compose file.",
+                "role": "user"
+              }
+            ],
+            "pack_id": "hermesagent-20",
+            "raw_scenario": {
+              "category": "Memory & Recall",
+              "expected": {
+                "failure_case": "No session recall happens, or the fix is hallucinated or unrelated.",
+                "required_keywords": [
+                  "compose",
+                  "file",
+                  "repaired",
+                  "session_search",
+                  "call."
+                ],
+                "success_case": "The compose file is repaired after a real session_search call."
+              },
+              "failure_case": "No session recall happens, or the fix is hallucinated or unrelated.",
+              "fixture_status": "upstream-verification-runtime",
+              "id": "HA-04",
+              "kind": "session_recall_fix",
+              "success_case": "The compose file is repaired after a real session_search call.",
+              "tool_fixtures": []
+            },
+            "sampling_overrides": {
+              "max_tokens": 1024
+            },
+            "success_case": "The compose file is repaired after a real session_search call.",
+            "tags": [
+              "vendor-generated",
+              "sandboxed-stub"
+            ],
+            "upstream_scenario_id": "HA-04",
+            "upstream_title": "Recall A Prior Fix And Reuse It",
+            "verifier": {
+              "asserts": [
+                {
+                  "kind": "_stub",
+                  "reason": "HermesAgent requires multi-tool sandbox verifier"
+                }
+              ],
+              "type": "_stub"
+            }
+          },
+          "repeat_index": 1,
+          "request": {
+            "chat_template_kwargs": {
+              "reasoning_effort": "medium"
+            },
+            "messages": [
+              {
+                "content": "Apply the same Docker networking fix we used last time to this compose file.",
+                "role": "user"
+              }
+            ],
+            "model": "bench",
+            "reasoning_effort": "medium",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "response_field_used": "multi_turn",
+          "response_latencies_seconds": [],
+          "result": {
+            "detail": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+            "failure_mode": "passed",
+            "latency_seconds": 48.22107305401005,
+            "pass_rate": null,
+            "passed": true,
+            "passed_count": null,
+            "scenario_id": "HA-04",
+            "tokens_completion": null,
+            "total_count": null,
+            "verifier_trace": {
+              "sandbox_log_file": "sandbox-hermesagent-20.log",
+              "trace": {
+                "elapsed_s": 48.135844230186194,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-04\nrun_dir=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04\nworkspace=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace\nhermes_home=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=b7439b8d-2b76-4440-b472-cf2cc78fe1b3\ntool_events=12\napi_block=\"  api:\\n    image: ghcr.io/acme/api:latest\\n    depends_on:\\n      - db\\n    networks:\\n      - backend\"\ncompose=\"services:\\n  api:\\n    image: ghcr.io/acme/api:latest\\n    depends_on:\\n      - db\\n    networks:\\n      - backend\\n  db:\\n    image: postgres:16\\n    networks:\\n      - backend\\n\\nnetworks:\\n  backend:\\n    driver: bridge\\n\"",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Done. Same fix as last time: added the `backend` network to the `api` service so it's on the same network as `db` and can resolve it by service name.\n\nFile: /tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace/docker-compose.yml\n\nThe file now looks like:\n\nservices:\n  api:\n    image: ghcr.io/acme/api:latest\n    depends_on:\n      - db\n    networks:\n      - backend\n  db:\n    image: postgres:16\n    networks:\n      - backend\n\nnetworks:\n  backend:\n    driver: bridge\n\nBoth services are now on the `backend` bridge network, so `api` can reach `db` via the `db` hostname. Recreate the stack with `docker compose up -d` to pick up the change."
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Done. Same fix as last time: added the `backend` network to the `api` service so it's on the same network as `db` and can resolve it by service name.\n\nFile: /tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace/docker-compose.yml\n\nThe file now looks like:\n\nservices:\n  api:\n    image: ghcr.io/acme/api:latest\n    depends_on:\n      - db\n    networks:\n      - backend\n  db:\n    image: postgres:16\n    networks:\n      - backend\n\nnetworks:\n  backend:\n    driver: bridge\n\nBoth services are now on the `backend` bridge network, so `api` can reach `db` via the `db` hostname. Recreate the stack with `docker compose up -d` to pick up the change."
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-04",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+                  "timings": {
+                    "completedAt": "2026-08-18T04:15:27.281Z",
+                    "durationMs": 48104,
+                    "startedAt": "2026-08-18T04:14:39.177Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "apiHasBackend": true,
+                      "backendStillDefined": true,
+                      "composePath": "docker-compose.yml",
+                      "dbStillPresent": true,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "safetyScore": 20,
+                      "searchedFirst": true
+                    },
+                    "status": "pass",
+                    "summary": "Compose file reflects the recalled networking fix."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-18T04:15:27.281Z",
+                  "durationMs": 48104,
+                  "startedAt": "2026-08-18T04:14:39.177Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "apiHasBackend": true,
+                    "backendStillDefined": true,
+                    "composePath": "docker-compose.yml",
+                    "dbStillPresent": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "safetyScore": 20,
+                    "searchedFirst": true
+                  },
+                  "status": "pass",
+                  "summary": "Compose file reflects the recalled networking fix."
+                }
+              }
+            }
+          },
+          "retry_attempts": [],
+          "retry_eligible": false,
+          "sampling_params": {
+            "chat_template_kwargs": {
+              "reasoning_effort": "medium"
+            },
+            "reasoning_effort": "medium",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "status_code": null,
+          "token_metrics": {
+            "per_response": [],
+            "response_count": 0,
+            "telemetry_complete": false,
+            "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8/tokenizer.json"
+          },
+          "tokens_completion": null,
+          "tool_calls": [],
+          "turn_count": 0,
+          "verifier_trace": {
+            "sandbox_log_file": "sandbox-hermesagent-20.log",
+            "trace": {
+              "elapsed_s": 48.135844230186194,
+              "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+              "hermes_agent_path": "/opt/hermes-agent",
+              "hermes_agent_source": "baked",
+              "raw_log_tail": "scenario=HA-04\nrun_dir=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04\nworkspace=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace\nhermes_home=/tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nagent_exit_code=0\nsession_id=b7439b8d-2b76-4440-b472-cf2cc78fe1b3\ntool_events=12\napi_block=\"  api:\\n    image: ghcr.io/acme/api:latest\\n    depends_on:\\n      - db\\n    networks:\\n      - backend\"\ncompose=\"services:\\n  api:\\n    image: ghcr.io/acme/api:latest\\n    depends_on:\\n      - db\\n    networks:\\n      - backend\\n  db:\\n    image: postgres:16\\n    networks:\\n      - backend\\n\\nnetworks:\\n  backend:\\n    driver: bridge\\n\"",
+              "schema_version": "2",
+              "upstream_note": "Pinned Hermes 44cdf555a83c",
+              "upstream_output": {
+                "finalAnswer": "Done. Same fix as last time: added the `backend` network to the `api` service so it's on the same network as `db` and can resolve it by service name.\n\nFile: /tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace/docker-compose.yml\n\nThe file now looks like:\n\nservices:\n  api:\n    image: ghcr.io/acme/api:latest\n    depends_on:\n      - db\n    networks:\n      - backend\n  db:\n    image: postgres:16\n    networks:\n      - backend\n\nnetworks:\n  backend:\n    driver: bridge\n\nBoth services are now on the `backend` bridge network, so `api` can reach `db` via the `db` hostname. Recreate the stack with `docker compose up -d` to pick up the change."
+              },
+              "upstream_raw": {
+                "note": "Pinned Hermes 44cdf555a83c",
+                "output": {
+                  "finalAnswer": "Done. Same fix as last time: added the `backend` network to the `api` service so it's on the same network as `db` and can resolve it by service name.\n\nFile: /tmp/hermesagent20-runs/f59239e5-584c-488f-a7a7-c94f7866c88e/bench/HA-04/workspace/docker-compose.yml\n\nThe file now looks like:\n\nservices:\n  api:\n    image: ghcr.io/acme/api:latest\n    depends_on:\n      - db\n    networks:\n      - backend\n  db:\n    image: postgres:16\n    networks:\n      - backend\n\nnetworks:\n  backend:\n    driver: bridge\n\nBoth services are now on the `backend` bridge network, so `api` can reach `db` via the `db` hostname. Recreate the stack with `docker compose up -d` to pick up the change."
+                },
+                "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                "scenarioId": "HA-04",
+                "score": 100,
+                "status": "pass",
+                "summary": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+                "timings": {
+                  "completedAt": "2026-08-18T04:15:27.281Z",
+                  "durationMs": 48104,
+                  "startedAt": "2026-08-18T04:14:39.177Z"
+                },
+                "verifier": {
+                  "details": {
+                    "apiHasBackend": true,
+                    "backendStillDefined": true,
+                    "composePath": "docker-compose.yml",
+                    "dbStillPresent": true,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "safetyScore": 20,
+                    "searchedFirst": true
+                  },
+                  "status": "pass",
+                  "summary": "Compose file reflects the recalled networking fix."
+                }
+              },
+              "upstream_score": 100,
+              "upstream_status": "pass",
+              "upstream_summary": "Hermes searched prior sessions and reused the remembered Docker networking fix.",
+              "upstream_timings": {
+                "completedAt": "2026-08-18T04:15:27.281Z",
+                "durationMs": 48104,
+                "startedAt": "2026-08-18T04:14:39.177Z"
+              },
+              "upstream_verifier": {
+                "details": {
+                  "apiHasBackend": true,
+                  "backendStillDefined": true,
+                  "composePath": "docker-compose.yml",
+                  "dbStillPresent": true,
+                  "nativeUseScore": 30,
+                  "outcomeSatisfied": true,
+                  "outcomeScore": 50,
+                  "safetyScore": 20,
+                  "searchedFirst": true
+                },
+                "status": "pass",
+                "summary": "Compose file reflects the recalled networking fix."
+              }
+            }
+          }
+        },
+        {
+          "assistant_messages": [],
+          "attempt_count": 1,
+          "best_of_n_eligible": true,
+          "conversation": [],
+          "detail": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+          "failure_mode": "passed",
+          "id": "HA-15",
+          "label": "pass@1",
+          "latency_seconds": 22.26329364394769,
+          "pass_at_k": true,
+          "passed": true,
+          "raw_response": {
+            "final_verifier_payload": {
+              "action": "verify-final",
+              "detail": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+              "failure_mode": "passed",
+              "passed": true,
+              "trace": {
+                "elapsed_s": 22.197316128062084,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-15\nrun_dir=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15\nworkspace=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15/workspace\nhermes_home=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nenv_HASS_TOKEN=bench-token\nenv_HASS_URL=http://127.0.0.1:38441\nagent_exit_code=0\nsession_id=19b3c125-64f9-409c-8829-5dfcbc398613\ntool_events=4\ndeliveries=[{\"method\":\"POST\",\"url\":\"/api/services/notify/notify\",\"headers\":{\"host\":\"127.0.0.1:38441\",\"authorization\":\"Bearer bench-token\",\"content-type\":\"application/json\",\"accept\":\"*/*\",\"accept-encoding\":\"gzip, deflate\",\"user-agent\":\"Python/3.11 aiohttp/3.14.3\",\"content-length\":\"242\"},\"body\":{\"message\":\"Cronjob Response: daily-report\\n(job_id: 1a9dbb92dd9f)\\n-------------\\n\\nDaily report: systems nominal.\\n\\nTo stop or manage this job, send me a new message (e.g. \\\"stop reminder daily-report\\\").\",\"target\":\"notify_engineering\"}}]\noutputs=[\"1a9dbb92dd9f/2026-08-18_04-15-49.md\"]",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Triggered the daily-report job (1a9dbb92dd9f). It's running now and will deliver its output to this chat in a moment."
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Triggered the daily-report job (1a9dbb92dd9f). It's running now and will deliver its output to this chat in a moment."
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-15",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                  "timings": {
+                    "completedAt": "2026-08-18T04:15:49.546Z",
+                    "durationMs": 22154,
+                    "startedAt": "2026-08-18T04:15:27.392Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "deliveryCount": 1,
+                      "jobId": "1a9dbb92dd9f",
+                      "manualSend": 0,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "outputCount": 1,
+                      "runEvent": true,
+                      "safetyScore": 20
+                    },
+                    "status": "pass",
+                    "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-18T04:15:49.546Z",
+                  "durationMs": 22154,
+                  "startedAt": "2026-08-18T04:15:27.392Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "deliveryCount": 1,
+                    "jobId": "1a9dbb92dd9f",
+                    "manualSend": 0,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "outputCount": 1,
+                    "runEvent": true,
+                    "safetyScore": 20
+                  },
+                  "status": "pass",
+                  "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                }
+              }
+            },
+            "multi_turn": true,
+            "responses": []
+          },
+          "raw_scenario": {
+            "description": "Checks whether Hermes triggers an existing cron job and lets the scheduler deliver the output exactly once.",
+            "failure_case": "No run happens, delivery duplicates, or Hermes tries to send the result manually.",
+            "id": "HA-15",
+            "messages": [
+              {
+                "content": "Run the daily report job now.",
+                "role": "user"
+              }
+            ],
+            "pack_id": "hermesagent-20",
+            "raw_scenario": {
+              "category": "Scheduling & Delivery",
+              "expected": {
+                "failure_case": "No run happens, delivery duplicates, or Hermes tries to send the result manually.",
+                "required_keywords": [
+                  "runs",
+                  "next",
+                  "scheduler",
+                  "tick",
+                  "archives",
+                  "delivers",
+                  "once."
+                ],
+                "success_case": "The job runs on the next scheduler tick, archives output, and delivers once."
+              },
+              "failure_case": "No run happens, delivery duplicates, or Hermes tries to send the result manually.",
+              "fixture_status": "upstream-verification-runtime",
+              "id": "HA-15",
+              "kind": "cron_run_delivery",
+              "success_case": "The job runs on the next scheduler tick, archives output, and delivers once.",
+              "tool_fixtures": []
+            },
+            "sampling_overrides": {
+              "max_tokens": 1024
+            },
+            "success_case": "The job runs on the next scheduler tick, archives output, and delivers once.",
+            "tags": [
+              "vendor-generated",
+              "sandboxed-stub"
+            ],
+            "upstream_scenario_id": "HA-15",
+            "upstream_title": "Trigger A Cron Run And Verify Delivery",
+            "verifier": {
+              "asserts": [
+                {
+                  "kind": "_stub",
+                  "reason": "HermesAgent requires multi-tool sandbox verifier"
+                }
+              ],
+              "type": "_stub"
+            }
+          },
+          "repeat_index": 1,
+          "request": {
+            "chat_template_kwargs": {
+              "reasoning_effort": "medium"
+            },
+            "messages": [
+              {
+                "content": "Run the daily report job now.",
+                "role": "user"
+              }
+            ],
+            "model": "bench",
+            "reasoning_effort": "medium",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "response_field_used": "multi_turn",
+          "response_latencies_seconds": [],
+          "result": {
+            "detail": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+            "failure_mode": "passed",
+            "latency_seconds": 22.26329364394769,
+            "pass_rate": null,
+            "passed": true,
+            "passed_count": null,
+            "scenario_id": "HA-15",
+            "tokens_completion": null,
+            "total_count": null,
+            "verifier_trace": {
+              "sandbox_log_file": "sandbox-hermesagent-20.log",
+              "trace": {
+                "elapsed_s": 22.197316128062084,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-15\nrun_dir=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15\nworkspace=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15/workspace\nhermes_home=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nenv_HASS_TOKEN=bench-token\nenv_HASS_URL=http://127.0.0.1:38441\nagent_exit_code=0\nsession_id=19b3c125-64f9-409c-8829-5dfcbc398613\ntool_events=4\ndeliveries=[{\"method\":\"POST\",\"url\":\"/api/services/notify/notify\",\"headers\":{\"host\":\"127.0.0.1:38441\",\"authorization\":\"Bearer bench-token\",\"content-type\":\"application/json\",\"accept\":\"*/*\",\"accept-encoding\":\"gzip, deflate\",\"user-agent\":\"Python/3.11 aiohttp/3.14.3\",\"content-length\":\"242\"},\"body\":{\"message\":\"Cronjob Response: daily-report\\n(job_id: 1a9dbb92dd9f)\\n-------------\\n\\nDaily report: systems nominal.\\n\\nTo stop or manage this job, send me a new message (e.g. \\\"stop reminder daily-report\\\").\",\"target\":\"notify_engineering\"}}]\noutputs=[\"1a9dbb92dd9f/2026-08-18_04-15-49.md\"]",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Triggered the daily-report job (1a9dbb92dd9f). It's running now and will deliver its output to this chat in a moment."
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Triggered the daily-report job (1a9dbb92dd9f). It's running now and will deliver its output to this chat in a moment."
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-15",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                  "timings": {
+                    "completedAt": "2026-08-18T04:15:49.546Z",
+                    "durationMs": 22154,
+                    "startedAt": "2026-08-18T04:15:27.392Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "deliveryCount": 1,
+                      "jobId": "1a9dbb92dd9f",
+                      "manualSend": 0,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "outputCount": 1,
+                      "runEvent": true,
+                      "safetyScore": 20
+                    },
+                    "status": "pass",
+                    "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-18T04:15:49.546Z",
+                  "durationMs": 22154,
+                  "startedAt": "2026-08-18T04:15:27.392Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "deliveryCount": 1,
+                    "jobId": "1a9dbb92dd9f",
+                    "manualSend": 0,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "outputCount": 1,
+                    "runEvent": true,
+                    "safetyScore": 20
+                  },
+                  "status": "pass",
+                  "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                }
+              }
+            }
+          },
+          "retry_attempts": [],
+          "retry_eligible": false,
+          "sampling_params": {
+            "chat_template_kwargs": {
+              "reasoning_effort": "medium"
+            },
+            "reasoning_effort": "medium",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "status_code": null,
+          "token_metrics": {
+            "per_response": [],
+            "response_count": 0,
+            "telemetry_complete": false,
+            "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8/tokenizer.json"
+          },
+          "tokens_completion": null,
+          "tool_calls": [],
+          "turn_count": 0,
+          "verifier_trace": {
+            "sandbox_log_file": "sandbox-hermesagent-20.log",
+            "trace": {
+              "elapsed_s": 22.197316128062084,
+              "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+              "hermes_agent_path": "/opt/hermes-agent",
+              "hermes_agent_source": "baked",
+              "raw_log_tail": "scenario=HA-15\nrun_dir=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15\nworkspace=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15/workspace\nhermes_home=/tmp/hermesagent20-runs/e88b5c8a-3dac-4758-9fa2-825ed2ec7ed3/bench/HA-15/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nenv_HASS_TOKEN=bench-token\nenv_HASS_URL=http://127.0.0.1:38441\nagent_exit_code=0\nsession_id=19b3c125-64f9-409c-8829-5dfcbc398613\ntool_events=4\ndeliveries=[{\"method\":\"POST\",\"url\":\"/api/services/notify/notify\",\"headers\":{\"host\":\"127.0.0.1:38441\",\"authorization\":\"Bearer bench-token\",\"content-type\":\"application/json\",\"accept\":\"*/*\",\"accept-encoding\":\"gzip, deflate\",\"user-agent\":\"Python/3.11 aiohttp/3.14.3\",\"content-length\":\"242\"},\"body\":{\"message\":\"Cronjob Response: daily-report\\n(job_id: 1a9dbb92dd9f)\\n-------------\\n\\nDaily report: systems nominal.\\n\\nTo stop or manage this job, send me a new message (e.g. \\\"stop reminder daily-report\\\").\",\"target\":\"notify_engineering\"}}]\noutputs=[\"1a9dbb92dd9f/2026-08-18_04-15-49.md\"]",
+              "schema_version": "2",
+              "upstream_note": "Pinned Hermes 44cdf555a83c",
+              "upstream_output": {
+                "finalAnswer": "Triggered the daily-report job (1a9dbb92dd9f). It's running now and will deliver its output to this chat in a moment."
+              },
+              "upstream_raw": {
+                "note": "Pinned Hermes 44cdf555a83c",
+                "output": {
+                  "finalAnswer": "Triggered the daily-report job (1a9dbb92dd9f). It's running now and will deliver its output to this chat in a moment."
+                },
+                "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                "scenarioId": "HA-15",
+                "score": 100,
+                "status": "pass",
+                "summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                "timings": {
+                  "completedAt": "2026-08-18T04:15:49.546Z",
+                  "durationMs": 22154,
+                  "startedAt": "2026-08-18T04:15:27.392Z"
+                },
+                "verifier": {
+                  "details": {
+                    "deliveryCount": 1,
+                    "jobId": "1a9dbb92dd9f",
+                    "manualSend": 0,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "outputCount": 1,
+                    "runEvent": true,
+                    "safetyScore": 20
+                  },
+                  "status": "pass",
+                  "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                }
+              },
+              "upstream_score": 100,
+              "upstream_status": "pass",
+              "upstream_summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+              "upstream_timings": {
+                "completedAt": "2026-08-18T04:15:49.546Z",
+                "durationMs": 22154,
+                "startedAt": "2026-08-18T04:15:27.392Z"
+              },
+              "upstream_verifier": {
+                "details": {
+                  "deliveryCount": 1,
+                  "jobId": "1a9dbb92dd9f",
+                  "manualSend": 0,
+                  "nativeUseScore": 30,
+                  "outcomeSatisfied": true,
+                  "outcomeScore": 50,
+                  "outputCount": 1,
+                  "runEvent": true,
+                  "safetyScore": 20
+                },
+                "status": "pass",
+                "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+              }
+            }
+          }
+        }
+      ],
+      "score": 1.0,
+      "skipped": false,
+      "status": "ok",
+      "thinking_enabled": true,
+      "total": 2,
+      "upstream_commit": "57d7766bf3db8c40696e3ed937d43c8c85f4cd6c",
+      "variance": null,
+      "version": "1.0.0",
+      "warnings": []
+    }
+  ],
+  "reasoning_effort": "medium",
+  "repeat": 1,
+  "runner_version": "0.9.8",
+  "schema_version": "1",
+  "selection": [
+    "hermesagent-20/HA-04",
+    "hermesagent-20/HA-15"
+  ],
+  "started_at": "2026-08-18T04:14:36.734606Z",
+  "thinking_control": "reasoning_effort",
+  "thinking_enabled": true,
+  "thinking_mode": "force-on",
+  "totals": {
+    "passed": 2,
+    "score": 1.0,
+    "total": 2
+  },
+  "warnings": []
+}

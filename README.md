@@ -1,9 +1,14 @@
-# Qwen3.8-27B speed benchmarks on 4x RTX 3090: raw traces
+# Qwen3.8-27B benchmarks on 4x RTX 3090: speed, quality, raw traces
 
 Shared by @superalesha. Everything here comes from the release day runs on
 2026-08-14 and 15. llama.cpp GGUF sweeps started a few hours after the weights
 hit HF, the 288 point engine matrix (vLLM vs SGLang, NVFP4 vs FP8 weights)
 finished the next evening.
+
+The `quality/` dataset adds a second campaign from 2026-08-18 through 20:
+five quantizations, four reasoning-effort settings, two BenchLocal suites,
+4,800 scenario-arm results, 10,118 model calls, and the full request/response
+telemetry including extracted reasoning traces.
 
 ## Setup
 
@@ -23,6 +28,8 @@ finished the next evening.
 - `qwen38-full-comparison.csv`: same data, machine readable
 - `RESULTS-LLAMACPP-GGUF.md`: llama.cpp day one report (Q4/Q5/Q6 depth sweeps,
   in-GGUF MTP, max context per quant)
+- `quality/README.md`: quality/reasoning matrix, raw responses, per-request token
+  accounting, exact methodology, caveats, and trace-inspection tools
 - `engine-matrix/`: four autonomous suites (vLLM/SGLang x NVFP4/FP8), per point
   JSON, launch manifests, server logs, summaries
 - `llamacpp-gguf/`: llama-bench and llama-server raw runs

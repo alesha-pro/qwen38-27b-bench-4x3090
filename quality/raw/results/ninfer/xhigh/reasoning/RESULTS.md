@@ -1,0 +1,159 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+humaneval-plus-30 (v0.1.0) | 30 / 30 | 100% | — | — | 17.84s | 142.34s | ok
+lcb-v6-30 (v0.1.0) | 28 / 30 | 93% | — | — | 504.01s | 1762.70s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 | - | — | — | - | - | skipped
+gsm-symbolic-30 (v0.1.0) | 30 / 30 | 100% | — | — | 11.42s | 15.46s | ok
+
+TOTAL | 88 / 90 | 98% |  |  |  |  |
+
+Equivalent to: 147/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --reasoning  (endpoint: http://127.0.0.1:19081/v1, model: bench, thinking=on, 2026-08-19T00:15:58.474192Z) ===
+
+  [1/30] HumanEval-0 ✓ passed pass@1 (16.0s)
+  [2/30] HumanEval-1 ✓ passed pass@1 (17.9s)
+  [3/30] HumanEval-2 ✓ passed pass@1 (13.1s)
+  [4/30] HumanEval-3 ✓ passed pass@1 (15.8s)
+  [5/30] HumanEval-4 ✓ passed pass@1 (34.9s)
+  [6/30] HumanEval-5 ✓ passed pass@1 (15.8s)
+  [7/30] HumanEval-6 ✓ passed pass@1 (29.5s)
+  [8/30] HumanEval-7 ✓ passed pass@1 (5.9s)
+  [9/30] HumanEval-8 ✓ passed pass@1 (14.7s)
+  [10/30] HumanEval-9 ✓ passed pass@1 (20.4s)
+  [11/30] HumanEval-10 ✓ passed pass@1 (437.9s)
+  [12/30] HumanEval-11 ✓ passed pass@1 (142.3s)
+  [13/30] HumanEval-12 ✓ passed pass@1 (39.0s)
+  [14/30] HumanEval-13 ✓ passed pass@1 (17.7s)
+  [15/30] HumanEval-14 ✓ passed pass@1 (11.2s)
+  [16/30] HumanEval-15 ✓ passed pass@1 (9.0s)
+  [17/30] HumanEval-16 ✓ passed pass@1 (7.0s)
+  [18/30] HumanEval-17 ✓ passed pass@1 (22.9s)
+  [19/30] HumanEval-18 ✓ passed pass@1 (81.6s)
+  [20/30] HumanEval-19 ✓ passed pass@1 (26.3s)
+  [21/30] HumanEval-20 ✓ passed pass@1 (26.9s)
+  [22/30] HumanEval-21 ✓ passed pass@1 (35.7s)
+  [23/30] HumanEval-22 ✓ passed pass@1 (42.9s)
+  [24/30] HumanEval-23 ✓ passed pass@1 (3.7s)
+  [25/30] HumanEval-24 ✓ passed pass@1 (68.9s)
+  [26/30] HumanEval-25 ✓ passed pass@1 (89.9s)
+  [27/30] HumanEval-26 ✓ passed pass@1 (17.6s)
+  [28/30] HumanEval-27 ✓ passed pass@1 (5.2s)
+  [29/30] HumanEval-28 ✓ passed pass@1 (10.7s)
+  [30/30] HumanEval-29 ✓ passed pass@1 (11.8s)
+humaneval-plus-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 17.84s | ok
+  [1/30] LCBv6-3702 ✓ passed pass@1 (198.8s)
+  [2/30] LCBv6-3634 ✓ passed pass@1 (40.2s)
+  [3/30] LCBv6-3715 ✓ passed pass@1 (1611.6s)
+  [4/30] LCBv6-3562 ✓ passed pass@1 (1762.7s)
+  [5/30] LCBv6-3684 ✓ passed pass@1 (142.4s)
+  [6/30] LCBv6-3716 ✓ passed pass@1 (798.4s)
+  [7/30] LCBv6-3688 ✓ passed pass@1 (1543.4s)
+  [8/30] LCBv6-3708 ✓ passed pass@1 (55.8s)
+  [9/30] LCBv6-3677 ✓ passed pass@1 (485.8s)
+  [10/30] LCBv6-3720 ✓ passed pass@1 (522.2s)
+  [11/30] LCBv6-3674 ✓ passed pass@1 (1639.8s)
+  [12/30] LCBv6-3731 ✓ passed pass@1 (21.8s)
+  [13/30] LCBv6-3714 ✓ passed pass@1 (936.2s)
+  [14/30] LCBv6-3737 ✓ passed pass@1 (406.0s)
+  [15/30] LCBv6-3725 ✗ wrong_answer pass@2 (639.6s)
+  [16/30] LCBv6-3704 ✓ passed pass@1 (12.4s)
+  [17/30] LCBv6-3721 ✓ passed pass@1 (197.4s)
+  [18/30] LCBv6-3751 ✓ passed pass@1 (195.0s)
+  [19/30] LCBv6-3753 ✓ passed pass@1 (63.0s)
+  [20/30] LCBv6-3754 ✓ passed pass@1 (716.1s)
+  [21/30] LCBv6-3697 ✗ wrong_answer pass@2 (1026.3s)
+  [22/30] LCBv6-3748 ✓ passed pass@1 (86.0s)
+  [23/30] LCBv6-3760 ✓ passed pass@1 (108.4s)
+  [24/30] LCBv6-3696 ✓ passed pass@1 (1052.6s)
+  [25/30] LCBv6-3762 ✓ passed pass@1 (2937.0s)
+  [26/30] LCBv6-3709 ✓ passed pass@1 (30.1s)
+  [27/30] LCBv6-3779 ✓ passed pass@1 (1283.0s)
+  [28/30] LCBv6-3771 ✓ passed pass@1 (1159.6s)
+  [29/30] LCBv6-3733 ✓ passed pass@1 (1558.8s)
+  [30/30] LCBv6-3768 ✓ passed pass@1 (20.7s)
+lcb-v6-30 (v0.1.0) | pass@1 28 / 30 (93%) | pass@3 30 / 30 (100%) | 504.01s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 | - | - | skipped
+  [1/30] GSM-SYM-0000 ✓ passed pass@1 (9.1s)
+  [2/30] GSM-SYM-0000 ✓ passed pass@1 (11.9s)
+  [3/30] GSM-SYM-0000 ✓ passed pass@1 (12.0s)
+  [4/30] GSM-SYM-0000 ✓ passed pass@1 (11.5s)
+  [5/30] GSM-SYM-0000 ✓ passed pass@1 (11.6s)
+  [6/30] GSM-SYM-0000 ✓ passed pass@1 (12.4s)
+  [7/30] GSM-SYM-0000 ✓ passed pass@1 (10.7s)
+  [8/30] GSM-SYM-0000 ✓ passed pass@1 (15.5s)
+  [9/30] GSM-SYM-0000 ✓ passed pass@1 (9.7s)
+  [10/30] GSM-SYM-0000 ✓ passed pass@1 (12.8s)
+  [11/30] GSM-SYM-0000 ✓ passed pass@1 (11.9s)
+  [12/30] GSM-SYM-0000 ✓ passed pass@1 (9.7s)
+  [13/30] GSM-SYM-0000 ✓ passed pass@1 (13.7s)
+  [14/30] GSM-SYM-0000 ✓ passed pass@1 (10.8s)
+  [15/30] GSM-SYM-0000 ✓ passed pass@1 (9.4s)
+  [16/30] GSM-SYM-0000 ✓ passed pass@1 (12.2s)
+  [17/30] GSM-SYM-0000 ✓ passed pass@1 (10.6s)
+  [18/30] GSM-SYM-0000 ✓ passed pass@1 (10.8s)
+  [19/30] GSM-SYM-0000 ✓ passed pass@1 (13.3s)
+  [20/30] GSM-SYM-0000 ✓ passed pass@1 (16.0s)
+  [21/30] GSM-SYM-0000 ✓ passed pass@1 (10.7s)
+  [22/30] GSM-SYM-0000 ✓ passed pass@1 (12.4s)
+  [23/30] GSM-SYM-0000 ✓ passed pass@1 (8.5s)
+  [24/30] GSM-SYM-0000 ✓ passed pass@1 (10.7s)
+  [25/30] GSM-SYM-0000 ✓ passed pass@1 (8.6s)
+  [26/30] GSM-SYM-0000 ✓ passed pass@1 (9.8s)
+  [27/30] GSM-SYM-0000 ✓ passed pass@1 (10.5s)
+  [28/30] GSM-SYM-0000 ✓ passed pass@1 (14.6s)
+  [29/30] GSM-SYM-0000 ✓ passed pass@1 (11.9s)
+  [30/30] GSM-SYM-0000 ✓ passed pass@1 (11.3s)
+gsm-symbolic-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 11.42s | ok
+
+Pack | Pass@1 | Pass@3 | Flaky | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---
+humaneval-plus-30 (v0.1.0) | 30 / 30 (100%) | 30 / 30 (100%) | 0 | 17.84s | 142.34s | ok
+lcb-v6-30 (v0.1.0) | 28 / 30 (93%) | 30 / 30 (100%) | 2 | 504.01s | 1762.70s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 (-) | - | - | - | - | skipped
+gsm-symbolic-30 (v0.1.0) | 30 / 30 (100%) | 30 / 30 (100%) | 0 | 11.42s | 15.46s | ok
+
+TOTAL | 88 / 90 (98%) | 90 / 90 (100%) | 2 |  |  |
+
+Inline retry classification (clean pass@1 rows omitted):
+
+Scenario | Label | Attempts | Pass@k credit
+---|---|---:|---
+lcb-v6-30/LCBv6-3725 | pass@2 | 2 | yes
+lcb-v6-30/LCBv6-3697 | pass@2 | 2 | yes
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+humaneval-plus-30 | 0 / 30 (0.0%) | code_start=30 | no_fenced_block=30 | message.content=30
+lcb-v6-30 | 0 / 32 (0.0%) | code_start=32 | no_fenced_block=32 | message.content=32
+gsm-symbolic-30 | 0 / 30 (0.0%) | — | — | message.content=30
+
+Failure breakdown:
+- lcb-v6-30 LCBv6-3725: wrong_answer [pass@2] (LCBv6-3725: Traceback (most recent call last):
+  File "/tmp/tmpb0lnvslm.py", line 110, in <module>
+    _run()
+  File "/tmp/tmpb0lnvslm.py", line 109, in _run
+    raise AssertionError(f"test {i}: expected {expected!r}, got {got!r}")
+AssertionError: test 0: expected 20, got 15
+)
+- lcb-v6-30 LCBv6-3697: wrong_answer [pass@2] (LCBv6-3697: Traceback (most recent call last):
+  File "/tmp/tmpet053vhd.py", line 138, in <module>
+    _run()
+  File "/tmp/tmpet053vhd.py", line 137, in _run
+    raise AssertionError(f"test {i}: expected {expected!r}, got {got!r}")
+AssertionError: test 0: expected 1, got 0
+)
+
+Warnings:
+- GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here.
+```
+
+</details>

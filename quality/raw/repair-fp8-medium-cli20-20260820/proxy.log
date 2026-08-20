@@ -1,0 +1,3 @@
+[telemetry-proxy] listening on 0.0.0.0:19086 -> http://127.0.0.1:18086; log=$RUN_ROOT/repair-fp8-medium-cli20-20260820/telemetry.new.jsonl
+[telemetry-proxy] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -
+[telemetry-proxy] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 -

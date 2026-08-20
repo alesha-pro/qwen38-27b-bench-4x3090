@@ -1,0 +1,770 @@
+diff --git a/benchlocal_cli/cli.py b/benchlocal_cli/cli.py
+index e84c7e6..03a7af4 100644
+--- a/benchlocal_cli/cli.py
++++ b/benchlocal_cli/cli.py
+@@ -289,9 +289,18 @@ def _parser() -> argparse.ArgumentParser:
+         "--thinking-max-tokens",
+         type=int,
+         default=None,
+-        help="max_tokens to request when thinking is enabled "
++        help="max_tokens to request when thinking is enabled; 0 omits max_tokens "
++             "so the endpoint uses its native remaining-context limit "
+              "(default: --max-tokens if set, else 16384)",
+     )
++    run.add_argument(
++        "--tokenizer",
++        help=(
++            "path to tokenizer.json or its model directory; records exact "
++            "per-scenario reasoning, visible-answer, and tool-call token counts "
++            "in saved JSON (requires the telemetry extra)"
++        ),
++    )
+     run.add_argument(
+         "--reasoning-effort",
+         type=_parse_reasoning_effort,
+@@ -303,6 +312,14 @@ def _parser() -> argparse.ArgumentParser:
+             "The off arm always sends none; the on arm sends VALUE."
+         ),
+     )
++    run.add_argument(
++        "--reasoning-effort-top-level-only",
++        action="store_true",
++        help=(
++            "send reasoning_effort only at the OpenAI top level, not duplicated "
++            "inside chat_template_kwargs (for strict endpoints such as NInfer)"
++        ),
++    )
+     run.add_argument(
+         "--probe-thinking-control",
+         action="store_true",
+@@ -1098,6 +1115,10 @@ def main(argv: list[str] | None = None) -> int:
+             args.thinking_override = config.get("thinking_override")
+             args.thinking_max_tokens = config.get("thinking_max_tokens")
+             args.reasoning_effort = config.get("reasoning_effort")
++            args.reasoning_effort_top_level_only = bool(
++                config.get("reasoning_effort_top_level_only")
++            )
++            args.tokenizer = args.tokenizer or config.get("tokenizer")
+             args.probe_thinking_control = bool(config.get("probe_thinking_control"))
+             for key, value in (config.get("sampling_overrides") or {}).items():
+                 attr = "repeat_penalty" if key == "repeat_penalty" else key.replace("-", "_")
+@@ -1392,7 +1413,9 @@ def main(argv: list[str] | None = None) -> int:
+                 else "pack-defaults"
+             ),
+             "thinking_max_tokens": effective_thinking_max,
++            "tokenizer": args.tokenizer,
+             "reasoning_effort": args.reasoning_effort,
++            "reasoning_effort_top_level_only": args.reasoning_effort_top_level_only,
+             "thinking_control": (
+                 "reasoning_effort"
+                 if args.reasoning_effort is not None
+@@ -1481,7 +1504,9 @@ def main(argv: list[str] | None = None) -> int:
+             negative_control=args.negative_control_text if args.negative_control else None,
+             thinking_enabled=args.thinking_override,
+             thinking_max_tokens=effective_thinking_max,
++            tokenizer=args.tokenizer,
+             reasoning_effort=args.reasoning_effort,
++            reasoning_effort_top_level_only=args.reasoning_effort_top_level_only,
+             probe_thinking_control=args.probe_thinking_control,
+             extra_body=effective_extra_body,
+             api_key=args.api_key,
+diff --git a/benchlocal_cli/runner.py b/benchlocal_cli/runner.py
+index 8823242..0163b82 100644
+--- a/benchlocal_cli/runner.py
++++ b/benchlocal_cli/runner.py
+@@ -14,6 +14,8 @@ from contextlib import suppress
+ from dataclasses import replace
+ from datetime import datetime, timezone
+ from importlib import resources
++from pathlib import Path
++from urllib.parse import quote
+ 
+ import httpx
+ 
+@@ -129,6 +131,155 @@ _REASONING_HISTORY_FIELDS = frozenset({
+ })
+ 
+ 
++class _TextTokenCounter:
++    """Small tokenizer.json wrapper used only when telemetry is requested."""
++
++    def __init__(self, model_or_file: str) -> None:
++        path = Path(model_or_file).expanduser()
++        tokenizer_file = path if path.is_file() else path / "tokenizer.json"
++        if not tokenizer_file.is_file():
++            raise ValueError(f"tokenizer.json not found: {tokenizer_file}")
++        try:
++            from tokenizers import Tokenizer
++        except ImportError as exc:
++            raise ValueError(
++                "--tokenizer requires the telemetry extra: pip install 'benchlocal-cli[telemetry]'"
++            ) from exc
++        self.path = str(tokenizer_file.resolve())
++        self._tokenizer = Tokenizer.from_file(self.path)
++
++    def count(self, value: object) -> int:
++        if value is None:
++            return 0
++        if isinstance(value, str):
++            text = value
++        else:
++            text = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
++        if not text:
++            return 0
++        return len(self._tokenizer.encode(text, add_special_tokens=False).ids)
++
++
++def _response_token_metrics(
++    raw_response: dict,
++    token_counter: _TextTokenCounter | None,
++    latency_seconds: float | None = None,
++) -> dict:
++    """Extract reported usage and independently reconstruct output categories."""
++    usage = raw_response.get("usage") if isinstance(raw_response, dict) else None
++    usage = usage if isinstance(usage, dict) else {}
++    choices = raw_response.get("choices") if isinstance(raw_response, dict) else None
++    choice = choices[0] if isinstance(choices, list) and choices and isinstance(choices[0], dict) else {}
++    message = choice.get("message") if isinstance(choice.get("message"), dict) else {}
++    details = usage.get("completion_tokens_details")
++    details = details if isinstance(details, dict) else {}
++
++    reported_reasoning = details.get("reasoning_tokens")
++    if not isinstance(reported_reasoning, int):
++        reported_reasoning = usage.get("reasoning_tokens")
++    if not isinstance(reported_reasoning, int):
++        reported_reasoning = None
++
++    reconstructed_reasoning = None
++    reconstructed_answer = None
++    reconstructed_tool_calls = None
++    if token_counter is not None:
++        reasoning_value = message.get("reasoning_content")
++        if reasoning_value is None:
++            reasoning_value = message.get("reasoning")
++        reconstructed_reasoning = token_counter.count(reasoning_value)
++        reconstructed_answer = token_counter.count(message.get("content"))
++        reconstructed_tool_calls = token_counter.count(message.get("tool_calls"))
++
++    completion = usage.get("completion_tokens")
++    latency = float(latency_seconds) if latency_seconds is not None else None
++    return {
++        "reported_prompt_tokens": usage.get("prompt_tokens") if isinstance(usage.get("prompt_tokens"), int) else None,
++        "reported_completion_tokens": completion if isinstance(completion, int) else None,
++        "reported_total_tokens": usage.get("total_tokens") if isinstance(usage.get("total_tokens"), int) else None,
++        "reported_reasoning_tokens": reported_reasoning,
++        "reconstructed_reasoning_tokens": reconstructed_reasoning,
++        "reconstructed_answer_tokens": reconstructed_answer,
++        "reconstructed_tool_call_tokens": reconstructed_tool_calls,
++        "finish_reason": choice.get("finish_reason"),
++        "latency_seconds": latency,
++        "reported_completion_tps": (
++            float(completion) / latency
++            if isinstance(completion, int) and latency is not None and latency > 0
++            else None
++        ),
++    }
++
++
++def _scenario_token_metrics(
++    raw_response: dict | None,
++    token_counter: _TextTokenCounter | None,
++    response_latencies_seconds: list[float] | None = None,
++) -> dict | None:
++    if not isinstance(raw_response, dict):
++        return None
++    nested = raw_response.get("responses")
++    responses = [item for item in nested if isinstance(item, dict)] if isinstance(nested, list) else [raw_response]
++    if not responses:
++        return {
++            "tokenizer": token_counter.path if token_counter is not None else None,
++            "response_count": 0,
++            "telemetry_complete": False,
++            "per_response": [],
++        }
++    latencies = response_latencies_seconds or []
++    per_response = [
++        _response_token_metrics(
++            response,
++            token_counter,
++            latencies[index] if index < len(latencies) else None,
++        )
++        for index, response in enumerate(responses)
++    ]
++
++    def summed(key: str) -> int | None:
++        values = [row.get(key) for row in per_response]
++        integers = [value for value in values if isinstance(value, int)]
++        return sum(integers) if integers else None
++
++    reported_reasoning = summed("reported_reasoning_tokens")
++    reconstructed_reasoning = summed("reconstructed_reasoning_tokens")
++    reasoning_tokens = reported_reasoning if reported_reasoning is not None else reconstructed_reasoning
++    reasoning_source = (
++        "reported" if reported_reasoning is not None
++        else "reconstructed" if reconstructed_reasoning is not None
++        else "unavailable"
++    )
++    completion = summed("reported_completion_tokens")
++    total_latency = sum(latencies) if latencies else None
++    return {
++        "tokenizer": token_counter.path if token_counter is not None else None,
++        "response_count": len(responses),
++        "telemetry_complete": len(responses) == len(latencies),
++        "reported_prompt_tokens": summed("reported_prompt_tokens"),
++        "reported_completion_tokens": completion,
++        "reported_total_tokens": summed("reported_total_tokens"),
++        "reported_reasoning_tokens": reported_reasoning,
++        "reconstructed_reasoning_tokens": reconstructed_reasoning,
++        "reconstructed_answer_tokens": summed("reconstructed_answer_tokens"),
++        "reconstructed_tool_call_tokens": summed("reconstructed_tool_call_tokens"),
++        "reasoning_tokens": reasoning_tokens,
++        "reasoning_token_source": reasoning_source,
++        "reasoning_share_of_completion": (
++            float(reasoning_tokens) / completion
++            if isinstance(reasoning_tokens, int) and isinstance(completion, int) and completion > 0
++            else None
++        ),
++        "reported_completion_tps": (
++            float(completion) / total_latency
++            if isinstance(completion, int) and total_latency is not None and total_latency > 0
++            else None
++        ),
++        "finish_reasons": [row.get("finish_reason") for row in per_response],
++        "per_response": per_response,
++    }
++
++
+ def strip_reasoning_history(messages: list[dict]) -> list[dict]:
+     """Return an outgoing-history copy without prior assistant reasoning fields.
+ 
+@@ -200,6 +351,7 @@ def _apply_thinking_control(
+     control: str,
+     enabled: bool,
+     reasoning_effort: str | float,
++    effort_top_level_only: bool = False,
+ ) -> None:
+     """Apply one resolved reasoning control while preserving unrelated kwargs."""
+     kwargs = dict(sampling.get("chat_template_kwargs") or {})
+@@ -208,7 +360,8 @@ def _apply_thinking_control(
+ 
+     if control == THINKING_CONTROL_EFFORT:
+         value: str | float = reasoning_effort if enabled else "none"
+-        kwargs[THINKING_CONTROL_EFFORT] = value
++        if not effort_top_level_only:
++            kwargs[THINKING_CONTROL_EFFORT] = value
+         # OpenAI-standard location. Keep the kwargs copy because llama.cpp does
+         # not yet forward this field into templates that read reasoning_effort.
+         sampling[THINKING_CONTROL_EFFORT] = value
+@@ -342,6 +495,7 @@ def build_request(
+     thinking_sampler: dict | None = None,
+     thinking_control: str = THINKING_CONTROL_ENABLE,
+     reasoning_effort: str | float = "high",
++    reasoning_effort_top_level_only: bool = False,
+ ) -> tuple[dict, dict]:
+     sampling = dict(meta.get("sampling_defaults", {}))
+     scenario_overrides = scenario.get("sampling_overrides") or {}
+@@ -353,6 +507,7 @@ def build_request(
+         thinking_control,
+         resolved_thinking,
+         reasoning_effort,
++        reasoning_effort_top_level_only,
+     )
+     sampling.update(scenario_overrides)
+     request_thinking = _request_thinking_enabled(
+@@ -364,8 +519,14 @@ def build_request(
+         sampling.update(_thinking_sampler_for(meta, thinking_sampler))
+     if sampling_overrides:
+         sampling.update(sampling_overrides)
+-    if request_thinking:
++    if request_thinking and thinking_max_tokens > 0:
+         sampling["max_tokens"] = thinking_max_tokens
++    elif request_thinking:
++        # A zero budget is an explicit request for natural, endpoint-bounded
++        # reasoning. Remove pack/scenario defaults instead of turning it into
++        # an immediate token-limit stop. The endpoint remains bounded by its
++        # native context window and can derive the remaining output capacity.
++        sampling.pop("max_tokens", None)
+     # --sampling-from-server (#21): strip all sampling params from the
+     # request so the server applies its own configured defaults. Keep
+     # max_tokens (length budget) and chat_template_kwargs (thinking gate).
+@@ -621,7 +782,9 @@ class Runner:
+         negative_control: str | None = None,
+         thinking_enabled: bool | None = None,
+         thinking_max_tokens: int = 16384,
++        tokenizer: str | None = None,
+         reasoning_effort: str | float | None = None,
++        reasoning_effort_top_level_only: bool = False,
+         probe_thinking_control: bool = False,
+         extra_body: dict | None = None,
+         api_key: str | None = None,
+@@ -672,9 +835,12 @@ class Runner:
+         self.thinking_enabled = bool(thinking_enabled)
+         self.thinking_mode = thinking_mode_from_override(thinking_enabled)
+         self.thinking_max_tokens = thinking_max_tokens
++        self.tokenizer = tokenizer
++        self._token_counter = _TextTokenCounter(tokenizer) if tokenizer else None
+         self.reasoning_effort: str | float = (
+             reasoning_effort if reasoning_effort is not None else "high"
+         )
++        self.reasoning_effort_top_level_only = bool(reasoning_effort_top_level_only)
+         self.probe_thinking_control = bool(probe_thinking_control)
+         # An explicit effort value selects the standard effort control even when
+         # the endpoint cannot expose /props. Otherwise preserve the historical
+@@ -1604,6 +1770,7 @@ class Runner:
+             thinking_sampler=self.thinking_sampler,
+             thinking_control=self.thinking_control,
+             reasoning_effort=self.reasoning_effort,
++            reasoning_effort_top_level_only=self.reasoning_effort_top_level_only,
+         )
+         _apply_cli_thinking_controls(
+             scenario,
+@@ -1650,7 +1817,13 @@ class Runner:
+             latency = 0.0
+         else:
+             try:
+-                status_code, raw_response, transient_trace = self._post_chat(request, request_timeout)
++                status_code, raw_response, transient_trace = self._post_chat(
++                    request,
++                    request_timeout,
++                    scenario_tag=(
++                        f"{scenario.get('pack_id')}/{scenario['id']}/r{repeat_index}"
++                    ),
++                )
+                 latency = time.perf_counter() - started
+                 if status_code >= 500:
+                     result = ScenarioResult(scenario["id"], False, "server_error", f"HTTP {status_code}", latency)
+@@ -1760,7 +1933,12 @@ class Runner:
+         return 15
+ 
+     def _post_chat(
+-        self, request: dict, timeout: float, *, max_attempts: int | None = None
++        self,
++        request: dict,
++        timeout: float,
++        *,
++        max_attempts: int | None = None,
++        scenario_tag: str | None = None,
+     ) -> tuple[int, dict, dict | None]:
+         transient_errors: list[str] = []
+         # `max_attempts` lets callers (e.g. the startup TPS probe) opt out of the
+@@ -1781,8 +1959,12 @@ class Runner:
+ 
+         for attempt in range(1, max_attempts + 1):
+             try:
++                headers = dict(self._request_headers)
++                if scenario_tag:
++                    headers["X-Benchlocal-Scenario"] = scenario_tag
++                    headers["X-Benchlocal-Attempt"] = str(attempt)
+                 with httpx.Client(timeout=timeout) as client:
+-                    response = client.post(_chat_url(self.endpoint), json=request, headers=self._request_headers)
++                    response = client.post(_chat_url(self.endpoint), json=request, headers=headers)
+             except httpx.TimeoutException as exc:
+                 transient_errors.append(f"attempt {attempt}: {type(exc).__name__}: {exc}")
+                 # A timeout means the budget was genuinely exceeded — retrying just
+@@ -1956,6 +2138,19 @@ class Runner:
+         calls = message.get("tool_calls")
+         return calls if isinstance(calls, list) else []
+ 
++    def _scenario_session_endpoint(self, scenario: dict, repeat_index: int) -> str:
++        """Give out-of-process agents a proxy-visible scenario namespace."""
++        if os.environ.get("BENCHLOCAL_TELEMETRY_SESSION_PATHS") != "1":
++            return self.endpoint
++        tag = quote(
++            f"{scenario.get('pack_id')}/{scenario.get('id')}/r{repeat_index}",
++            safe="",
++        )
++        endpoint = self.endpoint.rstrip("/")
++        if endpoint.endswith("/v1"):
++            return f"{endpoint[:-3]}/session/{tag}/v1"
++        return f"{endpoint}/session/{tag}"
++
+     def _run_multiturn_scenario(
+         self,
+         meta: dict,
+@@ -1969,6 +2164,7 @@ class Runner:
+         started = time.perf_counter()
+         status_code: int | None = None
+         raw_responses: list[dict] = []
++        response_latencies: list[float] = []
+         transient_trace: dict | None = None
+         assistant_messages: list[dict] = []
+         tool_calls: list[dict] = []
+@@ -1991,12 +2187,12 @@ class Runner:
+                 # BENCHLOCAL_HERMES_RESOLVE_LOCALHOST as the opt-in for
+                 # non-loopback hosts where deployment topology is ambiguous.
+                 from benchlocal_cli.sandbox import endpoint_is_loopback, resolve_endpoint_for_container
+-                hermes_endpoint = self.endpoint
++                hermes_endpoint = self._scenario_session_endpoint(scenario, repeat_index)
+                 if (
+                     endpoint_is_loopback(self.endpoint)
+                     or os.environ.get("BENCHLOCAL_HERMES_RESOLVE_LOCALHOST") == "1"
+                 ):
+-                    hermes_endpoint = resolve_endpoint_for_container(self.endpoint)
++                    hermes_endpoint = resolve_endpoint_for_container(hermes_endpoint)
+                 start_kwargs = {
+                     "model_endpoint": hermes_endpoint,
+                     "model_name": self.model,
+@@ -2022,7 +2218,9 @@ class Runner:
+                 # endpoint resolver (rewrites localhost → host.docker.internal).
+                 from benchlocal_cli.sandbox import resolve_endpoint_for_container
+                 start_kwargs = {
+-                    "model_endpoint": resolve_endpoint_for_container(self.endpoint),
++                    "model_endpoint": resolve_endpoint_for_container(
++                        self._scenario_session_endpoint(scenario, repeat_index)
++                    ),
+                     "model_name": self.model,
+                     "model_api_key": self.api_key or "benchlocal-cli-aider-polyglot",  # forward the real key for cloud endpoints; placeholder for local
+                     "sampling": dict(sampling),
+@@ -2110,8 +2308,16 @@ class Runner:
+                     else strip_reasoning_history(history)
+                 )
+                 request = build_chat_request(request_history, sampling, self.model, tools=tools)
++                turn_started = time.perf_counter()
+                 try:
+-                    status_code, raw_response, turn_transient_trace = self._post_chat(request, timeout)
++                    status_code, raw_response, turn_transient_trace = self._post_chat(
++                        request,
++                        timeout,
++                        scenario_tag=(
++                            f"{scenario.get('pack_id')}/{scenario['id']}/"
++                            f"r{repeat_index}/turn{_turn}"
++                        ),
++                    )
+                     transient_trace = _merge_transient_trace(transient_trace, turn_transient_trace)
+                 except _TransientPostFailure as exc:
+                     transient_trace = _merge_transient_trace(transient_trace, exc.trace)
+@@ -2126,6 +2332,7 @@ class Runner:
+ 
+                 raw_response = sanitize_response_text_fields(raw_response)
+                 raw_responses.append(raw_response)
++                response_latencies.append(time.perf_counter() - turn_started)
+                 if status_code >= 500:
+                     result = ScenarioResult(scenario["id"], False, "server_error", f"HTTP {status_code}")
+                     break
+@@ -2221,10 +2428,11 @@ class Runner:
+             assistant_messages=assistant_messages,
+             tool_calls=tool_calls,
+             conversation=history,
++            response_latencies_seconds=response_latencies,
+         )
+ 
+-    @staticmethod
+     def _scenario_run(
++        self,
+         scenario: dict,
+         raw_response: dict | None,
+         request: dict,
+@@ -2237,7 +2445,11 @@ class Runner:
+         assistant_messages: list[dict] | None = None,
+         tool_calls: list[dict] | None = None,
+         conversation: list[dict] | None = None,
++        response_latencies_seconds: list[float] | None = None,
+     ) -> ScenarioRun:
++        response_latencies = list(response_latencies_seconds or [])
++        if not response_latencies and raw_response is not None and not raw_response.get("multi_turn"):
++            response_latencies = [result.latency_seconds]
+         return ScenarioRun(
+             id=scenario["id"],
+             result=result,
+@@ -2252,4 +2464,10 @@ class Runner:
+             assistant_messages=assistant_messages or [],
+             tool_calls=tool_calls or [],
+             conversation=conversation or [],
++            token_metrics=_scenario_token_metrics(
++                raw_response,
++                self._token_counter,
++                response_latencies,
++            ),
++            response_latencies_seconds=response_latencies,
+         )
+diff --git a/benchlocal_cli/types.py b/benchlocal_cli/types.py
+index c00cd17..eadaf32 100644
+--- a/benchlocal_cli/types.py
++++ b/benchlocal_cli/types.py
+@@ -75,6 +75,14 @@ class ScenarioRun:
+     # single-turn scenarios where the request `messages` field already captures
+     # the full input. Populated by the runner's multi-turn loop.
+     conversation: list[dict] = field(default_factory=list)
++    # Additive quality-efficiency telemetry. Reported API usage is preserved
++    # alongside tokenizer-reconstructed reasoning/answer/tool-call counts, so
++    # hidden-reasoning and visible-answer tokens are never conflated.
++    token_metrics: dict | None = None
++    # One wall-clock duration per model response where the runner owns the
++    # request loop. Agent runtimes that call the endpoint out-of-process may
++    # leave this empty and rely on their verifier trace/proxy telemetry.
++    response_latencies_seconds: list[float] = field(default_factory=list)
+     # Inline failure-only retry classification (#111). The top-level run is
+     # always attempt 1 and remains the authoritative pass@1 result. Retry
+     # attempts are nested so existing pass@1/delta/repeat consumers never
+diff --git a/pyproject.toml b/pyproject.toml
+index 45c3abb..e4043e4 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -45,6 +45,10 @@ dev = [
+ sandbox = [
+     "docker>=7.0",
+ ]
++telemetry = [
++    # Exact per-field token reconstruction from a model tokenizer.json.
++    "tokenizers>=0.20",
++]
+ 
+ [project.scripts]
+ benchlocal-cli = "benchlocal_cli.cli:main"
+diff --git a/sandboxes/hermes/server.py b/sandboxes/hermes/server.py
+index 05da2cc..2cea37b 100644
+--- a/sandboxes/hermes/server.py
++++ b/sandboxes/hermes/server.py
+@@ -82,9 +82,6 @@ UPSTREAM_RAW_MAX_BYTES = 16384
+ # upstream_status/upstream_score/etc. instead of grading.tool_event_count.
+ SCHEMA_VERSION = "2"
+ 
+-# Thinking-only endpoints reject enable_thinking=false. Hermes therefore
+-# emulates its off arm with one reasoning token instead of sending false.
+-THINKING_BUDGET_FLOOR = 1
+ DEFAULT_THINKING_BUDGET = 16384
+ 
+ 
+@@ -312,7 +309,15 @@ def _thinking_extra_body(req: dict) -> dict:
+         chat_template_kwargs = sampling.get("chat_template_kwargs") or {}
+         enabled = bool(chat_template_kwargs.get("enable_thinking", False))
+ 
+-    budget = req.get("thinking_budget")
++    # Modern local endpoints in this benchmark support a real template gate.
++    # Do not contaminate the off arm with the historical one-token reasoning
++    # emulation. A literal zero budget means natural endpoint-bounded thinking,
++    # so omit every token-budget field there as well.
++    requested_budget = req.get("thinking_budget")
++    if not enabled or requested_budget == 0:
++        return {"chat_template_kwargs": {"enable_thinking": bool(enabled)}}
++
++    budget = requested_budget
+     if isinstance(budget, bool) or not isinstance(budget, int) or budget < 1:
+         sampling_budget = sampling.get("max_tokens")
+         budget = (
+@@ -325,7 +330,7 @@ def _thinking_extra_body(req: dict) -> dict:
+ 
+     return {
+         "enable_thinking": True,
+-        "thinking_budget": budget if enabled else THINKING_BUDGET_FLOOR,
++        "thinking_budget": budget,
+     }
+ 
+ 
+diff --git a/tests/test_sandbox_verifiers.py b/tests/test_sandbox_verifiers.py
+index 4aabdce..1f3da58 100644
+--- a/tests/test_sandbox_verifiers.py
++++ b/tests/test_sandbox_verifiers.py
+@@ -688,6 +688,28 @@ def test_hermes_translate_request_normalizes_endpoint_and_filters_generation():
+     assert out["model"]["extraBody"] == {"enable_thinking": True, "thinking_budget": 4096}
+ 
+ 
++def test_hermes_zero_budget_means_uncapped_template_control():
++    server = _hermes_server()
++    base = {
++        "scenario_id": "HA-01",
++        "scenario": {"id": "HA-01"},
++        "model_endpoint": "http://host:8001/v1",
++        "model_name": "qwen",
++        "sampling": {},
++        "thinking_budget": 0,
++    }
++    assert server._translate_request(
++        {**base, "enable_thinking": True}
++    )["model"]["extraBody"] == {
++        "chat_template_kwargs": {"enable_thinking": True}
++    }
++    assert server._translate_request(
++        {**base, "enable_thinking": False}
++    )["model"]["extraBody"] == {
++        "chat_template_kwargs": {"enable_thinking": False}
++    }
++
++
+ def test_hermes_reasoning_policy_strips_only_outgoing_api_copy():
+     class FakeAgent:
+         def _copy_reasoning_content_for_api(self, source_msg, api_msg):
+@@ -705,11 +727,14 @@ def test_hermes_reasoning_policy_strips_only_outgoing_api_copy():
+ 
+ 
+ @pytest.mark.parametrize(
+-    ("thinking_enabled", "expected_budget"),
+-    [(True, 4096), (False, 1)],
++    ("thinking_enabled", "expected_body"),
++    [
++        (True, {"enable_thinking": True, "thinking_budget": 4096}),
++        (False, {"chat_template_kwargs": {"enable_thinking": False}}),
++    ],
+ )
+ def test_hermes_config_emits_thinking_extra_body_for_all_models(
+-    tmp_path, thinking_enabled, expected_budget
++    tmp_path, thinking_enabled, expected_body
+ ):
+     server = _hermes_server()
+     translated = server._translate_request(
+@@ -723,6 +748,7 @@ def test_hermes_config_emits_thinking_extra_body_for_all_models(
+             "thinking_budget": 4096,
+         }
+     )
++    assert translated["model"]["extraBody"] == expected_body
+     script = r'''
+ import { readFile } from "node:fs/promises";
+ import { writeHermesConfig } from "./vendor/HermesAgent-20/verification/hermes-runtime.mjs";
+@@ -747,8 +773,12 @@ process.stdout.write(await readFile(`${home}/config.yaml`, "utf8"));
+     )
+     config = proc.stdout
+     assert config.count("extra_body:") == 4
+-    assert config.count("enable_thinking: true") == 4
+-    assert config.count(f"thinking_budget: {expected_budget}") == 4
++    if thinking_enabled:
++        assert config.count("enable_thinking: true") == 4
++        assert config.count("thinking_budget: 4096") == 4
++    else:
++        assert config.count('chat_template_kwargs: {"enable_thinking":false}') == 4
++        assert "thinking_budget:" not in config
+ 
+ 
+ def test_hermes_normalize_base_url_ensures_v1_suffix():
+diff --git a/tests/test_thinking_control.py b/tests/test_thinking_control.py
+index 843184d..42b1898 100644
+--- a/tests/test_thinking_control.py
++++ b/tests/test_thinking_control.py
+@@ -99,6 +99,40 @@ def test_effort_control_uses_configured_on_value_and_thinking_budget():
+     assert request["max_tokens"] == 4096
+ 
+ 
++def test_zero_thinking_budget_omits_max_tokens_for_native_context_limit():
++    request, sampling = build_request(
++        _scenario(),
++        _meta(),
++        "fake",
++        thinking_enabled=True,
++        thinking_max_tokens=0,
++        thinking_control=THINKING_CONTROL_EFFORT,
++        reasoning_effort="xhigh",
++    )
++
++    assert "max_tokens" not in request
++    assert "max_tokens" not in sampling
++    assert request["reasoning_effort"] == "xhigh"
++
++
++def test_effort_can_be_sent_top_level_only_for_strict_endpoints():
++    request, sampling = build_request(
++        _scenario(),
++        _meta(),
++        "fake",
++        thinking_enabled=True,
++        thinking_max_tokens=0,
++        thinking_control=THINKING_CONTROL_EFFORT,
++        reasoning_effort="medium",
++        reasoning_effort_top_level_only=True,
++    )
++
++    assert request["reasoning_effort"] == "medium"
++    assert request["chat_template_kwargs"] == {}
++    assert "max_tokens" not in request
++    assert sampling["reasoning_effort"] == "medium"
++
++
+ def test_no_detected_control_does_not_send_qwen_key():
+     request, _ = build_request(
+         _scenario(),
+diff --git a/tests/test_token_metrics.py b/tests/test_token_metrics.py
+new file mode 100644
+index 0000000..f478896
+--- /dev/null
++++ b/tests/test_token_metrics.py
+@@ -0,0 +1,92 @@
++from benchlocal_cli.runner import Runner, _scenario_token_metrics
++
++
++class _FakeCounter:
++    path = "/models/qwen/tokenizer.json"
++
++    @staticmethod
++    def count(value):
++        if value is None:
++            return 0
++        if isinstance(value, str):
++            return len(value.split())
++        return 3
++
++
++def _response(reasoning, content, prompt, completion, total, finish="stop"):
++    return {
++        "choices": [{
++            "finish_reason": finish,
++            "message": {
++                "reasoning_content": reasoning,
++                "content": content,
++            },
++        }],
++        "usage": {
++            "prompt_tokens": prompt,
++            "completion_tokens": completion,
++            "total_tokens": total,
++        },
++    }
++
++
++def test_token_metrics_reconstruct_reasoning_separately_from_answer():
++    metrics = _scenario_token_metrics(
++        _response("one two three", "four five", 10, 7, 17),
++        _FakeCounter(),
++        [2.0],
++    )
++
++    assert metrics["reported_prompt_tokens"] == 10
++    assert metrics["reported_completion_tokens"] == 7
++    assert metrics["reconstructed_reasoning_tokens"] == 3
++    assert metrics["reconstructed_answer_tokens"] == 2
++    assert metrics["reasoning_tokens"] == 3
++    assert metrics["reasoning_token_source"] == "reconstructed"
++    assert metrics["reported_completion_tps"] == 3.5
++    assert metrics["telemetry_complete"] is True
++
++
++def test_token_metrics_aggregate_multiturn_and_prefer_reported_reasoning():
++    first = _response("one two", "three", 10, 4, 14)
++    first["usage"]["completion_tokens_details"] = {"reasoning_tokens": 2}
++    second = _response("one two three", "four", 20, 5, 25, "tool_calls")
++    second["usage"]["completion_tokens_details"] = {"reasoning_tokens": 3}
++
++    metrics = _scenario_token_metrics(
++        {"multi_turn": True, "responses": [first, second]},
++        _FakeCounter(),
++        [1.0, 2.0],
++    )
++
++    assert metrics["response_count"] == 2
++    assert metrics["reported_prompt_tokens"] == 30
++    assert metrics["reported_completion_tokens"] == 9
++    assert metrics["reported_reasoning_tokens"] == 5
++    assert metrics["reconstructed_reasoning_tokens"] == 5
++    assert metrics["reasoning_tokens"] == 5
++    assert metrics["reasoning_token_source"] == "reported"
++    assert metrics["finish_reasons"] == ["stop", "tool_calls"]
++    assert metrics["reported_completion_tps"] == 3.0
++
++
++def test_token_metrics_marks_out_of_process_agent_telemetry_incomplete():
++    metrics = _scenario_token_metrics(
++        {"multi_turn": True, "responses": []},
++        _FakeCounter(),
++        [],
++    )
++
++    assert metrics["response_count"] == 0
++    assert metrics["telemetry_complete"] is False
++
++
++def test_scenario_session_endpoint_is_opt_in_and_url_safe(monkeypatch):
++    runner = Runner(endpoint="http://127.0.0.1:19000/v1", model="fake")
++    scenario = {"pack_id": "hermesagent-20", "id": "HA-01"}
++    assert runner._scenario_session_endpoint(scenario, 1) == "http://127.0.0.1:19000/v1"
++
++    monkeypatch.setenv("BENCHLOCAL_TELEMETRY_SESSION_PATHS", "1")
++    assert runner._scenario_session_endpoint(scenario, 1) == (
++        "http://127.0.0.1:19000/session/hermesagent-20%2FHA-01%2Fr1/v1"
++    )

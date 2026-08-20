@@ -1,0 +1,29 @@
+{
+  "started_at": "2026-08-18T04:16:31.941324Z",
+  "models": [
+    "fp8",
+    "awq-int4",
+    "ninfer"
+  ],
+  "efforts": [
+    "off",
+    "low",
+    "medium",
+    "xhigh"
+  ],
+  "suites": [
+    "full",
+    "reasoning"
+  ],
+  "benchlocal": "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli",
+  "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8",
+  "target_port": 18081,
+  "proxy_port": 19081,
+  "gpu_map": {
+    "fp8": "0,1",
+    "awq-int4": "0,1",
+    "ninfer": "0"
+  },
+  "thinking_max_tokens": null,
+  "methodology": "natural endpoint-bounded reasoning; no request max_tokens in thinking arms"
+}

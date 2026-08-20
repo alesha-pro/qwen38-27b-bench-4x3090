@@ -1,0 +1,207 @@
+
+[2026-08-17T21:54:08.545604Z] argv=["$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli", "run", "--full", "--no-thinking", "--thinking-max-tokens", "0", "--tokenizer", "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8", "--incremental", "--save-json", "$RUN_ROOT/results/fp8/off/full/result.json", "--sandbox-log-dir", "$RUN_ROOT/results/fp8/off/full/sandbox-logs", "--endpoint", "http://127.0.0.1:19081/v1", "--model", "bench", "--timeout-per-case", "86400", "--timeout-ceiling-s", "0", "--model-turn-timeout", "0", "--progress", "--strict-thinking", "--history-file", "$RUN_ROOT/results/history.csv", "--report", "md", "--report-out", "$RUN_ROOT/results/fp8/off/full/RESULTS.md"]
+  [1/15] TC-01 ✓ passed pass@1 (1.3s)
+  [2/15] TC-02 ✓ passed pass@1 (1.3s)
+  [3/15] TC-03 ✓ passed pass@1 (1.9s)
+  [4/15] TC-04 ✓ passed pass@1 (1.6s)
+  [5/15] TC-05 ✗ verifier_fail fail (2.6s)
+  [6/15] TC-06 ✓ passed pass@1 (3.0s)
+  [7/15] TC-07 ✓ passed pass@1 (1.8s)
+  [8/15] TC-08 ✓ passed pass@1 (1.5s)
+  [9/15] TC-09 ✓ passed pass@1 (1.8s)
+  [10/15] TC-10 ✓ passed pass@1 (2.3s)
+  [11/15] TC-11 ✓ passed pass@1 (1.3s)
+  [12/15] TC-12 ✓ passed pass@1 (3.7s)
+  [13/15] TC-13 ✓ passed pass@1 (1.3s)
+  [14/15] TC-14 ✓ passed pass@1 (1.3s)
+  [15/15] TC-15 ✓ passed pass@1 (1.7s)
+toolcall-15 (v1.0.1) | pass@1 14 / 15 (93%) | pass@3 14 / 15 (93%) | 1.68s | ok
+  [1/15] IF-01 ✓ passed pass@1 (1.0s)
+  [2/15] IF-02 ✓ passed pass@1 (0.5s)
+  [3/15] IF-03 ✓ passed pass@1 (0.5s)
+  [4/15] IF-04 ✓ passed pass@1 (0.5s)
+  [5/15] IF-05 ✓ passed pass@1 (1.0s)
+  [6/15] IF-06 ✓ passed pass@1 (0.8s)
+  [7/15] IF-07 ✓ passed pass@1 (0.6s)
+  [8/15] IF-08 ✓ passed pass@1 (0.5s)
+  [9/15] IF-09 ✓ passed pass@1 (0.9s)
+  [10/15] IF-10 ✗ verifier_fail fail (0.9s)
+  [11/15] IF-11 ✓ passed pass@1 (1.2s)
+  [12/15] IF-12 ✓ passed pass@1 (0.5s)
+  [13/15] IF-13 ✓ passed pass@1 (0.3s)
+  [14/15] IF-14 ✗ verifier_fail fail (0.7s)
+  [15/15] IF-15 ✓ passed pass@1 (0.4s)
+instructfollow-15 (v1.0.0) | pass@1 13 / 15 (87%) | pass@3 13 / 15 (87%) | 0.64s | ok
+  [1/15] SO-01 ✓ passed pass@1 (1.3s)
+  [2/15] SO-02 ✓ passed pass@1 (1.0s)
+  [3/15] SO-03 ✓ passed pass@1 (1.8s)
+  [4/15] SO-04 ✓ passed pass@1 (1.7s)
+  [5/15] SO-05 ✓ passed pass@1 (2.9s)
+  [6/15] SO-06 ✓ passed pass@1 (3.5s)
+  [7/15] SO-07 ✓ passed pass@1 (5.0s)
+  [8/15] SO-08 ✓ passed pass@1 (1.8s)
+  [9/15] SO-09 ✓ passed pass@1 (3.4s)
+  [10/15] SO-10 ✓ passed pass@1 (1.6s)
+  [11/15] SO-11 ✓ passed pass@1 (2.0s)
+  [12/15] SO-12 ✓ passed pass@1 (5.4s)
+  [13/15] SO-13 ✓ passed pass@1 (2.1s)
+  [14/15] SO-14 ✓ passed pass@1 (1.3s)
+  [15/15] SO-15 ✓ passed pass@1 (0.7s)
+structoutput-15 (v1.1.0) | pass@1 15 / 15 (100%) | pass@3 15 / 15 (100%) | 1.79s | ok
+  [1/15] DE-01 ✓ passed pass@1 (3.2s)
+  [2/15] DE-02 ✓ passed pass@1 (5.4s)
+  [3/15] DE-03 ✓ passed pass@1 (4.6s)
+  [4/15] DE-04 ✗ verifier_fail fail (3.9s)
+  [5/15] DE-05 ✓ passed pass@1 (5.2s)
+  [6/15] DE-06 ✓ passed pass@1 (5.0s)
+  [7/15] DE-07 ✗ verifier_fail fail (6.8s)
+  [8/15] DE-08 ✓ passed pass@1 (3.1s)
+  [9/15] DE-09 ✓ passed pass@1 (2.6s)
+  [10/15] DE-10 ✗ verifier_fail fail (2.3s)
+  [11/15] DE-11 ✗ invalid_json fail (0.3s)
+  [12/15] DE-12 ✓ passed pass@1 (4.3s)
+  [13/15] DE-13 ✓ passed pass@1 (11.9s)
+  [14/15] DE-14 ✗ verifier_fail fail (5.7s)
+  [15/15] DE-15 ✓ passed pass@1 (2.0s)
+dataextract-15 (v1.2.0) | pass@1 10 / 15 (67%) | pass@3 10 / 15 (67%) | 4.32s | ok
+  [1/15] RM-01 ✓ passed pass@1 (7.3s)
+  [2/15] RM-02 ✓ passed pass@1 (3.6s)
+  [3/15] RM-03 ✓ passed pass@1 (5.4s)
+  [4/15] RM-04 ✗ token_limit fail (21.3s)
+  [5/15] RM-05 ✗ token_limit fail (21.3s)
+  [6/15] RM-06 ✗ token_limit fail (21.3s)
+  [7/15] RM-07 ✓ passed pass@1 (12.9s)
+  [8/15] RM-08 ✓ passed pass@1 (13.0s)
+  [9/15] RM-09 ✓ passed pass@1 (9.6s)
+  [10/15] RM-10 ✓ passed pass@1 (7.9s)
+  [11/15] RM-11 ✓ passed pass@1 (6.5s)
+  [12/15] RM-12 ✓ passed pass@1 (4.8s)
+  [13/15] RM-13 ✗ wrong_answer fail (11.6s)
+  [14/15] RM-14 ✓ passed pass@1 (9.4s)
+  [15/15] RM-15 ✓ passed pass@1 (17.2s)
+reasonmath-15 (v1.0.0) | pass@1 11 / 15 (73%) | pass@3 11 / 15 (73%) | 9.64s | ok
+  [1/15] BF-01 ✓ passed pass@1 (3.6s)
+  [2/15] BF-02 ✓ passed pass@1 (4.1s)
+  [3/15] BF-03 ✓ passed pass@1 (8.8s)
+  [4/15] BF-04 ✓ passed pass@1 (4.4s)
+  [5/15] BF-05 ✓ passed pass@1 (9.3s)
+  [6/15] BF-06 ✓ passed pass@1 (3.3s)
+  [7/15] BF-07 ✓ passed pass@1 (4.3s)
+  [8/15] BF-08 ✓ passed pass@1 (10.2s)
+  [9/15] BF-09 ✓ passed pass@1 (5.5s)
+  [10/15] BF-10 ✓ passed pass@1 (9.4s)
+  [11/15] BF-11 ✓ passed pass@1 (8.8s)
+  [12/15] BF-12 ✓ passed pass@1 (14.3s)
+  [13/15] BF-13 ✓ passed pass@1 (5.1s)
+  [14/15] BF-14 ✓ passed pass@1 (4.2s)
+  [15/15] BF-15 ✓ passed pass@1 (10.5s)
+bugfind-15 (v1.0.1) | pass@1 15 / 15 (100%) | pass@3 15 / 15 (100%) | 5.51s | ok
+  [1/20] HA-01 ✓ passed pass@1 (8.6s)
+  [2/20] HA-02 ✗ verifier_fail fail (42.2s)
+  [3/20] HA-03 ✓ passed pass@1 (5.3s)
+  [4/20] HA-04 ✓ passed pass@1 (33.1s)
+  [5/20] HA-05 ✓ passed pass@1 (47.0s)
+  [6/20] HA-06 ✓ passed pass@1 (46.3s)
+  [7/20] HA-07 ✓ passed pass@1 (31.1s)
+  [8/20] HA-08 ✓ passed pass@1 (45.4s)
+  [9/20] HA-09 ✓ passed pass@1 (22.7s)
+  [10/20] HA-10 ✓ passed pass@1 (30.5s)
+  [11/20] HA-11 ✓ passed pass@1 (13.5s)
+  [12/20] HA-12 ✓ passed pass@1 (16.5s)
+  [13/20] HA-13 ✗ verifier_fail fail (16.1s)
+  [14/20] HA-14 ✓ passed pass@1 (10.8s)
+Traceback (most recent call last):
+  File "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/cli.py", line 1536, in main
+    result = runner.run(
+             ^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 957, in run
+    pack_result = self.run_pack(
+                  ^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 1677, in run_pack
+    run = self._run_scenario_with_inline_retries(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 1541, in _run_scenario_with_inline_retries
+    baseline = self.run_scenario(meta, scenario, repeat_index=repeat_index)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 1802, in run_scenario
+    return self._run_multiturn_scenario(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 2235, in _run_multiturn_scenario
+    start_payload = sandbox_client.verify_multiturn_start(scenario, **start_kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/sandbox.py", line 491, in verify_multiturn_start
+    return self._post("/verify-start", payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/sandbox.py", line 521, in _post
+    response = httpx.post(
+               ^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_api.py", line 304, in post
+    return request(
+           ^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_api.py", line 109, in request
+    return client.request(
+           ^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/.venv/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 937, in _cleanup_and_raise
+    self._stop_sandboxes()
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 1235, in _stop_sandboxes
+    client.stop(log_dir=log_dir)
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/sandbox.py", line 437, in stop
+    subprocess.run(["docker", "stop", self._container_id], check=False, capture_output=True, text=True)
+  File "$SERVER_HOME/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$SERVER_HOME/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$SERVER_HOME/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/subprocess.py", line 2115, in _communicate
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$SERVER_HOME/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$BENCHLOCAL_ROOT/benchlocal_cli/runner.py", line 941, in _cleanup_and_raise
+    raise KeyboardInterrupt
+KeyboardInterrupt

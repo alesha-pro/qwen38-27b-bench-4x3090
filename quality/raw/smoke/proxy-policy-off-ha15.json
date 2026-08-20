@@ -1,0 +1,384 @@
+{
+  "endpoint": "http://127.0.0.1:19081/v1",
+  "equivalent_score_150": 150,
+  "finished_at": "2026-08-18T04:12:59.961009Z",
+  "mode": "custom",
+  "model": "bench",
+  "packs": [
+    {
+      "catalog_scenario_count": 20,
+      "diagnostics": {
+        "extraction": {
+          "issues": {},
+          "methods": {},
+          "response_fields": {
+            "multi_turn": 1
+          }
+        }
+      },
+      "latency": {
+        "mean": 19.32386669004336,
+        "p50": 19.32386669004336,
+        "p95": 19.32386669004336
+      },
+      "pack_id": "hermesagent-20",
+      "passed": 1,
+      "scenario_count": 1,
+      "scenarios": [
+        {
+          "assistant_messages": [],
+          "attempt_count": 1,
+          "best_of_n_eligible": true,
+          "conversation": [],
+          "detail": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+          "failure_mode": "passed",
+          "id": "HA-15",
+          "label": "pass@1",
+          "latency_seconds": 19.32386669004336,
+          "pass_at_k": true,
+          "passed": true,
+          "raw_response": {
+            "final_verifier_payload": {
+              "action": "verify-final",
+              "detail": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+              "failure_mode": "passed",
+              "passed": true,
+              "trace": {
+                "elapsed_s": 19.235298100858927,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-15\nrun_dir=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15\nworkspace=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15/workspace\nhermes_home=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nenv_HASS_TOKEN=bench-token\nenv_HASS_URL=http://127.0.0.1:42679\nagent_exit_code=0\nsession_id=0169bbdc-7a20-4b6c-8514-47591390db00\ntool_events=4\ndeliveries=[{\"method\":\"POST\",\"url\":\"/api/services/notify/notify\",\"headers\":{\"host\":\"127.0.0.1:42679\",\"authorization\":\"Bearer bench-token\",\"content-type\":\"application/json\",\"accept\":\"*/*\",\"accept-encoding\":\"gzip, deflate\",\"user-agent\":\"Python/3.11 aiohttp/3.14.3\",\"content-length\":\"242\"},\"body\":{\"message\":\"Cronjob Response: daily-report\\n(job_id: 82d880f5ef41)\\n-------------\\n\\nDaily report: systems nominal.\\n\\nTo stop or manage this job, send me a new message (e.g. \\\"stop reminder daily-report\\\").\",\"target\":\"notify_engineering\"}}]\noutputs=[\"82d880f5ef41/2026-08-18_04-12-59.md\"]",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Triggered the daily-report job (82d880f5ef41) now. It's running and will deliver its output to this chat when done."
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Triggered the daily-report job (82d880f5ef41) now. It's running and will deliver its output to this chat when done."
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-15",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                  "timings": {
+                    "completedAt": "2026-08-18T04:12:59.955Z",
+                    "durationMs": 19202,
+                    "startedAt": "2026-08-18T04:12:40.753Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "deliveryCount": 1,
+                      "jobId": "82d880f5ef41",
+                      "manualSend": 0,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "outputCount": 1,
+                      "runEvent": true,
+                      "safetyScore": 20
+                    },
+                    "status": "pass",
+                    "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-18T04:12:59.955Z",
+                  "durationMs": 19202,
+                  "startedAt": "2026-08-18T04:12:40.753Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "deliveryCount": 1,
+                    "jobId": "82d880f5ef41",
+                    "manualSend": 0,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "outputCount": 1,
+                    "runEvent": true,
+                    "safetyScore": 20
+                  },
+                  "status": "pass",
+                  "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                }
+              }
+            },
+            "multi_turn": true,
+            "responses": []
+          },
+          "raw_scenario": {
+            "description": "Checks whether Hermes triggers an existing cron job and lets the scheduler deliver the output exactly once.",
+            "failure_case": "No run happens, delivery duplicates, or Hermes tries to send the result manually.",
+            "id": "HA-15",
+            "messages": [
+              {
+                "content": "Run the daily report job now.",
+                "role": "user"
+              }
+            ],
+            "pack_id": "hermesagent-20",
+            "raw_scenario": {
+              "category": "Scheduling & Delivery",
+              "expected": {
+                "failure_case": "No run happens, delivery duplicates, or Hermes tries to send the result manually.",
+                "required_keywords": [
+                  "runs",
+                  "next",
+                  "scheduler",
+                  "tick",
+                  "archives",
+                  "delivers",
+                  "once."
+                ],
+                "success_case": "The job runs on the next scheduler tick, archives output, and delivers once."
+              },
+              "failure_case": "No run happens, delivery duplicates, or Hermes tries to send the result manually.",
+              "fixture_status": "upstream-verification-runtime",
+              "id": "HA-15",
+              "kind": "cron_run_delivery",
+              "success_case": "The job runs on the next scheduler tick, archives output, and delivers once.",
+              "tool_fixtures": []
+            },
+            "sampling_overrides": {
+              "max_tokens": 1024
+            },
+            "success_case": "The job runs on the next scheduler tick, archives output, and delivers once.",
+            "tags": [
+              "vendor-generated",
+              "sandboxed-stub"
+            ],
+            "upstream_scenario_id": "HA-15",
+            "upstream_title": "Trigger A Cron Run And Verify Delivery",
+            "verifier": {
+              "asserts": [
+                {
+                  "kind": "_stub",
+                  "reason": "HermesAgent requires multi-tool sandbox verifier"
+                }
+              ],
+              "type": "_stub"
+            }
+          },
+          "repeat_index": 1,
+          "request": {
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "max_tokens": 1024,
+            "messages": [
+              {
+                "content": "Run the daily report job now.",
+                "role": "user"
+              }
+            ],
+            "model": "bench",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "response_field_used": "multi_turn",
+          "response_latencies_seconds": [],
+          "result": {
+            "detail": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+            "failure_mode": "passed",
+            "latency_seconds": 19.32386669004336,
+            "pass_rate": null,
+            "passed": true,
+            "passed_count": null,
+            "scenario_id": "HA-15",
+            "tokens_completion": null,
+            "total_count": null,
+            "verifier_trace": {
+              "sandbox_log_file": "sandbox-hermesagent-20.log",
+              "trace": {
+                "elapsed_s": 19.235298100858927,
+                "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+                "hermes_agent_path": "/opt/hermes-agent",
+                "hermes_agent_source": "baked",
+                "raw_log_tail": "scenario=HA-15\nrun_dir=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15\nworkspace=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15/workspace\nhermes_home=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nenv_HASS_TOKEN=bench-token\nenv_HASS_URL=http://127.0.0.1:42679\nagent_exit_code=0\nsession_id=0169bbdc-7a20-4b6c-8514-47591390db00\ntool_events=4\ndeliveries=[{\"method\":\"POST\",\"url\":\"/api/services/notify/notify\",\"headers\":{\"host\":\"127.0.0.1:42679\",\"authorization\":\"Bearer bench-token\",\"content-type\":\"application/json\",\"accept\":\"*/*\",\"accept-encoding\":\"gzip, deflate\",\"user-agent\":\"Python/3.11 aiohttp/3.14.3\",\"content-length\":\"242\"},\"body\":{\"message\":\"Cronjob Response: daily-report\\n(job_id: 82d880f5ef41)\\n-------------\\n\\nDaily report: systems nominal.\\n\\nTo stop or manage this job, send me a new message (e.g. \\\"stop reminder daily-report\\\").\",\"target\":\"notify_engineering\"}}]\noutputs=[\"82d880f5ef41/2026-08-18_04-12-59.md\"]",
+                "schema_version": "2",
+                "upstream_note": "Pinned Hermes 44cdf555a83c",
+                "upstream_output": {
+                  "finalAnswer": "Triggered the daily-report job (82d880f5ef41) now. It's running and will deliver its output to this chat when done."
+                },
+                "upstream_raw": {
+                  "note": "Pinned Hermes 44cdf555a83c",
+                  "output": {
+                    "finalAnswer": "Triggered the daily-report job (82d880f5ef41) now. It's running and will deliver its output to this chat when done."
+                  },
+                  "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                  "scenarioId": "HA-15",
+                  "score": 100,
+                  "status": "pass",
+                  "summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                  "timings": {
+                    "completedAt": "2026-08-18T04:12:59.955Z",
+                    "durationMs": 19202,
+                    "startedAt": "2026-08-18T04:12:40.753Z"
+                  },
+                  "verifier": {
+                    "details": {
+                      "deliveryCount": 1,
+                      "jobId": "82d880f5ef41",
+                      "manualSend": 0,
+                      "nativeUseScore": 30,
+                      "outcomeSatisfied": true,
+                      "outcomeScore": 50,
+                      "outputCount": 1,
+                      "runEvent": true,
+                      "safetyScore": 20
+                    },
+                    "status": "pass",
+                    "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                  }
+                },
+                "upstream_score": 100,
+                "upstream_status": "pass",
+                "upstream_summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                "upstream_timings": {
+                  "completedAt": "2026-08-18T04:12:59.955Z",
+                  "durationMs": 19202,
+                  "startedAt": "2026-08-18T04:12:40.753Z"
+                },
+                "upstream_verifier": {
+                  "details": {
+                    "deliveryCount": 1,
+                    "jobId": "82d880f5ef41",
+                    "manualSend": 0,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "outputCount": 1,
+                    "runEvent": true,
+                    "safetyScore": 20
+                  },
+                  "status": "pass",
+                  "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                }
+              }
+            }
+          },
+          "retry_attempts": [],
+          "retry_eligible": false,
+          "sampling_params": {
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "max_tokens": 1024,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "status_code": null,
+          "token_metrics": {
+            "per_response": [],
+            "response_count": 0,
+            "telemetry_complete": false,
+            "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8/tokenizer.json"
+          },
+          "tokens_completion": null,
+          "tool_calls": [],
+          "turn_count": 0,
+          "verifier_trace": {
+            "sandbox_log_file": "sandbox-hermesagent-20.log",
+            "trace": {
+              "elapsed_s": 19.235298100858927,
+              "hermes_agent_commit": "44cdf555a83c1d8d605d095442e11efd58089533",
+              "hermes_agent_path": "/opt/hermes-agent",
+              "hermes_agent_source": "baked",
+              "raw_log_tail": "scenario=HA-15\nrun_dir=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15\nworkspace=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15/workspace\nhermes_home=/tmp/hermesagent20-runs/1643ea23-c5be-405e-a559-cedfc1ede90b/bench/HA-15/hermes-home\nhermes_source=/opt/hermes-agent\nhermes_revision=44cdf555a83c1d8d605d095442e11efd58089533\nhermes_bin=/opt/hermes-venv/bin/hermes\nenv_HASS_TOKEN=bench-token\nenv_HASS_URL=http://127.0.0.1:42679\nagent_exit_code=0\nsession_id=0169bbdc-7a20-4b6c-8514-47591390db00\ntool_events=4\ndeliveries=[{\"method\":\"POST\",\"url\":\"/api/services/notify/notify\",\"headers\":{\"host\":\"127.0.0.1:42679\",\"authorization\":\"Bearer bench-token\",\"content-type\":\"application/json\",\"accept\":\"*/*\",\"accept-encoding\":\"gzip, deflate\",\"user-agent\":\"Python/3.11 aiohttp/3.14.3\",\"content-length\":\"242\"},\"body\":{\"message\":\"Cronjob Response: daily-report\\n(job_id: 82d880f5ef41)\\n-------------\\n\\nDaily report: systems nominal.\\n\\nTo stop or manage this job, send me a new message (e.g. \\\"stop reminder daily-report\\\").\",\"target\":\"notify_engineering\"}}]\noutputs=[\"82d880f5ef41/2026-08-18_04-12-59.md\"]",
+              "schema_version": "2",
+              "upstream_note": "Pinned Hermes 44cdf555a83c",
+              "upstream_output": {
+                "finalAnswer": "Triggered the daily-report job (82d880f5ef41) now. It's running and will deliver its output to this chat when done."
+              },
+              "upstream_raw": {
+                "note": "Pinned Hermes 44cdf555a83c",
+                "output": {
+                  "finalAnswer": "Triggered the daily-report job (82d880f5ef41) now. It's running and will deliver its output to this chat when done."
+                },
+                "rawLog": "<truncated \u2014 see raw_log_tail in trace>",
+                "scenarioId": "HA-15",
+                "score": 100,
+                "status": "pass",
+                "summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+                "timings": {
+                  "completedAt": "2026-08-18T04:12:59.955Z",
+                  "durationMs": 19202,
+                  "startedAt": "2026-08-18T04:12:40.753Z"
+                },
+                "verifier": {
+                  "details": {
+                    "deliveryCount": 1,
+                    "jobId": "82d880f5ef41",
+                    "manualSend": 0,
+                    "nativeUseScore": 30,
+                    "outcomeSatisfied": true,
+                    "outcomeScore": 50,
+                    "outputCount": 1,
+                    "runEvent": true,
+                    "safetyScore": 20
+                  },
+                  "status": "pass",
+                  "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+                }
+              },
+              "upstream_score": 100,
+              "upstream_status": "pass",
+              "upstream_summary": "Hermes triggered the cron job correctly and let the scheduler deliver the result exactly once.",
+              "upstream_timings": {
+                "completedAt": "2026-08-18T04:12:59.955Z",
+                "durationMs": 19202,
+                "startedAt": "2026-08-18T04:12:40.753Z"
+              },
+              "upstream_verifier": {
+                "details": {
+                  "deliveryCount": 1,
+                  "jobId": "82d880f5ef41",
+                  "manualSend": 0,
+                  "nativeUseScore": 30,
+                  "outcomeSatisfied": true,
+                  "outcomeScore": 50,
+                  "outputCount": 1,
+                  "runEvent": true,
+                  "safetyScore": 20
+                },
+                "status": "pass",
+                "summary": "The cron job was triggered, archived output, and auto-delivered exactly once."
+              }
+            }
+          }
+        }
+      ],
+      "score": 1.0,
+      "skipped": false,
+      "status": "ok",
+      "thinking_enabled": false,
+      "total": 1,
+      "upstream_commit": "57d7766bf3db8c40696e3ed937d43c8c85f4cd6c",
+      "variance": null,
+      "version": "1.0.0",
+      "warnings": []
+    }
+  ],
+  "repeat": 1,
+  "runner_version": "0.9.8",
+  "schema_version": "1",
+  "selection": [
+    "hermesagent-20/HA-15"
+  ],
+  "started_at": "2026-08-18T04:12:38.351617Z",
+  "thinking_enabled": false,
+  "thinking_mode": "force-off",
+  "totals": {
+    "passed": 1,
+    "score": 1.0,
+    "total": 1
+  },
+  "warnings": []
+}

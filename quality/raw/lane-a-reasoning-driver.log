@@ -1,0 +1,25 @@
+[2026-08-18T15:40:52.686009Z] ready fp8
+[2026-08-18T15:40:52.700447Z] skip complete fp8/off/reasoning
+[2026-08-18T15:40:52.716083Z] skip complete fp8/low/reasoning
+[2026-08-18T15:40:52.734628Z] skip complete fp8/medium/reasoning
+[2026-08-18T15:40:52.750578Z] skip complete fp8/xhigh/reasoning
+[2026-08-18T15:42:21.881062Z] ready awq-int4
+[2026-08-18T15:42:21.896419Z] skip complete awq-int4/off/reasoning
+[2026-08-18T15:42:21.907305Z] skip complete awq-int4/low/reasoning
+[2026-08-18T15:42:21.936329Z] skip complete awq-int4/medium/reasoning
+[2026-08-18T15:42:21.937043Z] run awq-int4/xhigh/reasoning
+[2026-08-18T18:15:31.881942Z] ready ninfer
+[2026-08-18T18:15:31.882741Z] run ninfer/off/reasoning
+[2026-08-18T19:31:51.565270Z] run ninfer/low/reasoning
+[2026-08-18T22:03:44.700521Z] run ninfer/medium/reasoning
+[2026-08-19T00:15:58.330211Z] run ninfer/xhigh/reasoning
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 398, in <module>
+    raise SystemExit(main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 389, in main
+    raise RuntimeError(f"final analysis failed rc={analysis.returncode}: {analysis.stderr}")
+RuntimeError: final analysis failed rc=1: Traceback (most recent call last):
+  File "$RUN_ROOT/harness/analyze_quality_matrix.py", line 16, in <module>
+    from tokenizers import Tokenizer
+ModuleNotFoundError: No module named 'tokenizers'
+

@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-08-19T21:37:39.171696Z",
+  "models": [
+    "awq-int4"
+  ],
+  "efforts": [
+    "off",
+    "low",
+    "medium",
+    "xhigh"
+  ],
+  "suites": [
+    "full"
+  ],
+  "benchlocal": "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli",
+  "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8",
+  "target_port": 18085,
+  "proxy_port": 19085,
+  "gpu_map": {
+    "awq-int4": "0,1"
+  },
+  "thinking_max_tokens": null,
+  "methodology": "natural endpoint-bounded reasoning; no request max_tokens in thinking arms"
+}

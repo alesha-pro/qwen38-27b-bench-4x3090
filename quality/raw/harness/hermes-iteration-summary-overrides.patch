@@ -1,0 +1,40 @@
+diff --git a/run_agent.py b/run_agent.py
+index 1fa7743..2b6eb97 100644
+--- a/run_agent.py
++++ b/run_agent.py
+@@ -11274,6 +11274,19 @@ class AIAgent:
+             if _is_nous:
+                 summary_extra_body["tags"] = ["product=hermes-agent"]
+ 
++            # BenchLocal quality runs pass model-family thinking controls in
++            # request_overrides. The normal transport applies those overrides,
++            # but the iteration-limit summary path calls the OpenAI client
++            # directly. Carry the exact same controls into that fallback so an
++            # off arm cannot silently start reasoning and effort settings are
++            # not lost. Tools/stream stay disabled for the terminal summary.
++            _summary_request_overrides = dict(self.request_overrides or {})
++            _summary_override_extra_body = _summary_request_overrides.pop("extra_body", None)
++            _summary_request_overrides.pop("tools", None)
++            _summary_request_overrides.pop("stream", None)
++            if isinstance(_summary_override_extra_body, dict):
++                summary_extra_body.update(_summary_override_extra_body)
++
+             if self.api_mode == "codex_responses":
+                 codex_kwargs = self._build_api_kwargs(api_messages)
+                 codex_kwargs.pop("tools", None)
+@@ -11288,6 +11301,7 @@ class AIAgent:
+                     "model": self.model,
+                     "messages": api_messages,
+                 }
++                summary_kwargs.update(_summary_request_overrides)
+                 if _summary_temperature is not None:
+                     summary_kwargs["temperature"] = _summary_temperature
+                 if self.max_tokens is not None:
+@@ -11366,6 +11380,7 @@ class AIAgent:
+                         "model": self.model,
+                         "messages": api_messages,
+                     }
++                    summary_kwargs.update(_summary_request_overrides)
+                     if _summary_temperature is not None:
+                         summary_kwargs["temperature"] = _summary_temperature
+                     if self.max_tokens is not None:

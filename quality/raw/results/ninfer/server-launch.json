@@ -1,0 +1,37 @@
+{
+  "started_at": "2026-08-19T09:05:08.735379Z",
+  "engine": "ninfer",
+  "weights": "$MODEL_ROOT/Qwen3.8-27B-NInfer/qwen3_8_27b.ninfer",
+  "context": 187300,
+  "kv": "int8",
+  "argv": [
+    "$NINFER_ROOT/build-sm86/apps/ninfer-serve",
+    "$MODEL_ROOT/Qwen3.8-27B-NInfer/qwen3_8_27b.ninfer",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18083",
+    "--model-id",
+    "bench",
+    "--max-context",
+    "187300",
+    "--kv-capacity",
+    "auto",
+    "--max-concurrency",
+    "1",
+    "--max-pending-requests",
+    "1",
+    "--prefill-chunk",
+    "1024",
+    "--kv-dtype",
+    "int8",
+    "--default-max-tokens",
+    "187300",
+    "--no-prefix-reuse",
+    "--request-log-jsonl",
+    "$RUN_ROOT/results/ninfer/ninfer-requests.jsonl"
+  ],
+  "env": {
+    "CUDA_VISIBLE_DEVICES": "0"
+  }
+}

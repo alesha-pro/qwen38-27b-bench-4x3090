@@ -1,0 +1,18 @@
+[2026-08-17 21:50:39.569] [info] ninfer-serve: loading model...
+[2026-08-17 21:50:39.958] [info] ninfer-serve: load        weights                      0.00%           0 B /      15.92 GiB     0.000 s
+[2026-08-17 21:50:50.013] [info] ninfer-serve: load        weights                     25.91%      4.12 GiB /      15.92 GiB    10.054 s
+[2026-08-17 21:51:00.054] [info] ninfer-serve: load        weights                     40.83%      6.50 GiB /      15.92 GiB    20.095 s
+[2026-08-17 21:51:10.280] [info] ninfer-serve: load        weights                     55.36%      8.81 GiB /      15.92 GiB    30.322 s
+[2026-08-17 21:51:20.514] [info] ninfer-serve: load        weights                     69.88%     11.12 GiB /      15.92 GiB    40.555 s
+[2026-08-17 21:51:30.573] [info] ninfer-serve: load        weights                     93.05%     14.81 GiB /      15.92 GiB    50.615 s
+[2026-08-17 21:51:35.394] [info] ninfer-serve: load        weights                    100.00%     15.92 GiB /      15.92 GiB    55.436 s
+[2026-08-17 21:51:36.950] [info] ninfer-serve: model loaded in 57.3804 s
+[2026-08-17 21:51:36.950] [info] ninfer-serve: KV capacity auto resolved=187328 tokens pages=2927/2927 runtime=6.37 GiB free-after-weights=7.38 GiB free-after-startup=1.01 GiB headroom=1.00 GiB slack=1.01 GiB graphs=8.00 MiB/12.00 MiB
+[2026-08-17 21:51:36.950] [info] ninfer-serve: warming up...
+[2026-08-17 21:51:37.229] [info] ninfer-serve: listening on http://127.0.0.1:18081 (model id: bench, auth: disabled)
+[2026-08-17 21:51:49.493] [info] ninfer-serve: [req 1] openai_chat_completions non-stream msgs=2 max_tokens=512 (client) tools=12 tool_choice=auto tool_history=no thinking=off preserve_thinking=off preserve_change=no sampler=[greedy] → submitted
+[2026-08-17 21:51:51.779] [info] ninfer-serve: [req 1] done finish=tool_calls tool_calls=1 prompt=1410 gen=26 cache=0 reuse=full_reset ttft=1569ms prefill=904.6tok/s decode=34.4tok/s wall=2.30s speculative=off
+[2026-08-17 21:51:52.230] [info] ninfer-serve: throughput interval=5.000s prefill=282.0tok/s decode=5.0tok/s running=0 prefilling=0 decode_ready=0 waiting=0 avg_decode_batch=1.00
+[2026-08-17 21:51:52.588] [info] ninfer-serve: [req 2] openai_chat_completions non-stream msgs=2 max_tokens=187300 (server default) tools=12 tool_choice=auto tool_history=no thinking=on preserve_thinking=off preserve_change=no sampler=[temp=1.00 top_p=0.95 top_k=20 seed=10409114297242559234] → submitted
+[2026-08-17 21:51:55.575] [info] ninfer-serve: [req 2] done finish=tool_calls tool_calls=1 prompt=1446 gen=47 cache=0 reuse=full_reset ttft=1661ms prefill=874.0tok/s decode=34.5tok/s wall=2.99s speculative=off
+[2026-08-17 21:51:57.230] [info] ninfer-serve: throughput interval=5.000s prefill=289.2tok/s decode=9.2tok/s running=0 prefilling=0 decode_ready=0 waiting=0 avg_decode_batch=1.00

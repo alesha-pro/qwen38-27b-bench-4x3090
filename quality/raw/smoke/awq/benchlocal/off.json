@@ -1,0 +1,273 @@
+{
+  "endpoint": "http://127.0.0.1:19081/v1",
+  "equivalent_score_150": 150,
+  "finished_at": "2026-08-17T21:41:29.087545Z",
+  "mode": "custom",
+  "model": "bench",
+  "packs": [
+    {
+      "catalog_scenario_count": 15,
+      "diagnostics": {
+        "extraction": {
+          "issues": {},
+          "methods": {},
+          "response_fields": {
+            "message.content": 1
+          }
+        },
+        "finish_reasons": {
+          "counts": {
+            "stop": 1
+          },
+          "length": 0,
+          "length_rate": 0.0,
+          "total": 1
+        }
+      },
+      "latency": {
+        "mean": 5.074552402831614,
+        "p50": 5.074552402831614,
+        "p95": 5.074552402831614
+      },
+      "pack_id": "reasonmath-15",
+      "passed": 1,
+      "scenario_count": 1,
+      "scenarios": [
+        {
+          "assistant_messages": [],
+          "attempt_count": 1,
+          "best_of_n_eligible": true,
+          "conversation": [],
+          "detail": "Answer axis 2/2, trace axis 2/2 (100%). Matched checkpoints across message.content.",
+          "failure_mode": "passed",
+          "id": "RM-01",
+          "label": "pass@1",
+          "latency_seconds": 5.074552402831614,
+          "pass_at_k": true,
+          "passed": true,
+          "raw_response": {
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "logprobs": null,
+                "message": {
+                  "annotations": null,
+                  "audio": null,
+                  "content": "To determine how much each person owes, we need to calculate the total cost including tax and tip, then divide by the number of friends.\n\n**Step 1: Calculate the tax amount.**\nThe tax is 8.5% of the pre-tax food total ($84.00).\n$$ \\text{Tax} = 84.00 \\times 0.085 $$\n$$ \\text{Tax} = 7.14 $$\n\n**Step 2: Calculate the tip amount.**\nThe tip is 20% of the pre-tax food total ($84.00).\n$$ \\text{Tip} = 84.00 \\times 0.20 $$\n$$ \\text{Tip} = 16.80 $$\n\n**Step 3: Calculate the total bill.**\n$$ \\text{Total Bill} = \\text{Food} + \\text{Tax} + \\text{Tip} $$\n$$ \\text{Total Bill} = 84.00 + 7.14 + 16.80 $$\n$$ \\text{Total Bill} = 107.94 $$\n\n**Step 4: Divide the total bill by the number of friends.**\nThere are 3 friends.\n$$ \\text{Cost per person} = \\frac{107.94}{3} $$\n$$ \\text{Cost per person} = 35.98 $$\n\nANSWER: $35.98",
+                  "function_call": null,
+                  "reasoning": null,
+                  "refusal": null,
+                  "role": "assistant"
+                },
+                "routed_experts": null,
+                "stop_reason": null,
+                "token_ids": null
+              }
+            ],
+            "created": 1787002884,
+            "ec_transfer_params": null,
+            "id": "chatcmpl-bd9c87843ee8e0ba",
+            "kv_transfer_params": null,
+            "metrics": null,
+            "model": "bench",
+            "object": "chat.completion",
+            "prompt_logprobs": null,
+            "prompt_text": null,
+            "prompt_token_ids": null,
+            "service_tier": null,
+            "system_fingerprint": "vllm-0.26.0-tp2-c114c389",
+            "usage": {
+              "completion_tokens": 325,
+              "prompt_tokens": 185,
+              "prompt_tokens_details": null,
+              "total_tokens": 510
+            }
+          },
+          "raw_scenario": {
+            "description": "Multi-step percentage arithmetic with an explicit tip base and a per-person total.",
+            "failure_case": "Calculates tip on the wrong base or omits the required final answer line.",
+            "id": "RM-01",
+            "max_seconds_override": null,
+            "messages": [
+              {
+                "content": "You are a helpful assistant that solves practical reasoning problems.\n\nRules:\n- Show concise visible work using equations, short bullet points, or numbered steps.\n- Do not write a long essay.\n- End with exactly one line that starts with \"ANSWER: \".\n- If the question asks for more than one value, format the final line as semicolon-separated key=value pairs.\n- Use exact arithmetic when possible.\n- Round only the final result when the problem context requires it.\n- If the constraints are inconsistent, say so explicitly in the final answer.",
+                "role": "system"
+              },
+              {
+                "content": "Three friends had dinner. The food total was $84.00 before tax. Tax is 8.5%. They want to leave a 20% tip calculated on the pre-tax amount. How much does each person owe in total?",
+                "role": "user"
+              }
+            ],
+            "pack_id": "reasonmath-15",
+            "sampling_overrides": {
+              "max_tokens": 1024
+            },
+            "success_case": "Uses the right tax and tip bases, then ends with the published per-person answer line.",
+            "tags": [
+              "vendor-generated"
+            ],
+            "upstream_scenario_id": "RM-01",
+            "upstream_title": "Bill Splitting with Tax and Tip",
+            "verifier": {
+              "asserts": [
+                {
+                  "accepted_answers": [
+                    "ANSWER: $35.98",
+                    "ANSWER: 35.98",
+                    "ANSWER: per_person=35.98"
+                  ],
+                  "canonical_answer": "ANSWER: per_person=$35.98",
+                  "checkpoints": [
+                    "7.14",
+                    "16.80",
+                    "107.94",
+                    "35.98"
+                  ],
+                  "kind": "exact_string",
+                  "partial_answers": [],
+                  "value": "per_person=$35.98"
+                }
+              ],
+              "type": "reason_math"
+            }
+          },
+          "repeat_index": 1,
+          "request": {
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "max_tokens": 1024,
+            "messages": [
+              {
+                "content": "You are a helpful assistant that solves practical reasoning problems.\n\nRules:\n- Show concise visible work using equations, short bullet points, or numbered steps.\n- Do not write a long essay.\n- End with exactly one line that starts with \"ANSWER: \".\n- If the question asks for more than one value, format the final line as semicolon-separated key=value pairs.\n- Use exact arithmetic when possible.\n- Round only the final result when the problem context requires it.\n- If the constraints are inconsistent, say so explicitly in the final answer.",
+                "role": "system"
+              },
+              {
+                "content": "Three friends had dinner. The food total was $84.00 before tax. Tax is 8.5%. They want to leave a 20% tip calculated on the pre-tax amount. How much does each person owe in total?",
+                "role": "user"
+              }
+            ],
+            "model": "bench",
+            "temperature": 0,
+            "top_p": 1
+          },
+          "response_field_used": "message.content",
+          "response_latencies_seconds": [
+            5.074552402831614
+          ],
+          "result": {
+            "detail": "Answer axis 2/2, trace axis 2/2 (100%). Matched checkpoints across message.content.",
+            "failure_mode": "passed",
+            "latency_seconds": 5.074552402831614,
+            "pass_rate": null,
+            "passed": true,
+            "passed_count": null,
+            "scenario_id": "RM-01",
+            "tokens_completion": 325,
+            "total_count": null,
+            "verifier_trace": {
+              "answer_axis_points": 2,
+              "notes": "Matched checkpoints across message.content.",
+              "status_threshold": "pass when answer_axis_points == 2; trace axis is diagnostic",
+              "trace_axis_points": 2,
+              "trace_sources": [
+                "message.content"
+              ],
+              "upstream_style_score": 100
+            }
+          },
+          "retry_attempts": [],
+          "retry_eligible": false,
+          "sampling_params": {
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "max_tokens": 1024,
+            "temperature": 0,
+            "top_p": 1
+          },
+          "status_code": 200,
+          "token_metrics": {
+            "finish_reasons": [
+              "stop"
+            ],
+            "per_response": [
+              {
+                "finish_reason": "stop",
+                "latency_seconds": 5.074552402831614,
+                "reconstructed_answer_tokens": 324,
+                "reconstructed_reasoning_tokens": 0,
+                "reconstructed_tool_call_tokens": 0,
+                "reported_completion_tokens": 325,
+                "reported_completion_tps": 64.04505741602927,
+                "reported_prompt_tokens": 185,
+                "reported_reasoning_tokens": null,
+                "reported_total_tokens": 510
+              }
+            ],
+            "reasoning_share_of_completion": 0.0,
+            "reasoning_token_source": "reconstructed",
+            "reasoning_tokens": 0,
+            "reconstructed_answer_tokens": 324,
+            "reconstructed_reasoning_tokens": 0,
+            "reconstructed_tool_call_tokens": 0,
+            "reported_completion_tokens": 325,
+            "reported_completion_tps": 64.04505741602927,
+            "reported_prompt_tokens": 185,
+            "reported_reasoning_tokens": null,
+            "reported_total_tokens": 510,
+            "response_count": 1,
+            "telemetry_complete": true,
+            "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8/tokenizer.json"
+          },
+          "tokens_completion": 325,
+          "tool_calls": [],
+          "turn_count": null,
+          "verifier_trace": {
+            "answer_axis_points": 2,
+            "notes": "Matched checkpoints across message.content.",
+            "status_threshold": "pass when answer_axis_points == 2; trace axis is diagnostic",
+            "trace_axis_points": 2,
+            "trace_sources": [
+              "message.content"
+            ],
+            "upstream_style_score": 100
+          }
+        }
+      ],
+      "score": 1.0,
+      "skipped": false,
+      "status": "ok",
+      "thinking_enabled": false,
+      "total": 1,
+      "upstream_commit": "78ef138cc26ad6b11f89238e20430de9a9e862aa",
+      "variance": null,
+      "version": "1.0.0",
+      "warnings": []
+    }
+  ],
+  "repeat": 1,
+  "runner_version": "0.9.8",
+  "schema_version": "1",
+  "selection": [
+    "reasonmath-15/RM-01"
+  ],
+  "started_at": "2026-08-17T21:41:23.417645Z",
+  "thinking_enabled": false,
+  "thinking_mode": "force-off",
+  "thinking_validity": {
+    "reasonmath-15": {
+      "expected": "off",
+      "responses": 1,
+      "status": "ok",
+      "with_reasoning": 0
+    }
+  },
+  "totals": {
+    "passed": 1,
+    "score": 1.0,
+    "total": 1
+  },
+  "warnings": []
+}

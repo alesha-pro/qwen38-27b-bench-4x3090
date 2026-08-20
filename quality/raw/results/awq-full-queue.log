@@ -1,0 +1,15 @@
+[2026-08-19T21:41:15.234400Z] ready awq-int4
+[2026-08-19T21:41:15.235235Z] run awq-int4/off/full
+[2026-08-19T22:08:16.353663Z] run awq-int4/low/full
+[2026-08-19T22:54:32.810948Z] run awq-int4/medium/full
+[2026-08-19T23:42:29.421062Z] run awq-int4/xhigh/full
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 398, in <module>
+    raise SystemExit(main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 389, in main
+    raise RuntimeError(f"final analysis failed rc={analysis.returncode}: {analysis.stderr}")
+RuntimeError: final analysis failed rc=1: Traceback (most recent call last):
+  File "$RUN_ROOT/harness/analyze_quality_matrix.py", line 16, in <module>
+    from tokenizers import Tokenizer
+ModuleNotFoundError: No module named 'tokenizers'
+

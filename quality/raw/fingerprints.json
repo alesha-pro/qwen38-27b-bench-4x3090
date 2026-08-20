@@ -1,0 +1,1853 @@
+{
+  "models": [
+    {
+      "path": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8",
+      "files": [
+        {
+          "name": ".cache/huggingface/.gitignore",
+          "size": 1,
+          "mtime_ns": 1786747177722972114
+        },
+        {
+          "name": ".cache/huggingface/CACHEDIR.TAG",
+          "size": 191,
+          "mtime_ns": 1786747177662973344
+        },
+        {
+          "name": ".cache/huggingface/download/.gitattributes.lock",
+          "size": 0,
+          "mtime_ns": 1786747775941954803
+        },
+        {
+          "name": ".cache/huggingface/download/.gitattributes.metadata",
+          "size": 100,
+          "mtime_ns": 1786747196046595452
+        },
+        {
+          "name": ".cache/huggingface/download/LICENSE.lock",
+          "size": 0,
+          "mtime_ns": 1786747775953954531
+        },
+        {
+          "name": ".cache/huggingface/download/LICENSE.metadata",
+          "size": 101,
+          "mtime_ns": 1786747196442587290
+        },
+        {
+          "name": ".cache/huggingface/download/README.md.lock",
+          "size": 0,
+          "mtime_ns": 1786747775941954803
+        },
+        {
+          "name": ".cache/huggingface/download/README.md.metadata",
+          "size": 101,
+          "mtime_ns": 1786747196314589928
+        },
+        {
+          "name": ".cache/huggingface/download/chat_template.jinja.lock",
+          "size": 0,
+          "mtime_ns": 1786747775949954622
+        },
+        {
+          "name": ".cache/huggingface/download/chat_template.jinja.metadata",
+          "size": 100,
+          "mtime_ns": 1786747196326589681
+        },
+        {
+          "name": ".cache/huggingface/download/config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747775945954712
+        },
+        {
+          "name": ".cache/huggingface/download/config.json.metadata",
+          "size": 99,
+          "mtime_ns": 1786747196346589269
+        },
+        {
+          "name": ".cache/huggingface/download/crc32.txt.lock",
+          "size": 0,
+          "mtime_ns": 1786747775945954712
+        },
+        {
+          "name": ".cache/huggingface/download/crc32.txt.metadata",
+          "size": 101,
+          "mtime_ns": 1786747196342589352
+        },
+        {
+          "name": ".cache/huggingface/download/generation_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747775945954712
+        },
+        {
+          "name": ".cache/huggingface/download/generation_config.json.metadata",
+          "size": 98,
+          "mtime_ns": 1786747196334589516
+        },
+        {
+          "name": ".cache/huggingface/download/layers-0.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775949954622
+        },
+        {
+          "name": ".cache/huggingface/download/layers-0.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747252113431172
+        },
+        {
+          "name": ".cache/huggingface/download/layers-1.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775953954531
+        },
+        {
+          "name": ".cache/huggingface/download/layers-1.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747252789417032
+        },
+        {
+          "name": ".cache/huggingface/download/layers-10.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775953954531
+        },
+        {
+          "name": ".cache/huggingface/download/layers-10.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747249997475420
+        },
+        {
+          "name": ".cache/huggingface/download/layers-11.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775953954531
+        },
+        {
+          "name": ".cache/huggingface/download/layers-11.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747254101389581
+        },
+        {
+          "name": ".cache/huggingface/download/layers-12.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775957954441
+        },
+        {
+          "name": ".cache/huggingface/download/layers-12.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747251489444223
+        },
+        {
+          "name": ".cache/huggingface/download/layers-13.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775957954441
+        },
+        {
+          "name": ".cache/huggingface/download/layers-13.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747253985392009
+        },
+        {
+          "name": ".cache/huggingface/download/layers-14.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775953954531
+        },
+        {
+          "name": ".cache/huggingface/download/layers-14.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747251345447234
+        },
+        {
+          "name": ".cache/huggingface/download/layers-15.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775957954441
+        },
+        {
+          "name": ".cache/huggingface/download/layers-15.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747252585421299
+        },
+        {
+          "name": ".cache/huggingface/download/layers-16.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775969954170
+        },
+        {
+          "name": ".cache/huggingface/download/layers-16.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747300540412351
+        },
+        {
+          "name": ".cache/huggingface/download/layers-17.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775961954350
+        },
+        {
+          "name": ".cache/huggingface/download/layers-17.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747309744217437
+        },
+        {
+          "name": ".cache/huggingface/download/layers-18.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775961954350
+        },
+        {
+          "name": ".cache/huggingface/download/layers-18.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747311220186141
+        },
+        {
+          "name": ".cache/huggingface/download/layers-19.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775961954350
+        },
+        {
+          "name": ".cache/huggingface/download/layers-19.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747313008148220
+        },
+        {
+          "name": ".cache/huggingface/download/layers-2.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775965954261
+        },
+        {
+          "name": ".cache/huggingface/download/layers-2.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747317864045151
+        },
+        {
+          "name": ".cache/huggingface/download/layers-20.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775961954350
+        },
+        {
+          "name": ".cache/huggingface/download/layers-20.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747314100125051
+        },
+        {
+          "name": ".cache/huggingface/download/layers-21.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775969954170
+        },
+        {
+          "name": ".cache/huggingface/download/layers-21.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747322767940955
+        },
+        {
+          "name": ".cache/huggingface/download/layers-22.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775973954080
+        },
+        {
+          "name": ".cache/huggingface/download/layers-22.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747314392118854
+        },
+        {
+          "name": ".cache/huggingface/download/layers-23.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775965954261
+        },
+        {
+          "name": ".cache/huggingface/download/layers-23.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747341895533512
+        },
+        {
+          "name": ".cache/huggingface/download/layers-24.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775973954080
+        },
+        {
+          "name": ".cache/huggingface/download/layers-24.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747374814828597
+        },
+        {
+          "name": ".cache/huggingface/download/layers-25.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775969954170
+        },
+        {
+          "name": ".cache/huggingface/download/layers-25.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747358679174685
+        },
+        {
+          "name": ".cache/huggingface/download/layers-26.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775973954080
+        },
+        {
+          "name": ".cache/huggingface/download/layers-26.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747377002781585
+        },
+        {
+          "name": ".cache/huggingface/download/layers-27.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775973954080
+        },
+        {
+          "name": ".cache/huggingface/download/layers-27.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747374254840625
+        },
+        {
+          "name": ".cache/huggingface/download/layers-28.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775977953989
+        },
+        {
+          "name": ".cache/huggingface/download/layers-28.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747372202884693
+        },
+        {
+          "name": ".cache/huggingface/download/layers-29.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775977953989
+        },
+        {
+          "name": ".cache/huggingface/download/layers-29.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747366655003750
+        },
+        {
+          "name": ".cache/huggingface/download/layers-3.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775981953899
+        },
+        {
+          "name": ".cache/huggingface/download/layers-3.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747381434686299
+        },
+        {
+          "name": ".cache/huggingface/download/layers-30.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775977953989
+        },
+        {
+          "name": ".cache/huggingface/download/layers-30.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747383974631655
+        },
+        {
+          "name": ".cache/huggingface/download/layers-31.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775977953989
+        },
+        {
+          "name": ".cache/huggingface/download/layers-31.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747423521777583
+        },
+        {
+          "name": ".cache/huggingface/download/layers-32.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775981953899
+        },
+        {
+          "name": ".cache/huggingface/download/layers-32.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747417737902867
+        },
+        {
+          "name": ".cache/huggingface/download/layers-33.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775981953899
+        },
+        {
+          "name": ".cache/huggingface/download/layers-33.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747418485886671
+        },
+        {
+          "name": ".cache/huggingface/download/layers-34.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775981953899
+        },
+        {
+          "name": ".cache/huggingface/download/layers-34.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747418405888403
+        },
+        {
+          "name": ".cache/huggingface/download/layers-35.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775985953808
+        },
+        {
+          "name": ".cache/huggingface/download/layers-35.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747436361499024
+        },
+        {
+          "name": ".cache/huggingface/download/layers-36.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775985953808
+        },
+        {
+          "name": ".cache/huggingface/download/layers-36.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747452957138100
+        },
+        {
+          "name": ".cache/huggingface/download/layers-37.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775985953808
+        },
+        {
+          "name": ".cache/huggingface/download/layers-37.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747448645231970
+        },
+        {
+          "name": ".cache/huggingface/download/layers-38.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775989953718
+        },
+        {
+          "name": ".cache/huggingface/download/layers-38.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747441269392389
+        },
+        {
+          "name": ".cache/huggingface/download/layers-39.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775985953808
+        },
+        {
+          "name": ".cache/huggingface/download/layers-39.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747479264563999
+        },
+        {
+          "name": ".cache/huggingface/download/layers-4.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775997953537
+        },
+        {
+          "name": ".cache/huggingface/download/layers-4.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747514771785504
+        },
+        {
+          "name": ".cache/huggingface/download/layers-40.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775993953627
+        },
+        {
+          "name": ".cache/huggingface/download/layers-40.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747466032853046
+        },
+        {
+          "name": ".cache/huggingface/download/layers-41.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775993953627
+        },
+        {
+          "name": ".cache/huggingface/download/layers-41.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747467304825285
+        },
+        {
+          "name": ".cache/huggingface/download/layers-42.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775989953718
+        },
+        {
+          "name": ".cache/huggingface/download/layers-42.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747488828354713
+        },
+        {
+          "name": ".cache/huggingface/download/layers-43.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775993953627
+        },
+        {
+          "name": ".cache/huggingface/download/layers-43.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747494540229577
+        },
+        {
+          "name": ".cache/huggingface/download/layers-44.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775997953537
+        },
+        {
+          "name": ".cache/huggingface/download/layers-44.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747487956373808
+        },
+        {
+          "name": ".cache/huggingface/download/layers-45.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775993953627
+        },
+        {
+          "name": ".cache/huggingface/download/layers-45.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747495480208974
+        },
+        {
+          "name": ".cache/huggingface/download/layers-46.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776001953446
+        },
+        {
+          "name": ".cache/huggingface/download/layers-46.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747507919936045
+        },
+        {
+          "name": ".cache/huggingface/download/layers-47.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747775997953537
+        },
+        {
+          "name": ".cache/huggingface/download/layers-47.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747528623480731
+        },
+        {
+          "name": ".cache/huggingface/download/layers-48.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776005953356
+        },
+        {
+          "name": ".cache/huggingface/download/layers-48.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747531343420818
+        },
+        {
+          "name": ".cache/huggingface/download/layers-49.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776001953446
+        },
+        {
+          "name": ".cache/huggingface/download/layers-49.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747532375398079
+        },
+        {
+          "name": ".cache/huggingface/download/layers-5.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776001953446
+        },
+        {
+          "name": ".cache/huggingface/download/layers-5.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747556550864512
+        },
+        {
+          "name": ".cache/huggingface/download/layers-50.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776001953446
+        },
+        {
+          "name": ".cache/huggingface/download/layers-50.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747558070830909
+        },
+        {
+          "name": ".cache/huggingface/download/layers-51.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776009953265
+        },
+        {
+          "name": ".cache/huggingface/download/layers-51.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747561090764125
+        },
+        {
+          "name": ".cache/huggingface/download/layers-52.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776013953175
+        },
+        {
+          "name": ".cache/huggingface/download/layers-52.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747583610265316
+        },
+        {
+          "name": ".cache/huggingface/download/layers-53.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776005953356
+        },
+        {
+          "name": ".cache/huggingface/download/layers-53.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747559838791814
+        },
+        {
+          "name": ".cache/huggingface/download/layers-54.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776013953175
+        },
+        {
+          "name": ".cache/huggingface/download/layers-54.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747569226584078
+        },
+        {
+          "name": ".cache/huggingface/download/layers-55.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776013953175
+        },
+        {
+          "name": ".cache/huggingface/download/layers-55.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747572466512326
+        },
+        {
+          "name": ".cache/huggingface/download/layers-56.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776009953265
+        },
+        {
+          "name": ".cache/huggingface/download/layers-56.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747570822548737
+        },
+        {
+          "name": ".cache/huggingface/download/layers-57.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776009953265
+        },
+        {
+          "name": ".cache/huggingface/download/layers-57.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747597141964923
+        },
+        {
+          "name": ".cache/huggingface/download/layers-58.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776017953084
+        },
+        {
+          "name": ".cache/huggingface/download/layers-58.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747614061588642
+        },
+        {
+          "name": ".cache/huggingface/download/layers-59.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776017953084
+        },
+        {
+          "name": ".cache/huggingface/download/layers-59.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747622345404148
+        },
+        {
+          "name": ".cache/huggingface/download/layers-6.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776017953084
+        },
+        {
+          "name": ".cache/huggingface/download/layers-6.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747615841549014
+        },
+        {
+          "name": ".cache/huggingface/download/layers-60.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776017953084
+        },
+        {
+          "name": ".cache/huggingface/download/layers-60.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747617037522383
+        },
+        {
+          "name": ".cache/huggingface/download/layers-61.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776017953084
+        },
+        {
+          "name": ".cache/huggingface/download/layers-61.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747625329337648
+        },
+        {
+          "name": ".cache/huggingface/download/layers-62.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776021952994
+        },
+        {
+          "name": ".cache/huggingface/download/layers-62.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786747623461379280
+        },
+        {
+          "name": ".cache/huggingface/download/layers-63.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776021952994
+        },
+        {
+          "name": ".cache/huggingface/download/layers-63.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747676152201702
+        },
+        {
+          "name": ".cache/huggingface/download/layers-7.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776021952994
+        },
+        {
+          "name": ".cache/huggingface/download/layers-7.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747675124224739
+        },
+        {
+          "name": ".cache/huggingface/download/layers-8.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776025952904
+        },
+        {
+          "name": ".cache/huggingface/download/layers-8.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747708103484526
+        },
+        {
+          "name": ".cache/huggingface/download/layers-9.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776021952994
+        },
+        {
+          "name": ".cache/huggingface/download/layers-9.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747698215706705
+        },
+        {
+          "name": ".cache/huggingface/download/merges.txt.lock",
+          "size": 0,
+          "mtime_ns": 1786747776029952813
+        },
+        {
+          "name": ".cache/huggingface/download/merges.txt.metadata",
+          "size": 101,
+          "mtime_ns": 1786747619341471070
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.index.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747776025952904
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.index.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786747620141453250
+        },
+        {
+          "name": ".cache/huggingface/download/mtp.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776033952723
+        },
+        {
+          "name": ".cache/huggingface/download/mtp.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747702279615414
+        },
+        {
+          "name": ".cache/huggingface/download/outside.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786747776029952813
+        },
+        {
+          "name": ".cache/huggingface/download/outside.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786747757958361206
+        },
+        {
+          "name": ".cache/huggingface/download/preprocessor_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747776029952813
+        },
+        {
+          "name": ".cache/huggingface/download/preprocessor_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786747623981367692
+        },
+        {
+          "name": ".cache/huggingface/download/safetensors-md5sum.txt.lock",
+          "size": 0,
+          "mtime_ns": 1786747776033952723
+        },
+        {
+          "name": ".cache/huggingface/download/safetensors-md5sum.txt.metadata",
+          "size": 101,
+          "mtime_ns": 1786747624245361808
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747776037952632
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer.json.metadata",
+          "size": 125,
+          "mtime_ns": 1786747631693195749
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747776037952632
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786747626069321154
+        },
+        {
+          "name": ".cache/huggingface/download/video_preprocessor_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747776037952632
+        },
+        {
+          "name": ".cache/huggingface/download/video_preprocessor_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786747626793305014
+        },
+        {
+          "name": ".cache/huggingface/download/vocab.json.lock",
+          "size": 0,
+          "mtime_ns": 1786747776033952723
+        },
+        {
+          "name": ".cache/huggingface/download/vocab.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786747629285249452
+        },
+        {
+          "name": ".cache/huggingface/trees/017b9c7af6b5689d5dd426a76e0bc077eb5ca20a.json",
+          "size": 22043,
+          "mtime_ns": 1786747195590604849
+        },
+        {
+          "name": ".gitattributes",
+          "size": 1570,
+          "mtime_ns": 1786747196046595452
+        },
+        {
+          "name": "LICENSE",
+          "size": 11544,
+          "mtime_ns": 1786747196442587290
+        },
+        {
+          "name": "README.md",
+          "size": 65249,
+          "mtime_ns": 1786747196314589928
+        },
+        {
+          "name": "chat_template.jinja",
+          "size": 8952,
+          "mtime_ns": 1786747196322589763
+        },
+        {
+          "name": "config.json",
+          "size": 51350,
+          "mtime_ns": 1786747196338589434
+        },
+        {
+          "name": "crc32.txt",
+          "size": 2426,
+          "mtime_ns": 1786747196338589434
+        },
+        {
+          "name": "generation_config.json",
+          "size": 202,
+          "mtime_ns": 1786747196330589599
+        },
+        {
+          "name": "layers-0.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747251861436443
+        },
+        {
+          "name": "layers-1.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747252625420462
+        },
+        {
+          "name": "layers-10.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747249805479433
+        },
+        {
+          "name": "layers-11.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747254013391422
+        },
+        {
+          "name": "layers-12.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747251333447486
+        },
+        {
+          "name": "layers-13.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747253813395608
+        },
+        {
+          "name": "layers-14.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747251045453508
+        },
+        {
+          "name": "layers-15.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747252253428244
+        },
+        {
+          "name": "layers-16.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747300112421406
+        },
+        {
+          "name": "layers-17.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747309588220744
+        },
+        {
+          "name": "layers-18.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747310768195726
+        },
+        {
+          "name": "layers-19.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747312828152038
+        },
+        {
+          "name": "layers-2.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747317492053050
+        },
+        {
+          "name": "layers-20.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747313768132095
+        },
+        {
+          "name": "layers-21.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747322591944696
+        },
+        {
+          "name": "layers-22.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747314220122505
+        },
+        {
+          "name": "layers-23.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747341787535818
+        },
+        {
+          "name": "layers-24.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747374702831002
+        },
+        {
+          "name": "layers-25.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747358487178796
+        },
+        {
+          "name": "layers-26.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747376774786485
+        },
+        {
+          "name": "layers-27.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747374082844320
+        },
+        {
+          "name": "layers-28.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747372082887269
+        },
+        {
+          "name": "layers-29.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747366483007439
+        },
+        {
+          "name": "layers-3.safetensors",
+          "size": 372313744,
+          "mtime_ns": 1786747381258690085
+        },
+        {
+          "name": "layers-30.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747383650638627
+        },
+        {
+          "name": "layers-31.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747423345781397
+        },
+        {
+          "name": "layers-32.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747417453909014
+        },
+        {
+          "name": "layers-33.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747418205892734
+        },
+        {
+          "name": "layers-34.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747417965897931
+        },
+        {
+          "name": "layers-35.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747436193502673
+        },
+        {
+          "name": "layers-36.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747452785141845
+        },
+        {
+          "name": "layers-37.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747448513234842
+        },
+        {
+          "name": "layers-38.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747440989398475
+        },
+        {
+          "name": "layers-39.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747479156566360
+        },
+        {
+          "name": "layers-4.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747514567789989
+        },
+        {
+          "name": "layers-40.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747465868856625
+        },
+        {
+          "name": "layers-41.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747467000831920
+        },
+        {
+          "name": "layers-42.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747488500361896
+        },
+        {
+          "name": "layers-43.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747494428232032
+        },
+        {
+          "name": "layers-44.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747487684379763
+        },
+        {
+          "name": "layers-45.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747495224214585
+        },
+        {
+          "name": "layers-46.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747507779939118
+        },
+        {
+          "name": "layers-47.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747528479483903
+        },
+        {
+          "name": "layers-48.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747531147425135
+        },
+        {
+          "name": "layers-49.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747532191402134
+        },
+        {
+          "name": "layers-5.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747556366868579
+        },
+        {
+          "name": "layers-50.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747557894834800
+        },
+        {
+          "name": "layers-51.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747560874768902
+        },
+        {
+          "name": "layers-52.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747583442269043
+        },
+        {
+          "name": "layers-53.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747559430800837
+        },
+        {
+          "name": "layers-54.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747568818593112
+        },
+        {
+          "name": "layers-55.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747572162519060
+        },
+        {
+          "name": "layers-56.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747570558554583
+        },
+        {
+          "name": "layers-57.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747596965968833
+        },
+        {
+          "name": "layers-58.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747613665597457
+        },
+        {
+          "name": "layers-59.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747622177407891
+        },
+        {
+          "name": "layers-6.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747615413558543
+        },
+        {
+          "name": "layers-60.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747616685530222
+        },
+        {
+          "name": "layers-61.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747625001344959
+        },
+        {
+          "name": "layers-62.safetensors",
+          "size": 383865472,
+          "mtime_ns": 1786747623121386856
+        },
+        {
+          "name": "layers-63.safetensors",
+          "size": 372313760,
+          "mtime_ns": 1786747676040204212
+        },
+        {
+          "name": "layers-7.safetensors",
+          "size": 372313744,
+          "mtime_ns": 1786747674964228324
+        },
+        {
+          "name": "layers-8.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747707983487224
+        },
+        {
+          "name": "layers-9.safetensors",
+          "size": 383865448,
+          "mtime_ns": 1786747697927713173
+        },
+        {
+          "name": "merges.txt",
+          "size": 3353259,
+          "mtime_ns": 1786747619337471159
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size": 137335,
+          "mtime_ns": 1786747620137453340
+        },
+        {
+          "name": "mtp.safetensors",
+          "size": 477202224,
+          "mtime_ns": 1786747702019621256
+        },
+        {
+          "name": "outside.safetensors",
+          "size": 6007102112,
+          "mtime_ns": 1786747756694389747
+        },
+        {
+          "name": "preprocessor_config.json",
+          "size": 390,
+          "mtime_ns": 1786747623977367781
+        },
+        {
+          "name": "safetensors-md5sum.txt",
+          "size": 0,
+          "mtime_ns": 1786747624245361808
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 12809320,
+          "mtime_ns": 1786747631677196106
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size": 17928,
+          "mtime_ns": 1786747626069321154
+        },
+        {
+          "name": "video_preprocessor_config.json",
+          "size": 385,
+          "mtime_ns": 1786747626793305014
+        },
+        {
+          "name": "vocab.json",
+          "size": 6722759,
+          "mtime_ns": 1786747629273249720
+        }
+      ]
+    },
+    {
+      "path": "$MODEL_ROOT_FAST/Qwen3.8-27B-NVFP4",
+      "files": [
+        {
+          "name": ".cache/huggingface/.gitignore",
+          "size": 1,
+          "mtime_ns": 1786727186386492072
+        },
+        {
+          "name": ".cache/huggingface/CACHEDIR.TAG",
+          "size": 191,
+          "mtime_ns": 1786727186270494640
+        },
+        {
+          "name": ".cache/huggingface/download/.gitattributes.lock",
+          "size": 0,
+          "mtime_ns": 1786727602769047397
+        },
+        {
+          "name": ".cache/huggingface/download/.gitattributes.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187126475690
+        },
+        {
+          "name": ".cache/huggingface/download/README.md.lock",
+          "size": 0,
+          "mtime_ns": 1786727602773047305
+        },
+        {
+          "name": ".cache/huggingface/download/README.md.metadata",
+          "size": 100,
+          "mtime_ns": 1786727187090476487
+        },
+        {
+          "name": ".cache/huggingface/download/chat_template.jinja.lock",
+          "size": 0,
+          "mtime_ns": 1786727602765047490
+        },
+        {
+          "name": ".cache/huggingface/download/chat_template.jinja.metadata",
+          "size": 101,
+          "mtime_ns": 1786727186774483483
+        },
+        {
+          "name": ".cache/huggingface/download/config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602773047305
+        },
+        {
+          "name": ".cache/huggingface/download/config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187114475956
+        },
+        {
+          "name": ".cache/huggingface/download/generation_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602769047397
+        },
+        {
+          "name": ".cache/huggingface/download/generation_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187062477107
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.index.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602777047212
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.index.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187086476576
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786727602777047212
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786727588473377452
+        },
+        {
+          "name": ".cache/huggingface/download/model_mtp.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786727602781047120
+        },
+        {
+          "name": ".cache/huggingface/download/model_mtp.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786727243101231307
+        },
+        {
+          "name": ".cache/huggingface/download/preprocessor_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602785047027
+        },
+        {
+          "name": ".cache/huggingface/download/preprocessor_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187246473033
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602785047027
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer.json.metadata",
+          "size": 125,
+          "mtime_ns": 1786727189918413863
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602781047120
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187546466391
+        },
+        {
+          "name": ".cache/huggingface/download/video_preprocessor_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602789046935
+        },
+        {
+          "name": ".cache/huggingface/download/video_preprocessor_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187590465417
+        },
+        {
+          "name": ".cache/huggingface/download/vocab.json.lock",
+          "size": 0,
+          "mtime_ns": 1786727602789046935
+        },
+        {
+          "name": ".cache/huggingface/download/vocab.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786727187970457003
+        },
+        {
+          "name": ".cache/huggingface/trees/60e813d4dbbdc5d64cf3f5a8caf2897bedf03679.json",
+          "size": 2012,
+          "mtime_ns": 1786727186250495083
+        },
+        {
+          "name": ".gitattributes",
+          "size": 1570,
+          "mtime_ns": 1786727187122475779
+        },
+        {
+          "name": "README.md",
+          "size": 6590,
+          "mtime_ns": 1786727187090476487
+        },
+        {
+          "name": "chat_template.jinja",
+          "size": 9993,
+          "mtime_ns": 1786727186774483483
+        },
+        {
+          "name": "config.json",
+          "size": 22601,
+          "mtime_ns": 1786727187114475956
+        },
+        {
+          "name": "generation_config.json",
+          "size": 214,
+          "mtime_ns": 1786727187062477107
+        },
+        {
+          "name": "model.safetensors",
+          "size": 22568192096,
+          "mtime_ns": 1786727588285381791
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size": 164371,
+          "mtime_ns": 1786727187082476664
+        },
+        {
+          "name": "model_mtp.safetensors",
+          "size": 849400392,
+          "mtime_ns": 1786727242625241930
+        },
+        {
+          "name": "preprocessor_config.json",
+          "size": 390,
+          "mtime_ns": 1786727187246473033
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 19989424,
+          "mtime_ns": 1786727189886414572
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size": 1124,
+          "mtime_ns": 1786727187546466391
+        },
+        {
+          "name": "video_preprocessor_config.json",
+          "size": 385,
+          "mtime_ns": 1786727187586465505
+        },
+        {
+          "name": "vocab.json",
+          "size": 6722759,
+          "mtime_ns": 1786727187962457180
+        }
+      ]
+    },
+    {
+      "path": "$MODEL_ROOT/Qwen3.8-27B-AWQ-INT4",
+      "files": [
+        {
+          "name": ".cache/huggingface/.gitignore",
+          "size": 1,
+          "mtime_ns": 1786988866564555976
+        },
+        {
+          "name": ".cache/huggingface/CACHEDIR.TAG",
+          "size": 191,
+          "mtime_ns": 1786988866500557422
+        },
+        {
+          "name": ".cache/huggingface/download/.gitattributes.lock",
+          "size": 0,
+          "mtime_ns": 1786988867388537357
+        },
+        {
+          "name": ".cache/huggingface/download/.gitattributes.metadata",
+          "size": 101,
+          "mtime_ns": 1786988867388537357
+        },
+        {
+          "name": ".cache/huggingface/download/LICENSE.lock",
+          "size": 0,
+          "mtime_ns": 1786988867100543864
+        },
+        {
+          "name": ".cache/huggingface/download/LICENSE.metadata",
+          "size": 101,
+          "mtime_ns": 1786988867100543864
+        },
+        {
+          "name": ".cache/huggingface/download/README.md.lock",
+          "size": 0,
+          "mtime_ns": 1786988867352538170
+        },
+        {
+          "name": ".cache/huggingface/download/README.md.metadata",
+          "size": 100,
+          "mtime_ns": 1786988867356538079
+        },
+        {
+          "name": ".cache/huggingface/download/chat_template.jinja.lock",
+          "size": 0,
+          "mtime_ns": 1786988867432536362
+        },
+        {
+          "name": ".cache/huggingface/download/chat_template.jinja.metadata",
+          "size": 101,
+          "mtime_ns": 1786988867432536362
+        },
+        {
+          "name": ".cache/huggingface/download/config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988867344538351
+        },
+        {
+          "name": ".cache/huggingface/download/config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786988867344538351
+        },
+        {
+          "name": ".cache/huggingface/download/generation_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988867352538170
+        },
+        {
+          "name": ".cache/huggingface/download/generation_config.json.metadata",
+          "size": 100,
+          "mtime_ns": 1786988867352538170
+        },
+        {
+          "name": ".cache/huggingface/download/merges.txt.lock",
+          "size": 0,
+          "mtime_ns": 1786988867692530487
+        },
+        {
+          "name": ".cache/huggingface/download/merges.txt.metadata",
+          "size": 101,
+          "mtime_ns": 1786988867692530487
+        },
+        {
+          "name": ".cache/huggingface/download/model-00001-of-00005.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786989172415635127
+        },
+        {
+          "name": ".cache/huggingface/download/model-00001-of-00005.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786989172415635127
+        },
+        {
+          "name": ".cache/huggingface/download/model-00002-of-00005.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786989297713472138
+        },
+        {
+          "name": ".cache/huggingface/download/model-00002-of-00005.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786989297713472138
+        },
+        {
+          "name": ".cache/huggingface/download/model-00003-of-00005.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786989284821701105
+        },
+        {
+          "name": ".cache/huggingface/download/model-00003-of-00005.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786989284821701105
+        },
+        {
+          "name": ".cache/huggingface/download/model-00004-of-00005.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786989252262273172
+        },
+        {
+          "name": ".cache/huggingface/download/model-00004-of-00005.safetensors.metadata",
+          "size": 125,
+          "mtime_ns": 1786989252266273103
+        },
+        {
+          "name": ".cache/huggingface/download/model-00005-of-00005.safetensors.lock",
+          "size": 0,
+          "mtime_ns": 1786989298573456816
+        },
+        {
+          "name": ".cache/huggingface/download/model-00005-of-00005.safetensors.metadata",
+          "size": 124,
+          "mtime_ns": 1786989298573456816
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.index.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988867996523617
+        },
+        {
+          "name": ".cache/huggingface/download/model.safetensors.index.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786988867996523617
+        },
+        {
+          "name": ".cache/huggingface/download/preprocessor_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988867988523797
+        },
+        {
+          "name": ".cache/huggingface/download/preprocessor_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786988867988523797
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988871860436292
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer.json.metadata",
+          "size": 125,
+          "mtime_ns": 1786988871860436292
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988868548511143
+        },
+        {
+          "name": ".cache/huggingface/download/tokenizer_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786988868548511143
+        },
+        {
+          "name": ".cache/huggingface/download/video_preprocessor_config.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988868652508792
+        },
+        {
+          "name": ".cache/huggingface/download/video_preprocessor_config.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786988868652508792
+        },
+        {
+          "name": ".cache/huggingface/download/vocab.json.lock",
+          "size": 0,
+          "mtime_ns": 1786988869800482849
+        },
+        {
+          "name": ".cache/huggingface/download/vocab.json.metadata",
+          "size": 101,
+          "mtime_ns": 1786988869800482849
+        },
+        {
+          "name": ".cache/huggingface/trees/63768c10df38c0395e12ef49edac1bd539eaeeea.json",
+          "size": 3195,
+          "mtime_ns": 1786988866492557603
+        },
+        {
+          "name": ".gitattributes",
+          "size": 1570,
+          "mtime_ns": 1786988867388537357
+        },
+        {
+          "name": "LICENSE",
+          "size": 11544,
+          "mtime_ns": 1786988867100543864
+        },
+        {
+          "name": "README.md",
+          "size": 66145,
+          "mtime_ns": 1786988867348538260
+        },
+        {
+          "name": "chat_template.jinja",
+          "size": 8952,
+          "mtime_ns": 1786988867432536362
+        },
+        {
+          "name": "config.json",
+          "size": 20927,
+          "mtime_ns": 1786988867344538351
+        },
+        {
+          "name": "generation_config.json",
+          "size": 202,
+          "mtime_ns": 1786988867348538260
+        },
+        {
+          "name": "merges.txt",
+          "size": 3353259,
+          "mtime_ns": 1786988867684530668
+        },
+        {
+          "name": "model-00001-of-00005.safetensors",
+          "size": 2542796928,
+          "mtime_ns": 1786989169187688867
+        },
+        {
+          "name": "model-00002-of-00005.safetensors",
+          "size": 4967650936,
+          "mtime_ns": 1786989294881522553
+        },
+        {
+          "name": "model-00003-of-00005.safetensors",
+          "size": 4996718528,
+          "mtime_ns": 1786989276705844543
+        },
+        {
+          "name": "model-00004-of-00005.safetensors",
+          "size": 4976405864,
+          "mtime_ns": 1786989238834506402
+        },
+        {
+          "name": "model-00005-of-00005.safetensors",
+          "size": 3534428672,
+          "mtime_ns": 1786989295145517856
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size": 241486,
+          "mtime_ns": 1786988867996523617
+        },
+        {
+          "name": "preprocessor_config.json",
+          "size": 390,
+          "mtime_ns": 1786988867988523797
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 12809320,
+          "mtime_ns": 1786988871816437286
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size": 17928,
+          "mtime_ns": 1786988868548511143
+        },
+        {
+          "name": "video_preprocessor_config.json",
+          "size": 385,
+          "mtime_ns": 1786988868648508883
+        },
+        {
+          "name": "vocab.json",
+          "size": 6722759,
+          "mtime_ns": 1786988869788483120
+        }
+      ]
+    },
+    {
+      "path": "$MODEL_ROOT/Qwen3.8-27B-GGUF/Qwen3.8-27B-Q4_K_M.gguf",
+      "files": [
+        {
+          "name": "Qwen3.8-27B-Q4_K_M.gguf",
+          "size": 17106773984,
+          "mtime_ns": 1786720000288822431
+        }
+      ]
+    },
+    {
+      "path": "$MODEL_ROOT/Qwen3.8-27B-NInfer/qwen3_8_27b.ninfer",
+      "files": [
+        {
+          "name": "qwen3_8_27b.ninfer",
+          "size": 18210531328,
+          "mtime_ns": 1786965375795893279
+        }
+      ]
+    }
+  ],
+  "nvidia_smi": {
+    "argv": [
+      "nvidia-smi",
+      "-q"
+    ],
+    "returncode": 0,
+    "stdout": "==============NVSMI LOG==============\n\nTimestamp                                              : Mon Aug 17 21:52:41 2026\nDriver Version                                         : 610.43.02 [Deprecated; will be removed in CUDA 14.0. Use KMD Version instead]\nCUDA Version                                           : 13.3 [Deprecated; will be removed in CUDA 14.0. Use CUDA UMD Version instead]\nKMD Version                                            : 610.43.02\nCUDA UMD Version                                       : 13.3\n\nAttached GPUs                                          : 4\nGPU 00000000:01:00.0\n    Product Name                                       : NVIDIA GeForce RTX 3090\n    Product Brand                                      : GeForce\n    Product Architecture                               : Ampere\n    Display Mode                                       : Requested functionality has been deprecated\n    Display Attached                                   : No\n    Display Active                                     : Disabled\n    Persistence Mode                                   : Enabled\n    Addressing Mode                                    : None\n    MIG Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    Accounting Mode                                    : Disabled\n    Accounting Mode Buffer Size                        : 4000\n    Driver Model\n        Current                                        : N/A\n        Pending                                        : N/A\n    Serial Number                                      : N/A\n    GPU UUID                                           : GPU-87547215-f876-fd2b-9970-f899e1cb5dd5\n    GPU PDI                                            : 0xce4b26bcb12a321d\n    Minor Number                                       : 3\n    VBIOS Version                                      : 94.02.59.00.F2\n    MultiGPU Board                                     : No\n    Board ID                                           : 0x100\n    Board Part Number                                  : N/A\n    GPU Part Number                                    : 2204-300-A1\n    FRU Part Number                                    : N/A\n    Platform Info\n        Chassis Serial Number                          : N/A\n        Slot Number                                    : N/A\n        Tray Index                                     : N/A\n        Host ID                                        : N/A\n        Peer Type                                      : N/A\n        Module Id                                      : 1\n        GPU Fabric GUID                                : N/A\n    Inforom Version\n        Image Version                                  : G001.0000.03.03\n        OEM Object                                     : 2.0\n        ECC Object                                     : N/A\n        Power Management Object                        : N/A\n    Inforom BBX Object Flush\n        Latest Timestamp                               : N/A\n        Latest Duration                                : N/A\n    Inforom Time Data\n        Time Run                                       : N/A\n    GPU Operation Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    GPU C2C Mode                                       : N/A\n    GPU Virtualization Mode\n        Virtualization Mode                            : None\n        Host VGPU Mode                                 : N/A\n        vGPU Heterogeneous Mode                        : N/A\n    GPU Recovery Action                                : None\n    GSP Firmware Version                               : 610.43.02\n    IBMNPU\n        Relaxed Ordering Mode                          : N/A\n    PCI\n        Bus                                            : 0x01\n        Device                                         : 0x00\n        Domain                                         : 0x0000\n        Base Classcode                                 : 0x3\n        Sub Classcode                                  : 0x0\n        Device Id                                      : 0x220410DE\n        Bus Id                                         : 00000000:01:00.0\n        Sub System Id                                  : 0x38811462\n        GPU Link Info\n            PCIe Generation\n                Max                                    : 3\n                Current                                : 2\n                Device Current                         : 2\n                Device Max                             : 4\n                Host Max                               : 3\n            Link Width\n                Max                                    : 16x\n                Current                                : 16x\n        Bridge Chip\n            Type                                       : N/A\n            Firmware                                   : N/A\n        Replays Since Reset                            : 0\n        Replay Number Rollovers                        : 0\n        Tx Throughput                                  : 927 KB/s\n        Rx Throughput                                  : 244 KB/s\n        Atomic Caps Outbound                           : N/A\n        Atomic Caps Inbound                            : N/A\n    Fan Speed                                          : 49 %\n    Performance State                                  : P5\n    Clocks Event Reasons\n        Idle                                           : Not Active\n        Applications Clocks Setting                    : Not Active\n        SW Power Cap                                   : Active\n        HW Slowdown                                    : Not Active\n            HW Thermal Slowdown                        : Not Active\n            HW Power Brake Slowdown                    : Not Active\n        Sync Boost                                     : Not Active\n        SW Thermal Slowdown                            : Active\n        Display Clock Setting                          : Not Active\n    Clocks Event Reasons Counters\n        SW Power Capping                               : 226088195086 us\n        Sync Boost                                     : 0 us\n        SW Thermal Slowdown                            : 15034506625 us\n        HW Thermal Slowdown                            : 90002 us\n        HW Power Braking                               : 0 us\n    Sparse Operation Mode                              : N/A\n    FB Memory Usage\n        Total                                          : 24576 MiB\n        Reserved                                       : 453 MiB\n        Used                                           : 1 MiB\n        Free                                           : 24123 MiB\n    BAR1 Memory Usage\n        Total                                          : 32768 MiB\n        Used                                           : 1 MiB\n        Free                                           : 32767 MiB\n    Conf Compute Protected Memory Usage\n        Total                                          : 0 MiB\n        Used                                           : 0 MiB\n        Free                                           : 0 MiB\n    Compute Mode                                       : Default\n    Utilization\n        GPU                                            : 0 %\n        Memory                                         : 0 %\n        Encoder                                        : 0 %\n        Decoder                                        : 0 %\n        JPEG                                           : 0 %\n        OFA                                            : 0 %\n    Encoder Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    FBC Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    DRAM Encryption Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Errors\n        Volatile\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n        Aggregate\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n            SRAM Threshold Exceeded                    : N/A\n        Aggregate Uncorrectable SRAM Sources\n            SRAM L2                                    : N/A\n            SRAM SM                                    : N/A\n            SRAM Microcontroller                       : N/A\n            SRAM PCIE                                  : N/A\n            SRAM Other                                 : N/A\n        Channel Repair Pending                         : No\n        TPC Repair Pending                             : No\n        Unrepairable Memory                            : N/A\n    Retired Pages\n        Single Bit ECC                                 : N/A\n        Double Bit ECC                                 : N/A\n        Pending Page Blacklist                         : N/A\n    Remapped Rows                                      : N/A\n    Temperature\n        GPU Current Temp                               : 55 C\n        GPU Current T.Limit Temp                       : N/A\n        GPU Shutdown Temp                              : 98 C\n        GPU Slowdown Temp                              : 95 C\n        GPU Max Operating Temp                         : 93 C\n        GPU Target Temperature Specification           : 83 C\n        Memory Current Temp                            : N/A\n        Memory Max Operating Temp                      : N/A\n    GPU Power Readings\n        Average Power Draw                             : 76.96 W\n        Instantaneous Power Draw                       : 76.85 W\n        GPU Ceiling Power Limit\n            Current Power Limit                        : 320.00 W\n            Requested Power Limit                      : 320.00 W\n            Default Power Limit                        : 350.00 W\n        GPU Base Power\n            Current Base Power                         : N/A\n            Requested Base Power                       : N/A\n            Default Base Power                         : N/A\n        Min Power Limit                                : 100.00 W\n        Max Power Limit                                : 350.00 W\n    GPU Memory Power Readings \n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n    Module Power Readings\n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n        Current Power Limit                            : N/A\n        Requested Power Limit                          : N/A\n        Default Power Limit                            : N/A\n        Min Power Limit                                : N/A\n        Max Power Limit                                : N/A\n    Power Smoothing                                    : N/A\n    Workload Power Profiles\n        Requested Profiles                             : N/A\n        Enforced Profiles                              : N/A\n    EDPp Multiplier                                    : N/A\n    Clocks\n        Graphics                                       : 1965 MHz\n        SM                                             : 1965 MHz\n        Memory                                         : 810 MHz\n        Video                                          : 1725 MHz\n    Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Default Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Deferred Clocks\n        Memory                                         : N/A\n    Max Clocks\n        Graphics                                       : 2130 MHz\n        SM                                             : 2130 MHz\n        Memory                                         : 9751 MHz\n        Video                                          : 1980 MHz\n    Max Customer Boost Clocks\n        Graphics                                       : N/A\n    Clock Policy\n        Auto Boost                                     : N/A\n        Auto Boost Default                             : N/A\n    Fabric\n        State                                          : N/A\n        Status                                         : N/A\n        CliqueId                                       : N/A\n        ClusterUUID                                    : N/A\n        Health\n            Summary                                    : N/A\n            Bandwidth                                  : N/A\n            Route Recovery in progress                 : N/A\n            Route Unhealthy                            : N/A\n            Access Timeout Recovery                    : N/A\n            Incorrect Configuration                    : N/A\n            Partition Assigned                         : N/A\n    Processes                                          : None\n    Capabilities\n        EGM                                            : disabled\n\nGPU 00000000:41:00.0\n    Product Name                                       : NVIDIA GeForce RTX 3090\n    Product Brand                                      : GeForce\n    Product Architecture                               : Ampere\n    Display Mode                                       : Requested functionality has been deprecated\n    Display Attached                                   : No\n    Display Active                                     : Disabled\n    Persistence Mode                                   : Enabled\n    Addressing Mode                                    : None\n    MIG Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    Accounting Mode                                    : Disabled\n    Accounting Mode Buffer Size                        : 4000\n    Driver Model\n        Current                                        : N/A\n        Pending                                        : N/A\n    Serial Number                                      : N/A\n    GPU UUID                                           : GPU-88c36ce2-6837-ea9e-d89a-d58def400bba\n    GPU PDI                                            : 0x8bdc21890869e0b6\n    Minor Number                                       : 2\n    VBIOS Version                                      : 94.02.42.80.9F\n    MultiGPU Board                                     : No\n    Board ID                                           : 0x4100\n    Board Part Number                                  : N/A\n    GPU Part Number                                    : 2204-300-A1\n    FRU Part Number                                    : N/A\n    Platform Info\n        Chassis Serial Number                          : N/A\n        Slot Number                                    : N/A\n        Tray Index                                     : N/A\n        Host ID                                        : N/A\n        Peer Type                                      : N/A\n        Module Id                                      : 1\n        GPU Fabric GUID                                : N/A\n    Inforom Version\n        Image Version                                  : G001.0000.03.03\n        OEM Object                                     : 2.0\n        ECC Object                                     : N/A\n        Power Management Object                        : N/A\n    Inforom BBX Object Flush\n        Latest Timestamp                               : N/A\n        Latest Duration                                : N/A\n    Inforom Time Data\n        Time Run                                       : N/A\n    GPU Operation Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    GPU C2C Mode                                       : N/A\n    GPU Virtualization Mode\n        Virtualization Mode                            : None\n        Host VGPU Mode                                 : N/A\n        vGPU Heterogeneous Mode                        : N/A\n    GPU Recovery Action                                : None\n    GSP Firmware Version                               : 610.43.02\n    IBMNPU\n        Relaxed Ordering Mode                          : N/A\n    PCI\n        Bus                                            : 0x41\n        Device                                         : 0x00\n        Domain                                         : 0x0000\n        Base Classcode                                 : 0x3\n        Sub Classcode                                  : 0x0\n        Device Id                                      : 0x220410DE\n        Bus Id                                         : 00000000:41:00.0\n        Sub System Id                                  : 0x161319DA\n        GPU Link Info\n            PCIe Generation\n                Max                                    : 3\n                Current                                : 2\n                Device Current                         : 2\n                Device Max                             : 4\n                Host Max                               : 3\n            Link Width\n                Max                                    : 16x\n                Current                                : 16x\n        Bridge Chip\n            Type                                       : N/A\n            Firmware                                   : N/A\n        Replays Since Reset                            : 0\n        Replay Number Rollovers                        : 0\n        Tx Throughput                                  : 390 KB/s\n        Rx Throughput                                  : 292 KB/s\n        Atomic Caps Outbound                           : N/A\n        Atomic Caps Inbound                            : N/A\n    Fan Speed                                          : 0 %\n    Performance State                                  : P5\n    Clocks Event Reasons\n        Idle                                           : Not Active\n        Applications Clocks Setting                    : Not Active\n        SW Power Cap                                   : Not Active\n        HW Slowdown                                    : Not Active\n            HW Thermal Slowdown                        : Not Active\n            HW Power Brake Slowdown                    : Not Active\n        Sync Boost                                     : Not Active\n        SW Thermal Slowdown                            : Not Active\n        Display Clock Setting                          : Not Active\n    Clocks Event Reasons Counters\n        SW Power Capping                               : 139615155299 us\n        Sync Boost                                     : 0 us\n        SW Thermal Slowdown                            : 66068385038 us\n        HW Thermal Slowdown                            : 0 us\n        HW Power Braking                               : 0 us\n    Sparse Operation Mode                              : N/A\n    FB Memory Usage\n        Total                                          : 24576 MiB\n        Reserved                                       : 453 MiB\n        Used                                           : 1 MiB\n        Free                                           : 24123 MiB\n    BAR1 Memory Usage\n        Total                                          : 32768 MiB\n        Used                                           : 1 MiB\n        Free                                           : 32767 MiB\n    Conf Compute Protected Memory Usage\n        Total                                          : 0 MiB\n        Used                                           : 0 MiB\n        Free                                           : 0 MiB\n    Compute Mode                                       : Default\n    Utilization\n        GPU                                            : 0 %\n        Memory                                         : 0 %\n        Encoder                                        : 0 %\n        Decoder                                        : 0 %\n        JPEG                                           : 0 %\n        OFA                                            : 0 %\n    Encoder Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    FBC Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    DRAM Encryption Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Errors\n        Volatile\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n        Aggregate\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n            SRAM Threshold Exceeded                    : N/A\n        Aggregate Uncorrectable SRAM Sources\n            SRAM L2                                    : N/A\n            SRAM SM                                    : N/A\n            SRAM Microcontroller                       : N/A\n            SRAM PCIE                                  : N/A\n            SRAM Other                                 : N/A\n        Channel Repair Pending                         : No\n        TPC Repair Pending                             : No\n        Unrepairable Memory                            : N/A\n    Retired Pages\n        Single Bit ECC                                 : N/A\n        Double Bit ECC                                 : N/A\n        Pending Page Blacklist                         : N/A\n    Remapped Rows                                      : N/A\n    Temperature\n        GPU Current Temp                               : 58 C\n        GPU Current T.Limit Temp                       : N/A\n        GPU Shutdown Temp                              : 98 C\n        GPU Slowdown Temp                              : 95 C\n        GPU Max Operating Temp                         : 93 C\n        GPU Target Temperature Specification           : 83 C\n        Memory Current Temp                            : N/A\n        Memory Max Operating Temp                      : N/A\n    GPU Power Readings\n        Average Power Draw                             : 78.35 W\n        Instantaneous Power Draw                       : 77.46 W\n        GPU Ceiling Power Limit\n            Current Power Limit                        : 320.00 W\n            Requested Power Limit                      : 320.00 W\n            Default Power Limit                        : 350.00 W\n        GPU Base Power\n            Current Base Power                         : N/A\n            Requested Base Power                       : N/A\n            Default Base Power                         : N/A\n        Min Power Limit                                : 100.00 W\n        Max Power Limit                                : 385.00 W\n    GPU Memory Power Readings \n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n    Module Power Readings\n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n        Current Power Limit                            : N/A\n        Requested Power Limit                          : N/A\n        Default Power Limit                            : N/A\n        Min Power Limit                                : N/A\n        Max Power Limit                                : N/A\n    Power Smoothing                                    : N/A\n    Workload Power Profiles\n        Requested Profiles                             : N/A\n        Enforced Profiles                              : N/A\n    EDPp Multiplier                                    : N/A\n    Clocks\n        Graphics                                       : 1935 MHz\n        SM                                             : 1935 MHz\n        Memory                                         : 810 MHz\n        Video                                          : 1695 MHz\n    Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Default Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Deferred Clocks\n        Memory                                         : N/A\n    Max Clocks\n        Graphics                                       : 2115 MHz\n        SM                                             : 2115 MHz\n        Memory                                         : 9751 MHz\n        Video                                          : 1965 MHz\n    Max Customer Boost Clocks\n        Graphics                                       : N/A\n    Clock Policy\n        Auto Boost                                     : N/A\n        Auto Boost Default                             : N/A\n    Fabric\n        State                                          : N/A\n        Status                                         : N/A\n        CliqueId                                       : N/A\n        ClusterUUID                                    : N/A\n        Health\n            Summary                                    : N/A\n            Bandwidth                                  : N/A\n            Route Recovery in progress                 : N/A\n            Route Unhealthy                            : N/A\n            Access Timeout Recovery                    : N/A\n            Incorrect Configuration                    : N/A\n            Partition Assigned                         : N/A\n    Processes                                          : None\n    Capabilities\n        EGM                                            : disabled\n\nGPU 00000000:81:00.0\n    Product Name                                       : NVIDIA GeForce RTX 3090\n    Product Brand                                      : GeForce\n    Product Architecture                               : Ampere\n    Display Mode                                       : Requested functionality has been deprecated\n    Display Attached                                   : No\n    Display Active                                     : Disabled\n    Persistence Mode                                   : Enabled\n    Addressing Mode                                    : None\n    MIG Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    Accounting Mode                                    : Disabled\n    Accounting Mode Buffer Size                        : 4000\n    Driver Model\n        Current                                        : N/A\n        Pending                                        : N/A\n    Serial Number                                      : N/A\n    GPU UUID                                           : GPU-380969c1-e71b-2045-c193-fd5a8e398a19\n    GPU PDI                                            : 0xe8a2146a59f9aec0\n    Minor Number                                       : 1\n    VBIOS Version                                      : 94.02.42.00.A7\n    MultiGPU Board                                     : No\n    Board ID                                           : 0x8100\n    Board Part Number                                  : N/A\n    GPU Part Number                                    : 2204-300-A1\n    FRU Part Number                                    : N/A\n    Platform Info\n        Chassis Serial Number                          : N/A\n        Slot Number                                    : N/A\n        Tray Index                                     : N/A\n        Host ID                                        : N/A\n        Peer Type                                      : N/A\n        Module Id                                      : 1\n        GPU Fabric GUID                                : N/A\n    Inforom Version\n        Image Version                                  : G001.0000.03.03\n        OEM Object                                     : 2.0\n        ECC Object                                     : N/A\n        Power Management Object                        : N/A\n    Inforom BBX Object Flush\n        Latest Timestamp                               : N/A\n        Latest Duration                                : N/A\n    Inforom Time Data\n        Time Run                                       : N/A\n    GPU Operation Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    GPU C2C Mode                                       : N/A\n    GPU Virtualization Mode\n        Virtualization Mode                            : None\n        Host VGPU Mode                                 : N/A\n        vGPU Heterogeneous Mode                        : N/A\n    GPU Recovery Action                                : None\n    GSP Firmware Version                               : 610.43.02\n    IBMNPU\n        Relaxed Ordering Mode                          : N/A\n    PCI\n        Bus                                            : 0x81\n        Device                                         : 0x00\n        Domain                                         : 0x0000\n        Base Classcode                                 : 0x3\n        Sub Classcode                                  : 0x0\n        Device Id                                      : 0x220410DE\n        Bus Id                                         : 00000000:81:00.0\n        Sub System Id                                  : 0x22041569\n        GPU Link Info\n            PCIe Generation\n                Max                                    : 3\n                Current                                : 2\n                Device Current                         : 2\n                Device Max                             : 4\n                Host Max                               : 3\n            Link Width\n                Max                                    : 16x\n                Current                                : 16x\n        Bridge Chip\n            Type                                       : N/A\n            Firmware                                   : N/A\n        Replays Since Reset                            : 0\n        Replay Number Rollovers                        : 0\n        Tx Throughput                                  : 927 KB/s\n        Rx Throughput                                  : 292 KB/s\n        Atomic Caps Outbound                           : N/A\n        Atomic Caps Inbound                            : N/A\n    Fan Speed                                          : 30 %\n    Performance State                                  : P5\n    Clocks Event Reasons\n        Idle                                           : Not Active\n        Applications Clocks Setting                    : Not Active\n        SW Power Cap                                   : Not Active\n        HW Slowdown                                    : Not Active\n            HW Thermal Slowdown                        : Not Active\n            HW Power Brake Slowdown                    : Not Active\n        Sync Boost                                     : Not Active\n        SW Thermal Slowdown                            : Not Active\n        Display Clock Setting                          : Not Active\n    Clocks Event Reasons Counters\n        SW Power Capping                               : 53532449369 us\n        Sync Boost                                     : 0 us\n        SW Thermal Slowdown                            : 0 us\n        HW Thermal Slowdown                            : 0 us\n        HW Power Braking                               : 0 us\n    Sparse Operation Mode                              : N/A\n    FB Memory Usage\n        Total                                          : 24576 MiB\n        Reserved                                       : 453 MiB\n        Used                                           : 1 MiB\n        Free                                           : 24123 MiB\n    BAR1 Memory Usage\n        Total                                          : 32768 MiB\n        Used                                           : 1 MiB\n        Free                                           : 32767 MiB\n    Conf Compute Protected Memory Usage\n        Total                                          : 0 MiB\n        Used                                           : 0 MiB\n        Free                                           : 0 MiB\n    Compute Mode                                       : Default\n    Utilization\n        GPU                                            : 0 %\n        Memory                                         : 0 %\n        Encoder                                        : 0 %\n        Decoder                                        : 0 %\n        JPEG                                           : 0 %\n        OFA                                            : 0 %\n    Encoder Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    FBC Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    DRAM Encryption Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Errors\n        Volatile\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n        Aggregate\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n            SRAM Threshold Exceeded                    : N/A\n        Aggregate Uncorrectable SRAM Sources\n            SRAM L2                                    : N/A\n            SRAM SM                                    : N/A\n            SRAM Microcontroller                       : N/A\n            SRAM PCIE                                  : N/A\n            SRAM Other                                 : N/A\n        Channel Repair Pending                         : No\n        TPC Repair Pending                             : No\n        Unrepairable Memory                            : N/A\n    Retired Pages\n        Single Bit ECC                                 : N/A\n        Double Bit ECC                                 : N/A\n        Pending Page Blacklist                         : N/A\n    Remapped Rows                                      : N/A\n    Temperature\n        GPU Current Temp                               : 47 C\n        GPU Current T.Limit Temp                       : N/A\n        GPU Shutdown Temp                              : 98 C\n        GPU Slowdown Temp                              : 95 C\n        GPU Max Operating Temp                         : 93 C\n        GPU Target Temperature Specification           : 83 C\n        Memory Current Temp                            : N/A\n        Memory Max Operating Temp                      : N/A\n    GPU Power Readings\n        Average Power Draw                             : 71.24 W\n        Instantaneous Power Draw                       : 71.20 W\n        GPU Ceiling Power Limit\n            Current Power Limit                        : 320.00 W\n            Requested Power Limit                      : 320.00 W\n            Default Power Limit                        : 350.00 W\n        GPU Base Power\n            Current Base Power                         : N/A\n            Requested Base Power                       : N/A\n            Default Base Power                         : N/A\n        Min Power Limit                                : 100.00 W\n        Max Power Limit                                : 365.00 W\n    GPU Memory Power Readings \n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n    Module Power Readings\n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n        Current Power Limit                            : N/A\n        Requested Power Limit                          : N/A\n        Default Power Limit                            : N/A\n        Min Power Limit                                : N/A\n        Max Power Limit                                : N/A\n    Power Smoothing                                    : N/A\n    Workload Power Profiles\n        Requested Profiles                             : N/A\n        Enforced Profiles                              : N/A\n    EDPp Multiplier                                    : N/A\n    Clocks\n        Graphics                                       : 1950 MHz\n        SM                                             : 1950 MHz\n        Memory                                         : 810 MHz\n        Video                                          : 1710 MHz\n    Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Default Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Deferred Clocks\n        Memory                                         : N/A\n    Max Clocks\n        Graphics                                       : 2100 MHz\n        SM                                             : 2100 MHz\n        Memory                                         : 9751 MHz\n        Video                                          : 1950 MHz\n    Max Customer Boost Clocks\n        Graphics                                       : N/A\n    Clock Policy\n        Auto Boost                                     : N/A\n        Auto Boost Default                             : N/A\n    Fabric\n        State                                          : N/A\n        Status                                         : N/A\n        CliqueId                                       : N/A\n        ClusterUUID                                    : N/A\n        Health\n            Summary                                    : N/A\n            Bandwidth                                  : N/A\n            Route Recovery in progress                 : N/A\n            Route Unhealthy                            : N/A\n            Access Timeout Recovery                    : N/A\n            Incorrect Configuration                    : N/A\n            Partition Assigned                         : N/A\n    Processes                                          : None\n    Capabilities\n        EGM                                            : disabled\n\nGPU 00000000:C5:00.0\n    Product Name                                       : NVIDIA GeForce RTX 3090\n    Product Brand                                      : GeForce\n    Product Architecture                               : Ampere\n    Display Mode                                       : Requested functionality has been deprecated\n    Display Attached                                   : No\n    Display Active                                     : Disabled\n    Persistence Mode                                   : Enabled\n    Addressing Mode                                    : None\n    MIG Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    Accounting Mode                                    : Disabled\n    Accounting Mode Buffer Size                        : 4000\n    Driver Model\n        Current                                        : N/A\n        Pending                                        : N/A\n    Serial Number                                      : N/A\n    GPU UUID                                           : GPU-f3f23280-5984-c476-1839-3c58cc305a02\n    GPU PDI                                            : 0xf8b0002b27f07e81\n    Minor Number                                       : 0\n    VBIOS Version                                      : 94.02.59.00.F2\n    MultiGPU Board                                     : No\n    Board ID                                           : 0xc500\n    Board Part Number                                  : N/A\n    GPU Part Number                                    : 2204-300-A1\n    FRU Part Number                                    : N/A\n    Platform Info\n        Chassis Serial Number                          : N/A\n        Slot Number                                    : N/A\n        Tray Index                                     : N/A\n        Host ID                                        : N/A\n        Peer Type                                      : N/A\n        Module Id                                      : 1\n        GPU Fabric GUID                                : N/A\n    Inforom Version\n        Image Version                                  : G001.0000.03.03\n        OEM Object                                     : 2.0\n        ECC Object                                     : N/A\n        Power Management Object                        : N/A\n    Inforom BBX Object Flush\n        Latest Timestamp                               : N/A\n        Latest Duration                                : N/A\n    Inforom Time Data\n        Time Run                                       : N/A\n    GPU Operation Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    GPU C2C Mode                                       : N/A\n    GPU Virtualization Mode\n        Virtualization Mode                            : None\n        Host VGPU Mode                                 : N/A\n        vGPU Heterogeneous Mode                        : N/A\n    GPU Recovery Action                                : None\n    GSP Firmware Version                               : 610.43.02\n    IBMNPU\n        Relaxed Ordering Mode                          : N/A\n    PCI\n        Bus                                            : 0xC5\n        Device                                         : 0x00\n        Domain                                         : 0x0000\n        Base Classcode                                 : 0x3\n        Sub Classcode                                  : 0x0\n        Device Id                                      : 0x220410DE\n        Bus Id                                         : 00000000:C5:00.0\n        Sub System Id                                  : 0x38811462\n        GPU Link Info\n            PCIe Generation\n                Max                                    : 3\n                Current                                : 1\n                Device Current                         : 1\n                Device Max                             : 4\n                Host Max                               : 3\n            Link Width\n                Max                                    : 16x\n                Current                                : 16x\n        Bridge Chip\n            Type                                       : N/A\n            Firmware                                   : N/A\n        Replays Since Reset                            : 0\n        Replay Number Rollovers                        : 0\n        Tx Throughput                                  : 488 KB/s\n        Rx Throughput                                  : 341 KB/s\n        Atomic Caps Outbound                           : N/A\n        Atomic Caps Inbound                            : N/A\n    Fan Speed                                          : 0 %\n    Performance State                                  : P8\n    Clocks Event Reasons\n        Idle                                           : Active\n        Applications Clocks Setting                    : Not Active\n        SW Power Cap                                   : Not Active\n        HW Slowdown                                    : Not Active\n            HW Thermal Slowdown                        : Not Active\n            HW Power Brake Slowdown                    : Not Active\n        Sync Boost                                     : Not Active\n        SW Thermal Slowdown                            : Not Active\n        Display Clock Setting                          : Not Active\n    Clocks Event Reasons Counters\n        SW Power Capping                               : 115580880734 us\n        Sync Boost                                     : 0 us\n        SW Thermal Slowdown                            : 119962455 us\n        HW Thermal Slowdown                            : 0 us\n        HW Power Braking                               : 0 us\n    Sparse Operation Mode                              : N/A\n    FB Memory Usage\n        Total                                          : 24576 MiB\n        Reserved                                       : 453 MiB\n        Used                                           : 1 MiB\n        Free                                           : 24123 MiB\n    BAR1 Memory Usage\n        Total                                          : 32768 MiB\n        Used                                           : 1 MiB\n        Free                                           : 32767 MiB\n    Conf Compute Protected Memory Usage\n        Total                                          : 0 MiB\n        Used                                           : 0 MiB\n        Free                                           : 0 MiB\n    Compute Mode                                       : Default\n    Utilization\n        GPU                                            : 0 %\n        Memory                                         : 0 %\n        Encoder                                        : 0 %\n        Decoder                                        : 0 %\n        JPEG                                           : 0 %\n        OFA                                            : 0 %\n    Encoder Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    FBC Stats\n        Active Sessions                                : 0\n        Average FPS                                    : 0\n        Average Latency                                : 0\n    DRAM Encryption Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Mode\n        Current                                        : N/A\n        Pending                                        : N/A\n    ECC Errors\n        Volatile\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n        Aggregate\n            SRAM Correctable                           : N/A\n            SRAM Uncorrectable Parity                  : N/A\n            SRAM Uncorrectable SEC-DED                 : N/A\n            DRAM Correctable                           : N/A\n            DRAM Uncorrectable                         : N/A\n            SRAM Threshold Exceeded                    : N/A\n        Aggregate Uncorrectable SRAM Sources\n            SRAM L2                                    : N/A\n            SRAM SM                                    : N/A\n            SRAM Microcontroller                       : N/A\n            SRAM PCIE                                  : N/A\n            SRAM Other                                 : N/A\n        Channel Repair Pending                         : No\n        TPC Repair Pending                             : No\n        Unrepairable Memory                            : N/A\n    Retired Pages\n        Single Bit ECC                                 : N/A\n        Double Bit ECC                                 : N/A\n        Pending Page Blacklist                         : N/A\n    Remapped Rows                                      : N/A\n    Temperature\n        GPU Current Temp                               : 59 C\n        GPU Current T.Limit Temp                       : N/A\n        GPU Shutdown Temp                              : 98 C\n        GPU Slowdown Temp                              : 95 C\n        GPU Max Operating Temp                         : 93 C\n        GPU Target Temperature Specification           : 83 C\n        Memory Current Temp                            : N/A\n        Memory Max Operating Temp                      : N/A\n    GPU Power Readings\n        Average Power Draw                             : 38.83 W\n        Instantaneous Power Draw                       : 38.71 W\n        GPU Ceiling Power Limit\n            Current Power Limit                        : 320.00 W\n            Requested Power Limit                      : 320.00 W\n            Default Power Limit                        : 350.00 W\n        GPU Base Power\n            Current Base Power                         : N/A\n            Requested Base Power                       : N/A\n            Default Base Power                         : N/A\n        Min Power Limit                                : 100.00 W\n        Max Power Limit                                : 350.00 W\n    GPU Memory Power Readings \n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n    Module Power Readings\n        Average Power Draw                             : N/A\n        Instantaneous Power Draw                       : N/A\n        Current Power Limit                            : N/A\n        Requested Power Limit                          : N/A\n        Default Power Limit                            : N/A\n        Min Power Limit                                : N/A\n        Max Power Limit                                : N/A\n    Power Smoothing                                    : N/A\n    Workload Power Profiles\n        Requested Profiles                             : N/A\n        Enforced Profiles                              : N/A\n    EDPp Multiplier                                    : N/A\n    Clocks\n        Graphics                                       : 210 MHz\n        SM                                             : 210 MHz\n        Memory                                         : 405 MHz\n        Video                                          : 555 MHz\n    Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Default Applications Clocks\n        Graphics                                       : Requested functionality has been deprecated\n        Memory                                         : Requested functionality has been deprecated\n    Deferred Clocks\n        Memory                                         : N/A\n    Max Clocks\n        Graphics                                       : 2130 MHz\n        SM                                             : 2130 MHz\n        Memory                                         : 9751 MHz\n        Video                                          : 1980 MHz\n    Max Customer Boost Clocks\n        Graphics                                       : N/A\n    Clock Policy\n        Auto Boost                                     : N/A\n        Auto Boost Default                             : N/A\n    Fabric\n        State                                          : N/A\n        Status                                         : N/A\n        CliqueId                                       : N/A\n        ClusterUUID                                    : N/A\n        Health\n            Summary                                    : N/A\n            Bandwidth                                  : N/A\n            Route Recovery in progress                 : N/A\n            Route Unhealthy                            : N/A\n            Access Timeout Recovery                    : N/A\n            Incorrect Configuration                    : N/A\n            Partition Assigned                         : N/A\n    Processes                                          : None\n    Capabilities\n        EGM                                            : disabled",
+    "stderr": ""
+  },
+  "gpu_topology": {
+    "argv": [
+      "nvidia-smi",
+      "topo",
+      "-m"
+    ],
+    "returncode": 0,
+    "stdout": "\u001b[4mGPU0\tGPU1\tGPU2\tGPU3\tCPU Affinity\tNUMA Affinity\tGPU NUMA ID\u001b[0m\nGPU0\t X \tNODE\tNODE\tNODE\t0-17,19-65\t0\t\tN/A\nGPU1\tNODE\t X \tNODE\tNODE\t0-17,19-65\t0\t\tN/A\nGPU2\tNODE\tNODE\t X \tNODE\t0-17,19-65\t0\t\tN/A\nGPU3\tNODE\tNODE\tNODE\t X \t0-17,19-65\t0\t\tN/A\n\nLegend:\n\n  X    = Self\n  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)\n  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node\n  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)\n  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)\n  PIX  = Connection traversing at most a single PCIe bridge\n  NV#  = Connection traversing a bonded set of # NVLinks",
+    "stderr": ""
+  },
+  "vllm_version": {
+    "argv": [
+      "$VLLM_ENV/bin/python",
+      "-c",
+      "import vllm; print(vllm.__version__, vllm.__file__)"
+    ],
+    "returncode": 0,
+    "stdout": "0.26.0 $ENGINE_ROOT_FAST/vllm-cross-kv-src/vllm/__init__.py",
+    "stderr": ""
+  },
+  "vllm_git": {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "568afb3a13806beb53bb2e6bd518269357b237c0",
+    "stderr": ""
+  },
+  "llama_version": {
+    "argv": [
+      "$LLAMACPP_ROOT/build/bin/llama-server",
+      "--version"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "version: 10013 (a4ce2595c)\nbuilt with GNU 11.4.0 for Linux x86_64"
+  },
+  "llama_git": {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "0e4a0362239713ea95a6864a17a8de4b0ad90d62",
+    "stderr": ""
+  },
+  "ninfer_git": {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "7d715ccdaf58ad214fcbe61bb517c5e414c2a83d",
+    "stderr": ""
+  },
+  "benchlocal_git": {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "3e677be357b79a2e4380a246e6d4399fd1a80c5c",
+    "stderr": ""
+  },
+  "benchlocal_diff": {
+    "argv": [
+      "git",
+      "diff",
+      "--stat"
+    ],
+    "returncode": 0,
+    "stdout": "benchlocal_cli/cli.py           |  27 ++++-\n benchlocal_cli/runner.py        | 238 ++++++++++++++++++++++++++++++++++++++--\n benchlocal_cli/types.py         |   8 ++\n pyproject.toml                  |   4 +\n sandboxes/hermes/server.py      |  15 ++-\n tests/test_sandbox_verifiers.py |  40 ++++++-\n tests/test_thinking_control.py  |  34 ++++++\n 7 files changed, 345 insertions(+), 21 deletions(-)",
+    "stderr": ""
+  },
+  "benchlocal_patch_sha256": "8b5ad53bd94bf10bc3720613a9485296c2e1e4ad2d00842a7dadad3c01e5ab43"
+}

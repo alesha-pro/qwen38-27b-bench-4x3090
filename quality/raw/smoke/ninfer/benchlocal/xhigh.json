@@ -1,0 +1,260 @@
+{
+  "endpoint": "http://127.0.0.1:19081/v1",
+  "equivalent_score_150": 150,
+  "finished_at": "2026-08-17T21:27:06.324306Z",
+  "mode": "custom",
+  "model": "bench",
+  "packs": [
+    {
+      "catalog_scenario_count": 15,
+      "diagnostics": {
+        "extraction": {
+          "issues": {},
+          "methods": {},
+          "response_fields": {
+            "message.content": 1
+          }
+        },
+        "finish_reasons": {
+          "counts": {
+            "stop": 1
+          },
+          "length": 0,
+          "length_rate": 0.0,
+          "total": 1
+        }
+      },
+      "latency": {
+        "mean": 9.654624323826283,
+        "p50": 9.654624323826283,
+        "p95": 9.654624323826283
+      },
+      "pack_id": "reasonmath-15",
+      "passed": 1,
+      "scenario_count": 1,
+      "scenarios": [
+        {
+          "assistant_messages": [],
+          "attempt_count": 1,
+          "best_of_n_eligible": true,
+          "conversation": [],
+          "detail": "Answer axis 2/2, trace axis 2/2 (100%). Matched checkpoints across message.content, message.reasoning_content.",
+          "failure_mode": "passed",
+          "id": "RM-01",
+          "label": "pass@1",
+          "latency_seconds": 9.654624323826283,
+          "pass_at_k": true,
+          "passed": true,
+          "raw_response": {
+            "choices": [
+              {
+                "finish_reason": "stop",
+                "index": 0,
+                "message": {
+                  "content": "Tax: 84 \u00d7 0.085 = 7.14  \nTip: 84 \u00d7 0.20 = 16.80  \nTotal: 84 + 7.14 + 16.80 = 107.94  \nPer person: 107.94 \u00f7 3 = 35.98  \n\nANSWER: $35.98",
+                  "reasoning_content": "We need answer a simple math word problem. Need show concise visible work, end with exactly one line \"ANSWER: ...\". Need compute each person owes total.\n\nFood total pre-tax $84.00. Tax 8.5% = 0.085 * 84 = 7.14. Tip 20% calculated on pre-tax amount = 0.20 * 84 = 16.80. Total = 84 + 7.14 + 16.80 = 107.94. Divide by 3 = 35.98 exactly? 107.94 / 3 = 35.98. Yes.\n\nNeed final line exactly one line starts with ANSWER: probably \"ANSWER: $35.98\" or maybe key=value? Question asks how much does each person owe in total? single value. Could be ANSWER: $35.98. Need no extra final line after. Show concise steps before.\n",
+                  "role": "assistant"
+                }
+              }
+            ],
+            "created": 1787002016,
+            "id": "chatcmpl-67ea9d1a77deca76",
+            "model": "bench",
+            "object": "chat.completion",
+            "usage": {
+              "completion_tokens": 324,
+              "prompt_tokens": 221,
+              "total_tokens": 545
+            }
+          },
+          "raw_scenario": {
+            "description": "Multi-step percentage arithmetic with an explicit tip base and a per-person total.",
+            "failure_case": "Calculates tip on the wrong base or omits the required final answer line.",
+            "id": "RM-01",
+            "max_seconds_override": null,
+            "messages": [
+              {
+                "content": "You are a helpful assistant that solves practical reasoning problems.\n\nRules:\n- Show concise visible work using equations, short bullet points, or numbered steps.\n- Do not write a long essay.\n- End with exactly one line that starts with \"ANSWER: \".\n- If the question asks for more than one value, format the final line as semicolon-separated key=value pairs.\n- Use exact arithmetic when possible.\n- Round only the final result when the problem context requires it.\n- If the constraints are inconsistent, say so explicitly in the final answer.",
+                "role": "system"
+              },
+              {
+                "content": "Three friends had dinner. The food total was $84.00 before tax. Tax is 8.5%. They want to leave a 20% tip calculated on the pre-tax amount. How much does each person owe in total?",
+                "role": "user"
+              }
+            ],
+            "pack_id": "reasonmath-15",
+            "sampling_overrides": {
+              "max_tokens": 1024
+            },
+            "success_case": "Uses the right tax and tip bases, then ends with the published per-person answer line.",
+            "tags": [
+              "vendor-generated"
+            ],
+            "upstream_scenario_id": "RM-01",
+            "upstream_title": "Bill Splitting with Tax and Tip",
+            "verifier": {
+              "asserts": [
+                {
+                  "accepted_answers": [
+                    "ANSWER: $35.98",
+                    "ANSWER: 35.98",
+                    "ANSWER: per_person=35.98"
+                  ],
+                  "canonical_answer": "ANSWER: per_person=$35.98",
+                  "checkpoints": [
+                    "7.14",
+                    "16.80",
+                    "107.94",
+                    "35.98"
+                  ],
+                  "kind": "exact_string",
+                  "partial_answers": [],
+                  "value": "per_person=$35.98"
+                }
+              ],
+              "type": "reason_math"
+            }
+          },
+          "repeat_index": 1,
+          "request": {
+            "chat_template_kwargs": {},
+            "messages": [
+              {
+                "content": "You are a helpful assistant that solves practical reasoning problems.\n\nRules:\n- Show concise visible work using equations, short bullet points, or numbered steps.\n- Do not write a long essay.\n- End with exactly one line that starts with \"ANSWER: \".\n- If the question asks for more than one value, format the final line as semicolon-separated key=value pairs.\n- Use exact arithmetic when possible.\n- Round only the final result when the problem context requires it.\n- If the constraints are inconsistent, say so explicitly in the final answer.",
+                "role": "system"
+              },
+              {
+                "content": "Three friends had dinner. The food total was $84.00 before tax. Tax is 8.5%. They want to leave a 20% tip calculated on the pre-tax amount. How much does each person owe in total?",
+                "role": "user"
+              }
+            ],
+            "min_p": 0.0,
+            "model": "bench",
+            "reasoning_effort": "xhigh",
+            "temperature": 1.0,
+            "top_k": 20,
+            "top_p": 0.95
+          },
+          "response_field_used": "message.content",
+          "response_latencies_seconds": [
+            9.654624323826283
+          ],
+          "result": {
+            "detail": "Answer axis 2/2, trace axis 2/2 (100%). Matched checkpoints across message.content, message.reasoning_content.",
+            "failure_mode": "passed",
+            "latency_seconds": 9.654624323826283,
+            "pass_rate": null,
+            "passed": true,
+            "passed_count": null,
+            "scenario_id": "RM-01",
+            "tokens_completion": 324,
+            "total_count": null,
+            "verifier_trace": {
+              "answer_axis_points": 2,
+              "notes": "Matched checkpoints across message.content, message.reasoning_content.",
+              "status_threshold": "pass when answer_axis_points == 2; trace axis is diagnostic",
+              "trace_axis_points": 2,
+              "trace_sources": [
+                "message.content",
+                "message.reasoning_content"
+              ],
+              "upstream_style_score": 100
+            }
+          },
+          "retry_attempts": [],
+          "retry_eligible": false,
+          "sampling_params": {
+            "chat_template_kwargs": {},
+            "min_p": 0.0,
+            "reasoning_effort": "xhigh",
+            "temperature": 1.0,
+            "top_k": 20,
+            "top_p": 0.95
+          },
+          "status_code": 200,
+          "token_metrics": {
+            "finish_reasons": [
+              "stop"
+            ],
+            "per_response": [
+              {
+                "finish_reason": "stop",
+                "latency_seconds": 9.654624323826283,
+                "reconstructed_answer_tokens": 96,
+                "reconstructed_reasoning_tokens": 225,
+                "reconstructed_tool_call_tokens": 0,
+                "reported_completion_tokens": 324,
+                "reported_completion_tps": 33.55904788552079,
+                "reported_prompt_tokens": 221,
+                "reported_reasoning_tokens": null,
+                "reported_total_tokens": 545
+              }
+            ],
+            "reasoning_share_of_completion": 0.6944444444444444,
+            "reasoning_token_source": "reconstructed",
+            "reasoning_tokens": 225,
+            "reconstructed_answer_tokens": 96,
+            "reconstructed_reasoning_tokens": 225,
+            "reconstructed_tool_call_tokens": 0,
+            "reported_completion_tokens": 324,
+            "reported_completion_tps": 33.55904788552079,
+            "reported_prompt_tokens": 221,
+            "reported_reasoning_tokens": null,
+            "reported_total_tokens": 545,
+            "response_count": 1,
+            "telemetry_complete": true,
+            "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8/tokenizer.json"
+          },
+          "tokens_completion": 324,
+          "tool_calls": [],
+          "turn_count": null,
+          "verifier_trace": {
+            "answer_axis_points": 2,
+            "notes": "Matched checkpoints across message.content, message.reasoning_content.",
+            "status_threshold": "pass when answer_axis_points == 2; trace axis is diagnostic",
+            "trace_axis_points": 2,
+            "trace_sources": [
+              "message.content",
+              "message.reasoning_content"
+            ],
+            "upstream_style_score": 100
+          }
+        }
+      ],
+      "score": 1.0,
+      "skipped": false,
+      "status": "ok",
+      "thinking_enabled": true,
+      "total": 1,
+      "upstream_commit": "78ef138cc26ad6b11f89238e20430de9a9e862aa",
+      "variance": null,
+      "version": "1.0.0",
+      "warnings": []
+    }
+  ],
+  "reasoning_effort": "xhigh",
+  "repeat": 1,
+  "runner_version": "0.9.8",
+  "schema_version": "1",
+  "selection": [
+    "reasonmath-15/RM-01"
+  ],
+  "started_at": "2026-08-17T21:26:56.116208Z",
+  "thinking_control": "reasoning_effort",
+  "thinking_enabled": true,
+  "thinking_mode": "force-on",
+  "thinking_validity": {
+    "reasonmath-15": {
+      "expected": "on",
+      "responses": 1,
+      "status": "ok",
+      "with_reasoning": 1
+    }
+  },
+  "totals": {
+    "passed": 1,
+    "score": 1.0,
+    "total": 1
+  },
+  "warnings": []
+}

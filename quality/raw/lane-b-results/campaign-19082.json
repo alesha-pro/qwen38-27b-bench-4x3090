@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-08-18T14:17:03.199748Z",
+  "models": [
+    "nvfp4",
+    "gguf-q4-k-m"
+  ],
+  "efforts": [
+    "off",
+    "low",
+    "medium",
+    "xhigh"
+  ],
+  "suites": [
+    "full",
+    "reasoning"
+  ],
+  "benchlocal": "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli",
+  "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8",
+  "target_port": 18082,
+  "proxy_port": 19082,
+  "gpu_map": {
+    "nvfp4": "2,3",
+    "gguf-q4-k-m": "2,3"
+  },
+  "thinking_max_tokens": null,
+  "methodology": "natural endpoint-bounded reasoning; no request max_tokens in thinking arms"
+}

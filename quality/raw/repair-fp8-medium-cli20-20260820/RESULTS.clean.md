@@ -1,0 +1,36 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 0 / 1 | 0% | — | — | 29.88s | 29.88s | ok; partial — 1 of 40 selected
+
+TOTAL | 0 / 1 | 0% |  |  |  |  |
+
+Equivalent to: 0/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --full  (endpoint: http://127.0.0.1:19087/v1, model: bench, thinking=on, 2026-08-20T04:49:53.805389Z) [PARTIAL SELECTION: 1 scenarios] ===
+
+  [1/1] CLI-20 ✗ verifier_fail fail (29.9s)
+cli-40 (v1.0.2) | 0 / 1 | 0% | 29.88s | ok; partial — 1 of 40 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 0 / 1 | 0% | 29.88s | 29.88s | ok; partial — 1 of 40 selected
+
+TOTAL | 0 / 1 | 0% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 1 (0.0%) | — | — | message.content=1
+
+Failure breakdown:
+- cli-40 CLI-20: verifier_fail [fail] (CLI-20: Did not satisfy the scenario requirements. (score=50; correctness=0/2; efficiency=2/2; discipline=2/2; commandCount=1; note=new.tar did not match the expected repacked archive.))
+```
+
+</details>
