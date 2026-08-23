@@ -1,0 +1,31 @@
+{
+ "schema_version": 1,
+ "source_campaign": "Qwen3.8-27B-quant-quality-2026-08-18 (ladder extension, 2026-08-20..23)",
+ "contents": [
+  "raw/ladder-full",
+  "raw/ladder-reasoning",
+  "raw/harness (run_ladder.py + rerun scripts)",
+  "raw/README-LADDER.md",
+  "raw/RUNAWAY-NOTE.md",
+  "raw/ladder-full.log",
+  "raw/ladder-reasoning.log"
+ ],
+ "note": "ud-iq2-xxs xhigh (full band) and the whole ud-iq2-xxs reasoning slice were still running at export time and will land in a follow-up commit. ud-iq1-m was not run.",
+ "exported_files": 383,
+ "skipped_files": 0,
+ "source_bytes": 1018002338,
+ "public_bytes": 291426080,
+ "replacement_totals": {
+  "campaign_root_home": 124,
+  "benchlocal_root": 82,
+  "llamacpp_root": 14,
+  "model_root_fast": 7070,
+  "model_root": 1234577,
+  "vllm_env": 25,
+  "vllm_cache": 15,
+  "hf_cache": 3,
+  "home": 3,
+  "lan_ip": 2,
+  "campaign_root_real": 2
+ }
+}

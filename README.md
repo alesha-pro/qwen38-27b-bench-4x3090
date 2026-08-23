@@ -10,6 +10,13 @@ five quantizations, four reasoning-effort settings, two BenchLocal suites,
 4,800 scenario-arm results, 10,118 model calls, and the full request/response
 telemetry including extracted reasoning traces.
 
+The quant ladder extension (2026-08-20 through 23) pushes the same quality
+suites down the bit ladder: seven Unsloth Dynamic GGUF quants from Q4_K_XL to
+IQ2_XXS plus AutoRound W4A16, 79 arms total, 235 hours of model time, 30.9M
+generated tokens. Raw traces in `quality/raw/ladder-full/` and
+`quality/raw/ladder-reasoning/`, findings (runaway generations at 2 bit, the
+timeout cascade that almost faked a collapse) in `quality/raw/RUNAWAY-NOTE.md`.
+
 ## Setup
 
 | Item | Value |

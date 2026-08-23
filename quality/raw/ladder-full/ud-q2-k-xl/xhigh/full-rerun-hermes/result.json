@@ -1,0 +1,48 @@
+{
+  "endpoint": "http://127.0.0.1:19093/v1",
+  "equivalent_score_150": 0,
+  "finished_at": "2026-08-23T06:49:26.118793Z",
+  "mode": "custom",
+  "model": "bench",
+  "packs": [
+    {
+      "latency": {
+        "mean": null,
+        "p50": null,
+        "p95": null
+      },
+      "pack_id": "hermesagent-20",
+      "passed": 0,
+      "scenario_count": 20,
+      "scenarios": [],
+      "score": 0.0,
+      "skipped": true,
+      "status": "sandbox-unavailable",
+      "thinking_enabled": true,
+      "total": 0,
+      "upstream_commit": "57d7766bf3db8c40696e3ed937d43c8c85f4cd6c",
+      "variance": null,
+      "version": "1.0.0",
+      "warnings": [
+        "skipping hermesagent-20: sandbox unavailable"
+      ]
+    }
+  ],
+  "reasoning_effort": "xhigh",
+  "repeat": 1,
+  "runner_version": "0.9.8",
+  "schema_version": "1",
+  "started_at": "2026-08-23T06:49:24.833001Z",
+  "thinking_control": "reasoning_effort",
+  "thinking_enabled": true,
+  "thinking_mode": "force-on",
+  "totals": {
+    "passed": 0,
+    "score": 0.0,
+    "total": 0
+  },
+  "warnings": [
+    "skipping hermesagent-20: sandbox unavailable (failed to start sandbox hermesagent-20: Command '['docker', 'run', '--rm', '-d', '--name', 'benchlocal-hermesagent-20-1787467765397', '-p', '9003:9000', '-e', 'HERMES_SUBPROCESS_TIMEOUT_S=300', '-e', 'BENCHLOCAL_HERMES_CONTEXT_OVERRIDE=64000', '--add-host', 'host.docker.internal:host-gateway', 'benchlocal-sandbox-hermes:latest']' returned non-zero exit status 125.). Hint: the sandboxed packs need pre-built Docker images (benchlocal-sandbox-*) that aren't auto-pulled \u2014 and the build tooling is NOT in the pip package, it lives in a benchlocal-cli checkout. Build them once: `git clone https://github.com/noonghunna/benchlocal-cli && bash benchlocal-cli/tools/build-sandboxes.sh`. Or run a deterministic-only subset (no Docker needed).",
+    "skipping hermesagent-20: sandbox unavailable"
+  ]
+}

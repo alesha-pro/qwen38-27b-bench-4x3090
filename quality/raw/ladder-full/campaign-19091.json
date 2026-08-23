@@ -1,0 +1,19 @@
+{
+  "started_at": "2026-08-23T07:38:16.248388Z",
+  "models": [
+    "ud-iq2-xxs"
+  ],
+  "efforts": [
+    "xhigh"
+  ],
+  "suites": [
+    "full"
+  ],
+  "benchlocal": "$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli",
+  "tokenizer": "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8",
+  "target_port": 18091,
+  "proxy_port": 19091,
+  "gpu_map": {},
+  "thinking_max_tokens": null,
+  "methodology": "natural endpoint-bounded reasoning; no request max_tokens in thinking arms"
+}

@@ -1,0 +1,338 @@
+
+[2026-08-22T18:27:16.905603Z] argv=["$BENCHLOCAL_ROOT/.venv/bin/benchlocal-cli", "run", "--reasoning-packs", "--enable-thinking", "--reasoning-effort", "medium", "--thinking-max-tokens", "0", "--tokenizer", "$MODEL_ROOT_FAST/Qwen3.8-27B-FP8", "--incremental", "--save-json", "$RUN_ROOT/ladder-reasoning/ud-q2-k-xl/medium/reasoning/result.json", "--sandbox-log-dir", "$RUN_ROOT/ladder-reasoning/ud-q2-k-xl/medium/reasoning/sandbox-logs", "--endpoint", "http://127.0.0.1:19092/v1", "--model", "bench", "--timeout-per-case", "86400", "--timeout-ceiling-s", "0", "--model-turn-timeout", "0", "--progress", "--strict-thinking", "--history-file", "$RUN_ROOT/ladder-reasoning/history.csv", "--report", "md", "--report-out", "$RUN_ROOT/ladder-reasoning/ud-q2-k-xl/medium/reasoning/RESULTS.md"]
+benchlocal-cli: thinking control 'reasoning_effort' (explicit --reasoning-effort)
+  [1/30] HumanEval-0 ✓ passed pass@1 (15.1s)
+  [2/30] HumanEval-1 ✗ verifier_fail fail (20.9s)
+  [3/30] HumanEval-2 ✓ passed pass@1 (7.1s)
+  [4/30] HumanEval-3 ✗ verifier_fail pass@2 (8.4s)
+  [5/30] HumanEval-4 ✓ passed pass@1 (11.5s)
+  [6/30] HumanEval-5 ✗ verifier_fail fail (10.5s)
+  [7/30] HumanEval-6 ✗ verifier_fail fail (16.1s)
+  [8/30] HumanEval-7 ✗ verifier_fail pass@2 (4.6s)
+  [9/30] HumanEval-8 ✓ passed pass@1 (14.2s)
+  [10/30] HumanEval-9 ✗ verifier_fail fail (8.9s)
+  [11/30] HumanEval-10 ✓ passed pass@1 (51.4s)
+  [12/30] HumanEval-11 ✓ passed pass@1 (11.6s)
+  [13/30] HumanEval-12 ✗ verifier_fail fail (8.5s)
+  [14/30] HumanEval-13 ✓ passed pass@1 (4.9s)
+  [15/30] HumanEval-14 ✗ verifier_fail pass@2 (6.0s)
+  [16/30] HumanEval-15 ✓ passed pass@1 (5.6s)
+  [17/30] HumanEval-16 ✓ passed pass@1 (6.5s)
+  [18/30] HumanEval-17 ✗ verifier_fail fail (12.1s)
+  [19/30] HumanEval-18 ✓ passed pass@1 (12.1s)
+  [20/30] HumanEval-19 ✓ passed pass@1 (13.3s)
+  [21/30] HumanEval-20 ✗ verifier_fail pass@2 (18.2s)
+  [22/30] HumanEval-21 ✗ verifier_fail pass@2 (14.2s)
+  [23/30] HumanEval-22 ✗ verifier_fail fail (12.1s)
+  [24/30] HumanEval-23 ✓ passed pass@1 (2.4s)
+  [25/30] HumanEval-24 ✓ passed pass@1 (27.4s)
+  [26/30] HumanEval-25 ✓ passed pass@1 (99.5s)
+  [27/30] HumanEval-26 ✗ verifier_fail fail (17.2s)
+  [28/30] HumanEval-27 ✓ passed pass@1 (11.3s)
+  [29/30] HumanEval-28 ✓ passed pass@1 (3.0s)
+  [30/30] HumanEval-29 ✗ verifier_fail pass@3 (4.6s)
+humaneval-plus-30 (v0.1.0) | pass@1 16 / 30 (53%) | pass@3 22 / 30 (73%) | 11.56s | ok
+  [1/30] LCBv6-3702 ✓ passed pass@1 (54.0s)
+  [2/30] LCBv6-3634 ✓ passed pass@1 (27.4s)
+  [3/30] LCBv6-3715 ✓ passed pass@1 (194.7s)
+  [4/30] LCBv6-3562 ✓ passed pass@1 (529.1s)
+  [5/30] LCBv6-3684 ✓ passed pass@1 (40.2s)
+  [6/30] LCBv6-3716 ✓ passed pass@1 (193.2s)
+  [7/30] LCBv6-3688 ✓ passed pass@1 (433.3s)
+  [8/30] LCBv6-3708 ✓ passed pass@1 (22.0s)
+  [9/30] LCBv6-3677 ✓ passed pass@1 (129.7s)
+  [10/30] LCBv6-3720 ✓ passed pass@1 (119.0s)
+  [11/30] LCBv6-3674 ✓ passed pass@1 (494.8s)
+  [12/30] LCBv6-3731 ✓ passed pass@1 (14.5s)
+  [13/30] LCBv6-3714 ✓ passed pass@1 (147.8s)
+  [14/30] LCBv6-3737 ✓ passed pass@1 (95.5s)
+  [15/30] LCBv6-3725 ✓ passed pass@1 (235.6s)
+  [16/30] LCBv6-3704 ✓ passed pass@1 (15.6s)
+  [17/30] LCBv6-3721 ✓ passed pass@1 (42.8s)
+  [18/30] LCBv6-3751 ✓ passed pass@1 (87.4s)
+  [19/30] LCBv6-3753 ✓ passed pass@1 (9.7s)
+  [20/30] LCBv6-3754 ✓ passed pass@1 (252.9s)
+  [21/30] LCBv6-3697 ✓ passed pass@1 (173.4s)
+  [22/30] LCBv6-3748 ✓ passed pass@1 (60.9s)
+  [23/30] LCBv6-3760 ✓ passed pass@1 (58.1s)
+  [24/30] LCBv6-3696 ✓ passed pass@1 (591.4s)
+  [25/30] LCBv6-3762 ✓ passed pass@1 (673.5s)
+  [26/30] LCBv6-3709 ✓ passed pass@1 (20.1s)
+  [27/30] LCBv6-3779 ✓ passed pass@1 (257.3s)
+  [28/30] LCBv6-3771 ✓ passed pass@1 (559.6s)
+  [29/30] LCBv6-3733 ✓ passed pass@1 (341.5s)
+  [30/30] LCBv6-3768 ✓ passed pass@1 (13.5s)
+lcb-v6-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 124.34s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 | - | - | skipped
+  [1/30] GSM-SYM-0000-I000 ✓ passed pass@1 (8.5s)
+  [2/30] GSM-SYM-0000-I001 ✓ passed pass@1 (6.2s)
+  [3/30] GSM-SYM-0000-I002 ✓ passed pass@1 (7.5s)
+  [4/30] GSM-SYM-0000-I003 ✓ passed pass@1 (7.1s)
+  [5/30] GSM-SYM-0000-I004 ✓ passed pass@1 (9.3s)
+  [6/30] GSM-SYM-0000-I005 ✓ passed pass@1 (7.1s)
+  [7/30] GSM-SYM-0000-I006 ✓ passed pass@1 (6.2s)
+  [8/30] GSM-SYM-0000-I007 ✓ passed pass@1 (9.8s)
+  [9/30] GSM-SYM-0000-I008 ✓ passed pass@1 (6.7s)
+  [10/30] GSM-SYM-0000-I009 ✓ passed pass@1 (7.7s)
+  [11/30] GSM-SYM-0000-I010 ✓ passed pass@1 (6.1s)
+  [12/30] GSM-SYM-0000-I011 ✓ passed pass@1 (7.3s)
+  [13/30] GSM-SYM-0000-I012 ✓ passed pass@1 (7.5s)
+  [14/30] GSM-SYM-0000-I013 ✓ passed pass@1 (9.0s)
+  [15/30] GSM-SYM-0000-I014 ✓ passed pass@1 (7.7s)
+  [16/30] GSM-SYM-0000-I015 ✓ passed pass@1 (6.7s)
+  [17/30] GSM-SYM-0000-I016 ✓ passed pass@1 (5.9s)
+  [18/30] GSM-SYM-0000-I017 ✓ passed pass@1 (7.4s)
+  [19/30] GSM-SYM-0000-I018 ✓ passed pass@1 (7.6s)
+  [20/30] GSM-SYM-0000-I019 ✓ passed pass@1 (7.8s)
+  [21/30] GSM-SYM-0000-I020 ✓ passed pass@1 (8.4s)
+  [22/30] GSM-SYM-0000-I021 ✓ passed pass@1 (6.3s)
+  [23/30] GSM-SYM-0000-I022 ✓ passed pass@1 (7.1s)
+  [24/30] GSM-SYM-0000-I023 ✓ passed pass@1 (7.7s)
+  [25/30] GSM-SYM-0000-I024 ✓ passed pass@1 (8.4s)
+  [26/30] GSM-SYM-0000-I025 ✓ passed pass@1 (5.5s)
+  [27/30] GSM-SYM-0000-I026 ✓ passed pass@1 (5.8s)
+  [28/30] GSM-SYM-0000-I027 ✓ passed pass@1 (8.2s)
+  [29/30] GSM-SYM-0000-I028 ✓ passed pass@1 (5.6s)
+  [30/30] GSM-SYM-0000-I029 ✓ passed pass@1 (5.6s)
+gsm-symbolic-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 7.35s | ok
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+humaneval-plus-30 (v0.1.0) | 16 / 30 | 53% | — | — | 11.56s | 51.43s | ok
+lcb-v6-30 (v0.1.0) | 30 / 30 | 100% | — | — | 124.34s | 591.36s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 | - | — | — | - | - | skipped
+gsm-symbolic-30 (v0.1.0) | 30 / 30 | 100% | — | — | 7.35s | 9.28s | ok
+
+TOTAL | 76 / 90 | 84% |  |  |  |  |
+
+Equivalent to: 127/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --reasoning  (endpoint: http://127.0.0.1:19092/v1, model: bench, thinking=on, 2026-08-22T18:27:17.071065Z) ===
+
+  [1/30] HumanEval-0 ✓ passed pass@1 (15.1s)
+  [2/30] HumanEval-1 ✗ verifier_fail fail (20.9s)
+  [3/30] HumanEval-2 ✓ passed pass@1 (7.1s)
+  [4/30] HumanEval-3 ✗ verifier_fail pass@2 (8.4s)
+  [5/30] HumanEval-4 ✓ passed pass@1 (11.5s)
+  [6/30] HumanEval-5 ✗ verifier_fail fail (10.5s)
+  [7/30] HumanEval-6 ✗ verifier_fail fail (16.1s)
+  [8/30] HumanEval-7 ✗ verifier_fail pass@2 (4.6s)
+  [9/30] HumanEval-8 ✓ passed pass@1 (14.2s)
+  [10/30] HumanEval-9 ✗ verifier_fail fail (8.9s)
+  [11/30] HumanEval-10 ✓ passed pass@1 (51.4s)
+  [12/30] HumanEval-11 ✓ passed pass@1 (11.6s)
+  [13/30] HumanEval-12 ✗ verifier_fail fail (8.5s)
+  [14/30] HumanEval-13 ✓ passed pass@1 (4.9s)
+  [15/30] HumanEval-14 ✗ verifier_fail pass@2 (6.0s)
+  [16/30] HumanEval-15 ✓ passed pass@1 (5.6s)
+  [17/30] HumanEval-16 ✓ passed pass@1 (6.5s)
+  [18/30] HumanEval-17 ✗ verifier_fail fail (12.1s)
+  [19/30] HumanEval-18 ✓ passed pass@1 (12.1s)
+  [20/30] HumanEval-19 ✓ passed pass@1 (13.3s)
+  [21/30] HumanEval-20 ✗ verifier_fail pass@2 (18.2s)
+  [22/30] HumanEval-21 ✗ verifier_fail pass@2 (14.2s)
+  [23/30] HumanEval-22 ✗ verifier_fail fail (12.1s)
+  [24/30] HumanEval-23 ✓ passed pass@1 (2.4s)
+  [25/30] HumanEval-24 ✓ passed pass@1 (27.4s)
+  [26/30] HumanEval-25 ✓ passed pass@1 (99.5s)
+  [27/30] HumanEval-26 ✗ verifier_fail fail (17.2s)
+  [28/30] HumanEval-27 ✓ passed pass@1 (11.3s)
+  [29/30] HumanEval-28 ✓ passed pass@1 (3.0s)
+  [30/30] HumanEval-29 ✗ verifier_fail pass@3 (4.6s)
+humaneval-plus-30 (v0.1.0) | pass@1 16 / 30 (53%) | pass@3 22 / 30 (73%) | 11.56s | ok
+  [1/30] LCBv6-3702 ✓ passed pass@1 (54.0s)
+  [2/30] LCBv6-3634 ✓ passed pass@1 (27.4s)
+  [3/30] LCBv6-3715 ✓ passed pass@1 (194.7s)
+  [4/30] LCBv6-3562 ✓ passed pass@1 (529.1s)
+  [5/30] LCBv6-3684 ✓ passed pass@1 (40.2s)
+  [6/30] LCBv6-3716 ✓ passed pass@1 (193.2s)
+  [7/30] LCBv6-3688 ✓ passed pass@1 (433.3s)
+  [8/30] LCBv6-3708 ✓ passed pass@1 (22.0s)
+  [9/30] LCBv6-3677 ✓ passed pass@1 (129.7s)
+  [10/30] LCBv6-3720 ✓ passed pass@1 (119.0s)
+  [11/30] LCBv6-3674 ✓ passed pass@1 (494.8s)
+  [12/30] LCBv6-3731 ✓ passed pass@1 (14.5s)
+  [13/30] LCBv6-3714 ✓ passed pass@1 (147.8s)
+  [14/30] LCBv6-3737 ✓ passed pass@1 (95.5s)
+  [15/30] LCBv6-3725 ✓ passed pass@1 (235.6s)
+  [16/30] LCBv6-3704 ✓ passed pass@1 (15.6s)
+  [17/30] LCBv6-3721 ✓ passed pass@1 (42.8s)
+  [18/30] LCBv6-3751 ✓ passed pass@1 (87.4s)
+  [19/30] LCBv6-3753 ✓ passed pass@1 (9.7s)
+  [20/30] LCBv6-3754 ✓ passed pass@1 (252.9s)
+  [21/30] LCBv6-3697 ✓ passed pass@1 (173.4s)
+  [22/30] LCBv6-3748 ✓ passed pass@1 (60.9s)
+  [23/30] LCBv6-3760 ✓ passed pass@1 (58.1s)
+  [24/30] LCBv6-3696 ✓ passed pass@1 (591.4s)
+  [25/30] LCBv6-3762 ✓ passed pass@1 (673.5s)
+  [26/30] LCBv6-3709 ✓ passed pass@1 (20.1s)
+  [27/30] LCBv6-3779 ✓ passed pass@1 (257.3s)
+  [28/30] LCBv6-3771 ✓ passed pass@1 (559.6s)
+  [29/30] LCBv6-3733 ✓ passed pass@1 (341.5s)
+  [30/30] LCBv6-3768 ✓ passed pass@1 (13.5s)
+lcb-v6-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 124.34s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 | - | - | skipped
+  [1/30] GSM-SYM-0000-I000 ✓ passed pass@1 (8.5s)
+  [2/30] GSM-SYM-0000-I001 ✓ passed pass@1 (6.2s)
+  [3/30] GSM-SYM-0000-I002 ✓ passed pass@1 (7.5s)
+  [4/30] GSM-SYM-0000-I003 ✓ passed pass@1 (7.1s)
+  [5/30] GSM-SYM-0000-I004 ✓ passed pass@1 (9.3s)
+  [6/30] GSM-SYM-0000-I005 ✓ passed pass@1 (7.1s)
+  [7/30] GSM-SYM-0000-I006 ✓ passed pass@1 (6.2s)
+  [8/30] GSM-SYM-0000-I007 ✓ passed pass@1 (9.8s)
+  [9/30] GSM-SYM-0000-I008 ✓ passed pass@1 (6.7s)
+  [10/30] GSM-SYM-0000-I009 ✓ passed pass@1 (7.7s)
+  [11/30] GSM-SYM-0000-I010 ✓ passed pass@1 (6.1s)
+  [12/30] GSM-SYM-0000-I011 ✓ passed pass@1 (7.3s)
+  [13/30] GSM-SYM-0000-I012 ✓ passed pass@1 (7.5s)
+  [14/30] GSM-SYM-0000-I013 ✓ passed pass@1 (9.0s)
+  [15/30] GSM-SYM-0000-I014 ✓ passed pass@1 (7.7s)
+  [16/30] GSM-SYM-0000-I015 ✓ passed pass@1 (6.7s)
+  [17/30] GSM-SYM-0000-I016 ✓ passed pass@1 (5.9s)
+  [18/30] GSM-SYM-0000-I017 ✓ passed pass@1 (7.4s)
+  [19/30] GSM-SYM-0000-I018 ✓ passed pass@1 (7.6s)
+  [20/30] GSM-SYM-0000-I019 ✓ passed pass@1 (7.8s)
+  [21/30] GSM-SYM-0000-I020 ✓ passed pass@1 (8.4s)
+  [22/30] GSM-SYM-0000-I021 ✓ passed pass@1 (6.3s)
+  [23/30] GSM-SYM-0000-I022 ✓ passed pass@1 (7.1s)
+  [24/30] GSM-SYM-0000-I023 ✓ passed pass@1 (7.7s)
+  [25/30] GSM-SYM-0000-I024 ✓ passed pass@1 (8.4s)
+  [26/30] GSM-SYM-0000-I025 ✓ passed pass@1 (5.5s)
+  [27/30] GSM-SYM-0000-I026 ✓ passed pass@1 (5.8s)
+  [28/30] GSM-SYM-0000-I027 ✓ passed pass@1 (8.2s)
+  [29/30] GSM-SYM-0000-I028 ✓ passed pass@1 (5.6s)
+  [30/30] GSM-SYM-0000-I029 ✓ passed pass@1 (5.6s)
+gsm-symbolic-30 (v0.1.0) | pass@1 30 / 30 (100%) | pass@3 30 / 30 (100%) | 7.35s | ok
+
+Pack | Pass@1 | Pass@3 | Flaky | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---
+humaneval-plus-30 (v0.1.0) | 16 / 30 (53%) | 22 / 30 (73%) | 6 | 11.56s | 51.43s | ok
+lcb-v6-30 (v0.1.0) | 30 / 30 (100%) | 30 / 30 (100%) | 0 | 124.34s | 591.36s | ok
+gpqa-diamond (v0.1.0) | 0 / 0 (-) | - | - | - | - | skipped
+gsm-symbolic-30 (v0.1.0) | 30 / 30 (100%) | 30 / 30 (100%) | 0 | 7.35s | 9.28s | ok
+
+TOTAL | 76 / 90 (84%) | 82 / 90 (91%) | 6 |  |  |
+
+Inline retry classification (clean pass@1 rows omitted):
+
+Scenario | Label | Attempts | Pass@k credit
+---|---|---:|---
+humaneval-plus-30/HumanEval-1 | fail | 3 | no
+humaneval-plus-30/HumanEval-3 | pass@2 | 2 | yes
+humaneval-plus-30/HumanEval-5 | fail | 3 | no
+humaneval-plus-30/HumanEval-6 | fail | 3 | no
+humaneval-plus-30/HumanEval-7 | pass@2 | 2 | yes
+humaneval-plus-30/HumanEval-9 | fail | 3 | no
+humaneval-plus-30/HumanEval-12 | fail | 3 | no
+humaneval-plus-30/HumanEval-14 | pass@2 | 2 | yes
+humaneval-plus-30/HumanEval-17 | fail | 3 | no
+humaneval-plus-30/HumanEval-20 | pass@2 | 2 | yes
+humaneval-plus-30/HumanEval-21 | pass@2 | 2 | yes
+humaneval-plus-30/HumanEval-22 | fail | 3 | no
+humaneval-plus-30/HumanEval-26 | fail | 3 | no
+humaneval-plus-30/HumanEval-29 | pass@3 | 3 | yes
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+humaneval-plus-30 | 0 / 53 (0.0%) | code_start=53 | no_fenced_block=53 | message.content=53
+lcb-v6-30 | 0 / 30 (0.0%) | code_start=29, last_fenced=1 | no_fenced_block=29, none=1 | message.content=29, message.reasoning_content=1
+gsm-symbolic-30 | 0 / 30 (0.0%) | — | — | message.content=30
+
+Failure breakdown:
+- humaneval-plus-30 HumanEval-1: verifier_fail [fail] (HumanEval-1: Traceback (most recent call last):
+  File "/tmp/tmpwtgg611u.py", line 1, in <module>
+    def separate_paren_groups(paren_string: str) -> List[str]:
+                                                    ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-3: verifier_fail [pass@2] (HumanEval-3: Traceback (most recent call last):
+  File "/tmp/tmpookroo8x.py", line 1, in <module>
+    def below_zero(operations: List[int]) -> bool:
+                               ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-5: verifier_fail [fail] (HumanEval-5: Traceback (most recent call last):
+  File "/tmp/tmpud3dtjt_.py", line 1, in <module>
+    def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-6: verifier_fail [fail] (HumanEval-6: Traceback (most recent call last):
+  File "/tmp/tmpd7to293n.py", line 1, in <module>
+    def parse_nested_parens(paren_string: str) -> List[int]:
+                                                  ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-7: verifier_fail [pass@2] (HumanEval-7: Traceback (most recent call last):
+  File "/tmp/tmpb6q5bryp.py", line 1, in <module>
+    def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+                                     ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-9: verifier_fail [fail] (HumanEval-9: Traceback (most recent call last):
+  File "/tmp/tmpiava9uu4.py", line 1, in <module>
+    def rolling_max(numbers: List[int]) -> List[int]:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-12: verifier_fail [fail] (HumanEval-12: Traceback (most recent call last):
+  File "/tmp/tmp3swvu_2m.py", line 1, in <module>
+    def longest(strings: List[str]) -> Optional[str]:
+                         ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-14: verifier_fail [pass@2] (HumanEval-14: Traceback (most recent call last):
+  File "/tmp/tmp35v5ui4g.py", line 1, in <module>
+    def all_prefixes(string: str) -> List[str]:
+                                     ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-17: verifier_fail [fail] (HumanEval-17: Traceback (most recent call last):
+  File "/tmp/tmpg5ptv8j_.py", line 1, in <module>
+    def parse_music(music_string: str) -> List[int]:
+                                          ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-20: verifier_fail [pass@2] (HumanEval-20: Traceback (most recent call last):
+  File "/tmp/tmpk0gg9ico.py", line 1, in <module>
+    def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+                                       ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-21: verifier_fail [pass@2] (HumanEval-21: Traceback (most recent call last):
+  File "/tmp/tmp11vhmxbe.py", line 1, in <module>
+    def rescale_to_unit(numbers: List[float]) -> List[float]:
+                                 ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-22: verifier_fail [fail] (HumanEval-22: Traceback (most recent call last):
+  File "/tmp/tmpx4m9v2y3.py", line 1, in <module>
+    def filter_integers(values: List[Any]) -> List[int]:
+                                ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-26: verifier_fail [fail] (HumanEval-26: Traceback (most recent call last):
+  File "/tmp/tmp85vq8l6e.py", line 1, in <module>
+    def remove_duplicates(numbers: List[int]) -> List[int]:
+                                   ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+- humaneval-plus-30 HumanEval-29: verifier_fail [pass@3] (HumanEval-29: Traceback (most recent call last):
+  File "/tmp/tmp400sxuhx.py", line 1, in <module>
+    def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+                                  ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+)
+
+Warnings:
+- GPQA is gated on Hugging Face; authenticate and run the future pack builder to materialize gpqa-diamond scenarios. No GPQA data is committed here.
+```
+
+</details>

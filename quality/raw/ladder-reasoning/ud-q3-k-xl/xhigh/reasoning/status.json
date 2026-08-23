@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "finished_at": "2026-08-22T15:58:16.420664Z",
+  "repair_manifest": "$RUN_ROOT/ladder-reasoning/ud-q3-k-xl/xhigh/reasoning/repair-gsm-unique-id.json",
+  "repaired": true,
+  "returncode": 0
+}

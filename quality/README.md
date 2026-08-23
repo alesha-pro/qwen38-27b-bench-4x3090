@@ -41,6 +41,48 @@ default), each scenario has one authoritative Pass@1 sample, and several strict-
 [`CAVEATS.md`](CAVEATS.md). Use the paired task flips and exact McNemar tests,
 not just totals.
 
+## The ladder extension (2026-08-20 through 23)
+
+The same campaign folder later grew a second phase: seven more GGUF
+quantizations from Unsloth Dynamic 3, run down the bit ladder on the same two
+suites and the same three thinking efforts, plus an AutoRound W4A16 arm served
+by vLLM. Raw data lives in `raw/ladder-full/` and `raw/ladder-reasoning/`,
+the runner is `raw/harness/run_ladder.py`.
+
+Combined score, low+medium+xhigh, 150 agentic + 90 reasoning tasks (720 max):
+
+| Format | Weights on disk | Score |
+|---|---:|---:|
+| UD-Q4_K_XL | 17.6 GB | 660 |
+| AWQ INT4 | 21.0 GB | 658 |
+| NVFP4 | 23.4 GB | 657 |
+| AutoRound W4A16 | 16.7 GB | 657 |
+| GGUF Q4_K_M | 17.1 GB | 656 |
+| UD-Q4_K_M | 16.5 GB | 652 |
+| UD-IQ4_XS | 14.3 GB | 650 |
+| FP8 | 30.9 GB | 647 |
+| UD-Q3_K_XL | 13.1 GB | 643 |
+| NInfer INT8 | 18.2 GB | 639 |
+| UD-Q2_K_XL | 9.8 GB | 629 |
+| UD-IQ2_XXS | 7.3 GB | 0.760/0.773 full low/medium, last arms pending |
+
+Two findings worth your time before trusting any single number:
+
+- **Runaway generations.** Four runs blew through the 262,144-token context
+  ceiling instead of stopping (`finish_reason=length`): three on the two 2 bit
+  quants, one on AutoRound at medium. A runaway leaves llama.cpp busy for
+  hours, so the rest of the pack dies on the agent harness 300 s timeout and
+  the arm score is understated. `raw/RUNAWAY-NOTE.md` documents the cascade,
+  the clean-server reruns are in `full-rerun-hermes/` and `full-rerun-tail/`
+  next to the affected arms. The corrected Q2_K_XL xhigh score is 128/150,
+  not the 123/150 the raw arm shows.
+- **Ceiling saturation.** 90 of the 150 agent tasks are passed by every
+  format; the ranking above rests on 54 discriminating tasks, so gaps under
+  3 points are noise.
+
+`ud-iq2-xxs` xhigh (full band) and its reasoning slice were still running at
+export time; `ud-iq1-m` was not run. `LADDER-MANIFEST.json` records the export.
+
 ## Start here
 
 ```bash

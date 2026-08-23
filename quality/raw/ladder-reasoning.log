@@ -1,0 +1,44 @@
+[2026-08-20T21:42:28.416718Z] ready autoround-w4a16
+[2026-08-20T21:42:28.417256Z] run autoround-w4a16/low/reasoning
+[2026-08-20T22:13:38.652935Z] run autoround-w4a16/medium/reasoning
+[2026-08-20T22:46:02.213757Z] run autoround-w4a16/xhigh/reasoning
+[2026-08-21T00:32:56.676420Z] ready ud-q4-k-xl
+[2026-08-21T00:32:56.677421Z] run ud-q4-k-xl/low/reasoning
+[2026-08-21T03:29:47.503288Z] run ud-q4-k-xl/medium/reasoning
+[2026-08-21T06:30:33.672763Z] run ud-q4-k-xl/xhigh/reasoning
+[2026-08-21T11:15:45.925721Z] ready ud-q4-k-m
+[2026-08-21T11:15:45.927418Z] run ud-q4-k-m/low/reasoning
+[2026-08-21T14:21:30.486177Z] run ud-q4-k-m/medium/reasoning
+[2026-08-21T17:13:57.613903Z] run ud-q4-k-m/xhigh/reasoning
+[2026-08-21T21:26:28.850735Z] ready ud-iq4-xs
+[2026-08-21T21:26:28.851700Z] run ud-iq4-xs/low/reasoning
+[2026-08-21T23:09:57.744097Z] run ud-iq4-xs/medium/reasoning
+[2026-08-22T01:02:15.545977Z] run ud-iq4-xs/xhigh/reasoning
+[2026-08-22T05:30:47.690901Z] ready ud-q3-k-xl
+[2026-08-22T05:30:47.691668Z] run ud-q3-k-xl/low/reasoning
+[2026-08-22T07:58:17.632019Z] run ud-q3-k-xl/medium/reasoning
+[2026-08-22T10:26:56.429104Z] run ud-q3-k-xl/xhigh/reasoning
+[2026-08-22T14:02:19.809476Z] ready ud-q3-k-xl
+[2026-08-22T14:02:19.845504Z] skip complete ud-q3-k-xl/low/reasoning
+[2026-08-22T14:02:19.879860Z] skip complete ud-q3-k-xl/medium/reasoning
+[2026-08-22T14:02:19.880588Z] run ud-q3-k-xl/xhigh/reasoning
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_ladder.py", line 133, in <module>
+    raise SystemExit(base.main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 369, in main
+    run_model(
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 314, in run_model
+    run_arm(root, model_name, model, effort, suite)
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 248, in run_arm
+    raise RuntimeError(
+RuntimeError: arm failed: ud-q3-k-xl/xhigh/reasoning rc=0; see $RUN_ROOT/ladder-reasoning/ud-q3-k-xl/xhigh/reasoning/run.log
+[2026-08-22T16:16:29.661570Z] ready ud-q3-k-xl
+[2026-08-22T16:16:29.721601Z] skip complete ud-q3-k-xl/low/reasoning
+[2026-08-22T16:16:29.763566Z] skip complete ud-q3-k-xl/medium/reasoning
+[2026-08-22T16:16:29.793416Z] skip complete ud-q3-k-xl/xhigh/reasoning
+[2026-08-22T16:16:36.326500Z] ready ud-q2-k-xl
+[2026-08-22T16:16:36.327403Z] run ud-q2-k-xl/low/reasoning
+[2026-08-22T18:27:16.905532Z] run ud-q2-k-xl/medium/reasoning
+[2026-08-22T20:22:43.530250Z] run ud-q2-k-xl/xhigh/reasoning
+[2026-08-23T01:02:02.562341Z] ready ud-iq2-xxs
+[2026-08-23T01:02:02.563220Z] run ud-iq2-xxs/low/reasoning

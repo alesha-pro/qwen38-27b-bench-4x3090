@@ -1,0 +1,40 @@
+[2026-08-20T21:42:28.415923Z] ready autoround-w4a16
+[2026-08-20T21:42:28.416863Z] run autoround-w4a16/low/full
+[2026-08-20T22:07:24.177369Z] run autoround-w4a16/medium/full
+[2026-08-20T23:26:46.186639Z] run autoround-w4a16/xhigh/full
+[2026-08-21T01:39:30.430324Z] ready ud-q4-k-xl
+[2026-08-21T01:39:30.431235Z] run ud-q4-k-xl/low/full
+[2026-08-21T02:48:23.759680Z] run ud-q4-k-xl/medium/full
+[2026-08-21T04:36:27.717508Z] run ud-q4-k-xl/xhigh/full
+[2026-08-21T11:07:52.675388Z] ready ud-q4-k-m
+[2026-08-21T11:07:52.676086Z] run ud-q4-k-m/low/full
+[2026-08-21T12:13:31.112003Z] run ud-q4-k-m/medium/full
+[2026-08-21T13:37:07.110918Z] run ud-q4-k-m/xhigh/full
+[2026-08-21T19:56:28.936943Z] ready ud-iq4-xs
+[2026-08-21T19:56:28.937848Z] run ud-iq4-xs/low/full
+[2026-08-21T21:08:40.880682Z] run ud-iq4-xs/medium/full
+[2026-08-21T22:22:56.285165Z] run ud-iq4-xs/xhigh/full
+[2026-08-22T04:16:59.376738Z] ready ud-q3-k-xl
+[2026-08-22T04:16:59.377614Z] run ud-q3-k-xl/low/full
+[2026-08-22T05:32:48.949399Z] run ud-q3-k-xl/medium/full
+[2026-08-22T07:27:26.681200Z] run ud-q3-k-xl/xhigh/full
+[2026-08-22T12:41:01.601254Z] ready ud-q2-k-xl
+[2026-08-22T12:41:01.602048Z] run ud-q2-k-xl/low/full
+[2026-08-22T14:02:19.807570Z] ready ud-q2-k-xl
+[2026-08-22T14:02:19.808499Z] run ud-q2-k-xl/low/full
+[2026-08-22T14:25:25.164877Z] run ud-q2-k-xl/medium/full
+[2026-08-22T15:39:54.224689Z] run ud-q2-k-xl/xhigh/full
+[2026-08-22T23:46:17.741233Z] ready ud-iq2-xxs
+[2026-08-22T23:46:17.742111Z] run ud-iq2-xxs/low/full
+[2026-08-23T01:39:16.893756Z] run ud-iq2-xxs/medium/full
+[2026-08-23T06:33:43.402709Z] run ud-iq2-xxs/xhigh/full
+Traceback (most recent call last):
+  File "$RUN_ROOT/harness/run_ladder.py", line 133, in <module>
+    raise SystemExit(base.main())
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 369, in main
+    run_model(
+  File "$RUN_ROOT/harness/run_quality_matrix.py", line 261, in run_model
+    raise RuntimeError(f"ports {TARGET_PORT}/{PROXY_PORT} are not free")
+RuntimeError: ports 18091/19091 are not free
+[2026-08-23T07:38:20.905223Z] ready ud-iq2-xxs
+[2026-08-23T07:38:20.906043Z] run ud-iq2-xxs/xhigh/full

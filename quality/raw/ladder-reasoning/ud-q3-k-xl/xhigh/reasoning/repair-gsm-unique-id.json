@@ -1,0 +1,17 @@
+{
+  "final_passed": 88,
+  "final_total": 90,
+  "id_scheme": "GSM-SYM-{problem_id:04d}-I{instance:03d}",
+  "model_inference_repeated": false,
+  "original_backup": "$RUN_ROOT/ladder-reasoning/ud-q3-k-xl/xhigh/reasoning/result.json.incomplete-61-before-gsm-repair",
+  "reconstructed_gsm_scenarios": 30,
+  "repaired_at": "2026-08-22T16:18:45.076691+00:00",
+  "report": "$RUN_ROOT/ladder-reasoning/ud-q3-k-xl/xhigh/reasoning/RESULTS.md",
+  "result": "$RUN_ROOT/ladder-reasoning/ud-q3-k-xl/xhigh/reasoning/result.json",
+  "retrofitted_complete_result_count": 0,
+  "retrofitted_complete_results": [],
+  "reverified_passed": 30,
+  "status": "$RUN_ROOT/ladder-reasoning/ud-q3-k-xl/xhigh/reasoning/status.json",
+  "telemetry": "$RUN_ROOT/ladder-reasoning/ud-q3-k-xl/telemetry.jsonl",
+  "telemetry_sha256": "632a30f3b8fcbe640c96777eec972597fdc3b23eb51cb8f78da85f134dd28c70"
+}
