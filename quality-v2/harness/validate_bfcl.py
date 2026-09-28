@@ -14,7 +14,7 @@ import sys
 import types
 from pathlib import Path
 
-BFCL = ("/mnt/nvme2/datasets/local-quant-bench-v2/repos/bfcl/"
+BFCL = ("$DATA_ROOT/datasets/local-quant-bench-v2/repos/bfcl/"
         "berkeley-function-call-leaderboard")
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))

@@ -377,7 +377,7 @@ labelled macro summary.
 
 ## Download snapshot, 2026-08-22
 
-Server root: `/mnt/nvme2/datasets/local-quant-bench-v2`.
+Server root: `$DATA_ROOT/datasets/local-quant-bench-v2`.
 
 Downloaded repository revisions:
 

@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from rg_configs import RG_FINAL  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
-DS = Path("/mnt/nvme2/datasets/local-quant-bench-v2")
+DS = Path("$DATA_ROOT/datasets/local-quant-bench-v2")
 OUT = ROOT / "final-pool"
 
 FINAL_SEED = 20260823          # disjoint from DEV_SEED 20260822

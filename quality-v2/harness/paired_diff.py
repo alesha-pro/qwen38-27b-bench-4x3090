@@ -54,7 +54,7 @@ ALSO REPORTED, explicitly secondary:
 import argparse, collections, json, random
 from pathlib import Path
 
-ROOT = Path("/mnt/nvme/work/benchmarks/quant-bench-v2")
+ROOT = Path("$RUN_ROOT/quant-bench-v2")
 B = 20000
 
 

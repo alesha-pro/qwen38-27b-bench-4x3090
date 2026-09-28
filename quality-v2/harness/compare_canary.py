@@ -8,7 +8,7 @@ per task, McNemar on the tasks where the two arms disagree.
 import json, math, os, sys
 from collections import defaultdict
 
-ROOT = "/mnt/nvme/work/benchmarks/quant-bench-v2"
+ROOT = "$RUN_ROOT/quant-bench-v2"
 
 
 def load(path, keep=None):

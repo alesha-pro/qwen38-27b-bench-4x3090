@@ -23,7 +23,7 @@ from pathlib import Path
 import reasoning_gym
 
 ROOT = Path(__file__).resolve().parent.parent
-DS = Path("/mnt/nvme2/datasets/local-quant-bench-v2")
+DS = Path("$DATA_ROOT/datasets/local-quant-bench-v2")
 OUT = ROOT / "dev-pool"
 DEV_SEED = 20260822
 

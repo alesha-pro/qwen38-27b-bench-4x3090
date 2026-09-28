@@ -6,7 +6,7 @@ xhigh. Tasks the reference itself flips or fails cannot measure a quant, so
 they are excluded before any quant number is looked at.
 """
 import json, sys, collections
-ROOT = "/mnt/nvme/work/benchmarks/quant-bench-v2"
+ROOT = "$RUN_ROOT/quant-bench-v2"
 run = sys.argv[1] if len(sys.argv) > 1 else "quant-fp8"
 effort = sys.argv[2] if len(sys.argv) > 2 else "xhigh"
 

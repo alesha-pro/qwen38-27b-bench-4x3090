@@ -26,7 +26,7 @@ import or_client
 from run_devpool import build_request
 import json
 
-ROOT = "/mnt/nvme/work/benchmarks/quant-bench-v2"
+ROOT = "$RUN_ROOT/quant-bench-v2"
 # Reference gradient at xhigh/low, from runs/ref-final-efforts + ref-final.
 PROBE = "rg-propositional_logic-001"
 REF_LOW, REF_XHIGH = 500, 12331

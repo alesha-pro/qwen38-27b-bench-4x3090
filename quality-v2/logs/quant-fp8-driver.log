@@ -1,5 +1,5 @@
 [08:40:01] power limit: 0, 250.00 W 1, 250.00 W 2, 250.00 W 3, 250.00 W 
-[08:40:01] starting vLLM: fp8 (/mnt/nvme2/models/Qwen3.8-27B-FP8)
+[08:40:01] starting vLLM: fp8 ($MODEL_ROOT/Qwen3.8-27B-FP8)
 [08:43:26] ready after 210s
 [08:43:26] === ANTI-FAKE GATE: effort must reach the model ===
 effort gradient on rg-propositional_logic-001 (reference: 500 -> 12331 tok, 24.7x):
@@ -642,6 +642,6 @@ xhigh    r3   quant-core-math    11/16    0.688 [0.444,0.858]
 xhigh    r3   quant-core-rg      35/40    0.875 [0.739,0.945]
 xhigh    r3   tool-calling       21/24    0.875 [0.690,0.957]
 
-saved: /mnt/nvme/work/benchmarks/quant-bench-v2/runs/quant-fp8/scored.jsonl
+saved: $RUN_ROOT/quant-bench-v2/runs/quant-fp8/scored.jsonl
 [15:49:12] ALL DONE: fp8
 [15:49:12] stopping server 1817361

@@ -17,9 +17,9 @@ ARM="${1:?usage: run_quant_arm.sh <arm-name> <weights-path> [quantization]}"
 WEIGHTS="${2:?}"
 QUANT="${3:-}"
 
-BASE=/mnt/nvme/work/benchmarks/quant-bench-v2
+BASE=$RUN_ROOT/quant-bench-v2
 VENV="$BASE/venv/bin/python"
-VLLM=/mnt/nvme/engines/vllm-env/bin/vllm
+VLLM=$ENGINE_ROOT/vllm-env/bin/vllm
 PORT=18000
 CTX=163840          # 131072 output ceiling + prompt headroom; no task comes close
 SEQS=4
@@ -44,7 +44,7 @@ QUANT_ARG=()
 
 log "starting vLLM: $ARM ($WEIGHTS)"
 VLLM_ATTENTION_BACKEND=FLASH_ATTN VLLM_USE_FLASHINFER_SAMPLER=0 \
-HF_HOME=/mnt/ssd/hf_cache VLLM_CACHE_ROOT=/mnt/ssd/caches/vllm \
+HF_HOME=$HF_HOME VLLM_CACHE_ROOT=$DATA_ROOT/caches/vllm \
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 "$VLLM" serve "$WEIGHTS" \
   --served-model-name qwen3.8-27b \

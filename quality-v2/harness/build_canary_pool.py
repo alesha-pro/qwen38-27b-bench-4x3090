@@ -10,7 +10,7 @@ sample of rg/if, and the three cheapest math tasks to keep long outputs in.
 import glob, json, os, statistics as st
 from collections import defaultdict
 
-ROOT = "/mnt/nvme/work/benchmarks/quant-bench-v2"
+ROOT = "$RUN_ROOT/quant-bench-v2"
 os.chdir(ROOT)
 
 cost, block = {}, {}

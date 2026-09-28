@@ -2,7 +2,7 @@
 [23:13:45] fp8-ext завершён, пауза 90с на освобождение GPU
 [23:15:15] стартую AWQ, 300 задач, полный протокол
 [23:15:15] power limit: 0, 220.00 W 1, 220.00 W 2, 220.00 W 3, 220.00 W 
-[23:15:15] starting vLLM: awq (/mnt/ssd/models/Qwen3.8-27B-AWQ-INT4)
+[23:15:15] starting vLLM: awq ($MODEL_ROOT/Qwen3.8-27B-AWQ-INT4)
 [23:20:11] ready after 300s
 [23:20:11] === ANTI-FAKE GATE: effort must reach the model ===
 effort gradient on rg-propositional_logic-001 (reference: 500 -> 12331 tok, 24.7x):
@@ -1845,7 +1845,7 @@ xhigh    r3   quant-core-math    20/27    0.741 [0.553,0.868]
 xhigh    r3   quant-core-rg     103/120   0.858 [0.785,0.910]
 xhigh    r3   tool-calling       67/84    0.798 [0.700,0.870]
 
-saved: /mnt/nvme/work/benchmarks/quant-bench-v2/runs/quant-awq/scored.jsonl
+saved: $RUN_ROOT/quant-bench-v2/runs/quant-awq/scored.jsonl
 [15:25:31] ALL DONE: awq
 [15:25:31] stopping server 2631290
 [15:25:33] AWQ завершён

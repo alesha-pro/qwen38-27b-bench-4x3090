@@ -51,7 +51,7 @@ EXT_SPEC = {
              "live_parallel_multiple": 12},  # [0.60] best discriminator
 }
 
-ROOT = Path("/mnt/nvme/work/benchmarks/quant-bench-v2")
+ROOT = Path("$RUN_ROOT/quant-bench-v2")
 OUT = ROOT / "final-pool"
 
 

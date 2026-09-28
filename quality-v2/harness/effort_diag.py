@@ -7,7 +7,7 @@ early and xhigh runs into the cap, the knob works.
 """
 import json, time, urllib.request
 
-ROOT = "/mnt/nvme/work/benchmarks/quant-bench-v2"
+ROOT = "$RUN_ROOT/quant-bench-v2"
 URL = "http://127.0.0.1:18000/v1/chat/completions"
 CAP = 4000
 SAMPLING = {"temperature": 1.0, "top_p": 0.95, "top_k": 20,

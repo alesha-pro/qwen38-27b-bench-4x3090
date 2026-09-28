@@ -28,7 +28,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-IFBENCH_REPO = "/mnt/nvme2/datasets/local-quant-bench-v2/repos/ifbench"
+IFBENCH_REPO = "$DATA_ROOT/datasets/local-quant-bench-v2/repos/ifbench"
 
 
 # ---------- answer extraction ----------
