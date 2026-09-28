@@ -1,0 +1,47 @@
+# benchlocal-cli sandbox log — cli-40
+# container_id: 159eac57795604b31d59cf4c1660a147014defae22c8e639d768f5d3111953dd
+# captured_at: 2026-09-28T10:40:09Z
+
+=== STDOUT ===
+
+=== STDERR ===
+[cli-sandbox] listening on :9000
+[cli-sandbox] "GET /health HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-start HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-end HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-start HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-end HTTP/1.1" 200 -
+

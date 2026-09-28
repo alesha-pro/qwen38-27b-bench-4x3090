@@ -1,0 +1,24 @@
+# benchlocal-cli sandbox log — cli-40
+# container_id: a40fb9d8048fd40f4e8cb326d47e581b2d00e34c6a7d641ee1bb70a287821bf4
+# captured_at: 2026-09-27T18:26:33Z
+
+=== STDOUT ===
+
+=== STDERR ===
+[cli-sandbox] listening on :9000
+[cli-sandbox] "GET /health HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-start HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-start HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+[cli-sandbox] "POST /verify-turn HTTP/1.1" 200 -
+

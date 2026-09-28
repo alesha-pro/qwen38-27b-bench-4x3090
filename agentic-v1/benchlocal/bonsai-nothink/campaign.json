@@ -1,0 +1,29 @@
+{
+ "arm": "bonsai-nothink",
+ "force": {
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 20,
+  "min_p": 0.05,
+  "presence_penalty": 0.0,
+  "repetition_penalty": 1.0,
+  "max_tokens": 131072,
+  "chat_template_kwargs": {
+   "reasoning_effort": "medium",
+   "enable_thinking": false
+  },
+  "reasoning_effort": null
+ },
+ "endpoints": [
+  "http://127.0.0.1:19416/v1",
+  "http://127.0.0.1:19417/v1"
+ ],
+ "workers": 8,
+ "reps": [
+  1,
+  2,
+  3
+ ],
+ "scenarios": 60,
+ "at": "10:43:35"
+}

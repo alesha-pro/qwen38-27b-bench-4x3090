@@ -1,0 +1,16 @@
+# benchlocal-cli sandbox log — hermesagent-20
+# container_id: 548cf977ac7515e16efb42623c809839bf3cc30f9c50a661323a19b20fe41cde
+# captured_at: 2026-09-28T10:43:12Z
+
+=== STDOUT ===
+HermesAgent-20 verifier listening on http://0.0.0.0:4010
+
+=== STDERR ===
+[entrypoint] starting upstream node grader on internal :4010...
+[entrypoint] upstream node grader ready on :4010 (2s)
+[hermes-sandbox] listening on :9000 (stage=v0.7.4, upstream=http://127.0.0.1:4010, hermes_agent_source=baked, timeout=300s)
+[hermes-sandbox] "GET /health HTTP/1.1" 200 -
+[hermes-sandbox] "POST /verify-start HTTP/1.1" 200 -
+[hermes-sandbox] "POST /verify-start HTTP/1.1" 200 -
+[hermes-sandbox] "POST /verify-start HTTP/1.1" 200 -
+

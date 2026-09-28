@@ -1,0 +1,43 @@
+arm                        off             low          medium           xhigh
+Mirai_S         60.3% (n=300)   68.0% (n=300)   70.0% (n=300)   78.4% (n=300)
+FP8             61.0% (n=100)   68.0% (n=100)   74.0% (n=100)   81.3% (n=300)
+Q6_K_M          63.3% (n=300)   70.3% (n=300)   72.3% (n=300)   80.8% (n=300)
+AWQ             63.3% (n=300)   68.7% (n=300)   73.3% (n=300)   82.3% (n=300)
+AutoRound       66.3% (n=300)   69.0% (n=300)   74.7% (n=300)   81.9% (n=300)
+Q4_K_XL         68.0% (n=300)   70.3% (n=300)   71.7% (n=300)   79.6% (n=300)
+Q3_K_XL         62.3% (n=300)   69.0% (n=300)   72.7% (n=300)   79.9% (n=300)
+Q2_K_XL         62.7% (n=300)   64.0% (n=300)   73.5% (n=298)   79.4% (n=300)
+IQ1_M           36.3% (n=300)   45.0% (n=298)   47.0% (n=300)   43.0% (n=300)
+
+diff vs BF16 (pp) / p
+Mirai_S          -1.0/p=0.761    -4.0/p=0.096    -3.0/p=0.225    -1.9/p=0.176
+FP8              +2.0/p=0.814    -4.0/p=0.454    -2.0/p=0.804    +1.0/p=0.491
+Q6_K_M           +2.0/p=0.416    -1.7/p=0.561    -0.7/p=0.876    +0.4/p=0.762
+AWQ              +2.0/p=0.479    -3.3/p=0.143    +0.3/p=1.000    +2.0/p=0.092
+AutoRound        +5.0/p=0.035    -3.0/p=0.255    +1.7/p=0.551    +1.6/p=0.192
+Q4_K_XL          +6.7/p=0.003    -1.7/p=0.541    -1.3/p=0.635    -0.7/p=0.586
+Q3_K_XL          +1.0/p=0.761    -3.0/p=0.246    -0.3/p=1.000    -0.4/p=0.778
+Q2_K_XL          +1.3/p=0.646    -8.0/p=0.002    +0.0/p=1.000    -0.9/p=0.538
+IQ1_M           -25.0/p=0.000   -27.2/p=0.000   -26.0/p=0.000   -37.3/p=0.000
+
+xhigh 95% CI
+Mirai_S        -1.9 pp [-4.4, +0.7] p=0.1760
+FP8            +1.0 pp [-1.6, +3.6] p=0.4915
+Q6_K_M         +0.4 pp [-1.7, +2.6] p=0.7619
+AWQ            +2.0 pp [-0.1, +4.2] p=0.0922
+AutoRound      +1.6 pp [-0.6, +3.8] p=0.1916
+Q4_K_XL        -0.7 pp [-3.1, +1.6] p=0.5861
+Q3_K_XL        -0.4 pp [-2.8, +1.9] p=0.7782
+Q2_K_XL        -0.9 pp [-3.6, +1.8] p=0.5378
+IQ1_M          -37.3 pp [-42.0, -32.7] p=0.0000
+
+xhigh diff by block (pp)
+Mirai_S        quant-core-if=+1.0  quant-core-math=-4.9  quant-core-rg=-2.2  tool-calling=-2.8
+FP8            quant-core-if=+2.9  quant-core-math=+7.4  quant-core-rg=-0.3  tool-calling=-0.8
+Q6_K_M         quant-core-if=+2.4  quant-core-math=-4.9  quant-core-rg=-1.1  tool-calling=+2.8
+AWQ            quant-core-if=+0.0  quant-core-math=+7.4  quant-core-rg=+2.5  tool-calling=+1.2
+AutoRound      quant-core-if=+2.9  quant-core-math=+8.6  quant-core-rg=+1.9  tool-calling=-2.4
+Q4_K_XL        quant-core-if=+0.7  quant-core-math=+2.5  quant-core-rg=-3.3  tool-calling=+0.8
+Q3_K_XL        quant-core-if=+1.4  quant-core-math=+4.9  quant-core-rg=-2.5  tool-calling=-0.8
+Q2_K_XL        quant-core-if=-3.6  quant-core-math=+8.6  quant-core-rg=-2.8  tool-calling=+1.0
+IQ1_M          quant-core-if=-47.8  quant-core-math=-43.8  quant-core-rg=-44.0  tool-calling=-17.1

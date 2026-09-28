@@ -1,0 +1,49 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 5 | 60% | — | — | 56.31s | 356.16s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 3 | 67% | — | — | 179.00s | 300.22s | ok; partial — 3 of 20 selected
+
+TOTAL | 5 / 8 | 62% |  |  |  |  |
+
+Equivalent to: 94/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19414/v1, model: bench, thinking=on, 2026-09-28T10:24:41.508594Z) [PARTIAL SELECTION: 8 scenarios] ===
+
+  [1/5] CLI-01 ✓ passed pass@1 (21.0s)
+  [2/5] CLI-09 ✓ passed pass@1 (56.3s)
+  [3/5] CLI-17 ✗ verifier_fail fail (356.2s)
+  [4/5] CLI-25 ✓ passed pass@1 (109.2s)
+  [5/5] CLI-33 ✗ verifier_fail fail (32.4s)
+cli-40 (v1.0.2) | 3 / 5 | 60% | 56.31s | ok; partial — 5 of 40 selected
+  [1/3] HA-01 ✓ passed pass@1 (41.5s)
+  [2/3] HA-09 ✓ passed pass@1 (179.0s)
+  [3/3] HA-17 ✗ agent_runner_timeout fail (300.2s)
+hermesagent-20 (v1.0.0) | 2 / 3 | 67% | 179.00s | ok; partial — 3 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 5 | 60% | 56.31s | 356.16s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 3 | 67% | 179.00s | 300.22s | ok; partial — 3 of 20 selected
+
+TOTAL | 5 / 8 | 62% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 15 (0.0%) | — | — | message.content=4, multi_turn=1
+hermesagent-20 | — | — | — | multi_turn=3
+
+Failure breakdown:
+- cli-40 CLI-17: verifier_fail [fail] (CLI-17: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=3; note=The submitted archive command did not succeed when repeated.))
+- cli-40 CLI-33: verifier_fail [fail] (CLI-33: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=1; note=results/alpha.done is missing or unreadable: ENOENT: no such file or directory, open '/workspace/results/alpha.done' results/count.txt is missing or unreadable: ENOENT: no such file or directory, open '/workspace/results/count.txt' data/tasks.sorted.txt is missing or unreadable: ENOENT: no such file or directory, open '/workspace/data/tasks.sorted.txt' The final task workspace contained unexpected files or bytes.))
+- hermesagent-20 HA-17: agent_runner_timeout [fail] (HA-17: upstream /run-scenario exceeded 300s)
+```
+
+</details>

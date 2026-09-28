@@ -1,0 +1,45 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 4 | 75% | — | — | 22.57s | 1440.28s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | — | — | 50.11s | 62.66s | ok; partial — 2 of 20 selected
+
+TOTAL | 5 / 6 | 83% |  |  |  |  |
+
+Equivalent to: 125/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19420/v1, model: bench, thinking=on, 2026-09-27T17:55:06.922207Z) [PARTIAL SELECTION: 6 scenarios] ===
+
+  [1/4] CLI-08 ✗ verifier_fail fail (1440.3s)
+  [2/4] CLI-18 ✓ passed pass@1 (3.5s)
+  [3/4] CLI-28 ✓ passed pass@1 (19.5s)
+  [4/4] CLI-38 ✓ passed pass@1 (25.7s)
+cli-40 (v1.0.2) | 3 / 4 | 75% | 22.57s | ok; partial — 4 of 40 selected
+  [1/2] HA-08 ✓ passed pass@1 (62.7s)
+  [2/2] HA-18 ✓ passed pass@1 (37.6s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 50.11s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 4 | 75% | 22.57s | 1440.28s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 50.11s | 62.66s | ok; partial — 2 of 20 selected
+
+TOTAL | 5 / 6 | 83% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 12 (0.0%) | — | — | message.content=2, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+
+Failure breakdown:
+- cli-40 CLI-08: verifier_fail [fail] (CLI-08: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=1; note=build/bin/run is missing or unreadable: ENOENT: no such file or directory, stat '/workspace/build/bin/run'))
+```
+
+</details>

@@ -1,0 +1,57 @@
+[17:46:01] sandbox port offset 2070
+benchlocal-cli: thinking control 'reasoning_effort' (explicit --reasoning-effort)
+  [1/5] CLI-07 ✓ passed pass@1 (243.0s)
+  [2/5] CLI-15 ✓ passed pass@1 (2268.6s)
+  [3/5] CLI-23 ✓ passed pass@1 (63.9s)
+  [4/5] CLI-31 ✗ verifier_fail fail (468.9s)
+  [5/5] CLI-39 ✓ passed pass@1 (43.7s)
+cli-40 (v1.0.2) | 4 / 5 | 80% | 243.04s | ok; partial — 5 of 40 selected
+  [1/2] HA-07 ✓ passed pass@1 (179.2s)
+  [2/2] HA-15 ✓ passed pass@1 (28.5s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 103.86s | ok; partial — 2 of 20 selected
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | — | — | 243.04s | 2268.64s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | — | — | 103.86s | 179.17s | ok; partial — 2 of 20 selected
+
+TOTAL | 6 / 7 | 86% |  |  |  |  |
+
+Equivalent to: 129/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19410/v1, model: bench, thinking=on, 2026-09-27T17:46:01.664635Z) [PARTIAL SELECTION: 7 scenarios] ===
+
+  [1/5] CLI-07 ✓ passed pass@1 (243.0s)
+  [2/5] CLI-15 ✓ passed pass@1 (2268.6s)
+  [3/5] CLI-23 ✓ passed pass@1 (63.9s)
+  [4/5] CLI-31 ✗ verifier_fail fail (468.9s)
+  [5/5] CLI-39 ✓ passed pass@1 (43.7s)
+cli-40 (v1.0.2) | 4 / 5 | 80% | 243.04s | ok; partial — 5 of 40 selected
+  [1/2] HA-07 ✓ passed pass@1 (179.2s)
+  [2/2] HA-15 ✓ passed pass@1 (28.5s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 103.86s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | 243.04s | 2268.64s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 103.86s | 179.17s | ok; partial — 2 of 20 selected
+
+TOTAL | 6 / 7 | 86% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 12 (0.0%) | — | — | message.content=3, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+
+Failure breakdown:
+- cli-40 CLI-31: verifier_fail [fail] (CLI-31: Did not satisfy the scenario requirements. (score=0; correctness=0/2; efficiency=0/2; discipline=0/2; commandCount=2; note=Submitted a blanket destructive delete.))
+```
+
+</details>

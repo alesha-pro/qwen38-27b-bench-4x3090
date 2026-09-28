@@ -17,6 +17,12 @@ generated tokens. Raw traces in `quality/raw/ladder-full/` and
 `quality/raw/ladder-reasoning/`, findings (runaway generations at 2 bit, the
 timeout cascade that almost faked a collapse) in `quality/raw/RUNAWAY-NOTE.md`.
 
+`quality-v2/` is a stricter single-turn rerun: 300 frozen tasks, eight quants
+against a BF16 reference. Since 2026-09-28 it also has two 2 bit builds,
+Mirai S and Bonsai 2, and `agentic-v1/` puts the same two builds and the BF16
+reference through AppWorld and BenchLocal agent suites. They tie on
+single-turn (78.4 vs 78.0) and split in agent loops (AppWorld 89.9 vs 64.3).
+
 ## Setup
 
 | Item | Value |
@@ -37,6 +43,10 @@ timeout cascade that almost faked a collapse) in `quality/raw/RUNAWAY-NOTE.md`.
   in-GGUF MTP, max context per quant)
 - `quality/README.md`: quality/reasoning matrix, raw responses, per-request token
   accounting, exact methodology, caveats, and trace-inspection tools
+- `quality-v2/README.md`: single-turn quant quality v2, 300 frozen tasks, every
+  raw response, including the Mirai S and Bonsai 2 arms
+- `agentic-v1/README.md`: Mirai S vs Bonsai 2 vs BF16 in agent loops (AppWorld,
+  BenchLocal CLI-40 and HermesAgent-20), full telemetry, AppWorld traces encrypted
 - `engine-matrix/`: four autonomous suites (vLLM/SGLang x NVFP4/FP8), per point
   JSON, launch manifests, server logs, summaries
 - `llamacpp-gguf/`: llama-bench and llama-server raw runs

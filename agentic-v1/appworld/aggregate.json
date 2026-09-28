@@ -1,0 +1,22 @@
+{
+ "bf16": {
+  "task_goal_completion": 95.8,
+  "scenario_goal_completion": 91.1
+ },
+ "mirai": {
+  "task_goal_completion": 89.9,
+  "scenario_goal_completion": 75.0
+ },
+ "bonsai": {
+  "task_goal_completion": 64.3,
+  "scenario_goal_completion": 37.5
+ },
+ "bonsai-med": {
+  "task_goal_completion": 64.3,
+  "scenario_goal_completion": 37.5
+ },
+ "bonsai-nothink": {
+  "task_goal_completion": 43.5,
+  "scenario_goal_completion": 14.3
+ }
+}

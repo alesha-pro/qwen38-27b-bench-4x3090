@@ -1,0 +1,372 @@
+===== restart on quarter pools 07:49:26
+[07:49:26][pq2/quarter1 gpu1] gguf $MODEL_ROOT/bonsai2-gguf/27B/Ternary-Bonsai-2-27B-PQ2_0.gguf, ctx 196608, slots 8, port 19101, pool final-pool/quarter1.jsonl
+[07:49:41][pq2/quarter1 gpu1] ready after 20s
+[07:49:41][pq2/quarter1 gpu1] === EFFORT GATE (template) ===
+[07:49:41][pq2/quarter1 gpu1] OK: low and xhigh lines rendered
+[07:49:41][pq2/quarter1 gpu1] === STAGE: --efforts xhigh --repeats 1 ===
+75 tasks x ['xhigh'] x 1 = 75 calls, concurrency 8
+[11/75] if-18 xhigh r1 rt=None ct=535 $0.00 
+[12/75] if-97 xhigh r1 rt=None ct=1234 $0.00 
+[13/75] bfcl-live_multiple_286-129-1 xhigh r1 rt=None ct=187 $0.00 
+[14/75] bfcl-live_multiple_628-160-8 xhigh r1 rt=None ct=142 $0.00 
+[15/75] bfcl-live_simple_118-74-0 xhigh r1 rt=None ct=85 $0.00 
+[16/75] bfcl-live_simple_180-105-0 xhigh r1 rt=None ct=220 $0.00 
+[17/75] bfcl-irrelevance_81 xhigh r1 rt=None ct=403 $0.00 
+[18/75] bfcl-live_parallel_multiple_7-6-0 xhigh r1 rt=None ct=337 $0.00 
+[19/75] rg-intermediate_integration-111 xhigh r1 rt=None ct=1850 $0.00 
+[20/75] if-248 xhigh r1 rt=None ct=5912 $0.00 
+[21/75] rg-intermediate_integration-115 xhigh r1 rt=None ct=2029 $0.00 
+[22/75] if-209 xhigh r1 rt=None ct=8195 $0.00 
+[23/75] rg-intermediate_integration-119 xhigh r1 rt=None ct=2491 $0.00 
+[24/75] rg-intermediate_integration-127 xhigh r1 rt=None ct=806 $0.00 
+[25/75] rg-intermediate_integration-123 xhigh r1 rt=None ct=4323 $0.00 
+[26/75] rg-propositional_logic-115 xhigh r1 rt=None ct=1996 $0.00 
+[27/75] rg-propositional_logic-123 xhigh r1 rt=None ct=88 $0.00 
+[28/75] rg-propositional_logic-111 xhigh r1 rt=None ct=2810 $0.00 
+[29/75] rg-propositional_logic-119 xhigh r1 rt=None ct=1159 $0.00 
+[30/75] rg-word_ladder-109 xhigh r1 rt=None ct=444 $0.00 
+[31/75] rg-word_ladder-113 xhigh r1 rt=None ct=1080 $0.00 
+[32/75] rg-propositional_logic-127 xhigh r1 rt=None ct=4095 $0.00 
+[33/75] rg-word_ladder-117 xhigh r1 rt=None ct=5367 $0.00 
+[34/75] rg-number_sequence-113 xhigh r1 rt=None ct=312 $0.00 
+[35/75] if-170 xhigh r1 rt=None ct=21003 $0.00 
+[36/75] rg-number_sequence-121 xhigh r1 rt=None ct=463 $0.00 
+[37/75] ma-hmmt_feb_2026-5 xhigh r1 rt=None ct=32446 $0.00 
+===== restart 4 slots 229K 08:32:23
+[08:32:23][pq2/quarter1 gpu1] gguf $MODEL_ROOT/bonsai2-gguf/27B/Ternary-Bonsai-2-27B-PQ2_0.gguf, ctx 229376, slots 6, port 19101, pool final-pool/quarter1.jsonl
+[08:32:33][pq2/quarter1 gpu1] ready after 15s
+[08:32:33][pq2/quarter1 gpu1] === EFFORT GATE (template) ===
+[08:32:33][pq2/quarter1 gpu1] OK: low and xhigh lines rendered
+[08:32:33][pq2/quarter1 gpu1] === STAGE: --efforts xhigh --repeats 1 ===
+75 tasks x ['xhigh'] x 1 = 75 calls, concurrency 6
+===== restart 4 slots 229K (actual) 08:33:41
+[08:33:42][pq2/quarter1 gpu1] gguf $MODEL_ROOT/bonsai2-gguf/27B/Ternary-Bonsai-2-27B-PQ2_0.gguf, ctx 229376, slots 4, port 19101, pool final-pool/quarter1.jsonl
+[08:33:52][pq2/quarter1 gpu1] ready after 15s
+[08:33:52][pq2/quarter1 gpu1] === EFFORT GATE (template) ===
+[08:33:52][pq2/quarter1 gpu1] OK: low and xhigh lines rendered
+[08:33:52][pq2/quarter1 gpu1] === STAGE: --efforts xhigh --repeats 1 ===
+75 tasks x ['xhigh'] x 1 = 75 calls, concurrency 4
+[36/75] rg-word_ladder-121 xhigh r1 rt=None ct=13596 $0.00 
+[37/75] rg-number_sequence-109 xhigh r1 rt=None ct=11826 $0.00 
+[39/75] rg-rush_hour-001 xhigh r1 rt=None ct=30000 $0.00 
+[41/75] rg-number_sequence-125 xhigh r1 rt=None ct=16124 $0.00 
+[42/75] ma-hmmt_feb_2026-29 xhigh r1 rt=None ct=54474 $0.00 
+[43/75] rg-number_sequence-117 xhigh r1 rt=None ct=30699 $0.00 
+===== restart timeout 3600 09:15:35
+[09:15:36][pq2/quarter1 gpu1] gguf $MODEL_ROOT/bonsai2-gguf/27B/Ternary-Bonsai-2-27B-PQ2_0.gguf, ctx 229376, slots 4, port 19101, pool final-pool/quarter1.jsonl
+[09:15:46][pq2/quarter1 gpu1] ready after 15s
+[09:15:46][pq2/quarter1 gpu1] === EFFORT GATE (template) ===
+[09:15:46][pq2/quarter1 gpu1] OK: low and xhigh lines rendered
+[09:15:46][pq2/quarter1 gpu1] === STAGE: --efforts xhigh --repeats 1 ===
+75 tasks x ['xhigh'] x 1 = 75 calls, concurrency 4
+[44/75] ma-hmmt_feb_2026-6 xhigh r1 rt=None ct=24800 $0.00 
+[45/75] rg-rush_hour-105 xhigh r1 rt=None ct=27361 $0.00 
+[46/75] if-21 xhigh r1 rt=None ct=622 $0.00 
+===== restart timeout 14400 09:36:26
+[09:36:26][pq2/quarter1 gpu1] gguf $MODEL_ROOT/bonsai2-gguf/27B/Ternary-Bonsai-2-27B-PQ2_0.gguf, ctx 229376, slots 4, port 19101, pool final-pool/quarter1.jsonl
+[09:36:36][pq2/quarter1 gpu1] ready after 15s
+[09:36:36][pq2/quarter1 gpu1] === EFFORT GATE (template) ===
+[09:36:36][pq2/quarter1 gpu1] OK: low and xhigh lines rendered
+[09:36:36][pq2/quarter1 gpu1] === STAGE: --efforts xhigh --repeats 1 ===
+75 tasks x ['xhigh'] x 1 = 75 calls, concurrency 4
+[47/75] if-60 xhigh r1 rt=None ct=346 $0.00 
+[48/75] if-78 xhigh r1 rt=None ct=4481 $0.00 
+[49/75] if-110 xhigh r1 rt=None ct=15398 $0.00 
+[50/75] if-135 xhigh r1 rt=None ct=2510 $0.00 
+[51/75] if-150 xhigh r1 rt=None ct=27001 $0.00 
+[52/75] if-164 xhigh r1 rt=None ct=5339 $0.00 
+[53/75] ma-hmmt_feb_2026-28 xhigh r1 rt=None ct=58987 $0.00 
+[54/75] if-210 xhigh r1 rt=None ct=8065 $0.00 
+[55/75] if-184 xhigh r1 rt=None ct=12754 $0.00 
+[56/75] if-236 xhigh r1 rt=None ct=2840 $0.00 
+[57/75] ma-hmmt_feb_2026-19 xhigh r1 rt=None ct=71026 $0.00 
+[58/75] bfcl-live_multiple_71-31-0 xhigh r1 rt=None ct=201 $0.00 
+[59/75] bfcl-live_multiple_390-137-8 xhigh r1 rt=None ct=133 $0.00 
+[60/75] if-293 xhigh r1 rt=None ct=2389 $0.00 
+[61/75] bfcl-live_multiple_658-162-0 xhigh r1 rt=None ct=929 $0.00 
+[62/75] bfcl-live_multiple_970-211-0 xhigh r1 rt=None ct=125 $0.00 
+[63/75] bfcl-live_multiple_901-185-11 xhigh r1 rt=None ct=142 $0.00 
+[64/75] bfcl-live_simple_25-5-3 xhigh r1 rt=None ct=110 $0.00 
+[65/75] bfcl-live_simple_98-58-0 xhigh r1 rt=None ct=117 $0.00 
+[66/75] bfcl-live_simple_191-115-1 xhigh r1 rt=None ct=135 $0.00 
+[67/75] bfcl-live_simple_137-90-0 xhigh r1 rt=None ct=168 $0.00 
+[68/75] bfcl-live_simple_228-119-0 xhigh r1 rt=None ct=87 $0.00 
+[69/75] bfcl-irrelevance_167 xhigh r1 rt=None ct=154 $0.00 
+[70/75] bfcl-live_parallel_multiple_1-1-0 xhigh r1 rt=None ct=133 $0.00 
+[71/75] bfcl-irrelevance_101 xhigh r1 rt=None ct=622 $0.00 
+[72/75] bfcl-live_parallel_multiple_13-11-0 xhigh r1 rt=None ct=287 $0.00 
+[73/75] bfcl-live_parallel_multiple_18-16-0 xhigh r1 rt=None ct=417 $0.00 
+[74/75] if-266 xhigh r1 rt=None ct=12640 $0.00 
+[75/75] ma-aime_2026-15 xhigh r1 rt=None ct=122661 $0.00 
+done in 82.2 min: ok=29 skip=46 err=0 cost=$0.00
+[10:58:51][pq2/quarter1 gpu1] === STAGE: --efforts off low medium --repeats 1 ===
+75 tasks x ['off', 'low', 'medium'] x 1 = 225 calls, concurrency 4
+[1/225] rg-intermediate_integration-009 off r1 rt=None ct=606 $0.00 
+[2/225] rg-propositional_logic-007 off r1 rt=None ct=10 $0.00 
+[3/225] rg-propositional_logic-003 off r1 rt=None ct=1493 $0.00 
+[4/225] rg-intermediate_integration-001 off r1 rt=None ct=1563 $0.00 
+[5/225] rg-intermediate_integration-005 off r1 rt=None ct=2665 $0.00 
+[6/225] rg-number_sequence-001 off r1 rt=None ct=1204 $0.00 
+[7/225] rg-number_sequence-005 off r1 rt=None ct=1607 $0.00 
+[8/225] rg-word_ladder-001 off r1 rt=None ct=6061 $0.00 
+[9/225] rg-word_ladder-005 off r1 rt=None ct=7553 $0.00 
+[10/225] rg-rush_hour-001 off r1 rt=None ct=10787 $0.00 
+[11/225] ma-hmmt_feb_2026-13 off r1 rt=None ct=7551 $0.00 
+[12/225] if-18 off r1 rt=None ct=67 $0.00 
+[13/225] if-97 off r1 rt=None ct=132 $0.00 
+[14/225] if-170 off r1 rt=None ct=51 $0.00 
+[15/225] if-209 off r1 rt=None ct=45 $0.00 
+[16/225] if-248 off r1 rt=None ct=32 $0.00 
+[17/225] bfcl-live_multiple_286-129-1 off r1 rt=None ct=59 $0.00 
+[18/225] bfcl-live_multiple_628-160-8 off r1 rt=None ct=45 $0.00 
+[19/225] bfcl-live_simple_118-74-0 off r1 rt=None ct=42 $0.00 
+[20/225] bfcl-live_simple_180-105-0 off r1 rt=None ct=53 $0.00 
+[21/225] ma-hmmt_feb_2026-5 off r1 rt=None ct=10583 $0.00 
+[22/225] bfcl-irrelevance_81 off r1 rt=None ct=159 $0.00 
+[23/225] bfcl-live_parallel_multiple_7-6-0 off r1 rt=None ct=84 $0.00 
+[24/225] rg-intermediate_integration-111 off r1 rt=None ct=631 $0.00 
+[25/225] rg-intermediate_integration-115 off r1 rt=None ct=1118 $0.00 
+[26/225] ma-hmmt_feb_2026-29 off r1 rt=None ct=7033 $0.00 
+[27/225] rg-intermediate_integration-127 off r1 rt=None ct=564 $0.00 
+[28/225] rg-intermediate_integration-119 off r1 rt=None ct=1300 $0.00 
+[29/225] rg-intermediate_integration-123 off r1 rt=None ct=1223 $0.00 
+[30/225] rg-propositional_logic-111 off r1 rt=None ct=695 $0.00 
+[31/225] rg-propositional_logic-123 off r1 rt=None ct=9 $0.00 
+[32/225] rg-propositional_logic-127 off r1 rt=None ct=10 $0.00 
+[33/225] rg-word_ladder-109 off r1 rt=None ct=19 $0.00 
+[34/225] rg-word_ladder-113 off r1 rt=None ct=18 $0.00 
+[35/225] rg-propositional_logic-119 off r1 rt=None ct=505 $0.00 
+[36/225] rg-word_ladder-121 off r1 rt=None ct=18 $0.00 
+[37/225] rg-propositional_logic-115 off r1 rt=None ct=1839 $0.00 
+[38/225] rg-number_sequence-109 off r1 rt=None ct=1067 $0.00 
+[39/225] rg-number_sequence-113 off r1 rt=None ct=681 $0.00 
+[40/225] rg-number_sequence-121 off r1 rt=None ct=328 $0.00 
+[41/225] rg-number_sequence-117 off r1 rt=None ct=1889 $0.00 
+[42/225] rg-number_sequence-125 off r1 rt=None ct=2171 $0.00 
+[43/225] rg-word_ladder-117 off r1 rt=None ct=7098 $0.00 
+[44/225] ma-aime_2026-15 off r1 rt=None ct=15143 $0.00 
+[45/225] rg-rush_hour-105 off r1 rt=None ct=9410 $0.00 
+[46/225] if-21 off r1 rt=None ct=97 $0.00 
+[47/225] if-60 off r1 rt=None ct=60 $0.00 
+[48/225] if-78 off r1 rt=None ct=708 $0.00 
+[49/225] if-110 off r1 rt=None ct=91 $0.00 
+[50/225] if-135 off r1 rt=None ct=264 $0.00 
+[51/225] if-150 off r1 rt=None ct=99 $0.00 
+[52/225] ma-hmmt_feb_2026-6 off r1 rt=None ct=11173 $0.00 
+[53/225] if-184 off r1 rt=None ct=67 $0.00 
+[54/225] if-210 off r1 rt=None ct=52 $0.00 
+[55/225] if-164 off r1 rt=None ct=2282 $0.00 
+[56/225] if-266 off r1 rt=None ct=142 $0.00 
+[57/225] if-236 off r1 rt=None ct=813 $0.00 
+[58/225] bfcl-live_multiple_71-31-0 off r1 rt=None ct=84 $0.00 
+[59/225] bfcl-live_multiple_390-137-8 off r1 rt=None ct=48 $0.00 
+[60/225] bfcl-live_multiple_658-162-0 off r1 rt=None ct=66 $0.00 
+[61/225] bfcl-live_multiple_901-185-11 off r1 rt=None ct=61 $0.00 
+[62/225] if-293 off r1 rt=None ct=409 $0.00 
+[63/225] bfcl-live_multiple_970-211-0 off r1 rt=None ct=66 $0.00 
+[64/225] bfcl-live_simple_25-5-3 off r1 rt=None ct=32 $0.00 
+[65/225] bfcl-live_simple_98-58-0 off r1 rt=None ct=68 $0.00 
+[66/225] bfcl-live_simple_137-90-0 off r1 rt=None ct=74 $0.00 
+[67/225] bfcl-live_simple_191-115-1 off r1 rt=None ct=58 $0.00 
+[68/225] bfcl-live_simple_228-119-0 off r1 rt=None ct=32 $0.00 
+[69/225] bfcl-irrelevance_167 off r1 rt=None ct=115 $0.00 
+[70/225] bfcl-live_parallel_multiple_1-1-0 off r1 rt=None ct=85 $0.00 
+[71/225] bfcl-live_parallel_multiple_13-11-0 off r1 rt=None ct=83 $0.00 
+[72/225] bfcl-live_parallel_multiple_18-16-0 off r1 rt=None ct=65 $0.00 
+[73/225] bfcl-irrelevance_101 off r1 rt=None ct=601 $0.00 
+[74/225] rg-intermediate_integration-001 low r1 rt=None ct=3151 $0.00 
+[75/225] ma-hmmt_feb_2026-19 off r1 rt=None ct=13620 $0.00 
+[76/225] rg-intermediate_integration-005 low r1 rt=None ct=4623 $0.00 
+[77/225] rg-propositional_logic-003 low r1 rt=None ct=2024 $0.00 
+[78/225] rg-intermediate_integration-009 low r1 rt=None ct=2143 $0.00 
+[79/225] rg-word_ladder-001 low r1 rt=None ct=1021 $0.00 
+[80/225] rg-number_sequence-001 low r1 rt=None ct=478 $0.00 
+[81/225] rg-number_sequence-005 low r1 rt=None ct=1211 $0.00 
+[82/225] rg-word_ladder-005 low r1 rt=None ct=4226 $0.00 
+[83/225] ma-hmmt_feb_2026-28 off r1 rt=None ct=15908 $0.00 
+[84/225] rg-propositional_logic-007 low r1 rt=None ct=6449 $0.00 
+[85/225] ma-hmmt_feb_2026-13 low r1 rt=None ct=17845 $0.00 
+[86/225] ma-hmmt_feb_2026-5 low r1 rt=None ct=31116 $0.00 
+[87/225] if-18 low r1 rt=None ct=549 $0.00 
+[88/225] if-97 low r1 rt=None ct=466 $0.00 
+[89/225] rg-rush_hour-001 low r1 rt=None ct=36437 $0.00 
+[90/225] if-209 low r1 rt=None ct=5737 $0.00 
+[91/225] if-248 low r1 rt=None ct=9895 $0.00 
+[92/225] bfcl-live_multiple_286-129-1 low r1 rt=None ct=178 $0.00 
+[93/225] bfcl-live_multiple_628-160-8 low r1 rt=None ct=216 $0.00 
+[94/225] if-170 low r1 rt=None ct=18821 $0.00 
+[95/225] bfcl-live_simple_118-74-0 low r1 rt=None ct=99 $0.00 
+[96/225] bfcl-live_simple_180-105-0 low r1 rt=None ct=215 $0.00 
+[97/225] bfcl-live_parallel_multiple_7-6-0 low r1 rt=None ct=183 $0.00 
+[98/225] bfcl-irrelevance_81 low r1 rt=None ct=521 $0.00 
+[99/225] rg-intermediate_integration-111 low r1 rt=None ct=1195 $0.00 
+[100/225] rg-intermediate_integration-119 low r1 rt=None ct=1502 $0.00 
+[101/225] rg-intermediate_integration-115 low r1 rt=None ct=2958 $0.00 
+[102/225] rg-intermediate_integration-127 low r1 rt=None ct=805 $0.00 
+[103/225] rg-intermediate_integration-123 low r1 rt=None ct=1428 $0.00 
+[104/225] rg-propositional_logic-111 low r1 rt=None ct=352 $0.00 
+[105/225] rg-propositional_logic-115 low r1 rt=None ct=3806 $0.00 
+[106/225] rg-propositional_logic-123 low r1 rt=None ct=213 $0.00 
+[107/225] rg-propositional_logic-119 low r1 rt=None ct=4206 $0.00 
+[108/225] rg-propositional_logic-127 low r1 rt=None ct=2007 $0.00 
+[109/225] rg-word_ladder-113 low r1 rt=None ct=1024 $0.00 
+[110/225] rg-word_ladder-109 low r1 rt=None ct=5055 $0.00 
+[111/225] ma-hmmt_feb_2026-29 low r1 rt=None ct=66424 $0.00 
+[112/225] ma-aime_2026-15 low r1 rt=None ct=58765 $0.00 
+[113/225] rg-number_sequence-113 low r1 rt=None ct=868 $0.00 
+[114/225] rg-word_ladder-117 low r1 rt=None ct=17895 $0.00 
+[115/225] rg-number_sequence-121 low r1 rt=None ct=267 $0.00 
+[116/225] rg-number_sequence-109 low r1 rt=None ct=18635 $0.00 
+[117/225] rg-rush_hour-105 low r1 rt=None ct=8649 $0.00 
+[118/225] rg-word_ladder-121 low r1 rt=None ct=31783 $0.00 
+[119/225] rg-number_sequence-125 low r1 rt=None ct=19882 $0.00 
+[120/225] rg-number_sequence-117 low r1 rt=None ct=28510 $0.00 
+[121/225] if-21 low r1 rt=None ct=1133 $0.00 
+[122/225] if-60 low r1 rt=None ct=343 $0.00 
+[123/225] if-78 low r1 rt=None ct=3088 $0.00 
+[124/225] if-110 low r1 rt=None ct=6652 $0.00 
+[125/225] if-135 low r1 rt=None ct=4296 $0.00 
+[126/225] ma-hmmt_feb_2026-6 low r1 rt=None ct=27186 $0.00 
+[127/225] if-164 low r1 rt=None ct=4984 $0.00 
+[128/225] if-150 low r1 rt=None ct=26319 $0.00 
+[129/225] if-184 low r1 rt=None ct=22136 $0.00 
+[130/225] if-236 low r1 rt=None ct=5318 $0.00 
+[131/225] if-210 low r1 rt=None ct=11282 $0.00 
+[132/225] if-266 low r1 rt=None ct=4479 $0.00 
+[133/225] bfcl-live_multiple_71-31-0 low r1 rt=None ct=182 $0.00 
+[134/225] if-293 low r1 rt=None ct=497 $0.00 
+[135/225] bfcl-live_multiple_390-137-8 low r1 rt=None ct=114 $0.00 
+[136/225] bfcl-live_multiple_901-185-11 low r1 rt=None ct=126 $0.00 
+[137/225] bfcl-live_multiple_970-211-0 low r1 rt=None ct=221 $0.00 
+[138/225] bfcl-live_simple_25-5-3 low r1 rt=None ct=130 $0.00 
+[139/225] bfcl-live_simple_98-58-0 low r1 rt=None ct=119 $0.00 
+[140/225] bfcl-live_multiple_658-162-0 low r1 rt=None ct=711 $0.00 
+[141/225] bfcl-live_simple_191-115-1 low r1 rt=None ct=106 $0.00 
+[142/225] bfcl-live_simple_137-90-0 low r1 rt=None ct=178 $0.00 
+[143/225] bfcl-live_simple_228-119-0 low r1 rt=None ct=84 $0.00 
+[144/225] bfcl-irrelevance_167 low r1 rt=None ct=137 $0.00 
+[145/225] bfcl-live_parallel_multiple_1-1-0 low r1 rt=None ct=162 $0.00 
+[146/225] bfcl-irrelevance_101 low r1 rt=None ct=478 $0.00 
+[147/225] bfcl-live_parallel_multiple_13-11-0 low r1 rt=None ct=251 $0.00 
+[148/225] bfcl-live_parallel_multiple_18-16-0 low r1 rt=None ct=216 $0.00 
+[149/225] rg-intermediate_integration-001 medium r1 rt=None ct=1766 $0.00 
+[150/225] rg-intermediate_integration-005 medium r1 rt=None ct=2448 $0.00 
+[151/225] rg-intermediate_integration-009 medium r1 rt=None ct=782 $0.00 
+[152/225] rg-propositional_logic-007 medium r1 rt=None ct=872 $0.00 
+[153/225] rg-propositional_logic-003 medium r1 rt=None ct=1242 $0.00 
+[154/225] rg-word_ladder-005 medium r1 rt=None ct=1021 $0.00 
+[155/225] rg-number_sequence-001 medium r1 rt=None ct=758 $0.00 
+[156/225] ma-hmmt_feb_2026-28 low r1 rt=None ct=67756 $0.00 
+[157/225] rg-number_sequence-005 medium r1 rt=None ct=3652 $0.00 
+[158/225] rg-rush_hour-001 medium r1 rt=None ct=3506 $0.00 
+[159/225] ma-hmmt_feb_2026-19 low r1 rt=None ct=83071 $0.00 
+[160/225] ma-hmmt_feb_2026-13 medium r1 rt=None ct=18517 $0.00 
+[161/225] ma-hmmt_feb_2026-29 medium r1 rt=None ct=14584 $0.00 
+[162/225] if-18 medium r1 rt=None ct=390 $0.00 
+[163/225] if-97 medium r1 rt=None ct=796 $0.00 
+[164/225] rg-word_ladder-001 medium r1 rt=None ct=37647 $0.00 
+[165/225] if-170 medium r1 rt=None ct=7474 $0.00 
+[166/225] ma-aime_2026-15 medium r1 rt=None ct=19016 $0.00 
+[167/225] bfcl-live_multiple_286-129-1 medium r1 rt=None ct=187 $0.00 
+[168/225] bfcl-live_multiple_628-160-8 medium r1 rt=None ct=270 $0.00 
+[169/225] bfcl-live_simple_118-74-0 medium r1 rt=None ct=104 $0.00 
+[170/225] bfcl-live_simple_180-105-0 medium r1 rt=None ct=335 $0.00 
+[171/225] bfcl-irrelevance_81 medium r1 rt=None ct=505 $0.00 
+[172/225] bfcl-live_parallel_multiple_7-6-0 medium r1 rt=None ct=217 $0.00 
+[173/225] if-248 medium r1 rt=None ct=8578 $0.00 
+[174/225] rg-intermediate_integration-111 medium r1 rt=None ct=980 $0.00 
+[175/225] rg-intermediate_integration-119 medium r1 rt=None ct=870 $0.00 
+[176/225] rg-intermediate_integration-115 medium r1 rt=None ct=1572 $0.00 
+[177/225] rg-intermediate_integration-123 medium r1 rt=None ct=1129 $0.00 
+[178/225] rg-intermediate_integration-127 medium r1 rt=None ct=1043 $0.00 
+[179/225] rg-propositional_logic-111 medium r1 rt=None ct=688 $0.00 
+[180/225] rg-propositional_logic-115 medium r1 rt=None ct=897 $0.00 
+[181/225] rg-propositional_logic-123 medium r1 rt=None ct=236 $0.00 
+[182/225] rg-propositional_logic-119 medium r1 rt=None ct=744 $0.00 
+[183/225] rg-word_ladder-109 medium r1 rt=None ct=828 $0.00 
+[184/225] rg-propositional_logic-127 medium r1 rt=None ct=974 $0.00 
+[185/225] rg-word_ladder-113 medium r1 rt=None ct=627 $0.00 
+[186/225] rg-word_ladder-121 medium r1 rt=None ct=605 $0.00 
+[187/225] rg-number_sequence-109 medium r1 rt=None ct=2547 $0.00 
+[188/225] rg-number_sequence-113 medium r1 rt=None ct=480 $0.00 
+[189/225] rg-number_sequence-117 medium r1 rt=None ct=621 $0.00 
+[190/225] rg-number_sequence-121 medium r1 rt=None ct=584 $0.00 
+[191/225] rg-number_sequence-125 medium r1 rt=None ct=1629 $0.00 
+[192/225] rg-word_ladder-117 medium r1 rt=None ct=12251 $0.00 
+[193/225] rg-rush_hour-105 medium r1 rt=None ct=9818 $0.00 
+[194/225] ma-hmmt_feb_2026-6 medium r1 rt=None ct=7124 $0.00 
+[195/225] if-209 medium r1 rt=None ct=17840 $0.00 
+[196/225] if-21 medium r1 rt=None ct=939 $0.00 
+[197/225] if-60 medium r1 rt=None ct=315 $0.00 
+[198/225] if-78 medium r1 rt=None ct=2750 $0.00 
+[199/225] ma-hmmt_feb_2026-28 medium r1 rt=None ct=18163 $0.00 
+[200/225] ma-hmmt_feb_2026-19 medium r1 rt=None ct=20933 $0.00 
+[201/225] if-110 medium r1 rt=None ct=8877 $0.00 
+[202/225] if-135 medium r1 rt=None ct=5406 $0.00 
+[203/225] if-164 medium r1 rt=None ct=5499 $0.00 
+[204/225] if-184 medium r1 rt=None ct=11311 $0.00 
+[205/225] if-236 medium r1 rt=None ct=3447 $0.00 
+[206/225] if-150 medium r1 rt=None ct=22471 $0.00 
+[207/225] if-266 medium r1 rt=None ct=3248 $0.00 
+[208/225] bfcl-live_multiple_71-31-0 medium r1 rt=None ct=166 $0.00 
+[209/225] if-293 medium r1 rt=None ct=1010 $0.00 
+[210/225] bfcl-live_multiple_390-137-8 medium r1 rt=None ct=127 $0.00 
+[211/225] bfcl-live_multiple_901-185-11 medium r1 rt=None ct=146 $0.00 
+[212/225] bfcl-live_multiple_970-211-0 medium r1 rt=None ct=135 $0.00 
+[213/225] bfcl-live_multiple_658-162-0 medium r1 rt=None ct=294 $0.00 
+[214/225] bfcl-live_simple_98-58-0 medium r1 rt=None ct=126 $0.00 
+[215/225] bfcl-live_simple_25-5-3 medium r1 rt=None ct=133 $0.00 
+[216/225] bfcl-live_simple_191-115-1 medium r1 rt=None ct=121 $0.00 
+[217/225] bfcl-live_simple_137-90-0 medium r1 rt=None ct=180 $0.00 
+[218/225] bfcl-live_simple_228-119-0 medium r1 rt=None ct=79 $0.00 
+[219/225] bfcl-irrelevance_167 medium r1 rt=None ct=296 $0.00 
+[220/225] bfcl-live_parallel_multiple_1-1-0 medium r1 rt=None ct=124 $0.00 
+[221/225] bfcl-live_parallel_multiple_13-11-0 medium r1 rt=None ct=154 $0.00 
+[222/225] bfcl-irrelevance_101 medium r1 rt=None ct=794 $0.00 
+[223/225] bfcl-live_parallel_multiple_18-16-0 medium r1 rt=None ct=194 $0.00 
+[224/225] if-210 medium r1 rt=None ct=26452 $0.00 
+[225/225] ma-hmmt_feb_2026-5 medium r1 rt=None ct=131072 $0.00 
+done in 261.3 min: ok=225 skip=0 err=0 cost=$0.00
+[15:20:11][pq2/quarter1 gpu1] === STAGE: --efforts xhigh --repeats 3 ===
+75 tasks x ['xhigh'] x 3 = 225 calls, concurrency 4
+[76/225] rg-intermediate_integration-001 xhigh r2 rt=None ct=1841 $0.00 
+[77/225] rg-intermediate_integration-009 xhigh r2 rt=None ct=2058 $0.00 
+[78/225] rg-word_ladder-001 xhigh r2 rt=None ct=1271 $0.00 
+[79/225] rg-propositional_logic-003 xhigh r2 rt=None ct=4457 $0.00 
+[80/225] rg-number_sequence-001 xhigh r2 rt=None ct=886 $0.00 
+[81/225] rg-propositional_logic-007 xhigh r2 rt=None ct=4554 $0.00 
+[82/225] rg-word_ladder-005 xhigh r2 rt=None ct=3231 $0.00 
+[83/225] rg-number_sequence-005 xhigh r2 rt=None ct=3895 $0.00 
+[84/225] rg-intermediate_integration-005 xhigh r2 rt=None ct=11255 $0.00 
+[85/225] ma-hmmt_feb_2026-13 xhigh r2 rt=None ct=19777 $0.00 
+[86/225] ma-hmmt_feb_2026-5 xhigh r2 rt=None ct=25350 $0.00 
+[87/225] if-18 xhigh r2 rt=None ct=792 $0.00 
+[88/225] if-97 xhigh r2 rt=None ct=494 $0.00 
+[89/225] if-170 xhigh r2 rt=None ct=14863 $0.00 
+[90/225] if-209 xhigh r2 rt=None ct=5960 $0.00 
+[91/225] if-248 xhigh r2 rt=None ct=6473 $0.00 
+[92/225] bfcl-live_multiple_286-129-1 xhigh r2 rt=None ct=175 $0.00 
+[93/225] bfcl-live_multiple_628-160-8 xhigh r2 rt=None ct=356 $0.00 
+[94/225] bfcl-live_simple_118-74-0 xhigh r2 rt=None ct=72 $0.00 
+[95/225] bfcl-live_simple_180-105-0 xhigh r2 rt=None ct=335 $0.00 
+[96/225] bfcl-irrelevance_81 xhigh r2 rt=None ct=745 $0.00 
+[97/225] bfcl-live_parallel_multiple_7-6-0 xhigh r2 rt=None ct=173 $0.00 
+[98/225] rg-intermediate_integration-111 xhigh r2 rt=None ct=990 $0.00 
+[99/225] rg-rush_hour-001 xhigh r2 rt=None ct=57770 $0.00 
+[100/225] rg-intermediate_integration-119 xhigh r2 rt=None ct=953 $0.00 
+[101/225] rg-intermediate_integration-115 xhigh r2 rt=None ct=1841 $0.00 
+[102/225] ma-hmmt_feb_2026-29 xhigh r2 rt=None ct=55338 $0.00 
+[103/225] rg-intermediate_integration-127 xhigh r2 rt=None ct=1698 $0.00 
+[104/225] rg-intermediate_integration-123 xhigh r2 rt=None ct=3011 $0.00 
+[105/225] rg-propositional_logic-119 xhigh r2 rt=None ct=1509 $0.00 
+[106/225] rg-propositional_logic-123 xhigh r2 rt=None ct=152 $0.00 
+[107/225] rg-propositional_logic-115 xhigh r2 rt=None ct=3740 $0.00 
+[108/225] rg-word_ladder-109 xhigh r2 rt=None ct=744 $0.00 
+[109/225] rg-propositional_logic-127 xhigh r2 rt=None ct=1788 $0.00 
+[110/225] rg-propositional_logic-111 xhigh r2 rt=None ct=5287 $0.00 
+[111/225] rg-word_ladder-113 xhigh r2 rt=None ct=2766 $0.00 
+[112/225] rg-word_ladder-117 xhigh r2 rt=None ct=9943 $0.00 
+[113/225] rg-number_sequence-113 xhigh r2 rt=None ct=589 $0.00 
+[114/225] rg-number_sequence-109 xhigh r2 rt=None ct=37095 $0.00 
+[115/225] rg-number_sequence-121 xhigh r2 rt=None ct=455 $0.00 
+===== stopped by Alexey 16:53:52

@@ -1,0 +1,32 @@
+[
+ {
+  "task": "rg-propositional_logic-115",
+  "ref_tokens": 20314,
+  "tokens": 4415,
+  "finish": "stop",
+  "distinct_12gram_by_quarter": [
+   0.999,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "latency_s": 86.3,
+  "tok_per_s": 51.2,
+  "answer_tail": "\n\n<answer>P \u2227 \u00acP</answer>"
+ },
+ {
+  "task": "ma-hmmt_feb_2026-30",
+  "ref_tokens": 20671,
+  "tokens": 62144,
+  "finish": "stop",
+  "distinct_12gram_by_quarter": [
+   1.0,
+   0.998,
+   1.0,
+   1.0
+  ],
+  "latency_s": 1363.5,
+  "tok_per_s": 45.6,
+  "answer_tail": "\\]\n\nSolving,\n\n\\[\n3(290-a^2)=290\n\\]\n\n\\[\n870-3a^2=290\n\\]\n\n\\[\n3a^2=580\n\\]\n\n\\[\na^2=\\frac{580}{3}.\n\\]\n\nTherefore\n\n\\[\nBC=a=\\sqrt{\\frac{580}{3}}=\\frac{2\\sqrt{435}}{3}.\n\\]\n\n\\[\n\\boxed{\\frac{2\\sqrt{435}}{3}}\n\\]"
+ }
+]

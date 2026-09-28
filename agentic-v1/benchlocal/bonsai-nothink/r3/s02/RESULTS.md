@@ -1,0 +1,48 @@
+## Quality bench, thinking off, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | — | — | 13.65s | 130.42s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 3 | 67% | — | — | 35.23s | 86.57s | ok; partial — 3 of 20 selected
+
+TOTAL | 6 / 8 | 75% |  |  |  |  |
+
+Equivalent to: 113/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19416/v1, model: bench, thinking=off, 2026-09-28T10:30:40.350992Z) [PARTIAL SELECTION: 8 scenarios] ===
+
+  [1/5] CLI-03 ✓ passed pass@1 (13.7s)
+  [2/5] CLI-11 ✓ passed pass@1 (18.9s)
+  [3/5] CLI-19 ✗ verifier_fail fail (8.1s)
+  [4/5] CLI-27 ✓ passed pass@1 (130.4s)
+  [5/5] CLI-35 ✓ passed pass@1 (3.9s)
+cli-40 (v1.0.2) | 4 / 5 | 80% | 13.65s | ok; partial — 5 of 40 selected
+  [1/3] HA-03 ✓ passed pass@1 (22.6s)
+  [2/3] HA-11 ✓ passed pass@1 (35.2s)
+  [3/3] HA-19 ✗ verifier_fail fail (86.6s)
+hermesagent-20 (v1.0.0) | 2 / 3 | 67% | 35.23s | ok; partial — 3 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | 13.65s | 130.42s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 3 | 67% | 35.23s | 86.57s | ok; partial — 3 of 20 selected
+
+TOTAL | 6 / 8 | 75% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 19 (0.0%) | — | — | message.content=4, multi_turn=1
+hermesagent-20 | — | — | — | multi_turn=3
+
+Failure breakdown:
+- cli-40 CLI-19: verifier_fail [fail] (CLI-19: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=1; note=slice.hex did not match the expected byte-for-byte content.))
+- hermesagent-20 HA-19: verifier_fail [fail] (Hermes retried deployment partially, but the corrective-action trace or final success was incomplete.)
+```
+
+</details>

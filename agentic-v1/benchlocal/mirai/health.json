@@ -1,0 +1,32 @@
+[
+ {
+  "task": "rg-propositional_logic-115",
+  "ref_tokens": 20314,
+  "tokens": 2491,
+  "finish": "stop",
+  "distinct_12gram_by_quarter": [
+   0.998,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "latency_s": 49.2,
+  "tok_per_s": 50.6,
+  "answer_tail": "\n\n<answer>P \u2227 \u00acP</answer>"
+ },
+ {
+  "task": "ma-hmmt_feb_2026-30",
+  "ref_tokens": 20671,
+  "tokens": 33940,
+  "finish": "stop",
+  "distinct_12gram_by_quarter": [
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "latency_s": 732.9,
+  "tok_per_s": 46.3,
+  "answer_tail": "{Q}{2}=\\frac{145}{3}.\n\\]\n\nNow\n\\[\nBC^2=290-2\\cdot \\frac{145}{3}\n=290-\\frac{290}{3}\n=\\frac{580}{3}.\n\\]\nTherefore\n\\[\nBC=\\sqrt{\\frac{580}{3}}=\\frac{2\\sqrt{435}}{3}.\n\\]\n\n\\[\n\\boxed{\\frac{2\\sqrt{435}}{3}}\n\\]"
+ }
+]

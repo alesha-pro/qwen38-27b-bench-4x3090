@@ -1,0 +1,67 @@
+[18:13:21] sandbox port offset 1070
+benchlocal-cli: thinking control 'reasoning_effort' (explicit --reasoning-effort)
+  [1/4] CLI-08 ✗ server_error fail (1726.6s)
+  [2/4] CLI-18 ✗ wrong_answer fail (300.8s)
+  [3/4] CLI-28 ✓ passed pass@1 (488.9s)
+  [4/4] CLI-38 ✓ passed pass@1 (129.3s)
+cli-40 (v1.0.2) | pass@1 2 / 4 (50%) | pass@3 2 / 4 (50%) | 394.84s | ok; partial — 4 of 40 selected
+  [1/2] HA-08 ✗ agent_runner_timeout fail (300.9s)
+  [2/2] HA-18 ✗ agent_runner_timeout fail (300.2s)
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | 300.53s | ok; partial — 2 of 20 selected
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 2 / 4 | 50% | — | — | 394.84s | 1726.59s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | — | — | 300.53s | 300.88s | ok; partial — 2 of 20 selected
+
+TOTAL | 2 / 6 | 33% |  |  |  |  |
+
+Equivalent to: 50/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19420/v1, model: bench, thinking=on, 2026-09-27T18:13:22.021852Z) [PARTIAL SELECTION: 6 scenarios] ===
+
+  [1/4] CLI-08 ✗ server_error fail (1726.6s)
+  [2/4] CLI-18 ✗ wrong_answer fail (300.8s)
+  [3/4] CLI-28 ✓ passed pass@1 (488.9s)
+  [4/4] CLI-38 ✓ passed pass@1 (129.3s)
+cli-40 (v1.0.2) | pass@1 2 / 4 (50%) | pass@3 2 / 4 (50%) | 394.84s | ok; partial — 4 of 40 selected
+  [1/2] HA-08 ✗ agent_runner_timeout fail (300.9s)
+  [2/2] HA-18 ✗ agent_runner_timeout fail (300.2s)
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | 300.53s | ok; partial — 2 of 20 selected
+
+Pack | Pass@1 | Pass@3 | Flaky | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 2 / 4 (50%) | 2 / 4 (50%) | 0 | 394.84s | 1726.59s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 0 / 2 (0%) | - | - | 300.53s | 300.88s | ok; partial — 2 of 20 selected
+
+TOTAL | 2 / 6 (33%) | 2 / 4 (50%) | 0 |  |  |
+
+Inline retry classification (clean pass@1 rows omitted):
+
+Scenario | Label | Attempts | Pass@k credit
+---|---|---:|---
+cli-40/CLI-08 | fail | 2 | no
+cli-40/CLI-18 | fail | 1 | no
+hermesagent-20/HA-08 | fail | 1 | no
+hermesagent-20/HA-18 | fail | 1 | no
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 1 / 11 (9.1%) | — | — | message.reasoning=1, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+
+Failure breakdown:
+- cli-40 CLI-08: server_error [fail] (CLI-08: verifier raised OSError: [Errno 7] Argument list too long: 'node')
+- cli-40 CLI-18: wrong_answer [fail] (CLI-18: empty model response)
+- hermesagent-20 HA-08: agent_runner_timeout [fail] (HA-08: upstream /run-scenario exceeded 300s)
+- hermesagent-20 HA-18: agent_runner_timeout [fail] (HA-18: upstream /run-scenario exceeded 300s)
+```
+
+</details>

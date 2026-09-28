@@ -1,0 +1,32 @@
+[
+ {
+  "task": "rg-propositional_logic-115",
+  "ref_tokens": 20314,
+  "tokens": 5021,
+  "finish": "stop",
+  "distinct_12gram_by_quarter": [
+   1.0,
+   0.989,
+   1.0,
+   1.0
+  ],
+  "latency_s": 100.2,
+  "tok_per_s": 50.1,
+  "answer_tail": "\n\n<answer>P \u2227 \u00acP</answer>"
+ },
+ {
+  "task": "ma-hmmt_feb_2026-30",
+  "ref_tokens": 20671,
+  "tokens": 47242,
+  "finish": "stop",
+  "distinct_12gram_by_quarter": [
+   1.0,
+   1.0,
+   1.0,
+   0.997
+  ],
+  "latency_s": 1025.4,
+  "tok_per_s": 46.1,
+  "answer_tail": "ac{290}{3}=\\frac{290}{6}=\\frac{145}{3}.\n\\]\n\nTherefore\n\\[\nBC^2=290-2s=290-\\frac{290}{3}=\\frac{580}{3}.\n\\]\nHence\n\\[\nBC=\\sqrt{\\frac{580}{3}}=\\frac{2\\sqrt{435}}{3}.\n\\]\n\n\\[\n\\boxed{\\frac{2\\sqrt{435}}{3}}\n\\]"
+ }
+]

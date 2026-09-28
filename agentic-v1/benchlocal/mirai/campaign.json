@@ -1,0 +1,23 @@
+{
+ "arm": "mirai",
+ "force": {
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 20,
+  "min_p": 0.05,
+  "presence_penalty": 0.0,
+  "repetition_penalty": 1.0,
+  "max_tokens": 131072
+ },
+ "endpoints": [
+  "http://127.0.0.1:19410/v1"
+ ],
+ "workers": 8,
+ "reps": [
+  1,
+  2,
+  3
+ ],
+ "scenarios": 60,
+ "at": "22:21:14"
+}

@@ -1,0 +1,56 @@
+[18:13:49] sandbox port offset 1090
+benchlocal-cli: thinking control 'reasoning_effort' (explicit --reasoning-effort)
+  [1/4] CLI-09 ✓ passed pass@1 (89.9s)
+  [2/4] CLI-19 ✗ verifier_fail fail (60.0s)
+  [3/4] CLI-29 ✓ passed pass@1 (38.8s)
+  [4/4] CLI-39 ✓ passed pass@1 (28.0s)
+cli-40 (v1.0.2) | 3 / 4 | 75% | 49.40s | ok; partial — 4 of 40 selected
+  [1/2] HA-09 ✓ passed pass@1 (66.7s)
+  [2/2] HA-19 ✗ verifier_fail fail (63.8s)
+hermesagent-20 (v1.0.0) | 1 / 2 | 50% | 65.25s | ok; partial — 2 of 20 selected
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 4 | 75% | — | — | 49.40s | 89.86s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 1 / 2 | 50% | — | — | 65.25s | 66.73s | ok; partial — 2 of 20 selected
+
+TOTAL | 4 / 6 | 67% |  |  |  |  |
+
+Equivalent to: 100/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19420/v1, model: bench, thinking=on, 2026-09-27T18:13:49.172792Z) [PARTIAL SELECTION: 6 scenarios] ===
+
+  [1/4] CLI-09 ✓ passed pass@1 (89.9s)
+  [2/4] CLI-19 ✗ verifier_fail fail (60.0s)
+  [3/4] CLI-29 ✓ passed pass@1 (38.8s)
+  [4/4] CLI-39 ✓ passed pass@1 (28.0s)
+cli-40 (v1.0.2) | 3 / 4 | 75% | 49.40s | ok; partial — 4 of 40 selected
+  [1/2] HA-09 ✓ passed pass@1 (66.7s)
+  [2/2] HA-19 ✗ verifier_fail fail (63.8s)
+hermesagent-20 (v1.0.0) | 1 / 2 | 50% | 65.25s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 4 | 75% | 49.40s | 89.86s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 1 / 2 | 50% | 65.25s | 66.73s | ok; partial — 2 of 20 selected
+
+TOTAL | 4 / 6 | 67% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 10 (0.0%) | — | — | message.content=2, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+
+Failure breakdown:
+- cli-40 CLI-19: verifier_fail [fail] (CLI-19: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=1; note=slice.hex did not match the expected byte-for-byte content.))
+- hermesagent-20 HA-19: verifier_fail [fail] (Hermes retried deployment partially, but the corrective-action trace or final success was incomplete.)
+```
+
+</details>

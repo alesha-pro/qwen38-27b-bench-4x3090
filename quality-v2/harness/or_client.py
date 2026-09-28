@@ -103,6 +103,9 @@ def build_body(messages, effort, effort_mode="raw", tools=None,
 def chat(messages, effort, effort_mode="raw", tools=None, max_tokens=None,
          timeout=3600, retries=5):
     """One completion. Returns dict: {request, response, latency_s, error}."""
+    # QB2_TIMEOUT: slower local engines need more than an hour for a
+    # 131072-token generation; a client timeout is missing data, not a fail.
+    timeout = int(os.environ.get("QB2_TIMEOUT", timeout))
     body = build_body(messages, effort, effort_mode, tools, max_tokens)
     data = json.dumps(body).encode()
     last_err = None

@@ -1,0 +1,12 @@
+--- language_model.py.bak-timeout	2026-09-27 20:32:51.329624514 +0000
++++ language_model.py	2026-09-27 20:32:51.353623999 +0000
+@@ -120,6 +120,9 @@
+         openai_args["api_key"] = api_key
+     if base_url is not None:
+         openai_args["base_url"] = base_url
++    import os as _os
++    openai_args["timeout"] = float(_os.environ.get("APPWORLD_LM_TIMEOUT", "600"))
++    openai_args["max_retries"] = 0
+     client = OpenAI(**openai_args)  # type: ignore
+     if api_type == "chat_completions":
+         return cast(Callable[..., Any], client.chat.completions.create)

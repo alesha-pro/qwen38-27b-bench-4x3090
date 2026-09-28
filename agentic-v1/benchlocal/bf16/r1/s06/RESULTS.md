@@ -1,0 +1,42 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 4 | 100% | — | — | 244.46s | 704.32s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | — | — | 207.19s | 260.47s | ok; partial — 2 of 20 selected
+
+TOTAL | 6 / 6 | 100% |  |  |  |  |
+
+Equivalent to: 150/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19420/v1, model: bench, thinking=on, 2026-09-27T17:35:44.375200Z) [PARTIAL SELECTION: 6 scenarios] ===
+
+  [1/4] CLI-07 ✓ passed pass@1 (704.3s)
+  [2/4] CLI-17 ✓ passed pass@1 (473.8s)
+  [3/4] CLI-27 ✓ passed pass@1 (15.2s)
+  [4/4] CLI-37 ✓ passed pass@1 (13.9s)
+cli-40 (v1.0.2) | 4 / 4 | 100% | 244.46s | ok; partial — 4 of 40 selected
+  [1/2] HA-07 ✓ passed pass@1 (153.9s)
+  [2/2] HA-17 ✓ passed pass@1 (260.5s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 207.19s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 4 | 100% | 244.46s | 704.32s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 207.19s | 260.47s | ok; partial — 2 of 20 selected
+
+TOTAL | 6 / 6 | 100% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 9 (0.0%) | — | — | message.content=2, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+```
+
+</details>

@@ -1,0 +1,34 @@
+[07:26:48][pq2/0 gpu0] gguf $MODEL_ROOT/bonsai2-gguf/27B/Ternary-Bonsai-2-27B-PQ2_0.gguf, ctx 196608, slots 8, port 19100, pool final-pool/half0.jsonl
+[07:26:53][pq2/0 gpu0] ready after 10s
+[07:26:53][pq2/0 gpu0] === EFFORT GATE (template) ===
+[07:26:53][pq2/0 gpu0] OK: low and xhigh lines rendered
+[07:26:53][pq2/0 gpu0] === effort token gradient (informational) ===
+effort gradient on rg-propositional_logic-001 (reference: 500 -> 12331 tok, 24.7x):
+  low    completion=  11553 thinking_chars=  39507 answer_chars=    24 finish=stop
+  xhigh  completion=   5743 thinking_chars=  20253 answer_chars=    34 finish=stop
+FAIL: xhigh/low = 0.50x (need >= 2.0x). The effort knob is not reaching the model; the reference saw 24.7x on this task.
+[07:31:23][pq2/0 gpu0] gradient gate below 2x (expected for this model, see card)
+[07:31:23][pq2/0 gpu0] === STAGE: --efforts xhigh --repeats 1 ===
+150 tasks x ['xhigh'] x 1 = 150 calls, concurrency 8
+[1/150] rg-propositional_logic-000 xhigh r1 rt=None ct=303 $0.00 
+[2/150] rg-propositional_logic-006 xhigh r1 rt=None ct=135 $0.00 
+[3/150] rg-intermediate_integration-006 xhigh r1 rt=None ct=802 $0.00 
+[4/150] rg-intermediate_integration-000 xhigh r1 rt=None ct=853 $0.00 
+[5/150] rg-intermediate_integration-008 xhigh r1 rt=None ct=1023 $0.00 
+[6/150] rg-intermediate_integration-004 xhigh r1 rt=None ct=1255 $0.00 
+[7/150] rg-word_ladder-000 xhigh r1 rt=None ct=479 $0.00 
+[8/150] rg-intermediate_integration-002 xhigh r1 rt=None ct=1717 $0.00 
+[9/150] rg-number_sequence-002 xhigh r1 rt=None ct=98 $0.00 
+[10/150] rg-number_sequence-004 xhigh r1 rt=None ct=97 $0.00 
+[11/150] rg-word_ladder-004 xhigh r1 rt=None ct=4533 $0.00 
+[12/150] rg-number_sequence-000 xhigh r1 rt=None ct=4280 $0.00 
+[13/150] rg-propositional_logic-002 xhigh r1 rt=None ct=5617 $0.00 
+[14/150] rg-propositional_logic-008 xhigh r1 rt=None ct=5742 $0.00 
+[15/150] rg-propositional_logic-004 xhigh r1 rt=None ct=6190 $0.00 
+[16/150] ma-hmmt_feb_2026-11 xhigh r1 rt=None ct=901 $0.00 
+[17/150] ma-hmmt_feb_2026-14 xhigh r1 rt=None ct=1798 $0.00 
+run-bonsai.sh: line 64: 2527409 Killed                  ./venv/bin/python harness/run_devpool.py --run-name "$RUN" --pool "$POOL" --concurrency "$PAR" "$@"
+[07:48:54][pq2/0 gpu0] !! stage failed: --efforts xhigh --repeats 1
+[07:48:54][pq2/0 gpu0] === STAGE: --efforts off low medium --repeats 1 ===
+150 tasks x ['off', 'low', 'medium'] x 1 = 450 calls, concurrency 8
+[07:48:54][pq2/0 gpu0] stopping server

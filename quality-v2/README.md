@@ -74,6 +74,29 @@ whitespace in the answer. All vLLM and API arms had a leading newline in 100%
 of those answers, llama.cpp in 0%. Normalizing the scorer removed the effect.
 Both corrections are recorded in [`PRE-REGISTRATION.md`](PRE-REGISTRATION.md).
 
+## Two 2 bit builds: Mirai S and Bonsai 2 (added 2026-09-28)
+
+Two more arms on the same 300 tasks and the same protocol:
+
+- `quant-mirai-s`: trymirai Mirai S, 2.4 bits/weight, on Mirai's vLLM plugin.
+- `quant-bonsai2-pq2`: PrismML Bonsai 2 PQ2_0, 2.13 bits/weight, on PrismML's
+  llama.cpp fork `prism-b10743-adfffbe`.
+
+| Arm | off | low | medium | xhigh | xhigh vs BF16 |
+|---|---|---|---|---|---|
+| Mirai S | 60.3% | 68.0% | 70.0% | 78.4% | -1.9 pp [-4.4, +0.7] p=0.18 |
+| Bonsai 2 PQ2_0 | 58.0% | 75.3% | 69.3% | 78.0% | -2.3 pp [-5.4, +0.7] p=0.15 |
+
+Both are inside the noise of the reference at max effort, and Bonsai minus
+Mirai is -0.4 pp (p=0.82). Bonsai's `low` behaves like `xhigh`, as its model
+card warns. The Bonsai xhigh arm is partial: 211 tasks with 2 repeats, 72 with
+1, 17 with 3. Full matrix and per-block deltas in
+[`TWO-BIT-RESULTS.txt`](TWO-BIT-RESULTS.txt), engine logs in `logs/`,
+launch scripts `harness/run-mirai-s.sh` and `harness/run-bonsai.sh`.
+
+The same two builds separate in agent loops (AppWorld 89.9 vs 64.3). That run
+is in [`../agentic-v1/`](../agentic-v1/).
+
 ## Protocol
 
 - 300 frozen tasks, sha256 manifest, in [`pool/allpool.jsonl`](pool/allpool.jsonl).

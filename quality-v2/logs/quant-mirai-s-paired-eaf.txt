@@ -1,0 +1,22 @@
+=== Mirai_S vs BF16 reference, xhigh ===
+reference runs : ref-final, ref-ext
+quant runs     : quant-mirai-s
+paired tasks   : 300
+
+PRIMARY  mean pass rate
+  reference  80.33 %   Mirai_S  78.44 %
+  difference -1.89 pp   95% CI [-4.44, +0.67]   p = 0.1760
+  (4.8% of permutations tie the observed value and are counted against the effect)
+
+SECONDARY  on the 271 tasks either arm ever solved
+  difference -2.09 pp   95% CI [-5.04, +0.74]   p = 0.1801
+
+BY BLOCK
+  block                     n    ref%  quant%     diff             95% CI       p
+  quant-core-if            69   81.16   82.13    +0.97 [ -4.83, +6.76]  0.8773
+  quant-core-math          27   64.20   59.26    -4.94 [-18.52, +8.64]  0.6092
+  quant-core-rg           120   84.44   82.22    -2.22 [ -5.83, +1.11]  0.3012
+  tool-calling             84   78.97   76.19    -2.78 [ -6.75, +0.79]  0.2454
+
+DESCRIPTIVE ONLY  tasks moved down 37, up 28, unchanged 235
+  (a raw count, not a test: it ignores how far each task moved)

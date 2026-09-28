@@ -1,0 +1,50 @@
+## Quality bench, thinking off, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 2 / 5 | 40% | — | — | 1.49s | 51.88s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | — | — | 28.95s | 29.13s | ok; partial — 2 of 20 selected
+
+TOTAL | 2 / 7 | 29% |  |  |  |  |
+
+Equivalent to: 43/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19417/v1, model: bench, thinking=off, 2026-09-28T10:35:32.669235Z) [PARTIAL SELECTION: 7 scenarios] ===
+
+  [1/5] CLI-08 ✗ verifier_fail fail (1.0s)
+  [2/5] CLI-16 ✗ verifier_fail fail (1.5s)
+  [3/5] CLI-24 ✓ passed pass@1 (41.8s)
+  [4/5] CLI-32 ✗ verifier_fail fail (0.8s)
+  [5/5] CLI-40 ✓ passed pass@1 (51.9s)
+cli-40 (v1.0.2) | 2 / 5 | 40% | 1.49s | ok; partial — 5 of 40 selected
+  [1/2] HA-08 ✗ verifier_fail fail (29.1s)
+  [2/2] HA-16 ✗ verifier_fail fail (28.8s)
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | 28.95s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 2 / 5 | 40% | 1.49s | 51.88s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | 28.95s | 29.13s | ok; partial — 2 of 20 selected
+
+TOTAL | 2 / 7 | 29% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 33 (0.0%) | — | — | message.content=3, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+
+Failure breakdown:
+- cli-40 CLI-08: verifier_fail [fail] (CLI-08: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=0; note=Missing solution block. build is missing or unreadable: ENOENT: no such file or directory, stat '/workspace/build'))
+- cli-40 CLI-16: verifier_fail [fail] (CLI-16: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=2; note=The extracted directory contained the wrong files, target path, or target bytes.))
+- cli-40 CLI-32: verifier_fail [fail] (CLI-32: Did not satisfy the scenario requirements. (score=0; correctness=0/2; efficiency=0/2; discipline=0/2; commandCount=1; note=Applied or attempted a blanket chmod 777 across the project tree.))
+- hermesagent-20 HA-08: verifier_fail [fail] (Hermes touched the browser flow, but the export artifact or verifier invariants were incomplete.)
+- hermesagent-20 HA-16: verifier_fail [fail] (Hermes failed to send the message to the correct named target.)
+```
+
+</details>

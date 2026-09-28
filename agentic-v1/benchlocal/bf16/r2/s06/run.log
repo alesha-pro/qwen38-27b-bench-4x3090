@@ -1,0 +1,52 @@
+[17:52:55] sandbox port offset 1010
+benchlocal-cli: thinking control 'reasoning_effort' (explicit --reasoning-effort)
+  [1/4] CLI-07 ✓ passed pass@1 (490.0s)
+  [2/4] CLI-17 ✓ passed pass@1 (209.4s)
+  [3/4] CLI-27 ✓ passed pass@1 (17.6s)
+  [4/4] CLI-37 ✓ passed pass@1 (13.2s)
+cli-40 (v1.0.2) | 4 / 4 | 100% | 113.47s | ok; partial — 4 of 40 selected
+  [1/2] HA-07 ✓ passed pass@1 (56.4s)
+  [2/2] HA-17 ✓ passed pass@1 (82.0s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 69.24s | ok; partial — 2 of 20 selected
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 4 | 100% | — | — | 113.47s | 490.04s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | — | — | 69.24s | 82.03s | ok; partial — 2 of 20 selected
+
+TOTAL | 6 / 6 | 100% |  |  |  |  |
+
+Equivalent to: 150/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19420/v1, model: bench, thinking=on, 2026-09-27T17:52:55.202411Z) [PARTIAL SELECTION: 6 scenarios] ===
+
+  [1/4] CLI-07 ✓ passed pass@1 (490.0s)
+  [2/4] CLI-17 ✓ passed pass@1 (209.4s)
+  [3/4] CLI-27 ✓ passed pass@1 (17.6s)
+  [4/4] CLI-37 ✓ passed pass@1 (13.2s)
+cli-40 (v1.0.2) | 4 / 4 | 100% | 113.47s | ok; partial — 4 of 40 selected
+  [1/2] HA-07 ✓ passed pass@1 (56.4s)
+  [2/2] HA-17 ✓ passed pass@1 (82.0s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 69.24s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 4 | 100% | 113.47s | 490.04s | ok; partial — 4 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 69.24s | 82.03s | ok; partial — 2 of 20 selected
+
+TOTAL | 6 / 6 | 100% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 9 (0.0%) | — | — | message.content=2, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+```
+
+</details>

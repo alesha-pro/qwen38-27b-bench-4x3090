@@ -1,0 +1,48 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | — | — | 84.52s | 272.78s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | — | — | 118.92s | 136.83s | ok; partial — 2 of 20 selected
+
+TOTAL | 4 / 7 | 57% |  |  |  |  |
+
+Equivalent to: 86/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19413/v1, model: bench, thinking=on, 2026-09-27T17:35:50.387070Z) [PARTIAL SELECTION: 7 scenarios] ===
+
+  [1/5] CLI-08 ✗ verifier_fail fail (3.1s)
+  [2/5] CLI-16 ✓ passed pass@1 (272.8s)
+  [3/5] CLI-24 ✓ passed pass@1 (84.5s)
+  [4/5] CLI-32 ✓ passed pass@1 (9.1s)
+  [5/5] CLI-40 ✓ passed pass@1 (166.0s)
+cli-40 (v1.0.2) | 4 / 5 | 80% | 84.52s | ok; partial — 5 of 40 selected
+  [1/2] HA-08 ✗ verifier_fail fail (101.0s)
+  [2/2] HA-16 ✗ verifier_fail fail (136.8s)
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | 118.92s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | 84.52s | 272.78s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 0 / 2 | 0% | 118.92s | 136.83s | ok; partial — 2 of 20 selected
+
+TOTAL | 4 / 7 | 57% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 28 (0.0%) | — | — | message.content=3, multi_turn=2
+hermesagent-20 | — | — | — | multi_turn=2
+
+Failure breakdown:
+- cli-40 CLI-08: verifier_fail [fail] (CLI-08: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=0; note=Missing solution block. build is missing or unreadable: ENOENT: no such file or directory, stat '/workspace/build'))
+- hermesagent-20 HA-08: verifier_fail [fail] (Hermes failed the browser automation export scenario.)
+- hermesagent-20 HA-16: verifier_fail [fail] (Hermes failed to send the message to the correct named target.)
+```
+
+</details>

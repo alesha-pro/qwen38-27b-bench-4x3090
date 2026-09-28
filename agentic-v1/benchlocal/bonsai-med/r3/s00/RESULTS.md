@@ -1,0 +1,47 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | — | — | 85.19s | 745.14s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 3 / 3 | 100% | — | — | 87.83s | 218.63s | ok; partial — 3 of 20 selected
+
+TOTAL | 7 / 8 | 88% |  |  |  |  |
+
+Equivalent to: 131/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19414/v1, model: bench, thinking=on, 2026-09-28T10:43:14.167947Z) [PARTIAL SELECTION: 8 scenarios] ===
+
+  [1/5] CLI-01 ✓ passed pass@1 (85.2s)
+  [2/5] CLI-09 ✓ passed pass@1 (319.7s)
+  [3/5] CLI-17 ✓ passed pass@1 (745.1s)
+  [4/5] CLI-25 ✓ passed pass@1 (30.6s)
+  [5/5] CLI-33 ✗ verifier_fail fail (1.6s)
+cli-40 (v1.0.2) | 4 / 5 | 80% | 85.19s | ok; partial — 5 of 40 selected
+  [1/3] HA-01 ✓ passed pass@1 (18.1s)
+  [2/3] HA-09 ✓ passed pass@1 (87.8s)
+  [3/3] HA-17 ✓ passed pass@1 (218.6s)
+hermesagent-20 (v1.0.0) | 3 / 3 | 100% | 87.83s | ok; partial — 3 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 4 / 5 | 80% | 85.19s | 745.14s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 3 / 3 | 100% | 87.83s | 218.63s | ok; partial — 3 of 20 selected
+
+TOTAL | 7 / 8 | 88% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 10 (0.0%) | — | — | message.content=4, multi_turn=1
+hermesagent-20 | — | — | — | multi_turn=3
+
+Failure breakdown:
+- cli-40 CLI-33: verifier_fail [fail] (CLI-33: Did not satisfy the scenario requirements. (score=25; correctness=0/2; efficiency=2/2; discipline=0/2; commandCount=0; note=Missing solution block. results/alpha.done is missing or unreadable: ENOENT: no such file or directory, open '/workspace/results/alpha.done' results/count.txt is missing or unreadable: ENOENT: no such file or directory, open '/workspace/results/count.txt' data/tasks.sorted.txt is missing or unreadable: ENOENT: no such file or directory, open '/workspace/data/tasks.sorted.txt' The final task workspace contained unexpected files or bytes.))
+```
+
+</details>

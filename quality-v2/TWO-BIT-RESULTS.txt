@@ -1,0 +1,15 @@
+arm                        off             low          medium           xhigh
+Mirai_S         60.3% (n=300)   68.0% (n=300)   70.0% (n=300)   78.4% (n=300)
+Bonsai2_PQ2     58.0% (n=300)   75.3% (n=300)   69.3% (n=300)   78.0% (n=300)
+
+diff vs BF16 (pp) / p
+Mirai_S          -1.0/p=0.761    -4.0/p=0.096    -3.0/p=0.225    -1.9/p=0.176
+Bonsai2_PQ2      -3.3/p=0.228    +3.3/p=0.209    -3.7/p=0.158    -2.3/p=0.153
+
+xhigh 95% CI
+Mirai_S        -1.9 pp [-4.4, +0.7] p=0.1760
+Bonsai2_PQ2    -2.3 pp [-5.4, +0.7] p=0.1528
+
+xhigh diff by block (pp)
+Mirai_S        quant-core-if=+1.0  quant-core-math=-4.9  quant-core-rg=-2.2  tool-calling=-2.8
+Bonsai2_PQ2    quant-core-if=+0.7  quant-core-math=+6.2  quant-core-rg=-4.4  tool-calling=-4.6

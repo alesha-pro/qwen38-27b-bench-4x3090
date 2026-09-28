@@ -1,0 +1,6 @@
+cli-40/CLI-02
+cli-40/CLI-12
+cli-40/CLI-22
+cli-40/CLI-32
+hermesagent-20/HA-02
+hermesagent-20/HA-12

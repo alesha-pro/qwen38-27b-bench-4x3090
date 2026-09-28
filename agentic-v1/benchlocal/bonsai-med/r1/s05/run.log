@@ -1,0 +1,102 @@
+[10:22:11] sandbox port offset 4060
+benchlocal-cli: thinking control 'reasoning_effort' (explicit --reasoning-effort)
+⚠️  skipping cli-40: sandbox unavailable (failed to start sandbox cli-40: Command '['docker', 'run', '--rm', '-d', '--name', 'benchlocal-cli-40-1790590932233', '-p', '13062:9000', 'benchlocal-sandbox-cli:latest']' returned non-zero exit status 125.). Hint: the sandboxed packs need pre-built Docker images (benchlocal-sandbox-*) that aren't auto-pulled — and the build tooling is NOT in the pip package, it lives in a benchlocal-cli checkout. Build them once: `git clone https://github.com/noonghunna/benchlocal-cli && bash benchlocal-cli/tools/build-sandboxes.sh`. Or run a deterministic-only subset (no Docker needed).
+cli-40 (v1.0.2) | 0 / 0 | - | - | skipped; partial — 5 of 40 selected
+  [1/2] HA-06 ✓ passed pass@1 (124.9s)
+  [2/2] HA-14 ✓ passed pass@1 (20.3s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 72.57s | ok; partial — 2 of 20 selected
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 0 / 0 | - | — | — | - | - | skipped; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | — | — | 72.57s | 124.87s | ok; partial — 2 of 20 selected
+
+TOTAL | 2 / 2 | 100% |  |  |  |  |
+
+Equivalent to: 150/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19415/v1, model: bench, thinking=on, 2026-09-28T10:22:11.689917Z) [PARTIAL SELECTION: 7 scenarios] ===
+
+cli-40 (v1.0.2) | 0 / 0 | - | - | skipped; partial — 5 of 40 selected
+  [1/2] HA-06 ✓ passed pass@1 (124.9s)
+  [2/2] HA-14 ✓ passed pass@1 (20.3s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 72.57s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 0 / 0 | - | - | - | skipped; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 72.57s | 124.87s | ok; partial — 2 of 20 selected
+
+TOTAL | 2 / 2 | 100% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+hermesagent-20 | — | — | — | multi_turn=2
+
+Warnings:
+- skipping cli-40: sandbox unavailable (failed to start sandbox cli-40: Command '['docker', 'run', '--rm', '-d', '--name', 'benchlocal-cli-40-1790590932233', '-p', '13062:9000', 'benchlocal-sandbox-cli:latest']' returned non-zero exit status 125.). Hint: the sandboxed packs need pre-built Docker images (benchlocal-sandbox-*) that aren't auto-pulled — and the build tooling is NOT in the pip package, it lives in a benchlocal-cli checkout. Build them once: `git clone https://github.com/noonghunna/benchlocal-cli && bash benchlocal-cli/tools/build-sandboxes.sh`. Or run a deterministic-only subset (no Docker needed).
+- skipping cli-40: sandbox unavailable
+```
+
+</details>
+[11:17:57] sandbox port offset 4020
+benchlocal-cli: thinking control 'reasoning_effort' (explicit --reasoning-effort)
+  [1/5] CLI-06 ✓ passed pass@1 (8.3s)
+  [2/5] CLI-14 ✓ passed pass@1 (35.1s)
+  [3/5] CLI-22 ✓ passed pass@1 (49.0s)
+  [4/5] CLI-30 ✓ passed pass@1 (24.5s)
+  [5/5] CLI-38 ✓ passed pass@1 (51.1s)
+cli-40 (v1.0.2) | 5 / 5 | 100% | 35.05s | ok; partial — 5 of 40 selected
+  [1/2] HA-06 ✓ passed pass@1 (59.4s)
+  [2/2] HA-14 ✓ passed pass@1 (13.6s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 36.53s | ok; partial — 2 of 20 selected
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 5 / 5 | 100% | — | — | 35.05s | 51.05s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | — | — | 36.53s | 59.41s | ok; partial — 2 of 20 selected
+
+TOTAL | 7 / 7 | 100% |  |  |  |  |
+
+Equivalent to: 150/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19415/v1, model: bench, thinking=on, 2026-09-28T11:17:57.578384Z) [PARTIAL SELECTION: 7 scenarios] ===
+
+  [1/5] CLI-06 ✓ passed pass@1 (8.3s)
+  [2/5] CLI-14 ✓ passed pass@1 (35.1s)
+  [3/5] CLI-22 ✓ passed pass@1 (49.0s)
+  [4/5] CLI-30 ✓ passed pass@1 (24.5s)
+  [5/5] CLI-38 ✓ passed pass@1 (51.1s)
+cli-40 (v1.0.2) | 5 / 5 | 100% | 35.05s | ok; partial — 5 of 40 selected
+  [1/2] HA-06 ✓ passed pass@1 (59.4s)
+  [2/2] HA-14 ✓ passed pass@1 (13.6s)
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 36.53s | ok; partial — 2 of 20 selected
+
+Pack | Pass / Total | Score | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 5 / 5 | 100% | 35.05s | 51.05s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 2 / 2 | 100% | 36.53s | 59.41s | ok; partial — 2 of 20 selected
+
+TOTAL | 7 / 7 | 100% |  |  |
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 39 (0.0%) | — | — | message.content=2, multi_turn=3
+hermesagent-20 | — | — | — | multi_turn=2
+```
+
+</details>

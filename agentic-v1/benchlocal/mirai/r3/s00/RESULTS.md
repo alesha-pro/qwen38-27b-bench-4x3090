@@ -1,0 +1,55 @@
+## Quality bench, thinking on, benchlocal-cli v0.9.8, repeat = 1
+
+Pack | Pass / Total | Score | Std | CV | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 5 | 60% | — | — | 433.76s | 4537.19s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 3 / 3 | 100% | — | — | 70.87s | 97.68s | ok; partial — 3 of 20 selected
+
+TOTAL | 6 / 8 | 75% |  |  |  |  |
+
+Equivalent to: 113/150
+
+<details>
+<summary>Raw data</summary>
+
+```
+=== benchlocal-cli --custom  (endpoint: http://127.0.0.1:19410/v1, model: bench, thinking=on, 2026-09-27T18:29:36.463309Z) [PARTIAL SELECTION: 8 scenarios] ===
+
+  [1/5] CLI-01 ✓ passed pass@1 (433.8s)
+  [2/5] CLI-09 ✓ passed pass@1 (98.3s)
+  [3/5] CLI-17 ✗ server_error fail (2130.2s)
+  [4/5] CLI-25 ✓ passed pass@1 (23.1s)
+  [5/5] CLI-33 ✗ server_error fail (4537.2s)
+cli-40 (v1.0.2) | pass@1 3 / 5 (60%) | pass@3 3 / 5 (60%) | 433.76s | ok; partial — 5 of 40 selected
+  [1/3] HA-01 ✓ passed pass@1 (37.6s)
+  [2/3] HA-09 ✓ passed pass@1 (70.9s)
+  [3/3] HA-17 ✓ passed pass@1 (97.7s)
+hermesagent-20 (v1.0.0) | 3 / 3 | 100% | 70.87s | ok; partial — 3 of 20 selected
+
+Pack | Pass@1 | Pass@3 | Flaky | p50 latency | p95 latency | Status
+---|---:|---:|---:|---:|---:|---
+cli-40 (v1.0.2) | 3 / 5 (60%) | 3 / 5 (60%) | 0 | 433.76s | 4537.19s | ok; partial — 5 of 40 selected
+hermesagent-20 (v1.0.0) | 3 / 3 (100%) | - | - | 70.87s | 97.68s | ok; partial — 3 of 20 selected
+
+TOTAL | 6 / 8 (75%) | 3 / 5 (60%) | 0 |  |  |
+
+Inline retry classification (clean pass@1 rows omitted):
+
+Scenario | Label | Attempts | Pass@k credit
+---|---|---:|---
+cli-40/CLI-17 | fail | 2 | no
+cli-40/CLI-33 | fail | 2 | no
+
+Completion and extraction diagnostics:
+
+Pack | finish_reason=length | extraction_method | extraction_issue | response_field_used
+---|---:|---|---|---
+cli-40 | 0 / 9 (0.0%) | — | — | message.content=3, message.reasoning=3, multi_turn=1
+hermesagent-20 | — | — | — | multi_turn=3
+
+Failure breakdown:
+- cli-40 CLI-17: server_error [fail] (CLI-17: verifier raised OSError: [Errno 7] Argument list too long: 'node')
+- cli-40 CLI-33: server_error [fail] (CLI-33: verifier raised OSError: [Errno 7] Argument list too long: 'node')
+```
+
+</details>

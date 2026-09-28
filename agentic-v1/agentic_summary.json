@@ -1,0 +1,153 @@
+{
+ "benchlocal": {
+  "cli-40": {
+   "bf16": 80.0,
+   "mirai": 80.0,
+   "bonsai": 71.7
+  },
+  "cli-40:mirai-bf16": {
+   "diff": 0.0,
+   "ci": [
+    -8.3,
+    8.3
+   ],
+   "p": 1.0
+  },
+  "cli-40:bonsai-bf16": {
+   "diff": -8.3,
+   "ci": [
+    -15.0,
+    -1.7
+   ],
+   "p": 0.04
+  },
+  "cli-40:bonsai-mirai": {
+   "diff": -8.3,
+   "ci": [
+    -15.8,
+    -1.7
+   ],
+   "p": 0.04
+  },
+  "hermesagent-20": {
+   "bf16": 73.3,
+   "mirai": 80.0,
+   "bonsai": 70.0
+  },
+  "hermesagent-20:mirai-bf16": {
+   "diff": 6.7,
+   "ci": [
+    1.7,
+    13.3
+   ],
+   "p": 0.126
+  },
+  "hermesagent-20:bonsai-bf16": {
+   "diff": -3.3,
+   "ci": [
+    -13.3,
+    5.0
+   ],
+   "p": 0.7482
+  },
+  "hermesagent-20:bonsai-mirai": {
+   "diff": -10.0,
+   "ci": [
+    -20.0,
+    -1.7
+   ],
+   "p": 0.126
+  },
+  "both": {
+   "bf16": 77.8,
+   "mirai": 80.0,
+   "bonsai": 71.1
+  },
+  "both:mirai-bf16": {
+   "diff": 2.2,
+   "ci": [
+    -3.9,
+    7.8
+   ],
+   "p": 0.5872
+  },
+  "both:bonsai-bf16": {
+   "diff": -6.7,
+   "ci": [
+    -12.2,
+    -1.1
+   ],
+   "p": 0.0342
+  },
+  "both:bonsai-mirai": {
+   "diff": -8.9,
+   "ci": [
+    -14.4,
+    -3.3
+   ],
+   "p": 0.0039
+  }
+ },
+ "appworld": {
+  "bf16": {
+   "task_goal_completion": 95.8,
+   "scenario_goal_completion": 91.1
+  },
+  "mirai": {
+   "task_goal_completion": 89.9,
+   "scenario_goal_completion": 75.0
+  },
+  "bonsai": {
+   "task_goal_completion": 64.3,
+   "scenario_goal_completion": 37.5
+  },
+  "mirai-bf16": {
+   "only_mirai": 3,
+   "only_bf16": 13,
+   "p_mcnemar_exact": 0.021270751953125
+  },
+  "bonsai-bf16": {
+   "only_bonsai": 3,
+   "only_bf16": 56,
+   "p_mcnemar_exact": 1.189326415129699e-13
+  },
+  "bonsai-mirai": {
+   "only_bonsai": 8,
+   "only_mirai": 51,
+   "p_mcnemar_exact": 9.052391166525231e-09
+  },
+  "bf16_test_pass_frac": 97.5,
+  "mirai_test_pass_frac": 94.1,
+  "bonsai_test_pass_frac": 86.4,
+  "bf16_steps": {
+   "mean": 19.1,
+   "at_cap_50": 0,
+   "n": 168
+  },
+  "mirai_steps": {
+   "mean": 18.8,
+   "at_cap_50": 1,
+   "n": 168
+  },
+  "bonsai_steps": {
+   "mean": 20.0,
+   "at_cap_50": 15,
+   "n": 168
+  },
+  "bf16_tok": {
+   "per_call": 193,
+   "per_task": 3686,
+   "total": 619300
+  },
+  "mirai_tok": {
+   "per_call": 511,
+   "per_task": 9629,
+   "total": 1617604
+  },
+  "bonsai_tok": {
+   "per_call": 309,
+   "per_task": 6179,
+   "total": 1037999
+  }
+ }
+}
